@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|Parameters|Axis|Feedback|Resolver" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>ResolverSetup Parameter</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic_Shaded_WithColumns.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../Parameter_File_Configuration.htm">Parameters</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="axis_Category.html">Axis</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="feedback_Category.html">Feedback</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="resolver_Category.html">Resolver</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">ResolverSetup</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>ResolverSetup Parameter</h1>
+        <table class="TableStyle-Basic" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');">
+            <col style="width: 115px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 200px;" class="TableStyle-Basic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Default Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>0x00000000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Minimum Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Maximum Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Units</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>None</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p class="alignRight">Type</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2613412680_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+						Parameter Settings and Parameter File Values
+					</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2613412680_0" style="display: none;">
+                <p>The following table gives the value that is assigned in the parameter file when you select a parameter setting.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Parameter Setting Values</p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Option</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Settings</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">Value</th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Resolver Type</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Single Speed</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Dual Speed</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000200</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="4" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="4" class="table_bold_left_just">Resolution Select</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Dynamic Resolution</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>16-bit Fixed Resolution</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000004</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>14-bit Fixed Resolution</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000008</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>12-bit Fixed Resolution</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x0000000C</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Reference Select</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Sine (Resolver)</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Cosine (Inductosyn)</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000001</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Encoder Emulation</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Disabled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Enabled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000040</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="4" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="4" class="table_bold_left_just">Channel 2 Resolution Select</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Dynamic Resolution</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>16-bit Fixed Resolution</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000010</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>14-bit Fixed Resolution</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000020</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>12-bit Fixed Resolution</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000030</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Channel 2 Reference Select</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Sine (Resolver)</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Cosine (Inductosyn)</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000002</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Channel 2 Encoder Emulation</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Disabled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Enabled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000080</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Commutation Initialization</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Initialize Using Resolver</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Initialize Using Hall Signals</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000100</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Initial Position</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Zero to one revolution</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>+/- Half of one revolution</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000400</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> The following information applies only if you are using the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_HLe">HLe</span> or <span class="AerotechVariablesDriveType_HPe">HPe</span>, the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>, or the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span> with the resolver option. This information does not apply to the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a name="kanchor273"></a>Use the ResolverSetup parameter to configure options related to the optional resolver interface of the drive. The sections that follow give the possible options for this parameter.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2613412680_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Resolver Type</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2613412680_1" style="display: none;">
+                <p>This option specifies the mode of operation of the resolver feedback. </p>
+                <p><span class="procedureTerm">Single Speed</span> is the default. A single resolver channel is used to derive feedback.</p>
+                <p>When you select <span class="procedureTerm">Dual Speed</span>, two resolver channels are used to derive feedback. For this setting, you must also configure the <a href="ResolverCoarseChannel.html">ResolverCoarseChannel</a>, <a href="ResolverFeedbackRatio.html">ResolverFeedbackRatio</a>, and <a href="ResolverFeedbackOffset.html">ResolverFeedbackOffset</a> parameters.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2613412680_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Resolution Select</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2613412680_2" style="display: none;">
+                <p>This option specifies the resolution of the resolver feedback device.</p>
+                <p><span class="procedureTerm">Dynamic Resolution</span> is the default. The controller adjusts the resolution of the resolver feedback device automatically based on the speed of the motor.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Dynamic Resolution Setting</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Basic_Shaded_WithColumns.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic_Shaded_WithLines" cellspacing="0">
+                    <col class="TableStyle-Basic_Shaded_WithLines-Column-Column2" />
+                    <col class="TableStyle-Basic_Shaded_WithLines-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Head-Header1">
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadE-Column2-Header1" style="text-align: left;">Applicable Drives</th>
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadD-Column2-Header1" style="text-align: left;">Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Body-Body1">
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyE-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p><![CDATA[  ]]><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span> and <span class="AerotechVariablesDriveType_HPe">HPe</span></p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyD-Column2-Body1">
+                                <ul>
+                                    <li value="1">The resolution of the resolver feedback device starts at 16-bit.</li>
+                                    <li value="2">When the speed of the motor exceeds 12.2 revolutions per second, the controller decreases the resolution to 14-bit.</li>
+                                    <li value="3">When the speed of the motor exceeds 48.8 revolutions per second, the controller decreases the resolution to 12-bit.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Body-Body2">
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyB-Column2-Body2" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p><span class="AerotechVariablesSimpleName_Npaq">Npaq</span> and <span class="AerotechVariablesSimpleName_Nservo">Nservo</span></p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyA-Column2-Body2" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <ul>
+                                    <li value="1">The resolution of the resolver feedback device starts at 16-bit.</li>
+                                    <li value="2">When you command the axis to move, the controller decreases the resolution to 14-bit.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>When you select <span class="procedureTerm">16-bit Fixed Resolution</span>, <span class="procedureTerm">14-bit Fixed Resolution</span>, or <span class="procedureTerm">12-bit Fixed Resolution</span>, the controller configures the resolver feedback device to the specified resolution. The following table shows the feedback counts and the maximum speed of each setting.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Fixed Resolution Settings</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Basic_Shaded_WithColumns.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic_Shaded_WithLines" cellspacing="0">
+                    <col class="TableStyle-Basic_Shaded_WithLines-Column-Column2" />
+                    <col class="TableStyle-Basic_Shaded_WithLines-Column-Column2" />
+                    <col class="TableStyle-Basic_Shaded_WithLines-Column-Column2" />
+                    <col class="TableStyle-Basic_Shaded_WithLines-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Head-Header1">
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadE-Column2-Header1" rowspan="2" style="text-align: left;">Settings</th>
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadE-Column2-Header1" rowspan="2" style="text-align: center;">Feedback Counts</th>
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadD-Column2-Header1" style="text-align: center;" colspan="2">Maximum Speed</th>
+                        </tr>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Head-Header1">
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadE-Column2-Header1" style="text-align: center;"><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span> and <span class="AerotechVariablesDriveType_HPe">HPe</span></th>
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadD-Column2-Header1" style="text-align: center;"><span class="AerotechVariablesSimpleName_Npaq">Npaq</span> and <span class="AerotechVariablesSimpleName_Nservo">Nservo</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Body-Body1">
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyE-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p><span class="procedureTerm">16-bit Fixed Resolution</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyE-Column2-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>65,536 counts per resolver revolution</p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyE-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p style="text-align: center;">16.25 revolutions/second</p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyD-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p style="text-align: center;">27 revolutions/second</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Body-Body2">
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyE-Column2-Body2" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p><span class="procedureTerm">14-bit Fixed Resolution</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyE-Column2-Body2" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p style="text-align: center;">16,384 counts per resolver revolution</p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyE-Column2-Body2" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p style="text-align: center;">65 revolutions/second</p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyD-Column2-Body2" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p style="text-align: center;">108 revolutions/second</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Body-Body1">
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyB-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p><span class="procedureTerm">12-bit Fixed Resolution</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyB-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p style="text-align: center;">4,096 counts per resolver revolution</p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyB-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p style="text-align: center;">260 revolutions/second</p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyA-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p style="text-align: center;">NA</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2613412680_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Reference Select</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2613412680_3" style="display: none;">
+                <p>This option specifies which of the two available reference signals is used to process the resolver feedback. </p>
+                <p><span class="procedureTerm">Sine (Resolver)</span> is the default. The reference signal  output to the resolver is used to process the feedback. This setting is typically used for interfacing with a resolver device. </p>
+                <p>When you select <span class="procedureTerm">Cosine (Inductosyn)</span>, a 90 degree phase shifted version of the reference signal is used to process the feedback. This setting is typically used for interfacing with an Inductosyn device due to the inherent phase shift introduced by the feedback device.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2613412680_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Encoder Emulation</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2613412680_4" style="display: none;">
+                <p>This option enables the generation of emulated quadrature signals based on the resolver feedback information. </p>
+                <p><span class="procedureTerm">Disabled</span> is the default.</p>
+                <p>When you select <span class="procedureTerm">Enabled</span>, the resolver channel generates emulated quadrature signals at the resolution that you specified for the <span class="procedureTerm">Resolution Select</span> option. </p>
+                <p>Refer to the <span class="procedureTerm">Resolution Select</span> option for the           <span class="procedureTerm">Dynamic Resolution</span> setting. The resolver channel generates emulated quadrature signals at the lowest resolution for this setting.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2613412680_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Channel 2 Resolution Select</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2613412680_5" style="display: none;">
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the optional second resolver channel on the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span> or <span class="AerotechVariablesDriveType_HPe">HPe</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies the resolution of the resolver feedback device.</p>
+                <p><span class="procedureTerm">Dynamic Resolution</span> is the default. The controller adjusts the resolution of the resolver feedback device automatically based on the speed of the motor.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Dynamic Resolution Setting</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Basic_Shaded_WithColumns.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic_Shaded_WithLines" cellspacing="0">
+                    <col class="TableStyle-Basic_Shaded_WithLines-Column-Column2" />
+                    <col class="TableStyle-Basic_Shaded_WithLines-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Head-Header1">
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadE-Column2-Header1" style="text-align: left;">Applicable Drives</th>
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadD-Column2-Header1" style="text-align: left;">Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Body-Body1">
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyB-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span> and <span class="AerotechVariablesDriveType_HPe">HPe</span></p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyA-Column2-Body1">
+                                <ul>
+                                    <li value="1">The resolution of the resolver feedback device starts at 16-bit.</li>
+                                    <li value="2">When the speed of the motor exceeds 12.2 revolutions per second, the controller decreases the resolution to 14-bit.</li>
+                                    <li value="3">When the speed of the motor exceeds 48.8 revolutions per second, the controller decreases the resolution to 12-bit.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>When you select <span class="procedureTerm">16-bit Fixed Resolution</span>, <span class="procedureTerm">14-bit Fixed Resolution</span>, or <span class="procedureTerm">12-bit Fixed Resolution</span>, the controller configures the resolver feedback device to the specified resolution. The following table shows the feedback counts and the maximum speed of each setting.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Fixed Resolution Settings</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Basic_Shaded_WithColumns.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic_Shaded_WithLines" cellspacing="0">
+                    <col class="TableStyle-Basic_Shaded_WithLines-Column-Column2" />
+                    <col class="TableStyle-Basic_Shaded_WithLines-Column-Column2" />
+                    <col class="TableStyle-Basic_Shaded_WithLines-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Head-Header1">
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadE-Column2-Header1" rowspan="2" style="text-align: left;">Settings</th>
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadE-Column2-Header1" rowspan="2" style="text-align: center;">Feedback Counts</th>
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadD-Column2-Header1" style="text-align: center;">Maximum Speed</th>
+                        </tr>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Head-Header1">
+                            <th class="TableStyle-Basic_Shaded_WithLines-HeadD-Column2-Header1" style="text-align: center;"><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span> and <span class="AerotechVariablesDriveType_HPe">HPe</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Body-Body1">
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyE-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p><span class="procedureTerm">16-bit Fixed Resolution</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyE-Column2-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>65,536 counts per resolver revolution</p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyD-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p style="text-align: center;">16.25 revolutions/second</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Body-Body2">
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyE-Column2-Body2" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p><span class="procedureTerm">14-bit Fixed Resolution</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyE-Column2-Body2" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p style="text-align: center;">16,384 counts per resolver revolution</p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyD-Column2-Body2" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p style="text-align: center;">65 revolutions/second</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic_Shaded_WithLines-Body-Body1">
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyB-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p><span class="procedureTerm">12-bit Fixed Resolution</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyB-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p style="text-align: center;">4,096 counts per resolver revolution</p>
+                            </td>
+                            <td class="TableStyle-Basic_Shaded_WithLines-BodyA-Column2-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p style="text-align: center;">260 revolutions/second</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2613412680_6" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Channel 2 Reference Select</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2613412680_6" style="display: none;">
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the optional second resolver channel on the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span> or <span class="AerotechVariablesDriveType_HPe">HPe</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies which of the two available reference signals is used to process the resolver feedback. </p>
+                <p><span class="procedureTerm">Sine (Resolver)</span> is the default. The reference signal  output to the resolver is used for processing the feedback. This setting is typically used for interfacing with a resolver device. </p>
+                <p>When you select <span class="procedureTerm">Cosine (Inductosyn)</span>, a 90 degree phase shifted version of the reference signal is used to process the feedback. This setting is typically used for interfacing with an Inductosyn device due to the inherent phase shift introduced by the feedback device.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2613412680_7" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Channel 2 Encoder Emulation</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2613412680_7" style="display: none;">
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the optional second resolver channel on the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span> or <span class="AerotechVariablesDriveType_HPe">HPe</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option enables the generation of emulated quadrature signals based on the resolver feedback information.</p>
+                <p><span class="procedureTerm">Disabled</span> is the default.</p>
+                <p>When you select <span class="procedureTerm">Enabled</span>, the resolver channel generates emulated quadrature signals at the resolution that you specified for the <span class="procedureTerm">Channel 2 Resolution Select</span> option.</p>
+                <p>Refer to the <span class="procedureTerm">Channel 2 Resolution Select</span> option for the <span class="procedureTerm">Dynamic Resolution</span> setting. The resolver channel generates emulated quadrature signals at the lowest resolution for this setting.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2613412680_8" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Commutation Initialization</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2613412680_8" style="display: none;">
+                <p>This option specifies the method of initializing the motor commutation when using resolver feedback. </p>
+                <p><span class="procedureTerm">Initialize Using Resolver</span> is the default. The motor commutation is initialized using the absolute angle of the resolver and assumes that the zero angle of the resolver corresponds to the motor zero. To compensate for misalignment between the resolver and the motor, use the <a href="CommutationOffset.html">CommutationOffset</a> parameter.</p>
+                <p>When you select <span class="procedureTerm">Initialize Using Hall Signals</span>, the motor commutation is initialized using Hall-effect switches on the motor.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2613412680_9" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Initial Position</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2613412680_9" style="display: none;">
+                <p MadCap:conditions="SnippetConditions_Parameters.ResolverSetup">This option specifies how the drive initializes the position feedback of an axis when you use resolver feedback.</p>
+                <p MadCap:conditions="SnippetConditions_Parameters.ResolverSetup"><span class="procedureTerm">Zero to one revolution</span> is the default. The drive initializes the position of the axis to a value that is between zero and one full revolution of the resolver. For example, for a 16-bit resolver the drive initializes the position feedback to a value between 0 and 65,535.</p>
+                <p MadCap:conditions="SnippetConditions_Parameters.ResolverSetup">When you select <span class="procedureTerm">+/- Half of one revolution</span>, the drive initializes the position of the axis to a value that is between negative one-half and positive one-half of one revolution of the resolver. For example, for a 16-bit resolver the drive initializes the position feedback to a value between -32,768 and 32,767.</p>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="../Configuring_Parameters_for_Resolver_Feedback.htm">Configuring Parameters for Resolver Feedback</a>
+        </p>
+        <p class="relatedTopic"><a href="resolver_Category.html">Resolver Parameter Category</a>
+        </p><a name="kanchor274"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=ResolverSetup.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=ResolverSetup.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|Parameters|Axis|I/O" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>IOSetup Parameter</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../Parameter_File_Configuration.htm">Parameters</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="axis_Category.html">Axis</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="io_Category.html">I/O</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">IOSetup</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>IOSetup Parameter</h1>
+        <table class="TableStyle-Basic" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');">
+            <col style="width: 115px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 200px;" class="TableStyle-Basic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Default Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>0x000000FC</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Minimum Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Maximum Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Units</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>None</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p class="alignRight">Type</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_3441333678_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+						Parameter Settings and Parameter File Values
+					</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3441333678_0" style="display: none;">
+                <p>The following table gives the value that is assigned in the parameter file when you select a parameter setting.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Parameter Setting Values</p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Option</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Settings</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">Value</th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Software ESTOP Filtering</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Disabled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Enabled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000001</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Software Opto Filtering</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Disabled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Enabled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000002</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Opto Output Mode</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Current Sourcing</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Current Sinking</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000004</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Opto Output Mode, Optional IO</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Same as Standard IO</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Sourcing and Sinking</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000800</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="4" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="4" class="table_bold_left_just">Analog Input 0 Range</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>+/-1 Volt</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>+/-2.5 Volts</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000008</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>+/-5 Volts</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000010</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>+/-10 Volts</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000018</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="4" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="4" class="table_bold_left_just">Analog Input 1 Range</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>+/-1 Volt</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>+/-2.5 Volts</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000020</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>+/-5 Volts</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000040</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>+/-10 Volts</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000060</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Npaq PSO Interlock</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Active</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Defeated</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000080</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="3" class="table_bold_left_just">Npaq Internal Brake</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use BrakeOutput Parameter</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use Sync Output (Active High)</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000200</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use Sync Output (Active Low)</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000300</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Fan Control</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Temperature Controlled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Always Full Speed</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000400</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Axis I/O Display</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Show optional I/O in Axis I/O</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Hide optional I/O in Axis I/O</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00010000</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>Use the IOSetup parameter to configure options related to I/O. The sections that follow give the possible options for this parameter.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3441333678_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Software ESTOP Filtering</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3441333678_1" style="display: none;">
+                <p>This option enables software-based filtering of the ESTOP input. </p>
+                <p><span class="procedureTerm">Disabled</span> is the default.</p>
+                <p>When you select <span class="procedureTerm">Enabled</span>, the ESTOP input is filtered by a 10 millisecond software filter. This means that the ESTOP input must be active for a minimum of 10 milliseconds before the controller generates an ESTOP fault.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3441333678_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Software Opto Filtering</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3441333678_2" style="display: none;">
+                <p>This option enables software-based filtering of the opto-isolated digital inputs. </p>
+                <p><span class="procedureTerm">Disabled</span> is the default.</p>
+                <p>When you select <span class="procedureTerm">Enabled</span>, the opto-isolated inputs are filtered by a 2 millisecond software filter. This means that the input must be active for a minimum of 2 milliseconds before the controller recognizes the active state.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3441333678_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Opto Output Mode</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3441333678_3" style="display: none;">
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting does not apply when used with the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_Piezo_Linear">QL</span> or <span class="AerotechVariablesDriveType_Piezo__LinearEnh">QLe</span>, the <span class="AerotechVariablesDriveType_XC2">XC2</span>, the <span class="AerotechVariablesDriveType_XC4">XC4</span>, the <span class="AerotechVariablesDriveType_XC4e">XC4e</span>, or the <span class="AerotechVariablesDriveType_XR3">XR3</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies the output mode for the opto-isolated digital outputs. </p>
+                <p>When you select <span class="procedureTerm">Current Sourcing</span>, the outputs are configured for current sourcing mode. </p>
+                <p><span class="procedureTerm">Current Sinking</span> is the default. The outputs are configured for current sinking mode.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3441333678_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Opto Output Mode, Optional IO</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3441333678_4" style="display: none;">
+                <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_CP">CP</span>, <span class="AerotechVariablesDriveType_ML">ML</span>, or <span class="AerotechVariablesDriveType_MP">MP</span> with the -IO option.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies the output mode for the opto-isolated digital outputs that are in the -IO option.</p>
+                <p><span class="procedureTerm">Same as Standard IO</span> is the default. The controller configures the outputs in the -IO option for the same mode as the standard opto-isolated digital outputs. To change this mode, use the <span class="procedureTerm">Opto Output Mode</span> option of this parameter.</p>
+                <p>When you select <span class="procedureTerm">Sourcing and Sinking</span>, the controller configures the outputs to source and sink current. This configuration, which is sometimes referred to as a push-pull output, can improve the rise and fall times of the outputs when you connect them to a load that has a high resistance.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3441333678_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Analog Input 0 Range
+        </a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3441333678_5" style="display: none;">
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> or the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span>. It does not apply to the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> MR.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies the sensitivity of analog input 0. </p>
+                <p>When you select <span class="procedureTerm">+/-1 Volt</span>, the input is configured for a maximum range of +/-1 Volt with a resolution of 30.5 microvolts per ADC&#160;count. </p>
+                <p>When you select <span class="procedureTerm">+/-2.5 Volts</span>, the input is configured for a maximum range of +/-2.5 Volts with a resolution of 76.3 microvolts per ADC&#160;count. </p>
+                <p>When you select <span class="procedureTerm">+/-5 Volts</span>, the input is configured for a maximum range of +/-5 Volts with a resolution of 152.6 microvolts per ADC&#160;count. </p>
+                <p><span class="procedureTerm">+/-10 Volts</span> is the default. The input is configured for a maximum range of +/-10 Volts with a resolution of 305 microvolts per ADC&#160;count.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3441333678_6" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Analog Input 1 Range
+        		       </a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3441333678_6" style="display: none;">
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> or the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span>. It does not apply to the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> MR.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies the sensitivity of analog input 1. </p>
+                <p>When you select <span class="procedureTerm">+/-1 Volt</span>, the input is configured for a maximum range of +/-1 Volt with a resolution of 30.5 microvolts per ADC&#160;count. </p>
+                <p>When you select <span class="procedureTerm">+/-2.5 Volts</span>, the input is configured for a maximum range of +/-2.5 Volts with a resolution of 76.3 microvolts per ADC&#160;count. </p>
+                <p>When you select <span class="procedureTerm">+/-5 Volts</span>, the input is configured for a maximum range of +/-5 Volts with a resolution of 152.6 microvolts per ADC&#160;count. </p>
+                <p><span class="procedureTerm">+/-10 Volts</span> is the default. The input is configured for a maximum range of +/-10 Volts with a resolution of 305 microvolts per ADC&#160;count.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3441333678_7" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_Npaq">Npaq</span> PSO Interlock
+        </a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3441333678_7" style="display: none;">
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>. It does not apply to the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> MR.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">Note:</span> Because there is only one PSO output, this setting applies only when set on the first axis of the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies the behavior of the PSO interlock input on the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>. </p>
+                <p>When you select <span class="procedureTerm">Active</span>, the PSO interlock input must be driven to allow firing of the PSO output. </p>
+                <p><span class="procedureTerm">Defeated</span> is the default. PSO firing can occur regardless of the state of the PSO interlock input.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3441333678_8" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_Npaq">Npaq</span> Internal Brake
+                </a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3441333678_8" style="display: none;">
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>. It does not apply to the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> MR.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies the behavior of the brake signals on the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>. </p>
+                <p><span class="procedureTerm">Use BrakeOutput Parameter</span> is the default. Use the <a href="BrakeOutput.html" class="MCXref_0">BrakeOutput Parameter</a> to specify the type of output that controls the brake.</p>
+                <p>When you select <span class="procedureTerm">Use Sync Output (Active&#160;High)</span>, the controller uses the SYNCOUT signals to generate an active-high brake control signal. The axis index in the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>&#160;specifies the SYNCOUT output number and the controller ignores the value of the BrakeOutput parameter.</p>
+                <p>When you select <span class="procedureTerm">Use Sync Output (Active&#160;Low)</span>, the controller uses the SYNCOUT signals to generate an active-low brake control signal. The axis index in the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>&#160;specifies the SYNCOUT output number and the controller ignores the value of the BrakeOutput parameter.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3441333678_9" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Fan Control</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3441333678_9" style="display: none;">
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the <span class="AerotechVariablesDriveType_GL4">GL4</span>, the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span>, <span class="AerotechVariablesDriveType_FLS">FLS</span>, or <span class="AerotechVariablesDriveType_ML">ML</span>, the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> or <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>, the <span class="AerotechVariablesDriveType_XL4s">XL4s</span>, or the <span class="AerotechVariablesDriveType_XR3">XR3</span>. It does not apply to the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies the behavior of the <a name="kanchor324"></a>cooling <a name="kanchor325"></a>fan of the drive. </p>
+                <p><span class="procedureTerm">Temperature Controlled</span> is the default. The fan speed is based on the heat sink temperature of the drive. </p>
+                <p>When you select <span class="procedureTerm">Always Full Speed</span>, the fan always runs at full speed regardless of the <a name="kanchor326"></a>heat sink temperature.</p>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="io_Category.html">I/O Parameter Category</a>
+        </p><a name="kanchor327"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=IOSetup.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=IOSetup.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
