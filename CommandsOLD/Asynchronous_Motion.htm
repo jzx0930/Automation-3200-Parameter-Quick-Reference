@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Motion" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Asynchronous Motion Overview</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../Motion_Overview.htm">Motion</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Asynchronous Motion</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor983"></a>Asynchronous Motion Overview</h1>
+        <p>Asynchronous motion commands cause program execution to continue on to the next program block immediately after the move starts. The controller does not wait for the move to end before continuing to the next command; therefore, the task can execute other commands while the motion is proceeding. A significant exception is the ABORT command which waits until the decelerations have completed before continuing onto the next program block.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Asynchronous Motion Commands</p>
+        <table class="TableStyle-Basic" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;" cellspacing="0">
+            <col style="width: 130px;" class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Command</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Action</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Commands/HOMEASYNC_Command.html">HOMEASYNC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Home an axis without waiting for completion.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Commands/FREERUN_Command.html">FREERUN</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Free run an axis at the specified velocity.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Commands/MC_Command.html">MC</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Use only with brushless motors for debugging purposes to output a fixed current to the specified axis.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Commands/MOVEABS_Command.html">MOVEABS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Move to an absolute position.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Commands/MOVEINC_Command.html">MOVEINC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Move incrementally.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Commands/MOVEOUTLIM_Command.html">MOVEOUTLIM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Move an axis out of a limit condition.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Commands/MOVETOLIM_Command.html">MOVETOLIM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Move an axis into a limit condition.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Commands/MSET_Command.html">MSET</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Use with brushless motors to output the specified electrical vector to the specified axis, typically for resolver or Hall-effect device alignment or debugging purposes.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Commands/OSCILLATE_Command.html">OSCILLATE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Oscillate (cycle at the specified distance and velocity).</p>
+                </td>
+            </tr>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Related Commands</p>
+        <table class="TableStyle-Basic" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;" cellspacing="0">
+            <col style="width: 130px;" class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Command</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Action</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="../Commands/ABORT_Command.html">ABORT</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Decelerate axis motion to a stop.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="../Commands/WAIT%20INPOS_Command.html">WAIT INPOS</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Waits for the commanded velocity to get to zero and for the position error to get to a specified value. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p><a href="../Commands/WAIT%20MOVEDONE_Command.html">WAIT MOVEDONE</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>Waits for the commanded velocity to get to zero. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Use asynchronous motion to complete other actions while doing a time consuming move. However, you must make sure that the asynchronous motion has actually been completed before a subsequent command is issued if it depends on the completion of this motion. Use the WAIT&#160;MOVEDONE or WAIT&#160;INPOS command to wait for asynchronous motion to complete. </p>
+        <p>If you issue a FREERUN, MOVEABS, or MOVEINC command on an axis while the controller is executing a FREERUN, MOVEABS, or MOVEINC command that you previously issued on that axis, the controller immediately stops executing the previously issued command and starts to execute the new command that you issued. The axis accelerates or decelerates smoothly to the new velocity and moves to the new target position.</p>
+        <p>Although they do not wait for the end of the move, asynchronous motion commands wait until the following conditions are satisfied before continuing to the next command.</p>
+        <ol>
+            <li value="1"><a href="../Feedhold_Operation.htm">FEEDHOLD</a> is not active.</li>
+            <li value="2">The <span class="bold">Wait Done</span> bit of the <a href="../StructsAutoGen/axisstatus.html">Axis Status</a> status item is off for each axis in the move.</li>
+        </ol>
+        <p> Asynchronous motion never includes the following transformations.</p>
+        <ul>
+            <li value="1">Cutter compensation</li>
+            <li value="2">Corner rounding</li>
+            <li value="3">Normalcy</li>
+        </ul>
+        <p> If you purchased the <span class="AerotechVariablesSimpleName_CNC">CNC Option</span>, refer to <a href="ms-its:cncoption.chm::/Transformation_Overview.htm" MadCap:wasOriginalLinkAbs_href="true">Transformation Overview</a> for more information.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Asynchronous  Motion Status</h2>
+        <p>You can wait for motion to complete by issuing the WAIT&#160;MOVEDONE or WAIT&#160;INPOS commands. To find out if a move is done without waiting, look at the <span class="bold">Move Done</span> bit of the Axis Status status item. To find out if a move is done and in-position, look at the <span class="bold">Move Done</span> bit of the Axis Status status item and the <span class="bold">In Position</span> bit of the <a href="../StructsAutoGen/drivestatus.html">Drive Status</a> status item. </p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics
+        </h3>
+        <p class="relatedTopic"><a href="../Motion_Overview.htm">Motion Overview</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Asynchronous_Motion.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Asynchronous_Motion.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

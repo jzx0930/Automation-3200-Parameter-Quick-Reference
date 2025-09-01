@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Controlling Axis Speeds" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>F and E Commands</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../Feedrate_Overview.htm">Controlling Axis Speeds</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">F and E Commands</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor789"></a>F and E Commands</h1>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Syntax.css');margin-left: 0;margin-right: auto;" class="TableStyle-Syntax" cellspacing="0">
+            <col style="width: 85px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1">
+                        <p>Syntax:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre xml:space="preserve">F<span class="commandArgument">&lt;CoordinatedSpeed&gt;</span>
+E<span class="commandArgument">&lt;CoordinatedSpeed&gt;</span></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p>Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">F ($global[0]+1) ; set dominant axes feedrate
+E100             ; set dependent axes feedrate</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor790"></a>Using the F and E Commands</h2>
+        <p>F and E commands specify feedrates for dominant and dependent axes, respectively. The feedrate specifies the speed for the line that it is on and remains in effect until a new feedrate command is given. The task will interpret the feedrate in the user units of the task when executing coordinated motion. Refer to <a href="../Feedrate_Overview.htm">Feedrate Overview</a>.</p>
+        <p>The F and E commands apply only to coordinated motion (<a href="../Commands/LINEAR_Command.html">LINEAR</a>, <a href="../Commands/CW_Command.html">CW</a>, <a href="../Commands/CCW_Command.html">CCW</a>, and <a href="../Commands/BEZIER_Command.html">BEZIER</a>) and specify the desired feedrate along the path of that coordinated motion. F and E commands can be specified on their own line, or with other commands, or with coordinated motion. If they are specified on the same line with coordinated motion, then the current feedrate is set to the desired value before the motion begins.</p>
+        <p>The F command specifies the feedrate for dominant axes. The E command specifies the feedrate for dependent axes. For coordinated moves that combine dominant and dependent axis motion, the controller uses only one of the two current feedrates and bases the selection on the feedrate dominance mode. Refer to <a href="../Axis_Type_Overview.htm">Axis Type Overview</a>. When you select <span class="procedureTerm">Ignore E Word</span> in the <a href="../Parameters/SystemCompatibility.html">SystemCompatibility</a> parameter, the F command is always used for coordinated move speeds and the E command is ignored.</p>
+        <p>The rate at which the motion changes to the new feedrate is controlled by the Automatic Acceleration Ramping. Refer to <a href="../Acceleration_Deceleration_Ramping_Overview.htm">Acceleration and Deceleration Ramping Overview</a>. With that ramping, the move might not have enough distance to achieve the new feedrate. In <a href="../Commands/VELOCITY_Command.html">VELOCITY OFF</a> mode, the motion will decelerate to zero speed before it reaches the new feedrate. However, in <a href="../Commands/VELOCITY_Command.html">VELOCITY ON</a> mode, the specified feedrate will not be achieved in that move, but the motion will continue to ramp toward the new feedrate in subsequent moves unless another feedrate change is made on a subsequent line.</p>
+        <p>The <a href="../Parameters/MaxSpeedClamp.html">MaxSpeedClamp</a> parameter can prevent the controller from achieving the feedrates that are specified by the F and E commands. In this case, the controller lowers the coordinated speed of the F and E commands so that every axis involved in the coordinated motion moves at or below the speed that is specified by MaxSpeedClamp.</p>
+        <h3 class="refExProg" MadCap:autonum=""><span class="autonumber"><span></span></span>Reference Example Programs</h3>
+        <p class="refExProg"><a href="../Samples/Electronic_Gearing.htm">Electronic Gearing</a>
+        </p>
+        <p class="refExProg"><a href="../Samples/Velocity_Profiling.htm">Velocity Profiling</a>
+        </p>
+        <p class="refExProg"><a href="../Samples/Constant_Force_Generation.htm">Constant Force 
+ Generation</a>
+        </p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="../Optimizing_Performance_in_VELOCITY_ON_Mode.htm">Optimizing Performance in VELOCITY&#160;ON&#160;Mode</a>
+        </p>
+        <p class="relatedTopic"><a href="../Programming_Units_and_Modes.htm">Programming 
+ Units and Modes</a>
+        </p>
+        <p class="relatedTopic"><a href="ms-its:cncoption.chm::/CommandsOLD/S_Command.htm" MadCap:wasOriginalLinkAbs_href="true">S Command</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=F_E_and_S_Codes.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=F_E_and_S_Codes.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

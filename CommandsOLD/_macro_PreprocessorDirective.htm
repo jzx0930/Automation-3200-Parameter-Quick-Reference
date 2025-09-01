@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Preprocessor Directives" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>#macro Preprocessor Directive</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/CodeEx.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../Compiler_Directive_Command_Overview.htm">Preprocessor Directives</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">#macro preprocessor directive</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor1164"></a>#macro Preprocessor Directive</h1>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="preprocessorDirective">#macro</span> Preprocessor Directive Arguments</p>
+        <table class="TableStyle-Basic" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;caption-side: top;width: 650px;" cellspacing="0">
+            <col style="width: 120px;" class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p>Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p>Type</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="commandArgument">&lt;macroName&gt;</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Defines the name for this <span class="preprocessorDirective">#macro</span>. Macro names must not contain the following items: white space, '\', '[', ']', ',', '(', or ')'. Do not put white space between the macro name and the argument list. Do not make the <span class="commandArgument">&lt;macroName&gt;</span> be the same as the name of a variable, which includes <a href="../Global_Variables.htm">$global variables</a>, <a href="../Task_Variables.htm">$task variables</a>, built-in variables, and <a href="../Program_Variables.htm">program variables</a> that you create.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="commandArgument">&lt;argument&gt;</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>A list of one or more arguments contained in parentheses ( ) or square brackets [ ]. Argument names must follow the same rules as <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> variables: argument names must begin with a '$' and can contain only letters, numbers, or underscores. You must separate arguments with a comma. You can also use white space with a comma to separate arguments.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="commandArgument">&lt;replacementText&gt;</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>The argument list must be followed by white space. All of the text that follows the white space is used as the replacement text of the <span class="preprocessorDirective">#macro</span>. All occurrences of an argument from the argument list in this text become placeholders. The placeholders are replaced by the text given for that argument when the <span class="preprocessorDirective">#macro</span> is used. The replacement text is terminated by a newline character. If a line ends with the line continuation character '\', the newline character that follows goes into the replacement text. The line that follows the newline character also goes into the replacement text, allowing for multiple line substitutions.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a name="kanchor1165"></a>Use the <span class="preprocessorDirective">#macro</span> preprocessor directive to make complex changes to the source code before the source code is compiled. The <span class="preprocessorDirective">#macro</span> statement defines a name token, argument list, and the corresponding replacement text of the <span class="preprocessorDirective">#macro</span>. On lines of the source file that come after the <span class="preprocessorDirective">#macro</span> definition, all occurrences of this <span class="preprocessorDirective">#macro</span> are replaced by the specified replacement text. On all lines of the source file that come before the <span class="preprocessorDirective">#macro</span> definition, no occurrences of the <span class="preprocessorDirective">#macro</span> name are replaced. Refer to <a href="../Recognition_of_the_Target_Word.htm">Recognition of the Target Word</a> for more information.</p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Substituting the Arguments</h3>
+        <p>When you use a <span class="preprocessorDirective">#macro</span> in the source code, the <span class="preprocessorDirective">#macro</span> must be followed by an argument list that is correctly formatted. Macro arguments that obey the following rules can contain each of the available characters. The following example programs use this sample macro definition.</p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Rules</h3>
+        <ol>
+            <li value="1">
+                <p>The macro name must always be followed by an argument list that has the same number of arguments that the macro was declared with. If the number of arguments in the argument list is not the same as the number of arguments in the macro definition, a compiler error occurs.</p>
+                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                <div class="codeexample"><pre xml:space="preserve">
+' Valid. Two arguments. 
+myAdd(1, 2)
+
+' Not valid. Not a sufficient number of arguments.
+myAdd(1)
+' Not valid. Too many arguments. 
+myAdd(1, 2, 3)
+' Not valid. The argument list is missing. 
+myAdd</pre>
+                </div>
+            </li>
+            <li value="2">
+                <p>Parenthesis&#160;(&#160;) and square brackets&#160;[&#160;] must be in pairs. Each opening parenthesis must have a closing parenthesis. Each opening square bracket  must have a closing square bracket. When you use parentheses and square brackets together, each pair must be nested correctly. </p>
+                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                <div class="codeexample"><pre xml:space="preserve">
+' All parenthesis and brackets are valid.
+myAdd((3 + $global[0]) * 8, 7)
+' You can nest #macros.
+myAdd(7, myAdd(3, 5))
+
+' Not valid. The closing parenthesis is missing.
+myAdd((2,3)
+' Not valid. The opening parenthesis is missing. 						
+myAdd(7, )4)
+' Not valid. The nesting is incorrect. 
+myAdd(3, $global[0)]</pre>
+                </div>
+            </li>
+            <li value="3">
+                <p>Separate arguments with a single comma character.</p>
+                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                <div class="codeexample"><pre>
+' Not valid. A comma is missing. 
+myAdd(1  2)</pre>
+                </div>
+            </li>
+            <li value="4">
+                <p>Use text that is contained in parentheses ( ) or square brackets [ ] as a single argument.</p>
+                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                <div class="codeexample"><pre>
+' Not valid. An Invalid Number of Arguments error occurs. "(1,2)" is used as the first argument.  
+myAdd((1,2))</pre>
+                </div>
+            </li>
+        </ol>
+        <p>In the replacement text of the macro definition, the text that you supply for the <span class="preprocessorDirective">#macro</span> argument is used as a direct substitution for all occurrences of the argument placeholder.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+myAdd($global[0], $global[1] * 3)
+
+' Becomes
+(($global[0]) + ($global[1] * 3)))</pre>
+        </div>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+' This macro uses its argument many times in its replacement text.
+#macro cube($num) (($num) * ($num) * ($num))
+
+' Example usage.
+cube(2)
+
+' Becomes
+((2) * (2) * (2))</pre>
+        </div>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Nesting and Chaining Macros</h3>
+        <p>You can use a given macro as the argument to another macro&#160;(nesting) or in the replacement text of another macro&#160;(chaining). It is important to remember that you cannot use a macro on a line that comes before the line on which a macro is defined.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+#macro myAdd($arg1, $arg2)  (($arg1) + ($arg2))
+' This macro makes a chain with the myAdd macro to get the result that you want.
+#macro timesTwo($arg)  myAdd($arg, $arg)
+
+' This example nests two #macros to do a complex operation.
+myAdd(3, timesTwo(myAdd(4, timesTwo(5))))
+
+' Becomes
+((3) + (((((4) + (((5) + (5))))) + (((4) + (((5) + (5))))))))</pre>
+        </div>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Undefining a Macro</h3>
+        <p>If you use the #undef preprocessor directive to disable a macro, then the macro is not valid on the lines that come after the #undef statement.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+#macro myEnable($arg) ENABLE $arg
+myEnable(X)
+#undef myEnable
+myEnable(Y)
+
+' Becomes
+ENABLE X
+myEnable(Y)</pre>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="../Compiler_Directive_Command_Overview.htm">Preprocessor Directive Overview</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=_macro_PreprocessorDirective.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=_macro_PreprocessorDirective.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

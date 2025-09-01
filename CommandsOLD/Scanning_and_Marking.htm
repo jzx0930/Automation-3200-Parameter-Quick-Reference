@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Galvo Drives" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Scanning and Marking</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../ProgrammingNotes/Galvo_Overview.htm">Galvo Drives</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Scanning and Marking</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor841"></a><a name="kanchor842"></a>Scanning and Marking</h1>
+        <p>This topic tells you about the commands that do scanning and marking operations for a <span class="AerotechVariablesDriveType_GL4">GL4</span> or an <span class="AerotechVariablesSimpleName_Nmark">Nmark</span>&#160;<span class="AerotechVariablesDriveType_CLS">CLS</span>, <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, or <span class="AerotechVariablesDriveType_SSaM">SSaM</span>. You must read and understand this topic to correctly program the <span class="AerotechVariablesDriveType_GL4">GL4</span> or the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> drive.</p>
+        <p>The <span class="AerotechVariablesSimpleName_A3200">A3200</span> is a multi-axis controller that can move more than one axis at a time.  Unlike most <span class="AerotechVariablesSimpleName_A3200">A3200</span> drives, which typically control mechanical axes of motors and stages, the <span class="AerotechVariablesDriveType_GL4">GL4</span> and the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span>&#160;<span class="AerotechVariablesDriveType_CLS">CLS</span>, <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, and <span class="AerotechVariablesDriveType_SSaM">SSaM</span> control small, high-bandwidth mirrors inside a galvo scanner. </p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Marking Motion</h2>
+        <p>Marking motion refers to moving any of the axes controlled by the <span class="AerotechVariablesDriveType_GL4">GL4</span> or the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span>&#160;<span class="AerotechVariablesDriveType_CLS">CLS</span>, <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, or <span class="AerotechVariablesDriveType_SSaM">SSaM</span> while the laser output of the drive is activated. Marking motion occurs when you issue a <a href="../Commands/LINEAR_Command.html">LINEAR</a>, <a href="../Commands/CW_Command.html">CW</a>, <a href="../Commands/CCW_Command.html">CCW</a>, or <a href="../Commands/BEZIER_Command.html">BEZIER</a> command on any <span class="AerotechVariablesDriveType_GL4">GL4</span> or <span class="AerotechVariablesSimpleName_Nmark">Nmark</span>&#160;<span class="AerotechVariablesDriveType_CLS">CLS</span>, <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, or <span class="AerotechVariablesDriveType_SSaM">SSaM</span> axis. The drive activates the laser output at the start of the marking motion and deactivates the laser when the marking motion is complete. Marking motion is subject to all <a href="Laser_Delays.htm">laser delays</a>.</p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span>&#160;For the laser output to activate, you must enable all the axes of your galvo drive. Make sure to include axes that do not engage in marking motion.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In the example that follows, X and Y are <span class="AerotechVariablesDriveType_GL4">GL4</span> or <span class="AerotechVariablesSimpleName_Nmark">Nmark</span>&#160;<span class="AerotechVariablesDriveType_CLS">CLS</span>, <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, or <span class="AerotechVariablesDriveType_SSaM">SSaM</span> axes and Z is a mechanical  axis controlled by a separate controller.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre>
+MINUTES
+ABSOLUTE
+
+' Set the dominant feedrate to 60 user units/min.
+F 60                   
+' The X and Y axes move at a coordinated speed of 60 with the Galvo laser on.
+LINEAR X10.0 Y20.0			
+' The X axis moves at a coordinated speed of 60 with the Galvo laser on.
+LINEAR X30.0          
+' The Z axis moves at a coordinated speed 60 with the Galvo laser off.
+LINEAR Z100.0         
+' The X and Z axes move at a coordinated speed of 60 with the Galvo laser on.
+LINEAR X60.0 Z200.0   </pre>
+        </div>
+        <p>You can command marking motion without issuing a LINEAR, CW, CCW, or BEZIER command. Refer to GALVO LASEROVERRIDE commands for more information.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Non-Marking Motion</h2>
+        <p>Non-Marking motion refers to moving the <span class="AerotechVariablesDriveType_GL4">GL4</span> or <span class="AerotechVariablesSimpleName_Nmark">Nmark</span>&#160;<span class="AerotechVariablesDriveType_CLS">CLS</span>, <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, or <span class="AerotechVariablesDriveType_SSaM">SSaM</span> axes while the laser output of the drive is deactivated. Non-Marking motion is accomplished by issuing a <a href="../Commands/RAPID_Command.html">RAPID</a> command, sometimes referred to as a Jump move.</p>
+        <p>It is possible to command non-marking motion with a LINEAR, CW, CCW or BEZIER command by using the GALVO LaserOverride command.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>High-Speed Motion</h2>
+        <p>The <span class="AerotechVariablesSimpleName_A3200">A3200</span> is capable of generating trajectory points at 48 kHz. The <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> and <span class="AerotechVariablesDriveType_SSaM">SSaM</span> interpolate each  trajectory point to 96 kHz. The <span class="AerotechVariablesDriveType_GL4">GL4</span> and the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span> interpolate each trajectory point to a maximum of 192 kHz. You must change the <a href="../Parameters/MotionUpdateRate.html">MotionUpdateRate</a> parameter to generate trajectory points at  the higher rate.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Compensating for Scanning Errors</h2>
+        <p style="font-weight: normal;font-style: normal;font-size: 10pt;">When adjoining two successive marking moves, it might be necessary to compensate for the lag between the position command and the actual mirror positions by reducing the speed of the <span class="AerotechVariablesDriveType_GL4">GL4</span> or <span class="AerotechVariablesSimpleName_Nmark">Nmark</span>&#160;<span class="AerotechVariablesDriveType_CLS">CLS</span>, <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, or <span class="AerotechVariablesDriveType_SSaM">SSaM</span> axes. The <span class="AerotechVariablesSimpleName_A3200">A3200</span> can detect these conditions and automatically reduce the commanded speed to achieve optimal marking.&#160;Refer to <a href="../Parameters/CoordinatedAccelLimit.html">CoordinatedAccelLimit</a> and <a href="../Parameters/CoordinatedCircularAccelLimit.html">CoordinatedCircularAccelLimit</a> parameters for more information.</p>
+        <h3 class="refExProg" MadCap:autonum=""><span class="autonumber"><span></span></span>Reference Example Program</h3>
+        <p class="refExProg"><a href="../Samples/Galvo.htm" class="MCXref_0">Galvo Example</a>
+        </p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="../Commands/GALVO%20LASEROVERRIDE%20AUTO_Command.html">GALVO LASEROVERRIDE AUTO Command</a>
+        </p>
+        <p class="relatedTopic"><a href="../Commands/GALVO%20LASEROVERRIDE%20OFF_Command.html">GALVO LASEROVERRIDE OFF Command</a>
+        </p>
+        <p class="relatedTopic"><a href="../Commands/GALVO%20LASEROVERRIDE%20ON_Command.html">GALVO LASEROVERRIDE ON Command</a>
+        </p>
+        <p class="relatedTopic"><a href="../ProgrammingNotes/Galvo_Overview.htm" class="MCXref_0">Galvo Overview</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Scanning_and_Marking.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Scanning_and_Marking.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
