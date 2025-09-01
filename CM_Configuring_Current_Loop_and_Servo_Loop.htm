@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Configuration Manager|Working with Parameters|Using Calculators to Set Parameters" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:conditions="ApplicationsSections.Calculators" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Configuring the Current Loop and the Servo Loop</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CM_Configuration_Manager_Overview.htm">Configuration Manager</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CM_Working_with_Parameters.htm">Working with Parameters</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CM_Using_Calculators_to_Set_Parameters.htm">Using Calculators to Set Parameters</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Configuring the Current Loop and the Servo Loop</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2719"></a>Configuring the Current Loop and the Servo Loop</h1>
+        <p>Use the <span class="procedureTerm"><a href="CM_Using_the_Parameter_Calculator.htm">Axis Parameter Calculator</a></span> in <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> to calculate the digital current loop gains. The calculator is the best way to configure the current loop because the gains do not change and they depend on some properties of the motor, including the resistance and inductance. If you are using an axis for the first time, you must configure the digital current loop gains.</p>
+        <p>You can also use the <span class="procedureTerm">Axis Parameter Calculator</span> to calculate servo loop gain values that change because of the mechanics of the system and the quantity of weight that is applied to the axis. If you change the load on the axis, you must adjust the servo loop gains. The calculator supplies you with servo loop gains that you can use to start your calculations. If you want to do more servo tuning, <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you use <a href="DS_Autotuning.htm">Autotune</a> or <a href="DS_EasyTune.htm"><span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span></a>.</p>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2497653028_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />To Configure the Current Loop</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2497653028_0" style="display: none;">
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> Before you continue, make sure that you complete the <span class="procedureTerm">Mechanics</span> and <span class="procedureTerm">Drive</span> sections of the Axis Parameter Calculator.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ol start="1">
+                    <li value="1">Expand the <span class="procedureTerm">Current Loop</span> section. If you want to make changes for only the current loop parameters, clear the <span class="procedureTerm">Calculate</span> boxes in the <span class="procedureTerm">Results</span> pane for all categories except for <span class="procedureTerm">Current Loop Parameters</span>.</li>
+                    <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2497653028_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Current Loop Section</a>
+                        <div class="MCDropDownBody_0" id="MCDropDownBody_2497653028_1" style="display: none;">
+                            <p>
+                                <img src="Resources/Images/Image_CM_Calculator_AxisParameter_CurrentLoop.png" alt="" title="" />
+                            </p>
+                        </div>
+                    </div>
+                    <li class="noBulletLevel1">
+                        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Current Loop Section</p>
+                        <table class="TableStyle-Basic" style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;" cellspacing="0">
+                            <col style="width: 208px;" class="TableStyle-Basic-Column-Column1" />
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-Basic-Head-Header1">
+                                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>Field Name</p>
+                                    </th>
+                                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                        <p>Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-Basic-Body-Body1">
+                                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>Phase Margin (Deg)</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                        <p>If <a name="kanchor2720"></a><span class="MCTextPopup"><a href="javascript:void(0);" class="MCTextPopupSpot_0" onclick="FMCTextPopup( event, this ); return false;">Phase Margin<img style="border: none;margin-left: 5px;" src="SkinSupport/ExpandingClosed.gif" MadCap:altsrc="SkinSupport/ExpandingOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/ExpandingOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCExpandingIcon" /></a><span class="MCTextPopupBody_0" style="display: none; ">The phase margin of a system is defined as the difference, in degrees, of the phase of the open-loop system at the crossover frequency and -180 degrees. The phase margin is a measure of system stability and provides a measure of robustness against variations in system dynamics. Increasing the phase margin increases system stability while decreasing the phase margin decreases stability and can eventually lead to an unstable system. If the phase margin is less than or equal to zero then the system is unstable. A larger phase margin results in a less oscillatory and better-damped system. If an open-loop system has multiple crossover frequencies, the overall phase margin is taken as the worse case or lowest phase margin. Typically, a phase margin between 30 and 60 degrees results in a reasonable trade-off between system performance and stability.</span></span> is not at the default value of 45 degrees, change it to 45 degrees.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-Basic-Body-Body1">
+                                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>Crossover Frequency (Hz)</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                        <p>If <a name="kanchor2721"></a><span class="MCTextPopup"><a href="javascript:void(0);" class="MCTextPopupSpot_0" onclick="FMCTextPopup( event, this ); return false;">Crossover Frequency<img style="border: none;margin-left: 5px;" src="SkinSupport/ExpandingClosed.gif" MadCap:altsrc="SkinSupport/ExpandingOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/ExpandingOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCExpandingIcon" /></a><span class="MCTextPopupBody_0" style="display: none; ">The open-loop crossover frequency is the frequency at which the open-loop gain is equal to one (0 dB). The simplest model for motor has a single open-loop crossover frequency. The open-loop crossover frequency is a measure of system performance. A higher crossover frequency implies better system performance through improved position tracking and decreased response time. Too high of a crossover frequency can however degrade system performance by decreasing damping in the system and causing instabilities in the servo-loop.</span></span> is not at the default value of 2000 Hz, change it to 2000 Hz.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-Basic-Body-Body1">
+                                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>Actual Crossover Frequency&#160;(Hz)</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                        <p>The calculator determines the crossover frequency based on the values you enter in other fields and information from various loop models. You cannot set this value.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li start="7" value="2">The <span class="procedureTerm">Results</span> pane of the calculator shows the Current Value and the New Value of all the parameters that change as a result of the settings that you specify in the calculator. Review these values. Make necessary corrections to the values in the <span class="procedureTerm">Current Loop</span> section and click <span class="procedureTerm">OK</span>. The Axis Parameter Calculator closes.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2497653028_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />To Configure the Servo Loop Gains</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2497653028_2" style="display: none;">
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> Before you continue, make sure that you complete the <span class="procedureTerm">Mechanics</span>, <span class="procedureTerm">Drive</span>, and <span class="procedureTerm">Feedback</span> sections of the Axis Parameter Calculator.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ol start="1">
+                    <li value="1">Expand the <span class="procedureTerm">Servo Loop</span> section.  If you want to make changes for only the servo loop parameters, clear the <span class="procedureTerm">Calculate</span> boxes in the <span class="procedureTerm">Results</span> pane for all categories except for <span class="procedureTerm">Servo Loop Parameters</span>.</li>
+                    <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2497653028_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Servo Loop Section</a>
+                        <div class="MCDropDownBody_0" id="MCDropDownBody_2497653028_3" style="display: none;">
+                            <p>
+                                <img src="Resources/Images/Image_CM_Calculator_AxisParameter_ServoLoop.png" />
+                            </p>
+                        </div>
+                    </div>
+                    <li class="noBulletLevel1">
+                        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Servo Loop Section</p>
+                        <table class="TableStyle-Basic" style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;" cellspacing="0">
+                            <col style="width: 200px;" class="TableStyle-Basic-Column-Column1" />
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-Basic-Head-Header1">
+                                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>Field Name</p>
+                                    </th>
+                                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                        <p>Description</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-Basic-Body-Body1">
+                                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>Phase Margin (Deg)</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                        <p>If <a name="kanchor2722"></a><span class="MCTextPopup"><a href="javascript:void(0);" class="MCTextPopupSpot_0" onclick="FMCTextPopup( event, this ); return false;">Phase Margin<img style="border: none;margin-left: 5px;" src="SkinSupport/ExpandingClosed.gif" MadCap:altsrc="SkinSupport/ExpandingOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/ExpandingOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCExpandingIcon" /></a><span class="MCTextPopupBody_0" style="display: none; ">The phase margin of a system is defined as the difference, in degrees, of the phase of the open-loop system at the crossover frequency and -180 degrees. The phase margin is a measure of system stability and provides a measure of robustness against variations in system dynamics. Increasing the phase margin increases system stability while decreasing the phase margin decreases stability and can eventually lead to an unstable system. If the phase margin is less than or equal to zero then the system is unstable. A larger phase margin results in a less oscillatory and better-damped system. If an open-loop system has multiple crossover frequencies, the overall phase margin is taken as the worse case or lowest phase margin. Typically, a phase margin between 30 and 60 degrees results in a reasonable trade-off between system performance and stability.</span></span> is not the default value of 45 degrees, change it to 45 degrees.</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-Basic-Body-Body1">
+                                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>Crossover Frequency (Hz)</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                        <p>If <a name="kanchor2723"></a><span class="MCTextPopup"><a href="javascript:void(0);" class="MCTextPopupSpot_0" onclick="FMCTextPopup( event, this ); return false;">Crossover Frequency<img style="border: none;margin-left: 5px;" src="SkinSupport/ExpandingClosed.gif" MadCap:altsrc="SkinSupport/ExpandingOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/ExpandingOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCExpandingIcon" /></a><span class="MCTextPopupBody_0" style="display: none; ">The open-loop crossover frequency is the frequency at which the open-loop gain is equal to one (0 dB). The simplest model for motor has a single open-loop crossover frequency. The open-loop crossover frequency is a measure of system performance. A higher crossover frequency implies better system performance through improved position tracking and decreased response time. Too high of a crossover frequency can however degrade system performance by decreasing damping in the system and causing instabilities in the servo-loop.</span></span> is not at the default value of 35 Hz, change it to 35 Hz.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li start="7" value="2">The <span class="procedureTerm">Results</span> pane of the calculator shows the Current Value and the New Value of all the parameters that change as a result of the settings that you specify in the calculator. Review these values. Make necessary corrections to the values in the <span class="procedureTerm">Servo Loop</span> section and click <span class="procedureTerm">OK</span>. The Axis Parameter Calculator closes.</li>
+                    <li value="3">Save the active parameter file. If the parameter file you are working on is not the active parameter, set it as the active parameter file.  Refer to <a href="CM_Working_with_Parameters.htm">Working with Parameters</a>.</li>
+                    <li value="4">Move the motor with the newly calculated servo loop gains.<ul style="list-style-type: disc;"><li value="1">If the motor is moving correctly, but you want to continue fine-tuning, refer to <a href="DS_Autotuning.htm">Autotuning an Axis</a>.</li><li value="2">If the motor does not move correctly, makes noises, vibrates, or oscillates, then the Calculator was unable to calculate the correct servo loop gains for the particular configuration. Verify that all of the settings in the Calculator are correct. Recommit the parameters and move the motor again. If the motor still does not move correctly, then you need to manually tune the axis. For more information, contact <span class="AerotechVariablesCompanyName_Short">Aerotech</span>&#160;<MadCap:conditionalText MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.MotorSizerOnly,AerotechConditions.LensProOnly,AerotechConditions.GalvoCalibrationFileConverterOnly,AerotechConditions.CADFusionOnly"><a href="Technical_Support.htm" class="MCXref_0">Global Technical Support</a></MadCap:conditionalText>. </li></ul></li>
+                </ol>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="DS_Autotuning.htm" class="MCXref_0">Autotuning an Axis</a>
+        </p>
+        <p class="relatedTopic"><a href="DS_EasyTune.htm" class="MCXref_0">EasyTune</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=CM_Configuring_Current_Loop_and_Servo_Loop.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=CM_Configuring_Current_Loop_and_Servo_Loop.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

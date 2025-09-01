@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Getting Started|Getting Started" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Creating Your First Program
+</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Getting_Started.htm">Getting Started</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Getting_Started.htm">Getting Started</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Step 9: Creating Your First Program</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor62"></a>Creating Your First Program
+</h1>
+        <p>Use the following procedure to create an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program in <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Create an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> Program</h2>
+        <ol>
+            <li value="1">Open <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> by going to <span class="procedureTerm">Start</span> &#8594; <span class="procedureTerm">All Programs</span> &#8594; <span class="procedureTerm"><span style="mc-tag-and-class: span;" class="AerotechVariablesCompanyName_Short">Aerotech</span></span> &#8594; <span class="procedureTerm"><span class="AerotechVariablesSimpleNameLong_Auto3200">Automation 3200</span></span> &#8594; <span class="BodyText_bold">A3200</span> <span class="procedureTerm"> <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span></span>.</li>
+            <li value="2">In <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>, click the <span class="procedureTerm">Connect</span> button <img src="Resources/Images/Icons/Connect16x16.png" />. The <span class="procedureTerm">Axis Manager</span> comes into view.</li>
+            <h4 class="figure" MadCap:autonum=""><span class="autonumber"><span></span></span>Figure: Axis Manager</h4>
+            <li class="noBulletLevel1">
+                <img src="Resources/Images/Image_AxisManager_A1.png" alt="" title="" />
+            </li>
+            <li value="3"> Go to <span class="procedureTerm">File</span> &#8594; <span class="procedureTerm">New File</span> to create a new program file. The <span class="procedureTerm">Create New File</span> dialog comes into view.</li>
+            <li value="4">In the <span class="procedureTerm">Create New File</span> dialog, select <span class="BodyText_bold">AeroBasic</span>, then click <span class="procedureTerm">OK</span>.</li>
+            <li value="5">Copy and paste the following example program into the <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> editor.</li>
+            <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+            <div class="codeexample"><pre xml:space="preserve">
+' This is a simple A3200 program.
+
+' Enable servo loop control for the axes.
+ENABLE X Y
+
+' Move to the "0" reference position.
+HOME X Y
+
+' Enable incremental programming mode.
+INCREMENTAL
+
+' Set the speed to 100 mm/s. The default units are mm/s.
+F100 
+
+' Start a repeat loop.
+REPEAT 10
+
+' Move the axes incrementally.
+LINEAR X2.54 Y2.54
+
+' Wait for one second.
+DWELL 1
+
+' Stop the repeat loop.
+ENDRPT
+
+' Enable absolute programming mode.
+ABSOLUTE
+
+' Move to the start position at 50 mm/s.
+LINEAR X0 Y0 F50
+
+' You must include this line at the end of the program.
+END PROGRAM</pre>
+            </div>
+            <li value="6">Click the <span class="procedureTerm">Run</span> button <img src="Resources/Images/Icons/Run16x16.png" /> to save, compile, associate, and start the program. If you want to save, compile, associate and start the program separately, use the individual buttons.</li>
+            <ul style="list-style-type: disc;">
+                <li value="1">If the program is new, you are asked to enter a program name.</li>
+                <li value="2">If you save this program in the default location, it comes into view under the <span class="procedureTerm">User Files</span> node  in the <span class="procedureTerm">Network Explorer</span>.</li>
+                <li value="3">To reopen this program, double-click the program in the <span class="procedureTerm">User Files</span> node in the <span class="procedureTerm">Network Explorer</span>.</li>
+                <li value="4">If the program encounters errors, these errors are shown in the <span class="procedureTerm">Error List</span> at the bottom of the application.</li>
+            </ul>
+        </ol>
+        <div MadCap:conditions="AerotechConditions.Option_MainA3200">
+            <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Steps to <a name="kanchor63"></a>Getting Started</h3>
+            <ol>
+                <li value="1"><a href="Installing_the_Software.htm" class="MCXref_0">Installing the Software</a>
+                </li>
+                <li value="2"><a href="_License%20Activation/Activating_Your_Software.htm" class="MCXref_0">Activating Your Software</a>
+                </li>
+                <li value="3"><a href="Optimizing_A3200_Performance.htm" class="MCXref_0">Optimizing A3200 Performance</a>
+                </li>
+                <li value="4"><a href="Installing_the_FireWire_Card.htm" class="MCXref_0">Installing the FireWire or HyperWire™ Card
+        </a>
+                </li>
+                <li value="5"><a href="Configuring_the_FireWire_Card.htm" class="MCXref_0">Configuring and Verifying the FireWire or HyperWire™ Card</a>
+                </li>
+                <li value="6"><a href="Connecting_the_System.htm" class="MCXref_0">Connecting the System
+</a>
+                </li>
+                <li value="7"><a href="Selecting_a_Parameter_File.htm" class="MCXref_0">Selecting a Parameter File
+        </a>
+                </li>
+                <li value="8"><a href="Verifying_Motion.htm" class="MCXref_0">Verifying Motion</a>
+                </li>
+                <li value="9">Creating Your First Program</li>
+            </ol>
+        </div>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Creating_Your_First_Program.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Creating_Your_First_Program.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

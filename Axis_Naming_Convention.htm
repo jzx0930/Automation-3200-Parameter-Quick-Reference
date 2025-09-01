@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Configuration Manager" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:conditions="ApplicationsSections.AeroBasic" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Axis Naming Conventions</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CM_Configuration_Manager_Overview.htm">Configuration Manager</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Axis Naming Conventions</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2743"></a>Axis Naming Conventions</h1>
+        <p>An axis name can be any string of letters, numeric digits, and underscores. In some situations, you can specify an axis by using an axis index or axis variable.</p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2744"></a>Default Axis Names</h3>
+        <p>By default, axis names are assigned by a communications channel and are named as follows (corresponding to communications channels 1 to 32): X, Y, Z, U, A, B, C, D, x, y, z, u, a, b, c, d, XX, YY, ZZ, UU, AA, BB, CC, DD, xx, yy, zz, uu, aa, bb, cc, and dd. </p>
+        <table class="TableStyle_Note" style="mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note:</span> If you change an axis name, the change does not have an effect in an application until you exit and reenter the application and do a reset from that application.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2745"></a>Changing Axis Names in a Parameter File</h3>
+        <p>Use the following procedure to change the names of one or more axes in a parameter file.</p>
+        <ol>
+            <li value="1">On the main menu, select <span class="procedureTerm">File</span> &#8594; <span class="procedureTerm">New Parameter File</span>. </li>
+            <li class="noBulletLevel1">
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3329811380_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Main Menu — New Parameter File                </a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3329811380_0" style="display: none;">
+                        <p>
+                            <img src="Resources/Images/Image_CM_MainMenuNewParameterFile.png" />
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="noBulletLevel1">In the <span class="procedureTerm">Network Explorer</span> of <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>, a new parameter file comes into view under the <span class="procedureTerm">Open Files</span> folder. This file becomes the active parameter file.</li>
+            <li class="noBulletLevel1">
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3329811380_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Network Explorer — Active Parameter File
+ <![CDATA[                ]]></a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3329811380_1" style="display: none;">
+                        <p>
+                            <img src="Resources/Images/Image_CM_NewParameterFile.png" />
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li value="2">In the <span class="procedureTerm">Network Explorer</span> of <a href="CM_Configuration_Manager_Overview.htm"><span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span></a>, right-click the active parameter file and select <span class="procedureTerm">Configure Axes</span>.</li>
+            <li class="noBulletLevel1">
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3329811380_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Network Explorer — Configure Axes
+                </a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3329811380_2" style="display: none;">
+                        <p>
+                            <img src="Resources/Images/Image_CM_ConfigureAxes.png" />
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li value="3">In the dialog that comes into view, select the axis that you want to rename. Then click <span class="procedureTerm">Rename</span>. </li>
+            <li class="noBulletLevel1">
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3329811380_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Renaming Axis              </a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3329811380_3" style="display: none;">
+                        <p>
+                            <img src="Resources/Images/Image_CM_Renaming_Axis.png" />
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li value="4">Type a new axis name. Then click <span class="procedureTerm">OK</span>.</li>
+            <li class="noBulletLevel1">
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3329811380_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Renamed Axis </a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3329811380_4" style="display: none;">
+                        <p>
+                            <img src="Resources/Images/Image_CM_RenamedAxis.png" />
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ol>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2746"></a>Rules for Custom Axis Names</h3>
+        <ul>
+            <li value="1">Axis names are case sensitive. (XAXIS is a different axis than xaxis.)</li>
+            <li value="2">You cannot use key words that are used for commands (for example, FOR and IF) as axis names. </li>
+            <li value="3">You cannot use  E, e, F, f, G, g, H, h, I, i, J, j, K, k, L, l, M, m, N, n, O, o, P, p, Q, q, R, r, S, s, T, or t as axis names.</li>
+            <li value="4">Axis names cannot be more than 31 characters.</li>
+            <li value="5">The  first two characters in an axis name cannot be numeric digits.</li>
+            <li value="6">You must separate the axis name that you create (with a space, equal sign, or parentheses) from a constant value given in a command (for example, LINEAR MYAXIS=5).</li>
+        </ul>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Valid Axis Names</p>
+        <table class="TableStyle-Basic" style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col style="width: 280px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 359px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;text-align: left;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Syntax</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;text-align: left;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1"><pre xml:space="preserve">X</pre>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Valid single character.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1"><pre xml:space="preserve">Xaxis_1</pre>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Valid multi-character.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1"><pre xml:space="preserve">LINEAR MYAXIS $global[0] F100</pre>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Valid multi-character.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1"><pre xml:space="preserve">LINEAR MYAXIS 7.8 F100</pre>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Valid multi-character: constant follows a space.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1"><pre xml:space="preserve">LINEAR MYAXIS=7.8 F100</pre>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Valid multi-character: constant follow an equal sign.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1"><pre xml:space="preserve">LINEAR MYAXIS(7.8) F100</pre>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>Valid multi-character: constant is in parentheses.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span style="color: #ff0000;">Invalid</span> Axis Names</p>
+        <table class="TableStyle-Basic" style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col style="width: 280px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 359px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Syntax</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1"><pre xml:space="preserve">If</pre>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p><span style="color: #ff0000;">Invalid</span>: <b>If</b> is a command key word.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1"><pre xml:space="preserve">ThisAxisNameIsMuchMuchMuchTooLong</pre>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p><span style="color: #ff0000;">Invalid</span>: more than 31 characters.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1"><pre xml:space="preserve">X1X</pre>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p><span style="color: #ff0000;">Invalid</span>: second letter is a numeric digit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1"><pre xml:space="preserve">LINEAR MYAXIS7.8 F100</pre>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p><span style="color: #ff0000;">Invalid</span>: constant immediately follows the axis name.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Axis_Index.htm">Axis Index</a>
+        </p>
+        <p class="relatedTopic"><a href="Axis_Name_Variables.htm">Axis Name Variables</a>
+        </p>
+        <p class="relatedTopic"><a href="Connecting_the_System.htm">Connecting the System</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Axis_Naming_Convention.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Axis_Naming_Convention.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

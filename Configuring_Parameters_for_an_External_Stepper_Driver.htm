@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|Configuration Examples" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Configuring Parameters for an External Stepper Driver</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Configuring_Parameters_for_Brush_and_Brushless_Motors.htm">Configuration Examples</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Configuring Parameters for an External Stepper Driver</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor702"></a>Configuring Parameters for an External Stepper Driver</h1>
+        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> This topic only applies if you are using an <span class="AerotechVariablesSimpleName_Nservo">Nservo</span> or <span class="AerotechVariablesSimpleName_Nstep">Nstep</span> to control an external stepper motor driver via the clock and direction outputs.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To configure the <span class="AerotechVariablesSimpleName_A3200">A3200</span> parameters to use the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span> or <span class="AerotechVariablesSimpleName_Nstep">Nstep</span> to control a stepper motor, you must know the following information about the motor and external driver:</p>
+        <ul>
+            <li value="1">The microstepping resolution of the stepper motor driver in microsteps per revolution.</li>
+            <li value="2">The resolution of the feedback device, if applicable, in counts per revolution.</li>
+        </ul>
+        <p>The <span class="AerotechVariablesSimpleName_A3200">A3200</span> supports stepper motors both with and without feedback devices. Stepper motors are always driven in an open loop manner, but if a feedback device is present you can use it for stepper position verification. The parameter configuration used for each mode is different, so  refer to the appropriate following section  for the correct configuration instructions.</p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Stepper Motor without Feedback</h3>
+        <table style="mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note:</span> If you are using a stepper motor without feedback, you can use the <span class="bold">Axis Parameter Calculator</span> in Configuration Manager to configure the parameters automatically. Refer to <a href="CM_Using_Calculators_to_Set_Parameters.htm" class="MCXref_0">Using Calculators to Set Parameters</a> for more information. </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In this configuration, the controller simply needs to know how many clock pulses to output for each unit of motion.</p>
+        <ol>
+            <li value="1">Set the <a href="Parameters/MotorType.html">MotorType</a> parameter to <span class="procedureTerm">Stepper Motor</span>.</li>
+            <li value="2">Set the <a href="Parameters/PositionFeedbackType.html">PositionFeedbackType</a> parameter to <span class="procedureTerm">None (Open-Loop)</span>.</li>
+            <li value="3">Set the <a href="Parameters/CountsPerUnit.html">CountsPerUnit</a> parameter to the number of microsteps per programming unit. This setting will depend on the microstepping resolution of the stepper motor driver and any mechanical gearing between the stepper motor and moving part of the stage.</li>
+            <li value="4">Note that neither the <a href="Parameters/CountsPerRev.html">CountsPerRev</a> nor the <a href="Parameters/StepperResolution.html">StepperResolution</a> parameters are used in this situation.</li>
+        </ol>
+        <div class="example">
+            <p class="For_example_Head">For Example</p>
+            <p>Assume an <span class="AerotechVariablesSimpleName_Nstep">Nstep</span> is connected to a stepper driver that generates 5000 microsteps per revolution and a stepper motor connected to a ballscrew stage with a screw pitch of 4 millimeters per revolution.</p>
+            <p>The CountsPerUnit parameter should be set to: 5000 / 4 = 1250 microsteps per millimeter.</p>
+        </div>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Stepper Motor with Feedback</h3>
+        <p>In this configuration, the controller needs to know how many clock pulses to output for each unit of motion, but for correct operation of the stepper position verification functionality, it must also know the scaling between the microstepping resolution and the feedback resolution.</p>
+        <ol>
+            <li value="1">Set the <a href="Parameters/MotorType.html">MotorType</a> parameter to <span class="procedureTerm">Stepper Motor</span>.</li>
+            <li value="2">Set the <a href="Parameters/PositionFeedbackType.html">PositionFeedbackType</a> and <a href="Parameters/PositionFeedbackChannel.html">PositionFeedbackChannel</a>  parameters to appropriate settings.<ul><li value="1">The PositionFeedbackType would typically be set to <span class="procedureTerm">Local Encoder Counter</span> for a stepper motor with an RS-422 digital quadrature encoder, but other feedback types are also supported on the Nservo.</li><li value="2">For the <span class="AerotechVariablesSimpleName_Nstep">Nstep</span> it is possible to configure the encoder inputs for either differential or single-ended operation using the <span class="procedureTerm"><span class="AerotechVariablesSimpleName_Nstep">Nstep</span> Encoder Inputs</span> setting of the <a href="Parameters/FeedbackSetup.html">FeedbackSetup</a> parameter.</li></ul></li>
+            <li value="3">Set the <a href="Parameters/CountsPerRev.html">CountsPerRev</a>  parameter to the number of feedback counts per revolution of the stepper motor. This setting will depend on the resolution of the feedback device.</li>
+            <li value="4">Set the <a href="Parameters/StepperResolution.html">StepperResolution</a> parameter to the number of microsteps per revolution of the stepper motor. This setting will depend on the microstepping resolution of the stepper motor driver.</li>
+            <li value="5">Set the <a href="Parameters/CountsPerUnit.html">CountsPerUnit</a> parameter to the number of feedback counts per programming unit. This setting will depend on the resolution of the feedback device and any mechanical gearing between the feedback device and moving part of the stage.</li>
+            <li value="6">To enable the use of the feedback device for stepper position verification, set the <a href="Parameters/StepperVerificationSpeed.html">StepperVerificationSpeed</a> parameter to a nonzero value. Refer to the documentation of this parameter for more information.<ul><li value="1">When using stepper position verification, you can obtain best performance  if the microstepping resolution of the stepper motor or driver is higher than the resolution of the feedback device. This means that you should typically set the value of the StepperResolution parameter  higher than the value of the CountsPerRev parameter.</li><li value="2">The <span class="AerotechVariablesSimpleName_A3200">A3200</span> supports two modes of stepper position verification, which can be selected using the <span class="procedureTerm">Stepper Verification</span> setting of the <a href="Parameters/ServoSetup.html">ServoSetup</a> parameter. Refer to the documentation of this setting for more information.</li></ul></li>
+        </ol>
+        <div class="example">
+            <p class="For_example_Head">For Example</p>
+            <p>Assume an <span class="AerotechVariablesSimpleName_Nstep">Nstep</span> is connected to a stepper driver that generates 25000 microsteps per revolution and a stepper motor with an encoder that generates 4000 counts per revolution. The stepper motor is connected to a ballscrew stage with a screw pitch of 4 millimeters per revolution.</p>
+            <ul>
+                <li value="1">The CountsPerRev parameter should be set to: 4000 (the encoder resolution).</li>
+                <li value="2">The StepperResolution parameter should be set to: 25000 (the microstepping resolution).</li>
+                <li value="3">The CountsPerUnit parameter should be set to: 4000 / 4 = 1000 counts per millimeter.</li>
+            </ul>
+        </div>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Configuring_Parameters_for_an_External_Stepper_Driver.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Configuring_Parameters_for_an_External_Stepper_Driver.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

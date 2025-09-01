@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Configuration Manager|Working with Parameters" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:conditions="ApplicationsSections.Calculators" class="" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Comparing Parameters</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CM_Configuration_Manager_Overview.htm">Configuration Manager</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CM_Working_with_Parameters.htm">Working with Parameters</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Comparing Parameters</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2716"></a>Comparing Parameters</h1>
+        <p>In <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> you can compare one parameter file with another parameter file. You can also compare the parameters from an axis or task with parameters in other axes or tasks in the same parameter file.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Selecting the Parameters to Compare</h2>
+        <ol>
+            <li value="1">In <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>, open the <span class="procedureTerm">Compare Parameters</span> dialog box.</li>
+            <li class="noBulletLevel1">On the <span class="procedureTerm">Tools</span> menu, select <span class="procedureTerm">Compare Parameters</span> or click the <span class="procedureTerm">Compare Parameters</span> button <img src="Resources/Images/Icons/CompareFiles16x16.png" /> on the toolbar. When you open the <span class="procedureTerm">Compare Parameters</span> dialog box, if a parameter file is selected in the <span class="procedureTerm">Network Explorer</span> that file becomes the Source.</li>
+            <li class="noBulletLevel1">
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3708734106_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Compare Parameters Dialog Box</a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3708734106_0" style="display: none;">
+                        <p class="img">
+                            <img src="Resources/Images/Image_CM_CompareParametersDialog_A.png" alt="" title="" />
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li value="2">To select or change the Source, click the <span class="procedureTerm">Source</span> arrow and select an item from the tree or click <span class="procedureTerm">Browse</span> to select a parameter file from the file system. </li>
+            <li value="3">Click the <span class="procedureTerm">Compare With</span> arrow and do one of the following. <ul style="list-style-type: disc;"><li stlye="disc" value="1">To compare the parameters from an axis or task with parameters in other axes or tasks in the same parameter file, select <span class="procedureTerm">Axes/Tasks within Source</span>. This is the default setting.</li><li stlye="disc" value="2">To compare the <span class="procedureTerm">Source</span> parameter file with another parameter file, select a file from the tree or click <span class="procedureTerm">Browse</span> to select a parameter file from the file system. When <span class="procedureTerm">Axes/Tasks within Source</span> is selected, the file tree is not available.</li></ul></li>
+            <li value="4">Verify your selections and click <span class="procedureTerm">Compare</span>.</li>
+        </ol>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Parameter Comparison Results</h2>
+        <p>The <span class="procedureTerm">Parameter Comparison</span> dialog box shows the results of your comparison.</p>
+        <p>When you select <span class="bold">two different</span> parameter files for your comparison, the application compares all axes and tasks from the first file with all axes and tasks from the second file.</p>
+        <p>When you use the <span class="bold">same</span> parameter file for your comparison by selecting <span class="procedureTerm">Axes/Tasks within Source</span> in the <span class="procedureTerm">Compare Parameters</span> dialog box, the application compares the first two axes with each other and the first two tasks with each other.</p>
+        <p>Refer to the following figures for more information.</p>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3708734106_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Parameter Comparison Results — Two Parameter files</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3708734106_1" style="display: none;">
+                <p>
+                    <img src="Resources/Images/Image_CM_ParameterComparison_TwoParameterFiles_A.png" alt="" title="" class="ScreenshotBorder" />
+                </p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Parameter Comparison Results — Two Parameter Files</p>
+                <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 965px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 130px;" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 118px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Figure Label</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p class="center">
+                                    <img src="Resources/Images/Common/CalloutLabel_Red_A.png" alt="" title="" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Results</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <ul>
+                                    <li value="1"> If you compared two parameter files, the results show only the parameters that are different.</li>
+                                    <li value="2">
+                               If you selected <span class="procedureTerm">Axes/Tasks within Source</span>, the results show only the parameters that are different on two axes and two tasks in the same <span class="bold">Source</span> file.
+</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_B.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Second Column</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Shows the name of the axis or task that corresponds to each parameter in the list.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_C.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Third Column</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Shows the values of axes and tasks in the <span class="procedureTerm">Source</span> file.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_D.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Fourth Column</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Shows the values of axes and tasks in the <span class="bold">file that you compare</span> with the <span class="procedureTerm">Source</span> file.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p class="center">
+                                    <img src="Resources/Images/Common/CalloutLabel_Red_E.png" alt="" title="" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Export button</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Exports the results of the parameter comparison as an HTML file.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3708734106_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Custom Axis Comparison — Two Axes</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3708734106_2" style="display: none;">
+                <p>
+                    <img src="Resources/Images/Image_CM_ParameterComparison_CustomAxisComparison_A.png" alt="" title="" class="ScreenshotBorder" />
+                </p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Custom Axis Comparison — Two Axes</p>
+                <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 948px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 134px;" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 170px;" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 644px;" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: center;">Figure&#160;Label</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_A.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Results</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <ul>
+                                    <li value="1"> If you compared two parameter files, the results show only the parameters that are different.</li>
+                                    <li value="2">
+                               If you selected <span class="procedureTerm">Axes/Tasks within Source</span>, the results show only the parameters that are different on two axes and two tasks in the same <span class="bold">Source</span> file.
+</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_B.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Second Column</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Shows the name of the axis or task that corresponds to each parameter in the list. If an axis name or task name is not the same in the <span class="procedureTerm">Source</span> file and the <span class="bold">file that you are comparing</span>, then the application shows both axis or task names.</p>
+                                <div class="example">
+                                    <p class="For_example_Head">For Example</p>
+                                    <p>If you do a custom axis comparison of the <span class="procedureTerm">X</span> axis and the <span class="procedureTerm">Y</span> axis, the application shows <span class="procedureTerm">X &#8596; Y</span> in this section.</p>
+                                </div>
+                                <p>This can occur if you use custom axis names, do custom axis or task comparisons, or if you compare the <span class="procedureTerm">Source</span> file with <span class="procedureTerm">Axes/Tasks within Source</span>.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_C.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Third Column</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Shows the values of the <span class="bold">first</span> axis or task that you select for a custom comparison in the <span class="procedureTerm">Source</span> file.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_D.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Fourth Column</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Shows the values of the <span class="bold">second</span> axis or task that you select for a custom comparison in the <span class="bold">file that you compare</span> with the <span class="procedureTerm">Source</span> file.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_E.png" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Export button</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Exports the results of the parameter comparison as an HTML file.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Parameter Comparison Options</h2>
+        <p>To make an analysis of the results from your comparison, use the following options in the <span class="procedureTerm">Parameter Comparison</span> dialog box.</p>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3708734106_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Parameter Comparison Options</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3708734106_3" style="display: none;">
+                <p>
+                    <img src="Resources/Images/Image_CM_ParameterComparison_Options_A.png" alt="" title="" class="ScreenshotBorder" />
+                </p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Parameter Comparison Options</p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');width: 956px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 110px;" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 182px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: center;">Figure Label</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_A.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Parameter Categories</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Shows all of the parameter categories that contain differences.</p>
+                                <ul>
+                                    <li value="1">When you select a parameter category in this section, the <span class="procedureTerm">Results</span> section shows the results of your comparison only for the parameters in that category.</li>
+                                    <div class="example">
+                                        <p class="For_example_Head">For Example</p>
+                                        <p>If you select the <span class="procedureTerm">Current Loop</span> node, the <span class="procedureTerm">Results</span> section shows the differences in only the parameters that apply to the <span class="bold">Current Loop Parameter Category</span>.</p>
+                                    </div>
+                                    <li value="2">When you select the <span class="procedureTerm">Results</span> node in this section, the <span class="procedureTerm">Results</span> section shows the results for all of the parameters in your comparison.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_B.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Compare Axis</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                                <p><span class="note">NOTE:</span> The <span class="procedureTerm">Compare Axis</span> option is available only when you compare two parameter files.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>Configures the comparison results for one or two axes in two parameter files. For example, you can configure a custom comparison to compare the <span class="procedureTerm">X</span> axis from the <span class="procedureTerm">Source</span> file with the <span class="procedureTerm">Y</span> axis from the <span class="bold">file that you compare</span> with the <span class="procedureTerm">Source</span> file.</p>
+                                <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3708734106_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                                To See Comparison Results for One Axis
+                            </a>
+                                    <div class="MCDropDownBody_0" id="MCDropDownBody_3708734106_4" style="display: none;">
+                                        <ol>
+                                            <li value="1">In the <span class="procedureTerm">Options</span> section, click the <span class="procedureTerm">Compare Axis</span> arrow. The application shows a list of axes that you can compare.</li>
+                                            <li value="2">Select one axis that you want to compare from the <span class="procedureTerm">Source</span> file and the <span class="procedureTerm">file that you compare</span> with the <span class="procedureTerm">Source</span> file.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3708734106_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                               To See Custom Comparison Results for Two Axes
+                            </a>
+                                    <div class="MCDropDownBody_0" id="MCDropDownBody_3708734106_5" style="display: none;">
+                                        <ol>
+                                            <li value="1">In the <span class="procedureTerm">Options</span> section, click the <span class="procedureTerm">Compare Axis</span> arrow and select <span class="procedureTerm">Custom Comparison</span>.</li>
+                                            <li value="2">Click the <span class="procedureTerm">First Axis</span> arrow and select the axis that you want to compare from the <span class="procedureTerm">Source</span> file.</li>
+                                            <li value="3">Click the <span class="procedureTerm">Second Axis</span> arrow and select a different axis that you want to compare from the <span class="bold">file that you compare</span> with the <span class="procedureTerm">Source</span> file.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_C.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Compare Task</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                                <p><span class="note">NOTE:</span> The <span class="procedureTerm">Compare Task</span> option is available only when you compare two parameter files.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>Configures the comparison results for one or two tasks in two parameter files. For example, you can configure a custom comparison to compare <span class="procedureTerm">Task 1</span> from the <span class="procedureTerm">Source</span> file with <span class="procedureTerm">Task 2</span> from the <span class="bold">file that you compare</span> with the <span class="procedureTerm">Source</span> file.</p>
+                                <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3708734106_6" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                                To See Comparison Results for One Task
+                            </a>
+                                    <div class="MCDropDownBody_0" id="MCDropDownBody_3708734106_6" style="display: none;">
+                                        <ol>
+                                            <li value="1">In the <span class="procedureTerm">Options</span> section, click the <span class="procedureTerm">Compare Task</span> arrow. The application shows a list of tasks that you can compare.</li>
+                                            <li value="2">Select one task that you want to compare from the <span class="procedureTerm">Source</span> file and the <span class="procedureTerm">file that you compare</span> with the <span class="procedureTerm">Source</span> file.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3708734106_7" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                                To See Custom Comparison Results For Two Tasks
+                            </a>
+                                    <div class="MCDropDownBody_0" id="MCDropDownBody_3708734106_7" style="display: none;">
+                                        <ol>
+                                            <li value="1">In the <span class="procedureTerm">Options</span> section, click the <span class="procedureTerm">Compare Task</span> arrow and select <span class="procedureTerm">Custom Comparison</span>.</li>
+                                            <li value="2">Click the <span class="procedureTerm">First Task</span> arrow and select the task that you want to compare from the <span class="procedureTerm">Source</span> file.</li>
+                                            <li value="3">Click the <span class="procedureTerm">Second Task</span> arrow and select a different task that you want to compare from the <span class="bold">file that you compare</span> with the <span class="procedureTerm">Source</span> file.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_D.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>First Axis and Second Axis</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>You can use these options to see the comparison results for two axes in the following locations. </p>
+                                <ul>
+                                    <li value="1">The same parameter file.</li>
+                                    <li value="2">The <span class="procedureTerm">Source</span> file and the <span class="procedureTerm">file that you compare</span> with the <span class="procedureTerm">Source</span> file.</li>
+                                </ul>
+                                <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3708734106_8" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                               To See Comparison Results for Two Axes
+                            </a>
+                                    <div class="MCDropDownBody_0" id="MCDropDownBody_3708734106_8" style="display: none;">
+                                        <ol>
+                                            <li value="1">In the <span class="procedureTerm">Options</span> section, click the <span class="procedureTerm">First Axis</span> arrow and select the axis that you want to compare.</li>
+                                            <li value="2">Click the <span class="procedureTerm">Second Axis</span> arrow and select a different axis that you want to compare.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_E.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>First Task and Second Task</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>You can use these options to see the comparison results for two tasks in the following locations.</p>
+                                <ul>
+                                    <li value="1">The same parameter file.</li>
+                                    <li value="2">The <span class="procedureTerm">Source</span> file and the <span class="procedureTerm">file that you compare</span> with the <span class="procedureTerm">Source</span> file.</li>
+                                </ul>
+                                <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3708734106_9" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                                To See Comparison Results for Two Tasks
+                            </a>
+                                    <div class="MCDropDownBody_0" id="MCDropDownBody_3708734106_9" style="display: none;">
+                                        <ol>
+                                            <li value="1">In the <span class="procedureTerm">Options</span> section, click the <span class="procedureTerm">First Task</span> arrow and select the task that you want to compare.</li>
+                                            <li value="2">Click the <span class="procedureTerm">Second Task</span> arrow and select a different task that you want to compare.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <img src="Resources/Images/Common/CalloutLabel_Red_F.png" alt="" title="" />
+                            </td>
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Highlight Differences box</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Highlights the pieces of parameter values that are different. The <span class="procedureTerm">Results</span> section does not highlight these differences by default because the <span class="procedureTerm">Highlight Differences</span> box is not selected by default.</p>
+                                <p>When you select this box, the <span class="procedureTerm">Results</span> section highlights the differences between the values of the axes and the values of the tasks in the two parameter files that you compared.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="CM_Working_with_Parameters.htm">Working with Parameters</a>
+        </p>
+        <p class="relatedTopic"><a href="CM_Copying_Parameters.htm">Copying Parameters</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=CM_Comparing_Parameters.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=CM_Comparing_Parameters.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

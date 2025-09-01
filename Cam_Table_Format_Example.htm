@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Motion|Master and Slave Motion" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Cam Table Format Example</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Motion_Overview.htm">Motion</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Master_and_Slave_Motion_Overview.htm">Master and Slave Motion</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Cam Table Format Example</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor1006"></a>Cam Table Format Example</h1>
+        <div class="codeexample"><pre xml:space="preserve">
+' File Name: temp.Cam
+
+Number of Points   206
+Master Units (PRIMARY) 
+Slave Units (PRIMARY)
+0001 0.000 .3720 
+0002 1.000 .3720 
+0003 1.928 .3719 
+0004 2.857 .3716 
+0005 3.785 .3711 
+0006 4.714 .3704 
+0007 5.642 .3695 
+0008 6.571 .3684 
+0009 7.499 .3671 
+0010 8.427 .3655 
+0011 9.356 .3638 
+0012 10.284 .3619 
+0013 11.213 .3598 
+0014 12.141 .3575 
+0015 13.070 .3550 
+0016 13.998 .3522 
+0017 14.927 .3493 
+0018 15.857 .3462 
+0019 16.786 .3429 
+0020 17.717 .3393 
+0021 18.648 .3356 
+0022 19.580 .3317 
+0023 20.513 .3276 
+0024 21.447 .3233 
+0025 22.383 .3188 
+0026 23.320 .3142 
+0027 24.259 .3093 
+0028 25.200 .3043 
+0029 26.144 .2991 
+0030 27.090 .2937 
+0031 28.039 .2882 
+0032 28.990 .2825 
+0033 29.945 .2766 
+0034 30.902 .2706 
+0035 31.863 .2645 
+0036 32.828 .2583 
+0037 33.795 .2519 
+0038 34.766 .2454 
+0039 35.739 .2389 
+0040 36.716 .2322 
+0041 37.696 .2255 
+0042 38.679 .2187 
+0043 39.664 .2118 
+0044 40.651 .2049 
+0045 41.640 .1979 
+0046 42.632 .1909 
+0047 43.625 .1839 
+0048 44.619 .1769 
+0049 45.615 .1698 
+0050 46.612 .1627 
+0051 47.611 .1556 
+0052 48.611 .1485 
+0053 49.614 .1414 
+0054 50.618 .1343 
+0055 51.626 .1272 
+0056 52.637 .1201 
+0057 53.653 .1130 
+0058 54.674 .1059 
+0059 55.703 .0989 
+0060 56.739 .0919 
+0061 57.785 .0850 
+0062 58.842 .0782 
+0063 59.911 .0715 
+0064 60.993 .0649 
+0065 62.088 .0586 
+0066 63.198 .0525 
+0067 64.320 .0468 
+0068 65.454 .0414 
+0069 66.595 .0364 
+0070 67.740 .0320 
+0071 68.884 .0280 
+0072 70.024 .0245 
+0073 71.159 .0215 
+0074 72.284 .0189 
+0075 73.400 .0168 
+0076 74.504 .0150 
+0077 75.594 .0135 
+0078 76.670 .0124 
+0079 77.733 .0115 
+0080 78.781 .0107 
+0081 79.816 .0101 
+0082 80.840 .0096 
+0083 81.854 .0091 
+0084 82.860 .0087 
+0085 83.862 .0083 
+0086 84.862 .0079 
+0087 85.862 .0075 
+0088 86.862 .0071 
+0089 87.862 .0067 
+0090 88.862 .0063 
+0091 89.862 .0059 
+0092 90.862 .0055 
+0093 91.862 .0051 
+0094 92.862 .0047 
+0095 93.862 .0043 
+0096 94.862 .0039 
+0097 95.862 .0035 
+0098 96.862 .0031 
+0099 97.862 .0027 
+0100 98.862 .0023 
+0101 99.862 .0018 
+0102 100.865 .0014 
+0103 101.876 .0011 
+0104 102.894 .0007 
+0105 103.918 .0004 
+0106 104.944 .0002 
+0107 105.967 .0001 
+0108 106.986 .0000 
+0109 107.996 .0000 
+0110 109.000 .0000 
+0111 110.000 .0000 
+0112 179.000 .0000 
+0113 180.000 .0000 
+0114 267.000 .0000 
+0115 268.000 .0000 
+0116 269.004 .0000 
+0117 270.015 .0000 
+0118 271.035 .0001 
+0119 272.066 .0003 
+0120 273.104 .0005 
+0121 274.149 .0009 
+0122 275.198 .0014 
+0123 276.248 .0021 
+0124 277.297 .0029 
+0125 278.344 .0039 
+0126 279.387 .0050 
+0127 280.428 .0063 
+0128 281.466 .0076 
+0129 282.504 .0091 
+0130 283.544 .0107 
+0131 284.588 .0124 
+0132 285.641 .0143 
+0133 286.706 .0164 
+0134 287.784 .0188 
+0135 288.880 .0215 
+0136 289.992 .0245 
+0137 291.120 .0280 
+0138 292.260 .0320 
+0139 293.405 .0364 
+0140 294.546 .0414 
+0141 295.680 .0468 
+0142 296.802 .0525 
+0143 297.912 .0586 
+0144 299.007 .0649 
+0145 300.089 .0715 
+0146 301.158 .0782 
+0147 302.215 .0850 
+0148 303.261 .0919 
+0149 304.297 .0989 
+0150 305.326 .1059 
+0151 306.347 .1130 
+0152 307.363 .1201 
+0153 308.374 .1272 
+0154 309.382 .1343 
+0155 310.386 .1414 
+0156 311.389 .1485 
+0157 312.389 .1556 
+0158 313.388 .1627 
+0159 314.385 .1698 
+0160 315.381 .1769 
+0161 316.375 .1839 
+0162 317.368 .1909 
+0163 318.360 .1979 
+0164 319.349 .2049 
+0165 320.336 .2118 
+0166 321.321 .2187 
+0167 322.304 .2255 
+0168 323.284 .2322 
+0169 324.260 .2389 
+0170 325.234 .2454 
+0171 326.205 .2519 
+0172 327.172 .2583 
+0173 328.137 .2645 
+0174 329.098 .2706 
+0175 330.055 .2766 
+0176 331.010 .2825 
+0177 331.961 .2882 
+0178 332.910 .2937 
+0179 333.856 .2991 
+0180 334.800 .3043 
+0181 335.741 .3093 
+0182 336.680 .3142 
+0183 337.617 .3188 
+0184 338.553 .3233 
+0185 339.487 .3276 
+0186 340.420 .3317 
+0187 341.352 .3356 
+0188 342.283 .3393 
+0189 343.214 .3429 
+0190 344.143 .3462 
+0191 345.073 .3493 
+0192 346.002 .3522 
+0193 346.930 .3550 
+0194 347.859 .3575 
+0195 348.787 .3598 
+0196 349.716 .3619 
+0197 350.644 .3638 
+0198 351.573 .3655 
+0199 352.501 .3671 
+0200 353.429 .3684 
+0201 354.358 .3695 
+0202 355.286 .3704 
+0203 356.215 .3711 
+0204 357.143 .3716 
+0205 358.072 .3719 
+0206 360.000 .3720 
+</pre>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Camming_Motion_from_a_File.htm">Camming Motion</a>
+        </p>
+        <p class="relatedTopic"><a href="Cam_Table_Format.htm" name="kanchor1007">Cam Table Format</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Cam_Table_Format_Example.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Cam_Table_Format_Example.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

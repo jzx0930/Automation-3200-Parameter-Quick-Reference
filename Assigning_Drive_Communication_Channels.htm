@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Configuration Manager|[%=AerotechVariables.Feature_DriveConfiguration%]" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Assigning Drive Communication Channels</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Warning.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CM_Configuration_Manager_Overview.htm">Configuration Manager</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Drive_Configuration_Overview.htm">Drive Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Assigning Drive Communication Channels</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Assigning Drive Communication Channels<a name="kanchor2709"></a></h1>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span> The <span class="procedureTerm"><span class="AerotechVariablesFeature_DriveConfiguration">Drive Configuration</span></span> dialog applies to <span class="AerotechVariablesHyperWire">HyperWire</span> drives only. If you are using FireWire drives, refer to the FireWire information in the <span class="bold">Getting Started</span> section of the Help file.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If you purchased an integrated system, the communication channel numbers are typically configured at the factory and do not require changes. But if you purchased an independent system, all of the communication channel numbers have a value of 0. Thus you must assign a unique communication channel number to each <span class="AerotechVariablesHyperWire">HyperWire</span> drive that is connected to the <span class="AerotechVariablesHyperWire">HyperWire</span> card installed in your PC. Some drives, such as the <span class="AerotechVariablesDriveType_GL4">GL4</span> or <span class="AerotechVariablesDriveType_XR3">XR3</span>, must have a unique range of communication channel numbers.</p>
+        <p>If you are troubleshooting the communication channel numbers, refer to the <span class="bold">Troubleshooting Communication Channel Numbers</span> section of this topic. Then refer to the applicable procedure in this topic to resolve the error.</p>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_375694900_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                
+               Figure: Communication Channels Tab in the <span class="AerotechVariablesFeature_DriveConfiguration">Drive Configuration</span> Dialog
+            
+            </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_375694900_0" style="display: none;">
+                <p class="img">
+                    <img src="Resources/Images/Image_DriveConfigurationDialog_CommunicationChannelsTab.png" alt="" title="" class="ScreenshotBorder" />
+                </p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Communication Channels Tab in the <span class="AerotechVariablesFeature_DriveConfiguration">Drive Configuration</span> Dialog</p>
+                <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col style="width: 101px;" class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 225px;" class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 650px;" class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        Figure Label
+                    </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                        Name
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                        Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>
+                                    <img src="Resources/Images/Common/CalloutLabel_Red_A.png" alt="" title="" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="procedureTerm">Refresh</span> button</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Click the <span class="procedureTerm">Refresh</span> button <img src="Resources/Images/Icons/Refresh16x16.png" /> to manually rescan the <span class="AerotechVariablesHyperWire">HyperWire</span> network so you can find the connected drives.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>
+                                    <img src="Resources/Images/Common/CalloutLabel_Red_B.png" alt="" title="" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="procedureTerm">Drive Topology</span> section</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Shows the physical connections between the connected <span class="AerotechVariablesHyperWire">HyperWire</span> drives and the <span class="AerotechVariablesHyperWire">HyperWire</span> card in your PC.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>
+                                    <img src="Resources/Images/Common/CalloutLabel_Red_C.png" alt="" title="" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="procedureTerm">Auto-Assign Channels</span> button</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Click the <span class="procedureTerm">Auto-Assign Channels</span> button to automatically assign communication channel numbers to each of the connected drives based on how they are physically connected on the <span class="AerotechVariablesHyperWire">HyperWire</span> network.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>
+                                    <img src="Resources/Images/Common/CalloutLabel_Red_D.png" alt="" title="" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="bold"><span class="AerotechVariablesHyperWire">HyperWire</span> Card Version</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Shows the current version of firmware that is installed on the <span class="AerotechVariablesHyperWire">HyperWire</span> card in your PC.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>
+                                    <img src="Resources/Images/Common/CalloutLabel_Red_E.png" alt="" title="" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="procedureTerm">Communication Channels Editor</span> <![CDATA[ ]]></p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Shows the communication channel numbers that you assigned to each <span class="AerotechVariablesHyperWire">HyperWire</span> drive and lets you edit them.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>
+                                    <img src="Resources/Images/Common/CalloutLabel_Red_F.png" alt="" title="" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="procedureTerm">Commit</span> button</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Click the <span class="procedureTerm">Commit</span> button to save communication channel numbers to memory on each of the connected drives.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>
+                                    <img src="Resources/Images/Common/CalloutLabel_Red_G.png" alt="" title="" />
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="procedureTerm">Message Log</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Shows the operations that occur.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p>To assign communication channel numbers to the <span class="AerotechVariablesHyperWire">HyperWire</span> drives that are connected to your PC, refer to the applicable procedure that follows.</p>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_375694900_1" onclick="FMCDropDown( this ); return false;" name="kanchor2710"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+               TO AUTOMATICALLY&#160;ASSIGN COMMUNICATION&#160;CHANNEL&#160;NUMBERS</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_375694900_1" style="display: none;">
+                <ol>
+                    <li class="TopMargin" value="1">Open <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>.</li>
+                    <li value="2">On the <span class="procedureTerm">Controller</span> menu, select <span class="procedureTerm"><span class="AerotechVariablesFeature_DriveConfiguration">Drive Configuration</span></span>. The <span class="procedureTerm"><span class="AerotechVariablesFeature_DriveConfiguration">Drive Configuration</span></span> dialog connects to the <span class="AerotechVariablesHyperWire">HyperWire</span> network and identifies all of the connected drives.</li>
+                    <table style="mc-table-style: url('Resources/TableStyles/Warning.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle-Warning" cellspacing="0">
+                        <col style="width: 50px;" class="TableStyle-Warning-Column-Column1" />
+                        <col class="TableStyle-Warning-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Warning-Body-Body1">
+                                <td class="TableStyle-Warning-BodyB-Column1-Body1">
+                                    <p>
+                                        <img src="Resources/Images/Common/Symbol_Warning.png" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-Warning-BodyA-Column2-Body1">
+                                    <p><span class="warning">WARNING:</span>&#160;When you open the <span class="AerotechVariablesFeature_DriveConfiguration">Drive Configuration</span> dialog, <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> disables all of the enabled axes and stops all of the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> programs that are running. It also stops programs that monitor safety-type conditions.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <li value="3">In the <span class="procedureTerm"><span class="AerotechVariablesFeature_DriveConfiguration">Drive Configuration</span></span> dialog, select the <span class="procedureTerm">Communication Channels</span> tab.</li>
+                    <li value="4">Click the <span class="procedureTerm">Auto-Assign Channels</span> button to automatically assign communication channel numbers to all of the connected drives.</li>
+                    <li value="5">Optional. Review the changes that were made to the communication channel numbers assigned to the drives.</li>
+                    <li class="noBulletLevel1">In the <span class="procedureTerm">Message Log</span>, a message shows the number of drives for which the assigned communication channel numbers changed. For communication channel numbers that have changed but must be committed to the memory of the controller, the <span class="procedureTerm">Communication Channels Editor</span> shows each of these numbers with an asterisk.</li>
+                    <li value="6">To commit the communication channel numbers to the <span class="AerotechVariablesHyperWire">HyperWire</span> drives, do one of the steps that follow. You can refer to the <span class="procedureTerm">Message Log</span> to see the operations that occur. The <span class="procedureTerm">Message Log</span> shows a message after <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> successfully commits the communication channel numbers.</li>
+                    <ul class="disc">
+                        <li value="1">If a dialog comes into view and tells you to commit the communication channel numbers, click <span class="procedureTerm">Yes</span>.</li>
+                        <li value="2">Click <span class="procedureTerm">Commit</span>.</li>
+                    </ul>
+                    <li class="noBulletLevel1">
+                        <p>Now the communication channel numbers are applied and they are saved if you reset the drives.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="MCDropDown_DropdownTopMargin_0"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_375694900_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+               TO MANUALLY&#160;ASSIGN COMMUNICATION&#160;CHANNEL&#160;NUMBERS
+            </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_375694900_2" style="display: none;">
+                <ol>
+                    <li class="TopMargin" value="1">Open <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>.</li>
+                    <li value="2">On the <span class="procedureTerm">Controller</span> menu, select <span class="procedureTerm"><span class="AerotechVariablesFeature_DriveConfiguration">Drive Configuration</span></span>. The <span class="procedureTerm"><span class="AerotechVariablesFeature_DriveConfiguration">Drive Configuration</span></span> dialog connects to the <span class="AerotechVariablesHyperWire">HyperWire</span> network and identifies all of the connected drives.</li>
+                    <table style="mc-table-style: url('Resources/TableStyles/Warning.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle-Warning" cellspacing="0">
+                        <col style="width: 50px;" class="TableStyle-Warning-Column-Column1" />
+                        <col class="TableStyle-Warning-Column-Column2" />
+                        <tbody>
+                            <tr class="TableStyle-Warning-Body-Body1">
+                                <td class="TableStyle-Warning-BodyB-Column1-Body1">
+                                    <p>
+                                        <img src="Resources/Images/Common/Symbol_Warning.png" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-Warning-BodyA-Column2-Body1">
+                                    <p><span class="warning">WARNING:</span>&#160;When you open the <span class="AerotechVariablesFeature_DriveConfiguration">Drive Configuration</span> dialog, <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> disables all of the enabled axes and stops all of the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> programs that are running. It also stops programs that monitor safety-type conditions.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <li value="3">In the <span class="procedureTerm"><span class="AerotechVariablesFeature_DriveConfiguration">Drive Configuration</span></span> dialog, select the <span class="procedureTerm">Communication Channels</span> tab.</li>
+                    <li value="4">In the <span class="procedureTerm">Communication Channels Editor</span>, select a <span class="AerotechVariablesHyperWire">HyperWire</span> drive for which you want to assign a communication channel number.</li>
+                    <li value="5">Double-click the <span class="bold">Channel</span> box.</li>
+                    <li value="6">Do one of the steps that follow.</li>
+                    <ul class="disc">
+                        <li value="1">If the drive requires only one communication channel number, type a new number in the <span class="procedureTerm">Channel</span> box.</li>
+                        <li value="2">If the drive requires a range of communication channel numbers that occur in a sequence, type the first number of the range that you want to assign in the <span class="procedureTerm">Channels</span> box.</li>
+                    </ul>
+                    <li value="7">Press the <span class="procedureTerm">Enter</span> key. For communication channel numbers that have changed but must be committed to the memory of the controller, the <span class="procedureTerm">Communication Channels Editor</span> shows each of these numbers with an asterisk.</li>
+                    <li value="8">Repeat <span class="bold">Steps</span> <span class="bold">4</span> through <span class="bold">7</span> for the other <span class="AerotechVariablesHyperWire">HyperWire</span> drives.</li>
+                    <li value="9">To commit the communication channel numbers to the <span class="AerotechVariablesHyperWire">HyperWire</span> drives, click <span class="procedureTerm">Commit</span>. You can refer to the <span class="procedureTerm">Message Log</span> to see the operations that occur. The <span class="procedureTerm">Message Log</span> shows a message after <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> successfully commits the communication channel numbers. Now the communication channel numbers are applied and they are saved if you reset the drives.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="MCDropDown_DropdownTopMargin_0">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_375694900_3" onclick="FMCDropDown( this ); return false;" name="kanchor2711"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Troubleshooting Communication Channel Numbers</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_375694900_3" style="display: none;">
+                <p>If <span class="AerotechVariablesHyperWire">HyperWire</span> drives have the same communication channel number or if a multi-axis <span class="AerotechVariablesHyperWire">HyperWire</span> drive has a range of communication channel numbers that do not occur in a sequence, <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> identifies these numbers by putting a red border around the <span class="procedureTerm">Channel</span> or <span class="procedureTerm">Channels</span> boxes that contain them. You must resolve these errors before you can commit the communication channel numbers to the drives. </p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Communication Channel Numbers Problems and Solutions</p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+                    <col style="width: 480px;" class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 480px;" class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                        Problems
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                        Solutions
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Two or more <span class="AerotechVariablesHyperWire">HyperWire</span> drives have the same communication channel number. </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Make sure that all of the <span class="AerotechVariablesHyperWire">HyperWire</span> drives have unique communication channel numbers. Then commit the communication channel numbers to the drives. Refer to the <span class="bold">To Automatically Assign Communication Channel Numbers</span> or the <span class="bold">To Manually Assign Communication Channel Numbers</span> procedure in this topic.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>One or more multi-axis <span class="AerotechVariablesHyperWire">HyperWire</span> drives have a range of communication channel numbers that do not occur in a sequence. As a result, the <span class="procedureTerm">Message Log</span> of the <span class="procedureTerm">Drive Configuration</span> dialog shows a message that has a yellow warning icon.</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Make sure that each multi-axis <span class="AerotechVariablesHyperWire">HyperWire</span> drive has a range of communication channel numbers that occur in a sequence. Then commit the communication channel numbers to the drives. Refer to the <span class="bold">To Automatically Assign Communication Channel Numbers</span> or the <span class="bold">To Manually Assign Communication Channel Numbers</span> procedure in this topic.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Drive_Configuration_Overview.htm" class="MCXref_0">Drive Configuration Overview</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Assigning_Drive_Communication_Channels.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Assigning_Drive_Communication_Channels.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

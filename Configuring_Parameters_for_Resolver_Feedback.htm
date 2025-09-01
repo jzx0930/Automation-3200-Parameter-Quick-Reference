@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|Configuration Examples" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Configuring Parameters for Resolver Feedback</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Configuring_Parameters_for_Brush_and_Brushless_Motors.htm">Configuration Examples</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Configuring Parameters for Resolver Feedback</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor710"></a>Configuring Parameters for Resolver Feedback</h1>
+        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> The following information applies only if you are using the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_HLe">HLe</span> or <span class="AerotechVariablesDriveType_HPe">HPe</span>, the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>, or the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span> with the resolver option. This information does not apply to the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To configure parameters to use resolver feedback, you must know the following information about your system.</p>
+        <ul>
+            <li value="1">If the motor has or does not have Hall-effect switches.</li>
+            <li value="2">The maximum speed of the motor in terms of resolver revolutions per second.</li>
+        </ul>
+        <table class="TableStyle_Note" style="mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note:</span> If the <span class="procedureTerm">Commutation Initialization</span> setting of the <a href="Parameters/ResolverSetup.html">ResolverSetup</a> parameter is set to <span class="procedureTerm">Initialize Using Resolver</span>, then you must determine the commutation offset of the resolver. Refer to <a href="Parameters/CommutationOffset.html"><span class="AerotechVariablesParameter_4">CommutationOffset</span></a> parameter for more information. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To configure parameters to use resolver feedback</h4>
+        <ol>
+            <li value="1">You must correctly set the various fields of the <a href="Parameters/ResolverSetup.html">ResolverSetup</a> parameter for your system.
+				<ul style="list-style-type: disc;"><li value="1">Set the <span class="procedureTerm">Resolution Select</span> setting based on the maximum speed of the motor. Refer to the documentation of this setting for the maximum allowable speed for a given resolution.</li><li value="2">If you plan to use the resolver feedback to initialize the motor commutation, <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you set the <span class="procedureTerm">Commutation Initialization</span> setting to <span class="procedureTerm">Initialize Using Resolver</span>. However, if the motor has Hall-effect switches, or if you plan to use the <a href="Automatic_Motor_Set_(auto-MSET).htm">Automatic Motor Set (Auto-MSET)</a> or <a href="Commutation_Search.htm">Commutation Search</a> methods to initialize the commutation, you can use the <span class="procedureTerm">Initialize Using Hall Signals</span> setting.
+					</li></ul></li>
+            <li value="2">Next, use the <span class="procedureTerm">Axis Parameter Calculator</span> in <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> to configure the remaining axis parameters. Refer to <a href="CM_Using_Calculators_to_Set_Parameters.htm">Using Calculators to Set Parameters</a> for more information.</li>
+            <li class="noBulletLevel1">For the <span class="procedureTerm">Position Feedback</span> selection, select <span class="procedureTerm">Other Encoder</span>. For the resolution, enter the value from the <span class="bold">Encoder Resolution Settings and Values</span> table that corresponds to the <span class="procedureTerm">Resolution Select</span> setting that you selected in <span class="bold">Step 1</span>.</li>
+            <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Encoder Resolution Settings and Values</p>
+            <li class="noBulletLevel1">
+                <table class="TableStyle-Basic" style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                    <col style="width: 200px;" class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 200px;" class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Resolution Select</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Encoder Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p>Dynamic Resolution</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>65,536</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p>16-bit Fixed Resolution</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>65,536</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p>14-bit Fixed Resolution</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>16,384</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                <p>12-bit Fixed Resolution</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>4,096</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li value="3">Accept the values from the <span class="procedureTerm">Axis Parameter Calculator</span>.            </li>
+            <li value="4">Set the <a href="Parameters/PositionFeedbackType.html">PositionFeedbackType</a> parameter (and <a href="Parameters/VelocityFeedbackType.html">VelocityFeedbackType</a>, if applicable) to <span class="procedureTerm">Resolver</span>.
+            </li>
+            <li value="5">Save these parameter settings and reset the controller.  </li>
+            <li value="6">Use the <a href="DS_Feedback_Tuning.htm">Feedback Tuning</a> utility in <span class="AerotechVariablesApp_DigScope">Digital Scope</span> to set the <a href="Parameters/ResolverReferenceGain.html">ResolverReferenceGain</a> parameter.            </li>
+        </ol>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Methods of Initializing Commutation of Brushless Motors with Resolver Feedback</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');width: 650px;" cellspacing="0" class="TableStyle-Basic">
+            <col style="width: 160px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 100px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">MotorType Parameter Setting</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Commutation Initialization Setting of ResolverSetup</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Commutation Initialization</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Applicable To</th>
+                </tr>
+            </thead>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="procedureTerm">AC Brushless<br /> (Auto-MSET)</span>
+                    </p>
+                    <p>or</p>
+                    <p><span class="procedureTerm">AC Brushless<br /> (Commutation Search)</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>NA</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Completes an <a href="Automatic_Motor_Set_(auto-MSET).htm">Auto-MSET</a> or <a href="Commutation_Search.htm">Commutation Search</a> sequence in the same manner as what would be done for an AC brushless motor with an encoder. The resolver does not have an effect on motor commutation.</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Any AC brushless motor.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="procedureTerm">AC Brushless <br />(Hall-Effect Switches)</span>
+                        <br />
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><span class="procedureTerm">Initialize Using Resolver</span>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Motor commutation is initialized based on the resolver feedback. If you use these settings, make sure that you set the CommutationOffset parameter to the correct value. </p>
+                    <p>To calculate the value of this parameter, refer to the <span class="bold">Resolver Feedback</span> procedure in the <span class="bold">Determining the Commutation Offset for an EnDat Encoder, Resolute Encoder, Analog Hall Feedback, or Resolver Feedback</span> section of the <a href="Parameters/CommutationOffset.html">CommutationOffset</a> parameter.</p>
+                    <p> The Hall-effect switches do not have an effect on motor commutation.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Any AC brushless motor with resolver feedback.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="procedureTerm">AC Brushless <br />(Hall-Effect Switches)</span>
+                        <br />
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><span class="procedureTerm">Initialize Using Hall Signals</span>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Motor commutation is initialized based on the Hall-effect switches. The resolver does not have an effect on motor commutation.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Any AC brushless motor with Hall-effect switches.</p>
+                </td>
+            </tr>
+        </table>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Configuring_Parameters_for_Brush_and_Brushless_Motors.htm">Configuring Parameters for Brush and Brushless Motors</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Configuring_Parameters_for_Resolver_Feedback.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Configuring_Parameters_for_Resolver_Feedback.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

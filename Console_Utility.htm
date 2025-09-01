@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Console Interface" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" class="" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Console Interface Overview</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink selected" href="#">Console Interface</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Console Interface</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2790"></a><span class="AerotechVariablesApp_Console">Console</span> Interface Overview</h1>
+        <p><span class="AerotechVariablesApp_Console">Console</span> is a command line interface used for system hardware debugging. It reads commands from text files, similar to batch files, so that you can execute multiple <span class="AerotechVariablesApp_Console">Console</span> commands as if they were one command. Specify a silent or block-terminal mode to deliver outputs to a file instead of the terminal.</p>
+        <p>Metric units (millimeters or millimeters/second) are the default unit for the controller's velocity and acceleration parameters. Commands and parameters in the Console utility are not case sensitive. </p>
+        <p class="img">
+            <img src="Resources/Images/Image_Console_Utility.png" />
+        </p>
+        <table class="TableStyle_Note" style="mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note</span>: You can concurrently run the Console utility with other applications. However, Console will allow you corrupt the motion being commanded by another application, so care must be exercised.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4145011992_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />The Console Prompt</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4145011992_0" style="display: none;">
+                <p>For the commands that apply only to an axis or a task (for example, PARMGET&#160;A displays all axis parameters), the command interface uses the default axis or task. The active task and axis is indicated in the prompt at the command line. Use the TK and AX commands to change the task or axis. View the following series of commands for examples.</p>
+                <table cellspacing="0" class="TableStyle-Basic" style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');">
+                    <col style="width: 160px;" class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 479px;" class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Prompt and Command</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Defaults after Command Executed</th>
+                        </tr>
+                    </thead>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>&lt;TK1\AX1&gt;</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Task 1, Axis 1</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>&lt;TK1\AX1&gt; TK 4</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Select Task 4</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>&lt;TK4\AX1&gt; AX 16</p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Select Axis 16</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>&lt;TK4\AX16&gt; TK&#160;&#160;</p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>No task change</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>&lt;TK4\AX16&gt; AX</p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>No axis change</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>&lt;TK4\AX16&gt;</p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Task 4, Axis 16</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4145011992_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Determining Your Axis Configuration</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4145011992_1" style="display: none;">
+                <p>Select the physical axis index with the AX command (AX &lt;axis index&gt;).</p>
+                <p>Use the INFO command to display the axis standard and auxiliary feedback type and channel assignment.</p>
+                <p class="img">
+                    <img src="Resources/Images/Image_Console_Axis_Info.png" />
+                </p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4145011992_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Entering Commands in Console</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4145011992_2" style="display: none;">
+                <p>The command line is the line the cursor is on, or the line the user is currently entering text on. Alphabetic keystrokes (a to z, 0 to 9, "-", "+", ".") result in the corresponding character being echoed on the command line and the cursor moving one character to the right. Non-alphabetic keystrokes (i.e. "$","#", Esc) are considered special characters and may or may not be echoed. Also, the characters "_", "\", and ":" are considered alphabetic and may be used in file names. The case of alphabetic characters are ignored, lowercase characters are echoed back as uppercase. Parameter names may be entered in any case in Console. After the command is fully entered, press the enter (return) key to execute the command.</p>
+                <p>As the user types, the Status Screen will display all Console commands that match the current text on the command line. For example, if TSK has been typed on the command line, the status line will display: "TSKASSOC, TSKDEASSOC, TSKINFO..." which are all valid Console commands starting with TSK. If you press "?" it will scroll through the help information on these commands.</p>
+                <p>If the text on the line matches only one valid command, then a one-line description of the command appears to the right of the command. For example, if TSKA is on the command line, then "TSKASSOC - Associates program with current task..." appears on the task line. Pressing the "?" key at this point will display the full help text for the command in the help screen.</p>
+                <p>After the text on the command line matches one valid command, the user does not need to type the rest of the command. For example, "TSKA", "TSKASS", or "TSKASSOC" are equivalent to the full command name.</p>
+                <p>In most cases, if the user suppliess an invalid parameter and presses return, Console will reject the return (not execute anything) and display an error message on the status bar. For example, if the user types "AX  44" and hits return, Console will ignore the return key because 44 is not a valid axis.</p>
+                <p class="img">
+                    <img src="Resources/Images/Image_Console_Invalid_Command.png" />
+                </p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4145011992_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Console Command Line Options</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4145011992_3" style="display: none;">
+                <p>The following table lists the command line options for the Console utility where # is a number and filespec is a valid path and file name. When typing a number of options on the same command line, precede each by a space.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Console Command Line Options</p>
+                <table cellspacing="0" class="TableStyle-Basic" style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');caption-side: top;width: 650px;">
+                    <col style="width: 90px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">Option</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description</th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>D###</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>UNIDEX Device Identification (where ### is 3200)</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>C#</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Card # (where # is 1 – 4)</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>I<span class="span_5">filespec</span></p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Playback file at startup in continuous mode</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>J<span class="span_5">filespec</span></p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Playback file at startup in step mode</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>K&#160;</p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Shut down the <span class="AerotechVariablesSimpleName_A3200">A3200</span></p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>O<span class="span_5">filespec</span></p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Startup with OUTPUTON command active (echo mode)</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>P<span class="span_5">filespec</span></p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Startup with OUTPUTON command active (block terminal 
+ mode)</p>
+                        </td>
+                    </tr>
+                </table>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>EXAMPLE</h4><pre class="indentLevel1">Console -JSetup.Ply; run PLAY file commands in Setup.Ply file in step mode</pre>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4145011992_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Special Keys in Console</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4145011992_4" style="display: none;">
+                <p>The Console command line interface uses these keys as normal keyboard keys: alphabet, 0 to 9, +, -, _, :, \, and (.). Other keys are considered special keys, as listed in the following table. </p>
+                <p>All other keys are ignored and not recognized by the Console utility. For example, the } (curly bracket) key has no special meaning and is ignored. However, the " (double quotes) is used to ignore recognition of some special characters by the Console application when specifying string variable values or strings to be compiled.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Console Special Keys</p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');width: 650px;" cellspacing="0" class="TableStyle-Basic">
+                    <col style="width: 90px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Key</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description</th>
+                        </tr>
+                    </thead>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Enter</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Execute the command line. After execution, move down a line and open new prompt line.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Esc</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Discontinue the multiple screen output or discontinue monitoring (returns user to command prompt)</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>&#8592;</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Move cursor one character to left in the command line</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>&#8594;</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Move cursor one character to right in the command line</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>­­­­­&#8593;</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Recall the previous command from the command buffer (erases active command line)</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>&#8595;</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Cycle thru the next command line in the command buffer (erases active command line)</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Home</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Move cursor to beginning of command line</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>End</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Move cursor to end of command line</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Insert</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Toggles insert (overstrike) mode</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Delete </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Deletes character at cursor</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Back Space</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Deletes the character to the left of the cursor and moves the cursor back one space to the left</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>PageUp</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Make the previous "PLAY" command the active command (erases active command line)</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>?</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Retrieve help for the active command line</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>"</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>All ASCII characters between "" are NOT interpreted as special characters.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>!</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>As first character in line, prefixes a direct memory access command. (Refer to Command Summary.)</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Identifying_Errors_in_Applications.htm">Identifying Errors in <span class="AerotechVariablesSimpleName_A3200">A3200</span> Applications</a>
+        </p>
+        <p class="relatedTopic"><a href="Motion_Composer_Suite.htm"><span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>Suite</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Console_Utility.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Console_Utility.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Configuration Manager|Working with Parameters|Using Calculators to Set Parameters" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Using the Motor Phasing Calculator</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CM_Configuration_Manager_Overview.htm">Configuration Manager</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CM_Working_with_Parameters.htm">Working with Parameters</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CM_Using_Calculators_to_Set_Parameters.htm">Using Calculators to Set Parameters</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Using the Motor Phasing Calculator</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Using the <a name="kanchor2738"></a>Motor Phasing Calculator</h1>
+        <p>Use the Motor Phasing Calculator to calculate the correct values for the <a href="Parameters/CommutationOffset.html" class="MCXref_0">CommutationOffset Parameter</a>, <a href="Parameters/FeedbackSetup.html" class="MCXref_0">FeedbackSetup Parameter</a>, and <a href="Parameters/ServoSetup.html" class="MCXref_0">ServoSetup Parameter</a>. By calculating the values of these axis parameters, you can compensate for motor wiring problems. This calculator is available only when you are using an AC Brushless (Auto-MSET) motor or an AC Brushless (Hall-Effect Switches) motor.</p>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_1659890655_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                Figure: <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> — Motor Phasing Calculator</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1659890655_0" style="display: none;">
+                <p class="img">
+                    <img src="Resources/Images/Image_CM_Calculator_MotorPhasing_A.png" alt="" title="" class="ScreenshotBorder" />
+                </p>
+            </div>
+        </div>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To Use the Motor Phasing Calculator</h4>
+        <ol>
+            <li value="1">Make sure that it is safe for motion to occur on the selected axis.
+			<ul class="disc"><li value="1">Make sure that the selected axis is away from any end-of-travel limits or software limits.</li><li value="2">Make sure that there is nothing blocking the selected axis.</li></ul></li>
+            <li value="2">Open the Motor Phasing Calculator in <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>. Do one of the following.</li>
+            <ul class="disc">
+                <li value="1">On the <span class="procedureTerm">Tools</span> menu, select <span class="procedureTerm">Other Calculators</span> &#8594; <span class="procedureTerm">Motor Phasing Calculator</span>. Make sure that the correct <span class="procedureTerm">Axis</span> is selected in the calculator.</li>
+                <li value="2">In the <span class="procedureTerm">Viewer</span>, select one of the following parameters. Then go to the <span class="procedureTerm">Editor</span> pane and click the <span class="procedureTerm">Calculator</span> button.</li>
+                <ul style="list-style-type: square;">
+                    <li value="1"><a href="Parameters/CommutationOffset.html" class="MCXref_0">CommutationOffset Parameter</a>
+                    </li>
+                </ul>
+                <ul style="list-style-type: square;">
+                    <li value="1"><a href="Parameters/FeedbackSetup.html" class="MCXref_0">FeedbackSetup Parameter</a>
+                    </li>
+                </ul>
+                <ul style="list-style-type: square;">
+                    <li value="1"><a href="Parameters/ServoSetup.html" class="MCXref_0">ServoSetup Parameter</a>
+                    </li>
+                </ul>
+            </ul>
+            <li value="3">In the <span class="procedureTerm">Options</span> section of the Motor Phasing Calculator, make sure that the value of the <span class="procedureTerm">Test Current</span> is correct. </li>
+            <li class="noBulletLevel1">The Motor Phasing Calculator automatically sets the <span class="procedureTerm">Test Current</span> to 50% of the value of the <a href="Parameters/AverageCurrentThreshold.html">AverageCurrentThreshold</a> axis parameter. If the Motor Phasing Calculator fails to calculate results, the <span class="procedureTerm">Test Current</span> value might be too low.</li>
+            <li value="4">Click the <span class="procedureTerm">Start</span> button <img src="Resources/Images/Icons/Run16x16.png" />. While the axis travels one full electrical cycle, the calculator collects data and calculates the parameter results.</li>
+            <li value="5">Examine the calculation results to see if your parameters require changes.</li>
+            <ul class="disc">
+                <li value="1">If parameter changes are required, the calculator shows the results for the parameters in the <span class="procedureTerm">New Value</span> section of the <span class="procedureTerm">Results</span> pane.</li>
+                <li value="2">If parameter changes are not required, the calculator shows a message in the <span class="procedureTerm">Results</span> pane that tells you the motor is phased correctly and no changes are required.</li>
+                <div class="MCDropDown_DropdownTopMargin_0"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_1659890655_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                        Figure: Motor Phasing Calculator — No Changes Required
+                    </a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_1659890655_1" style="display: none;">
+                        <p class="img">
+                            <img src="Resources/Images/Image_CM_Calculator_MotorPhasing_NoChangesRequired_A.png" class="ScreenshotBorder" />
+                        </p>
+                    </div>
+                </div>
+            </ul>
+            <li value="6">When you are done with the calculation, click <span class="procedureTerm">OK</span>.</li>
+        </ol>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To Use Advanced Options</h4>
+        <p>You can use the <span class="procedureTerm">Advanced Options</span> of the calculator to increase the effectiveness of the Motor Phasing calculation. Make sure that you use the default options for the first time that you use the Motor Phasing Calculator on an axis. If the results that you get from using the default options are not satisfactory, you can specify a larger <span class="procedureTerm">Step Interval</span> or smaller <span class="procedureTerm">Step Size</span> to get more accurate results.</p>
+        <ol>
+            <li value="1">In the <span class="procedureTerm">Options</span> section of the Motor Phasing Calculator, select the <span class="procedureTerm">Use Advanced Options</span> box.</li>
+            <div class="MCDropDown_DropdownTopMargin_0"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_1659890655_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                    Figure: Motor Phasing Calculator — Advanced Options
+                </a>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_1659890655_2" style="display: none;">
+                    <p class="img">
+                        <img src="Resources/Images/Image_CM_Calculator_MotorPhasing_AdvancedOptions_A.png" class="ScreenshotBorder" />
+                    </p>
+                </div>
+            </div>
+            <li value="2">Enter a value for the <span class="procedureTerm">Step Interval</span>. This is the quantity of time, in milliseconds, that the calculator waits to let the encoder settle after the axis moves to a new angle in the electrical cycle.</li>
+            <li value="3">Enter a value for the <span class="procedureTerm">Step Size</span>. This is the number of degrees in the electrical cycle that the axis steps. If you specify a smaller value for <span class="procedureTerm">Step Size</span>, the calculator collects higher-resolution data.</li>
+            <li value="4">Click the <span class="procedureTerm">Start</span> button <img src="Resources/Images/Icons/Run16x16.png" />. The Motor Phasing Calculator uses the <span class="procedureTerm">Advanced Options</span> while it travels one full electrical cycle and collects data.</li>
+        </ol>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Approximating the Value of the CountsPerRev Parameter</h2>
+        <p>The Motor Phasing Calculator records the total number of Encoder Counts that the axis travels during one full electrical cycle. The calculator uses this number to calculate the approximate value of the <a href="Parameters/CountsPerRev.html">CountsPerRev</a> axis parameter. </p>
+        <p>If the actual value of the CountsPerRev axis parameter is significantly different from the approximate value of this parameter, the Motor Phasing Calculator shows a warning. If you see this warning, do the following.</p>
+        <ul>
+            <li value="1">Make sure that you correctly configured the CountsPerRev axis parameter while using the <span class="procedureTerm">Axis Parameter Calculator</span>. Refer to <a href="CM_Using_the_Parameter_Calculator.htm">Using the Axis Parameter Calculator</a> for more information.</li>
+            <li value="2">Refer to the hardware manual that is applicable to your motor or stage.</li>
+        </ul>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_1659890655_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                Figure: Motor Phasing Calculator — Warning Message
+            </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1659890655_3" style="display: none;">
+                <p class="img">
+                    <img src="Resources/Images/Image_CM_Calculator_MotorPhasing_WarningMessage_A.png" class="ScreenshotBorder" />
+                </p>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="CM_Using_Calculators_to_Set_Parameters.htm">Using Calculators to Set Parameters</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=CM_Using_the_Motor_Phasing_Calculator.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=CM_Using_the_Motor_Phasing_Calculator.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

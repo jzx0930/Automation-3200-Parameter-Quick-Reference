@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|EXE and DLL Files" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Callback Commands</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/BasicColumns.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">EXE and DLL Files</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Callback Commands</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor806"></a>Callback Commands</h1>
+        <p>Callback commands are special commands that execute in Windows. 
+ For example, the controller running under a real-time operating system 
+ cannot access files on the PC, so when a file access command is encountered 
+ on the controller, it pauses the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program and triggers execution of the 
+ command in the Windows environment. There is a full list of callback commands at the end of this topic. </p>
+        <p>Some callback commands include commands that display text. Because the controller cannot directly write to the display, 
+ these commands are passed to the host PC. The process is as follows.</p>
+        <ol class="ol_1">
+            <li value="1">The controller pauses execution of the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program.</li>
+            <li value="2">A callback interrupt is generated by the controller. The 
+ <span class="bold">CallbackHoldActive</span> bit of the <a href="StructsAutoGen/taskstatus0.html">TaskStatus0</a> status value is set <span class="bold">True</span>.</li>
+            <li value="3">The Communication Service, running under Windows, detects the callback interrupt and 
+ signals the controller that it received the callback interrupt. 
+ The <span class="bold">CallbackResponding</span> bit of the TaskStatus0 status value is set to <span class="bold">True</span>.</li>
+            <li class="noBulletLevel1">
+                <table style="mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 625px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">Note</span>: If this step does not occur quickly enough the controller will generate the <span class="procedureTerm">Timeout 
+ Responding to Callback</span> error. This generally indicates that no application is registered to handle the callback.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li value="4">A host application retrieves the callback data and carries out the appropriate function.</li>
+            <li value="5">Upon completion of the callback command, the host application tells the controller to continue, clearing the <span class="bold">CallbackResponding</span> 
+ bit of the TaskStatus0 status value.</li>
+            <li value="6">The controller continues execution of the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program.</li>
+            <li class="noBulletLevel1">
+                <table style="mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 625px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">Note</span>: Callback commands set a task error for most error conditions. But, for some file-related errors the command sets the <a href="Info_Variables.htm" class="MCXref_0">Info Variables</a> and does not set a task error. The Help topic for the callback command tells you if  information is returned in the info variables. If the topic does not give information about info variables, then the command always sets a task error for error conditions. </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ol>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Related TaskStatus0 Status Value Bits</p>
+        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/BasicColumns.css');margin-left: 0;margin-right: auto;" class="TableStyle-BasicColumns" cellspacing="0">
+            <col class="TableStyle-BasicColumns-Column-Column1" />
+            <col class="TableStyle-BasicColumns-Column-Column2" />
+            <tr valign="top" class="TableStyle-BasicColumns-Body-Body1">
+                <td class="TableStyle-BasicColumns-BodyE-Column1-Body1">
+                    <p class="tableHeaderLeft">CallbackHoldActive</p>
+                </td>
+                <td class="TableStyle-BasicColumns-BodyD-Column2-Body1">
+                    <p><span class="bold">True</span> if the controller is waiting on the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program line for the host application to handle the callback. The host application may or may not have received the callback data.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-BasicColumns-Body-Body1">
+                <td class="TableStyle-BasicColumns-BodyE-Column1-Body1">
+                    <p class="tableHeaderLeft">CallbackResponding</p>
+                </td>
+                <td class="TableStyle-BasicColumns-BodyD-Column2-Body1">
+                    <p><span class="bold">True</span> if the host application running on the PC received the callback data but did not finish handling the callback.</p>
+                </td>
+            </tr>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Callback Commands</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');">
+            <col style="width: 110px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 529px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 4px;padding-right: 2px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Command</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 4px;padding-right: 2px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description</th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ADDPROGRAM_Command.html">ADDPROGRAM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Compiles and adds an AeroBasic program to the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CALLBACK_Function.html">CALLBACK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Raise a custom callback that is handled by the C or .NET library.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CALLDLL_Function.html">CALLDLL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Calls a function in a custom dynamic link library (DLL).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CLOSEDLL_Command.html">CLOSEDLL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Closes a .dll file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/COMMINIT_Command.html">COMMINIT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the communications settings on the specified serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/COMMSETTIMEOUT_Command.html">COMMSETTIMEOUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Defines the timeout on the serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATACOLLECT%20ITEM_Command.html">DATACOLLECT ITEM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures one data item to collect.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATACOLLECT%20ITEM%20RESET_Command.html">DATACOLLECT ITEM RESET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Erases the data item configuration.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATACOLLECT%20START_Command.html">DATACOLLECT START</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Starts real-time data collection. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATACOLLECT%20STOP_Command.html">DATACOLLECT STOP</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Stops the real-time data collection that was triggered by the DATACOLLECT START command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ERRORDECODE_Function.html">ERRORDECODE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Converts a controller error into a string representation of that error.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/EXE_Command.html">EXE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Runs an executable file from an AeroBasic program. The AeroBasic program continues and does not wait for the executable file to complete. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/EXEMODAL_Command.html">EXEMODAL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Runs an executable file from an AeroBasic program. The AeroBasic program waits for the executable file to complete. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILECLOSE_Command.html">FILECLOSE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Closes a data file or serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEEXISTS_Function.html">FILEEXISTS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Verifies that the file you specified exists.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEOPEN_Function.html">FILEOPEN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Opens a data file or serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEREAD_Function.html">FILEREAD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads data from a file or serial port into variables on the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEREADARRAYBINARY_Function.html">FILEREADARRAYBINARY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads data from a file or serial port into variables on the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEREADINI_Function.html">FILEREADINI</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads data from a formatted .ini file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILESIZE_Function.html">FILESIZE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the size, in bytes, of a file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEWRITE_Command.html">FILEWRITE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes data to a file or serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEWRITEARRAY_Command.html">FILEWRITEARRAY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes an array of global double variables or global string variables to a file or serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEWRITEARRAYBINARY_Function.html">FILEWRITEARRAYBINARY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes data to a file or serial port from variables on the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEWRITEINI_Command.html">FILEWRITEINI</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes data to a formatted .ini file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEWRITENOTERM_Command.html">FILEWRITENOTERM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes data to a file or serial port without &lt;CR&gt; and &lt;LF&gt; terminators.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/IMMEDIATE%20EXECUTE_Command.html">IMMEDIATE EXECUTE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Compiles and executes an immediate command on a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/LOADCALFILE_Command.html">LOADCALFILE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Downloads and activates a specified axis calibration file or galvo power correction file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/LOADCAMTABLE_Command.html">LOADCAMTABLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Loads a camming table from a file on the PC.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MAKESTRING_Function.html">MAKESTRING</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Creates a string by using format codes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20ACCEPT_Function.html">NETWORK ACCEPT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Accepts an incoming client connection on the specified server socket, which completes the connection to the remote client.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20AUTOFLUSH_Command.html">NETWORK AUTOFLUSH</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on or turns off autoflush.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20CLOSE_Command.html">NETWORK CLOSE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Closes a specified server socket or connection, or closes all open server sockets and connections.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20CONNECT_Function.html">NETWORK CONNECT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Connects to a TCP/IP socket on a remote machine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20FLUSH_Command.html">NETWORK FLUSH</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sends the data in the output buffer to the remote machine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20LISTEN_Function.html">NETWORK LISTEN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Creates a server socket that accepts incoming client connections on the specified TCP/IP port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20PENDING%20CLIENT_Function.html">NETWORK PENDING CLIENT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Determines if there is a client-connection request that is waiting to be accepted. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20PENDING%20OCTETS_Function.html">NETWORK PENDING OCTETS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Returns the number of bytes that are available for reading from the connection stream.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20READ_Function.html">NETWORK READ</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads the data from the connection stream.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20TIMEOUT_Command.html">NETWORK TIMEOUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the timeout period for the read and write operations on the specified connection.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20WRITE_Command.html">NETWORK WRITE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes the specified data to the connection stream. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/OPENDLL_Function.html">OPENDLL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Opens a .dll file and assigns it a reference number.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20BUFFEREDRUN_Command.html">PROGRAM BUFFEREDRUN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Compiles, loads, and runs a program in <a href="%25ROOT%25/Queue_Mode_Overview.htm">queue mode</a> on a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20LOAD_Command.html">PROGRAM LOAD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Compiles and adds an AeroBasic program to the controller, and then associates the program with a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20RUN_Command.html">PROGRAM RUN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Compiles, loads, and runs an AeroBasic program in another task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/READCONFIGSTRING_Function.html">READCONFIGSTRING</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads the file path of an active configuration file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/READPARM_Function.html">READPARM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads a parameter from a parameter file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/READPARMSTRING_Function.html">READPARMSTRING</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads a string parameter from a parameter file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SCOPELTTRIG_Command.html">SCOPELTTRIG</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Triggers a loop transmission sequence from within a program.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SCOPEOPEN_Command.html">SCOPEOPEN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Starts the <span class="AerotechVariablesApp_DigScope">Digital Scope</span> application.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/WRITEPARM_Command.html">WRITEPARM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes a parameter to a parameter file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/WRITEPARMSTRING_Command.html">WRITEPARMSTRING</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes a string parameter to a parameter file.</p>
+                </td>
+            </tr>
+        </table>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Callback_Timeouts.htm">Callback Timeouts</a>
+        </p>
+        <p class="relatedTopic"><a href="Errors/Callbacks_Category.html">Callback Error Messages</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Callback_Commands.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Callback_Commands.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

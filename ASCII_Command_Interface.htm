@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>ASCII Command Interface</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">ASCII Command Interface</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor769"></a>ASCII Command Interface</h1>
+        <div>
+            <p>Use the ASCII command interface to send ASCII text strings to the controller and to do actions that include commanding motion and retrieving diagnostic information. The  ASCII command interface receives ASCII text strings over a TCP/IP connection. The following sections show you how to configure the ASCII command interface. </p>
+            <p>After you configure the interface to receive ASCII text strings, you must make or download a program&#160;(for example, PuTTY) to send ASCII text strings to the ASCII command interface through a TCP/IP connection. </p>
+            <table style="width: 650px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                <col />
+                <tbody>
+                    <tr>
+                        <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                            <p><span class="note">NOTE:</span> The ASCII&#160;command interface supports all of the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> commands.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1413827291_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />To Enable the ASCII Command Interface</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1413827291_0" style="display: none;">
+                <p>The ASCII command interface is <span class="bold">not</span> enabled by default. To enable the interface, use the following procedure.</p>
+                <div>
+                    <ol>
+                        <li value="1">In <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>, go to the <a href="Parameters/CommandSetup.html" class="MCXref_0">CommandSetup Parameter</a>.</li>
+                        <li value="2">In the <span class="procedureTerm">ASCII Command Interface Options</span> section of the <span class="procedureTerm">Editor</span> pane, select <span class="procedureTerm">Enabled</span>.</li>
+                        <li value="3">Configure the <a href="Parameters/CommandPort.html" class="MCXref_0">CommandPort Parameter</a>. </li>
+                    </ol>
+                    <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                    <p><span class="note">NOTE:</span> You must reset the controller for these changes to have an effect.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>For more information about how to configure the CommandSetup and CommandPort parameters, refer to the <span class="bold">Parameters and Interfaces</span> section of this topic.</p>
+                </div>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1413827291_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Parameters and Interfaces</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1413827291_1" style="display: none;">
+                <p>Use the CommandSetup parameter to enable the ASCII command interface. You can also configure other ASCII&#160;communication settings. Refer to <a href="Parameters/CommandSetup.html" class="MCXref_0">CommandSetup Parameter</a>. The following table shows the values of this parameter.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>CommandSetup Parameter Values</p>
+                <div>
+                    <table style="mc-table-style: url('Resources/TableStyles/Basic.css');width: 650px;margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                        <col style="width: 125px;" class="TableStyle-Basic-Column-Column1" />
+                        <col class="TableStyle-Basic-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-Basic-Head-Header1">
+                                <th class="TableStyle-Basic-HeadE-Column1-Header1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                        Parameter Value
+                    </th>
+                                <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        Description
+                    </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Basic-Body-Body1">
+                                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;text-align: center;">
+                                    <p>0x00000004</p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                    <p><span class="procedureTerm">Enabled</span> When you set the parameter to this value, the ASCII command interface listens for client connections on the CommandPort. </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Basic-Body-Body1">
+                                <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;text-align: center;">
+                                    <p>0x00010000</p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                    <p><span class="procedureTerm">Always Send EOS</span> When you set the parameter to this value, the ASCII&#160;command interface attaches the End of String (EOS) character to the end of each response that it sends from the server to the client.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>The <a href="Parameters/CommandPort.html">CommandPort</a> parameter specifies the TCP/IP port that the ASCII command interface uses to listen for incoming client connections. The ASCII command interface accepts client connections only when the <span class="AerotechVariablesSimpleName_A3200">A3200</span> SMC is running.</p>
+                    <p>The ASCII Command Character parameters control which characters the ASCII&#160;command interface uses as outputs to send information back to the client about the result of some request sent by the client.</p>
+                    <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>ASCII&#160;Command Character Parameters</p>
+                </div>
+                <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('Resources/TableStyles/Basic.css');caption-side: top;margin-left: 0;margin-right: auto;width: 650px;">
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 4px;padding-right: 2px;padding-top: 2px;padding-bottom: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        Parameter Name
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 4px;padding-right: 2px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        Description
+<![CDATA[                    ]]></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><a href="Parameters/CommandTerminatingCharacter.html">CommandTerminatingCharacter</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Specifies the ASCII character that terminates all command strings that the client sends and all return string data that the ASCII command interface returns to the client. This is the "End of String"&#160;(EOS) character.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><a href="Parameters/CommandSuccessCharacter.html">CommandSuccessCharacter</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Specifies the ASCII character that the ASCII command interface returns when a command executes successfully.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><a href="Parameters/CommandInvalidCharacter.html">CommandInvalidCharacter</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Specifies the ASCII character that the ASCII command interface returns when a command is not syntactically correct.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><a href="Parameters/CommandFaultCharacter.html">CommandFaultCharacter</a>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Specifies the ASCII character that the ASCII&#160;command interface returns when a command is formatted correctly and identified by the controller, but cannot execute successfully.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>When a command executes successfully, the ASCII command interface returns the CommandSuccessCharacter. If the ASCII command interface also returns data for that command, such as axis status or position feedback, the interface returns the information in the following order.</p>
+                <ol>
+                    <li value="1">CommandSuccessCharacter</li>
+                    <li value="2">Response Data</li>
+                    <li value="3">CommandTerminatingCharacter (EOS)</li>
+                </ol>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1413827291_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Command Sequence</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1413827291_2" style="display: none;">
+                <div>
+                    <p>The ASCII&#160;command interface supports the following command modes.</p>
+                    <ul>
+                        <li value="1">Server commands</li>
+                        <li value="2">Controller commands</li>
+                    </ul>
+                    <p>All server and controller commands must be terminated by the CommandTerminatingCharacter. This is the "End of String"&#160;(EOS) character.</p>
+                </div>
+                <p>The <span class="commandArgument">&lt;Response Character&gt;</span> argument is the single-character response code that tells you about the status of a command that executes.</p>
+                <ul>
+                    <li value="1">If a command executes successfully, the ASCII command interface returns the CommandSuccessCharacter.</li>
+                    <li value="2">If a command does not execute successfully or is not valid, the ASCII command interface returns the CommandInvalidCharacter.</li>
+                    <li value="3">If a command does not execute successfully, the ASCII command interface returns the CommandFaultCharacter.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1413827291_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Server Commands</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1413827291_3" style="display: none;">
+                <p> The ASCII command interface executes server commands as special server commands that change the behavior of the interface or retrieve information. On a controller task, the ASCII command interface does not execute these commands as <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span>.</p>
+                <p>By default, the ASCII command interface uses the Library task to execute commands. To change the task, use the ~TASK server command.</p>
+                <p> Each server command has the prefix of ~ (tilde character).</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Server Commands</p>
+                <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 662px;" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                Server Command
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>~GETVARIABLE <span class="commandArgument">&lt;variable name&gt;</span> [<span class="commandArgument">&lt;TaskID&gt;</span>]</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Use the ~GETVARIABLE&#160;command to retrieve the value of a program, task, or global variable. The <span class="commandArgument">&lt;TaskID&gt;</span> argument is optional. If you specify the <span class="commandArgument"> &lt;TaskID&gt;</span> argument, the ~GETVARIABLE command retrieves the variable on the specified task. If you do not specify the <span class="commandArgument">&lt;TaskID&gt;</span> argument, this command retrieves the variable on the current task of the client. You do not have to include the $ in the name of the variable that you retrieve.</p>
+                                <p>Different from the ~STATUS command, you can specify a <span class="commandArgument">&lt;TaskID&gt;</span> argument when you use the ~GETVARIABLE command to retrieve global variables. Using this command is the same as if you get a variable from an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program or use Variable Watch.</p>
+                                <table style="width: 650px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                                <p><span class="note">NOTE:</span> If you use this command to retrieve strings that contain <span class="commandArgument">&lt;CommandTerminationCharacter&gt;</span> characters, <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you change the <span class="commandArgument">&lt;CommandTerminationCharacter&gt;</span> to a non-printable character. </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                                <div class="codeexample"><pre xml:space="preserve">
+' The ASCII command interface ignores the &lt;TaskID&gt; argument and 
+' does not cause an error.
+~GETVARIABLE $global[5] 2
+%3.14</pre>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>~INITQUEUE [<span class="commandArgument">&lt;TaskID&gt;</span>]</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Use the ~INITQUEUE server command to initialize queue mode on a task. The <span class="commandArgument">&lt;TaskID&gt;</span> argument is optional. If you specify the <span class="commandArgument">&lt;TaskID&gt;</span> argument, the ~INITQUEUE command initializes queue mode for the specified task.  If you do not specify the <span class="commandArgument">&lt;TaskID&gt;</span> argument, this command initializes queue mode on the current task of the client. Refer to <a href="Queue_Mode_Overview.htm" class="MCXref_0">Queue Mode Overview</a>.</p>
+                                <table style="width: 650px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                                <p><span class="note">NOTE:</span> Do not issue the ~INITQUEUE command on Task 0. Task 0 is the Library task. </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                                <div class="codeexample"><pre xml:space="preserve">
+' Initializes queue mode on Task 3.
+~INITQUEUE 3
+%</pre>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>~LASTERROR</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Use the ~LASTERROR command to retrieve a string representation of the last error that occurred when the client executed a server command or a controller command. When you issue this command, the ASCII&#160;command interface only returns errors that occur when the current client executes commands. The interface does not make a report about errors that occur when other clients execute commands. At this time during the client connection, if no error has occurred the ASCII command interface returns "No Error".</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>~RESETCONTROLLER</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Use the ~RESETCONTROLLER command to reset the controller. This command has the same functionality as when you click the <span class="procedureTerm">Reset Controller</span> button <img src="Resources/Images/Icons/Reset16x16.png" /> in <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>. The ASCII command interface does not respond to this command until the reset completes.</p>
+                                <table style="width: 650px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                                <p><span class="note">NOTE:</span> Do not issue commands from other clients while the controller is resetting because the behavior of commands is not defined during this period.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>~STATUS</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Use the ~STATUS command to retrieve more than one status item at a time. This command collects information about the syntax of Axis, System, Task, and Variable categories.</p>
+                                <p>The ~STATUS server command is different from the DATACOLLECT ITEM command because it can retrieve more than one item at a time and also because it can retrieve a Variable status item. </p>
+                                <p>The required arguments are different for each of the categories. But, you can call the status items in any order.  Do not include the <span class="commandArgument">&lt;AdditionalData&gt;</span> argument unless the <span class="commandArgument">&lt;DataItem&gt;</span> that you call specifies this argument. For more information about lists for possible data items, refer to <a href="Commands/DATACOLLECT%20ITEM_Command.html" class="MCXref_0">DATACOLLECT ITEM Command</a>.</p>
+                                <p> Results are separated by spaces and returned in the same order in which you call them. For more information about syntax and examples, refer to <span class="procedureTerm">Table: ~STATUS&#160;Server Command Syntax Examples</span>.</p>
+                                <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                                <p><span class="note">NOTE:</span> In the DATACOLLECT&#160;ITEM command, all data items start with <span class="procedureTerm">DATAITEM_</span>, which is removed in the ~STATUS&#160;server command.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                                <div class="codeexample"><pre xml:space="preserve">
+' Retrieves more than one status item at a time. 
+~STATUS (X, PositionFeedback) (1, QueueStatus, 1)
+(Timer) (T01, MFO) ($global[0])
+%19.671 0 50495 100 50</pre>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>~STOPTASK [<span class="commandArgument">&lt;TaskID&gt;</span>]</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p> Use the ~STOPTASK command to stop a task and reset all of the states for that task. This command has the same functionality as when you click the <span class="procedureTerm">Stop</span> button <img src="Resources/Images/Icons/Stop16x16.png" /> in <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>. The <span class="commandArgument">&lt;TaskID&gt;</span> argument is optional.  If you specify the <span class="commandArgument">&lt;TaskID&gt;</span> argument, the ~STOPTASK command stops the specified task. If you do not specify the <span class="commandArgument">&lt;TaskID&gt;</span> argument, this command stops the current task of the client.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>~TASK <span class="commandArgument">&lt;TaskID&gt;</span></p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Use the ~TASK command to change the task on which controller commands execute. By default, controller commands execute on the Library task. If you change the executing task, the executing task changes only for that specific client. The executing tasks of other clients do not change.</p>
+                                <p>If the value that you specify for the <span class="commandArgument">&lt;TaskID&gt;</span> argument is negative, or if the value is greater than the number of possible tasks, the ASCII command interface returns the CommandInvalidCharacter. If you specify a valid value for the <span class="commandArgument">&lt;TaskID&gt;</span> argument and the specified task cannot execute commands, for example the task is in the PLCReserved state, the interface returns the CommandFaultCharacter.</p>
+                                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                                <div class="codeexample"><pre xml:space="preserve">
+' Sets the executing task to Task 3.
+~TASK 3
+%</pre>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>~VERSION</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Use the ~VERSION command to retrieve the version of the <span class="AerotechVariablesSimpleName_A3200">A3200</span> software that is running on the server. The ASCII command interface returns version information in the format of <span class="procedureTerm">MAJOR.MINOR.REVISION.BUILD</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>~STATUS&#160;Server Command Syntax Examples</p>
+                <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 222px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                Syntax
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                Example
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Axis</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p><span class="pre">~STATUS (&lt;Axis&gt;, &lt;DataItem&gt;)</span>
+                                </p>
+                                <p><span class="pre">~STATUS (&lt;Axis&gt;, &lt;DataItem&gt;, &lt;AdditionalData&gt;)</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>System</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p><span class="pre">~STATUS (&lt;DataItem&gt;)</span>
+                                </p>
+                                <p><span class="pre">~STATUS (&lt;DataItem&gt;, &lt;AdditionalData&gt;)</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Task</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p><span class="pre">~STATUS (&lt;TaskId&gt;, &lt;DataItem&gt;)</span>
+                                </p>
+                                <p><span class="pre">~STATUS (&lt;TaskId&gt;, &lt;DataItem&gt;, &lt;AdditionalData&gt;)</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Program Variable</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p><span class="pre">~STATUS (&lt;VariableName&gt;, &lt;TaskId&gt;)</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Global Variable</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p><span class="pre">~STATUS (&lt;VariableName&gt;)</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1413827291_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Controller Commands</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1413827291_4" style="display: none;">
+                <p> The syntax for controller commands is the same as the syntax for <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> code that you can write in a PGM&#160;program or execute in the Execute Command box of <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>. Controller commands execute on the Library task by default. You can use the ~TASK command to change the task on which these commands execute. Controller commands do not have character prefixes.</p>
+                <p>The blocking behavior of controller commands is the same as the blocking behavior of the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> command that the controller is executing. If the controller executes the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> command through the ASCII&#160;command interface, the blocking behavior of the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> command is the same as if the controller executes the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> command in a PGM&#160;program. After the controller executes the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> command through the ASCII command interface, the interface returns the response character and can then accept more commands from the client.</p>
+                <div class="example">
+                    <p class="For_example_Head">For Example</p>
+                    <p>The <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span>&#160;<a href="Commands/HOME_Command.html">HOME</a> command blocks until you home the axis. If you issue HOME&#160;X through the ASCII&#160;command interface, the interface does not return the response character to the client until the home sequence completes.</p>
+                </div>
+                <p>To constantly retrieve status information while doing blocking moves, connect one more client to the ASCII command interface and use that client to continuously request status information.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Controller Command Examples</h4>
+                <p>Enables Axis X.</p>
+                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                <div class="codeexample"><pre xml:space="preserve">
+ENABLE X
+%</pre>
+                </div>
+                <p>When a controller command executes successfully, the ASCII&#160;command interface returns the CommandSuccessCharacter. If the ASCII command interface also returns data for that command, such as axis status or position feedback, the interface returns the information in the following order.</p>
+                <ol>
+                    <li value="1">CommandSuccessCharacter</li>
+                    <li value="2">Response Data</li>
+                    <li value="3">CommandTerminatingCharacter (EOS)</li>
+                </ol>
+                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                <div class="codeexample"><pre xml:space="preserve">
+$glob0 = 75
+%
+$glob0
+%75</pre>
+                </div>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1413827291_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Command Examples</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1413827291_5" style="display: none;">
+                <p>In the following examples, the ASCII Command Character parameters and axis names on the controller use default values. </p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Example String Sequences with Responses</p>
+                <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 215px;" class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 200px;" class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                Example
+                            </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                Command Sent from Client
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                Response Sent from ASCII Interface to Client
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Valid <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> syntax </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="pre">ENABLE X&lt;LF&gt;</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p><span class="pre">%</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Invalid <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> syntax</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="pre">ENABLE&lt;LF&gt;</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p><span class="pre">!</span> <![CDATA[ ]]></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Task Error</p>
+                                <p>(If Axis X is disabled) </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="pre">HOME X&lt;LF&gt;</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p><span class="pre">#</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p> Request error information</p>
+                                <p>(If a task error previously occurred)</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="pre">~LASTERROR&lt;LF&gt;</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p><span class="pre">%The axis is not enabled.</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p> Request error information</p>
+                                <p>(If no error has previously occurred)</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="pre">~LASTERROR&lt;LF&gt;</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p><span class="pre">%No Error</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Invalid task index</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="pre">~TASK 42&lt;LF&gt;</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p><span class="pre">!</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Disabled task</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="pre">~TASK&#160;17&lt;LF&gt;</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p><span class="pre">#</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Returning a value</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="pre">AXISSTATUS (X, DATAITEM_PositionFeedback)&lt;LF&gt;</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p><span class="pre">%75</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Retrieving the software version</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p><span class="pre">~VERSION&lt;LF&gt;</span>
+                                </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p><span class="pre">%4.02.000.0044</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=ASCII_Command_Interface.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=ASCII_Command_Interface.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

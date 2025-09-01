@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Getting Started|Getting Started" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" class="INtime_MasterPage" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Analyzing A3200 Performance</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Getting_Started.htm">Getting Started</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Getting_Started.htm">Getting Started</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Optional: Analyzing A3200 Performance</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor64"></a><a name="kanchor65"></a><a name="kanchor66"></a><a name="kanchor67"></a><a name="kanchor68"></a><a name="kanchor69"></a>Analyzing A3200 Performance</h1>
+        <p>To get real-time controller performance, the
+        <span class="AerotechVariablesSimpleNameLong_Auto3200">Automation 3200</span> runs with Windows in the
+        <span class="AerotechVariablesROS_Company">TenAsys</span> <span class="AerotechVariablesROS_Name">INtime</span> real-time operating system. The
+        <span class="AerotechVariablesSimpleName_A3200">A3200</span> runs on a PC. Thus controller performance, like general Windows performance, depends
+        on the PC hardware configuration and the software configuration. Both the wide variety
+        of available PCs and the different system configurations of those PCs make it important
+        for you to analyze your system before you use the 
+        <span class="AerotechVariablesSimpleName_A3200">A3200</span>. You can also analyze
+        the
+        <span class="AerotechVariablesSimpleName_A3200">A3200</span> controller software.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Analyzing PC Performance</h2>
+        <p>Use the Real-Time Performance Analyzer application to detect if your PC is or is not optimized for real-time use.
+    </p>
+        <ol>
+            <li value="1">Close all
+            <span class="AerotechVariablesSimpleName_A3200">A3200</span> applications.</li>
+            <li value="2">Shut down the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. Click <span class="procedureTerm">Start</span> &#8594; <span class="procedureTerm">All Programs</span> &#8594; <span class="procedureTerm"><span style="mc-tag-and-class: span;" class="AerotechVariablesCompanyName_Short">Aerotech</span></span> &#8594; <span class="procedureTerm"><span class="AerotechVariablesSimpleNameLong_Auto3200">Automation 3200</span></span> &#8594; <span class="procedureTerm">Shutdown <span class="AerotechVariablesSimpleName_A3200">A3200</span></span>. A black <span class="procedureTerm">Command Prompt</span> window comes into view momentarily.</li>
+            <li value="3">Open Real-Time Performance Analyzer. Click <span class="procedureTerm">Start</span> &#8594; <span class="procedureTerm">All Programs</span> &#8594; <span class="procedureTerm"><span style="mc-tag-and-class: span;" class="AerotechVariablesCompanyName_Short">Aerotech</span></span> &#8594; <span class="procedureTerm"><span class="AerotechVariablesSimpleNameLong_Auto3200">Automation 3200</span></span> &#8594; <span class="procedureTerm">Real-Time Performance Analyzer</span>.</li>
+            <li value="4">Let the application run for 30 minutes or more.</li>
+            <li value="5">Compare your results with the results that are shown in the following figures.
+If your PC is optimized for real-time use, then the <span class="procedureTerm">Real-Time Performance Analyzer</span> dialog should look almost the same as <span class="procedureTerm">Figure: Good Real-Time Performance</span>.<ol style="list-style-type: upper-alpha;"><li class="BodyText_bold" value="1">PC is Optimized for Real-Time Use</li><div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2657901629_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Good Real-Time Performance</a><div class="MCDropDownBody_0" id="MCDropDownBody_2657901629_0" style="display: none;"><img src="Resources/Images/Image_RealTimePerformanceAnalyzer_Good.png" /><p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Good Real-Time Performance</p><table style="mc-table-style: url('Resources/TableStyles/Basic.css');border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-Basic" cellspacing="0"><col style="width: 159px;" class="TableStyle-Basic-Column-Column1" /><col style="width: 159px;" class="TableStyle-Basic-Column-Column1" /><col style="width: 474px;" class="TableStyle-Basic-Column-Column1" /><thead><tr class="TableStyle-Basic-Head-Header1"><th class="TableStyle-Basic-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p><span style="font-size: 10pt;">Figure Label</span></p></th><th class="TableStyle-Basic-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p style="text-align: left;">Name</p></th><th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p><span style="font-size: 10pt;">Tick Distribution</span></p></th></tr></thead><tbody><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p><img src="Resources/Images/Common/CalloutLabel_Red_A.png" alt="" title="" /></p></td><td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p>Tick Distribution</p></td><td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p>The tick distributions are good when they are at 0.
+                                        </p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p><img src="Resources/Images/Common/CalloutLabel_Red_B.png" alt="" title="" /></p></td><td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p>Tick Information</p></td><td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p>The shortest tick and the longest tick are good when they are close to 100.</p></td></tr></tbody></table></div></div><li class="BodyText_bold" value="2">PC is Not Optimized for Real-Time Use</li><div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2657901629_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Bad Real-Time Performance</a><div class="MCDropDownBody_0" id="MCDropDownBody_2657901629_1" style="display: none;"><img src="Resources/Images/Image_RealTimePerformanceAnalyzer_Bad.png" /><p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Bad Real-Time Performance
+                        </p><table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-Basic" cellspacing="0"><col style="width: 159px;" class="TableStyle-Basic-Column-Column1" /><col style="width: 159px;" class="TableStyle-Basic-Column-Column1" /><col style="width: 490px;" class="TableStyle-Basic-Column-Column1" /><thead><tr class="TableStyle-Basic-Head-Header1"><th class="TableStyle-Basic-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p>Figure Label</p></th><th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p>Name</p></th><th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p>Tick Distribution</p></th></tr></thead><tbody><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p><img src="Resources/Images/Common/CalloutLabel_Red_A.png" alt="" title="" /></p></td><td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p>Tick Distribution</p></td><td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p>The tick distributions are bad when they are not at 0.
+                                        </p></td></tr><tr class="TableStyle-Basic-Body-Body1"><td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p><img src="Resources/Images/Common/CalloutLabel_Red_B.png" alt="" title="" /></p></td><td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p>Tick Information</p></td><td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><p>The shortest tick and the longest tick are bad when they are not close to 100.
+                                        </p></td></tr></tbody></table></div></div></ol></li>
+            <li class="noBulletLevel1">If your PC is not optimized for real-time use, refer to Optimizing
+            <span class="AerotechVariablesSimpleName_A3200">A3200</span> Performance for more information about how to optimize your PC. </li>
+        </ol>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Analyzing Controller Performance<a name="kanchor70"></a></h2>
+        <p>Use the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> to detect if the controller software is
+        or is not optimized for real-time use.
+    </p>
+        <ol>
+            <li value="1">Close all
+            <span class="AerotechVariablesSimpleName_A3200">A3200</span> applications.</li>
+            <li value="2">Open <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>. Click <span class="procedureTerm">Start</span> &#8594; <span class="procedureTerm">All Programs</span> &#8594; <span class="procedureTerm"><span style="mc-tag-and-class: span;" class="AerotechVariablesCompanyName_Short">Aerotech</span></span> &#8594; <span class="procedureTerm"><span class="AerotechVariablesSimpleNameLong_Auto3200">Automation 3200</span></span> &#8594; <span class="BodyText_bold">Configuration Manager</span>.</li>
+            <li value="3">If <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> is not already connected
+            to the
+            <span class="AerotechVariablesSimpleName_A3200">A3200</span>, select <span class="procedureTerm">Controller</span>&#160;&#8594; <span class="procedureTerm">Connect to the <span class="AerotechVariablesSimpleName_A3200">A3200</span></span>.</li>
+            <li value="4">Open the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span>. Click <span class="procedureTerm">Start</span> &#8594; <span class="procedureTerm">All Programs</span> &#8594; <span class="procedureTerm"><span style="mc-tag-and-class: span;" class="AerotechVariablesCompanyName_Short">Aerotech</span></span> &#8594; <span class="procedureTerm"><span class="AerotechVariablesSimpleNameLong_Auto3200">Automation 3200</span></span> &#8594; <span class="BodyText_bold">Status Utility</span>.</li>
+            <li value="5">In the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span>, select the <span class="procedureTerm">Controller</span> tab. </li>
+            <li value="6">Compare your results with the results that are in the figure that follows. If the
+            <span class="AerotechVariablesSimpleName_A3200">A3200</span> controller is optimized for real-time use, then the <span class="procedureTerm">Controller</span> tab in the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> will look almost the same as <span class="procedureTerm">Figure: Good</span> <span class="BodyText_bold">Status Utility</span>.</li>
+            <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2657901629_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Good <span class="AerotechVariablesApp_StatusUtility">Status Utility</span></a>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_2657901629_2" style="display: none;">
+                    <p class="img">
+                        <img src="Resources/Images/Image_StatusUtility_Good.png" class="ScreenshotBorder" />
+                    </p>
+                    <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Good <span class="AerotechVariablesApp_StatusUtility">Status Utility</span></p>
+                    <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-Basic" cellspacing="0">
+                        <col style="width: 159px;" class="TableStyle-Basic-Column-Column1" />
+                        <col style="width: 314px;" class="TableStyle-Basic-Column-Column1" />
+                        <col style="width: 520px;" class="TableStyle-Basic-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-Basic-Head-Header1">
+                                <th class="TableStyle-Basic-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>Figure Label</p>
+                                </th>
+                                <th class="TableStyle-Basic-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p style="text-align: left;">Name</p>
+                                </th>
+                                <th class="TableStyle-Basic-HeadD-Column1-Header1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p style="text-align: left;">Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Basic-Body-Body1">
+                                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                    <p style="text-align: center;"><a href="Resources/Images/Common/CalloutLabel_Red_A.png"><img src="Resources/Images/Common/CalloutLabel_Red_A.png" alt="" title="" /></a>
+                                    </p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                    <p>Communication Polling Timers</p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                    <p><span class="procedureTerm">Communication Polling Min (usec)</span> and  <span class="procedureTerm">Communication Polling Max (usec)</span> are near 100 for FireWire and near 1000 for <span class="AerotechVariablesHyperWire">HyperWire</span>.
+                                        </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Basic-Body-Body1">
+                                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>
+                                        <img src="Resources/Images/Common/CalloutLabel_Red_B.png" alt="" title="" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>Communication Activities Maximum</p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p><span class="procedureTerm">Communication Activities Max (usec)</span> is less than
+                                            35.
+                                        </p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Basic-Body-Body1">
+                                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>
+                                        <img src="Resources/Images/Common/CalloutLabel_Red_C.png" alt="" title="" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>Processor Usage Average</p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>While motion does not occur, the <span class="procedureTerm">Processor Usage Avg (%)</span> of the
+                                            <span class="AerotechVariablesSimpleName_A3200">A3200</span> is under 15%.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Basic-Body-Body1">
+                                <td class="TableStyle-Basic-BodyB-Column1-Body1" style="background-color: #ffffff;text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>
+                                        <img src="Resources/Images/Common/CalloutLabel_Red_D.png" alt="" title="" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>Internal Counters</p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyA-Column1-Body1" style="background-color: #ffffff;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>All <span class="procedureTerm">Internal Counters</span> are 0.
+                                        </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <li class="noBulletLevel1">If your controller software is not optimized for real-time use, refer
+            to Optimizing
+                <span class="AerotechVariablesSimpleName_A3200">A3200</span> Performance for information about how to optimize the controller. </li>
+        </ol>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics
+    </h3>
+        <p class="relatedTopic"><a href="Getting_Started.htm" class="MCXref_0">Getting Started</a>
+        </p>
+        <p class="relatedTopic"><a href="Optimizing_A3200_Performance.htm">Optimizing
+            <span class="AerotechVariablesSimpleName_A3200">A3200</span> Performance</a>
+        </p>
+        <p class="relatedTopic"><a href="Optimizing_Performance_in_VELOCITY_ON_Mode.htm">Optimizing Performance in VELOCITY&#160;ON&#160;Mode</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <col class="Column-Column1" style="width: 204px;" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Analyzing_A3200_Performance.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Analyzing_A3200_Performance.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyB-Column2-Body1">
+                            <img src="Resources/Images/Common/LOGO_INtime.png" />
+                        </td>
+                        <td class="BodyA-Column1-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,3326 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Command List</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Command List</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor771"></a>Command List</h1>
+        <p>The  <span class="AerotechVariablesSimpleName_A3200">A3200</span>&#160;<span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> programming commands, including mathematical functions, motion and I/O commands, and special compiler commands, are listed in the following table.</p>
+        <p>Some <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> commands do actions that were accomplished  in previous versions of the <span class="AerotechVariablesSimpleName_A3200">A3200</span> using G-Code or M-Code commands. You can use G-Codes and M-Codes if you have purchased the <a href="ms-its:cncoption.chm::/CNC_Option_Overview.htm" MadCap:wasOriginalLinkAbs_href="true">CNC controller option</a>.&#160;Refer to <a href="G_and_M_Code_Equivalents.htm">G-Code</a><a href="G_and_M_Code_Equivalents.htm"> and M-Code Equivalents</a>  for a complete list of G-Codes and M-Codes and their <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> equivalents.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>List of All Commands</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');">
+            <col style="width: 110px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 529px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 4px;padding-right: 2px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Command</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 4px;padding-right: 2px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description</th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/$AI_Function.html">$AI</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the value of a specified analog input.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/$AO_Function.html">$AO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Accesses the value of a specified analog output.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/$BI_Function.html">$BI</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the value of a specified binary input bit.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/$BO_Function.html">$BO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets or sets the value of a specified binary output bit.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/$DI_Function.html">$DI</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the value of a specified digital input bit.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/$DO_Function.html">$DO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Accesses the value of a specified digital output bit.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/$PORT_Function.html">$PORT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads or writes the expansion I/O on the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span>.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/$RI_Function.html">$RI</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets or sets the value of a specified input register.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/$RO_Function.html">$RO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets or sets the value of a specified output register.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/$WI_Function.html">$WI</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the value of a specified digital input word.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/$WO_Function.html">$WO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Accesses the value of a specified digital output word.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ABORT_Command.html">ABORT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Aborts motion on the axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ABSOLUTE_Command.html">ABSOLUTE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets motion commands to be in absolute mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ACKNOWLEDGEALL_Command.html">ACKNOWLEDGEALL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Acknowledges all axis faults and clears all task errors.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ADDPROGRAM_Command.html">ADDPROGRAM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Compiles and adds an AeroBasic program to the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ANALOG%20CONTROL%20ON_OFF_Command.html">ANALOG CONTROL ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures an axis to generate its position command based on an analog input signal.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ANALOG%20ON_OFF_Command.html">ANALOG ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on or turns off the analog vector-tracking mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ANALOG%20SET_Command.html">ANALOG SET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the analog vector-tracking mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ANALOG%20TIME_Command.html">ANALOG TIME</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Changes the update rate of the analog output voltage.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ANALOG%20TRACK_Command.html">ANALOG TRACK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the system to continuously set an analog output to be a real-time internal servo loop value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/APPLYDEFAULTS_Command.html">APPLYDEFAULTS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Restore the active task or axis settings to the values stored in the Default parameters.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ARRAY%20READ_Command.html">ARRAY READ</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Transfers drive array values into the specified controller array variables.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ARRAY%20WRITE_Command.html">ARRAY WRITE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes data into the PSO array.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/AUTOFOCUS_Command.html">AUTOFOCUS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the autofocus to On or Off.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/AXCALPARM_Function.html">AXCALPARM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Modifies the axis calibration parameters.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/AXISFAULT_Command.html">AXISFAULT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Causes a specified fault on a specified axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/AXISSTATUS_Function.html">AXISSTATUS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the specified status item from the specified axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/AXISSTATUSFAST_Command.html">AXISSTATUSFAST</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the specified status item from the specified axis at a rate that is faster than 1 kHz.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/BACKLASH%20OFF_Command.html">BACKLASH OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns off backlash compensation.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/BACKLASH%20ON_Command.html">BACKLASH ON</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on backlash compensation.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/BARCODE%20DATAMATRIX_Command.html">BARCODE DATAMATRIX</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Encodes a string into the binary representation of a Data Matrix ECC 200 barcode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/BEZIER_Command.html">BEZIER</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a Bezier move on the specified axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/BLOCKMOTION_Command.html">BLOCKMOTION</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Prevents the motion of one or more axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/BRAKE_Command.html">BRAKE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Controls the output of the brake on the specified axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CALDISABLE_Command.html">CALDISABLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Disables the specified type of axis calibration on the specified axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CALENABLE_Command.html">CALENABLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables the specified type of axis calibration on the specified axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CALL_Command.html">CALL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Calls a subroutine that is defined in the program.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CALLBACK_Function.html">CALLBACK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Raise a custom callback that is handled by the C or .NET library.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CALLDLL_Function.html">CALLDLL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Calls a function in a custom dynamic link library (DLL).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CAMSYNC_Command.html">CAMSYNC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Starts synchronizing the master axis to the slave axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CCW_Command.html">CCW</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a counterclockwise circular move on axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CEIL_Function.html">CEIL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Returns the smallest integral value that is not less than the specified value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CHECKPASSWORD_Command.html">CHECKPASSWORD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Determines if the specified password matches the password set on the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CLOSEDLL_Command.html">CLOSEDLL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Closes a .dll file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/COMMINIT_Command.html">COMMINIT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the communications settings on the specified serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/COMMSETTIMEOUT_Command.html">COMMSETTIMEOUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Defines the timeout on the serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/COUNTSTOUNITS_Function.html">COUNTSTOUNITS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Returns the value in user units of a specified value in counts.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CRITICAL%20END_Command.html">CRITICAL END</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Ends a critical section on the executing task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CRITICAL%20START_Command.html">CRITICAL START</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Starts a critical section on the executing task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CURRENTCOMMAND_Command.html">CURRENTCOMMAND</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Puts a signal into the current command of an axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/CW_Command.html">CW</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a clockwise circular move on the axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATAACQ%20ARRAY_Command.html">DATAACQ ARRAY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the location in the drive array space where the captured data is stored and the number of data elements to collect. Enables data collection.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATAACQ%20INPUT_Command.html">DATAACQ INPUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the data element collected when a trigger occurs.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATAACQ%20OFF_Command.html">DATAACQ OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Use this command to turn data acquisition off. All previously specified DATAACQ command configurations are cleared and must be re-specified if required.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATAACQ%20TRIGGER_Command.html">DATAACQ TRIGGER</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies which signal is monitored to collect data.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATACOLLECT%20ITEM_Command.html">DATACOLLECT ITEM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures one data item to collect.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATACOLLECT%20ITEM%20RESET_Command.html">DATACOLLECT ITEM RESET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Erases the data item configuration.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATACOLLECT%20START_Command.html">DATACOLLECT START</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Starts real-time data collection. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DATACOLLECT%20STOP_Command.html">DATACOLLECT STOP</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Stops the real-time data collection that was triggered by the DATACOLLECT START command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DBLTOSTR_Function.html">DBLTOSTR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Returns the ASCII string for the specified numeric value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DFS_Command.html">DFS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Defines a subroutine in a program.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DISABLE_Command.html">DISABLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Disables the axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DRIVEINFO_Function.html">DRIVEINFO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the specified drive info item from the specified axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/DWELL_Command.html">DWELL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Suspends the execution for a specified quantity of time.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ENABLE_Command.html">ENABLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables the axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ENCODER%20OUT%20DIVIDER_Command.html">ENCODER OUT DIVIDER</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Applies a divider to the echoed encoder outputs of the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>, <span class="AerotechVariablesDriveType_XC4">XC4</span>, <span class="AerotechVariablesDriveType_XC4e">XC4e</span>, or <span class="AerotechVariablesDriveType_XR3">XR3</span>.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ENCODER%20OUT%20ON_OFF_Command.html">ENCODER OUT ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures an <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>, <span class="AerotechVariablesDriveType_XC4">XC4</span>, <span class="AerotechVariablesDriveType_XC4e">XC4e</span>, or <span class="AerotechVariablesDriveType_XR3">XR3</span> to echo incoming encoder signals out of the applicable port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/END%20PROGRAM_Command.html">END PROGRAM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Ends the AeroBasic program.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ENGLISH_Command.html">ENGLISH</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets English distance and feedrate units.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ERRORDECODE_Function.html">ERRORDECODE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Converts a controller error into a string representation of that error.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/EXE_Command.html">EXE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Runs an executable file from an AeroBasic program. The AeroBasic program continues and does not wait for the executable file to complete. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/EXECCANNEDFUNCTION_Command.html">EXECCANNEDFUNCTION</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes the canned function that was configured with the SETCANNEDFUNCTION command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/EXECUTEMODE_Command.html">EXECUTEMODE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Changes the execution mode of a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/EXEMODAL_Command.html">EXEMODAL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Runs an executable file from an AeroBasic program. The AeroBasic program waits for the executable file to complete. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FARCALL_Command.html">FARCALL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Calls a subroutine in another program or executes a called program as a subroutine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FARGOTO_Command.html">FARGOTO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Transfers program execution to a specified label in another program.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FAULTACK_Command.html">FAULTACK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Acknowledges and clears the fault on axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FEEDHOLD_Command.html">FEEDHOLD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Activates and releases software feedhold control of a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER CENTROID_Command.html">FIBER CENTROID</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a Centroid 1D (one-dimensional) FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER CENTROID2D_Command.html">FIBER CENTROID2D</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a Centroid 2D (two-dimensional) FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER CENTROID3D_Command.html">FIBER CENTROID3D</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a Centroid 3D (three-dimensional) FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER FASTALIGN_Command.html">FIBER FASTALIGN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a FastAlign 2D (two-dimensional) FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER FASTALIGN3D_Command.html">FIBER FASTALIGN3D</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a FastAlign 3D (three-dimensional) FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER FASTALIGN4D_Command.html">FIBER FASTALIGN4D</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a FastAlign 4D (four-dimensional) FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER FASTALIGN5D_Command.html">FIBER FASTALIGN5D</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a FastAlign 5D (five-dimensional) FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER FASTALIGN6D_Command.html">FIBER FASTALIGN6D</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a FastAlign 6D (six-dimensional) FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER GEOCENTER_Command.html">FIBER GEOCENTER</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a GeoCenter 2D (two-dimensional) FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER HILLCLIMB_Command.html">FIBER HILLCLIMB</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a HillClimb FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER SPFINE_Command.html">FIBER SPFINE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a fine Spiral 2D (two-dimensional) FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:FiberOptic.chm::/Commands/FIBER SPROUGH_Command.html">FIBER SPROUGH</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a rough Spiral 2D (two-dimensional) FIBER search routine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILECLOSE_Command.html">FILECLOSE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Closes a data file or serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEEXISTS_Function.html">FILEEXISTS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Verifies that the file you specified exists.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEOPEN_Function.html">FILEOPEN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Opens a data file or serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEREAD_Function.html">FILEREAD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads data from a file or serial port into variables on the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEREADARRAYBINARY_Function.html">FILEREADARRAYBINARY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads data from a file or serial port into variables on the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEREADINI_Function.html">FILEREADINI</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads data from a formatted .ini file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILESIZE_Function.html">FILESIZE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the size, in bytes, of a file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEWRITE_Command.html">FILEWRITE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes data to a file or serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEWRITEARRAY_Command.html">FILEWRITEARRAY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes an array of global double variables or global string variables to a file or serial port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEWRITEARRAYBINARY_Function.html">FILEWRITEARRAYBINARY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes data to a file or serial port from variables on the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEWRITEINI_Command.html">FILEWRITEINI</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes data to a formatted .ini file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FILEWRITENOTERM_Command.html">FILEWRITENOTERM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes data to a file or serial port without &lt;CR&gt; and &lt;LF&gt; terminators.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FLOOR_Function.html">FLOOR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Returns the largest integral value that is not greater than the specified value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FOR_Command.html">FOR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a FOR loop over a set of code.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FORCEDDECEL_Command.html">FORCEDDECEL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Forces a move in a velocity profiled sequence to stop.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FREECAMTABLE_Command.html">FREECAMTABLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Frees a cam table from the controller memory.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/FREERUN_Command.html">FREERUN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Freeruns the axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20ENCODERSCALEFACTOR_Command.html">GALVO ENCODERSCALEFACTOR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables "marking on the fly" functionality on the specified axis of a GL4 or an Nmark CLS, GCL, or SSaM.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20IFV%20LIMITSERVOSPEED_Command.html">GALVO IFV LIMITSERVOSPEED</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p class="RedBold">Obsolete. This command will be removed in a future release. </p>
+                    <p>Limits the speed of a servo axis when operating in Infinite Field of View mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20IFV%20MASTERCONFIG_Command.html">GALVO IFV MASTERCONFIG</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p class="RedBold">Obsolete. This command will be removed in a future release. </p>
+                    <p>Configures the Infinite Field of View on a galvo axis and a servo axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20IFV%20OFF_Command.html">GALVO IFV OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p class="RedBold">Obsolete. This command will be removed in a future release. </p>
+                    <p>Disables the Infinite Field of View on a galvo axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20IFV%20ON_Command.html">GALVO IFV ON</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p class="RedBold">Obsolete. This command will be removed in a future release. </p>
+                    <p>Enables the Infinite Field of View on a galvo axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20LASER1PULSEWIDTH_Command.html">GALVO LASER1PULSEWIDTH</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the pulse width, in microseconds, of the O1 signal.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20LASER2PULSEWIDTH_Command.html">GALVO LASER2PULSEWIDTH</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the pulse width, in microseconds, of the O2 signal.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20LASERMODE_Command.html">GALVO LASERMODE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the mode in which the laser output signals operate.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20LASEROFFDELAY_Command.html">GALVO LASEROFFDELAY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies when the GL4 or the Nmark CLS, GCL, or SSaM stops firing the laser relative to when you command the laser to power off.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20LASERONDELAY_Command.html">GALVO LASERONDELAY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies when the GL4 or the Nmark CLS, GCL, or SSaM fires the laser relative to when you command the laser to power on.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20LASEROUTPUTPERIOD_Command.html">GALVO LASEROUTPUTPERIOD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the period, in microseconds, of the O1 and O2 signals.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20LASEROVERRIDE%20AUTO_Command.html">GALVO LASEROVERRIDE AUTO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies that the laser on a galvo axis is automatically controlled.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20LASEROVERRIDE%20OFF_Command.html">GALVO LASEROVERRIDE OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Commands the laser of the GL4 or the Nmark CLS, GCL, or SSaM to power off.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20LASEROVERRIDE%20ON_Command.html">GALVO LASEROVERRIDE ON</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Commands the laser of the GL4 or the Nmark CLS, GCL, or SSaM to power on.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20PROJECTION%20COEFFICIENTS_Command.html">GALVO PROJECTION COEFFICIENTS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the projective transformation coefficients that are applied to the two galvo axes of the GL4 or the Nmark GCL.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20PROJECTION%20ON_OFF_Command.html">GALVO PROJECTION ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables or disables the projective transformation on the two galvo axes of the GL4 or the Nmark GCL.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20ROTATION_Command.html">GALVO ROTATION</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies an angle of rotation that is applied to the two galvo axes of the GL4 or the Nmark CLS, GCL, or SSaM.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20STANDBYPERIOD_Command.html">GALVO STANDBYPERIOD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the period, in microseconds, of the standby signals.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20STANDBYPULSEWIDTH_Command.html">GALVO STANDBYPULSEWIDTH</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the pulse width, in microseconds, of the standby signals.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20SUPPRESSIONPULSEWIDTH_Command.html">GALVO SUPPRESSIONPULSEWIDTH</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the pulse width, in microseconds, of the suppression signal.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20WOBBLE%20CONFIG_Command.html">GALVO WOBBLE CONFIG</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the wobble feature, which generates a wobble pattern that is added to the motion command of the GL4 or the Nmark CLS, GCL, or SSaM.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GALVO%20WOBBLE%20ON_OFF_Command.html">GALVO WOBBLE ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on or turns off the galvo wobble feature.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GEAR%20MASTERCONFIG_Command.html">GEAR MASTERCONFIG</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the master and slave relationship for gearing.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GEAR%20ON_OFF_Command.html">GEAR ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Connects or disconnects the slave axis to or from the master axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GEAR%20RATIO_Command.html">GEAR RATIO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Defines the ratio of movement between the master axis and slave axis. The slave axis moves SlaveValue counts for every MasterValue counts.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GETPARMSTRING_Function.html">GETPARMSTRING</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads a string parameter from the SMC.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/GOTO_Command.html">GOTO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Transfers program execution to a specified label.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/HANDWHEEL_Command.html">HANDWHEEL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Moves an axis based on the position of an encoder input channel.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/HOME_Command.html">HOME</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Homes the axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/HOMEASYNC_Command.html">HOMEASYNC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Asynchronously homes axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/IF_Command.html">IF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a different set of code if a specified condition is true or if it is false.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/IFOV%20AXISPAIR_Command.html">IFOV AXISPAIR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the mapping and scaling of the servo and galvo axes in Infinite Field of View (IFOV).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/IFOV%20ON_OFF_Command.html">IFOV ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables or disables Infinite Field of View (IFOV).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/IFOV%20SIZE_Command.html">IFOV SIZE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the field of view size of the galvo head in Infinite Field of View (IFOV).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/IFOV%20SYNCAXES_Command.html">IFOV SYNCAXES</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures more axes to command in Infinite Field of View (IFOV).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/IFOV%20TIME_Command.html">IFOV TIME</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the maximum search time that the controller looks ahead in Infinite Field of View (IFOV).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/IFOV%20TRACKINGACCEL_Command.html">IFOV TRACKINGACCEL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the maximum acceleration of the servo axes while in Infinite Field of View (IFOV).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/IFOV%20TRACKINGSPEED_Command.html">IFOV TRACKINGSPEED</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the maximum speed of the servo axes while in Infinite Field of View (IFOV).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/IMMEDIATE%20EXECUTE_Command.html">IMMEDIATE EXECUTE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Compiles and executes an immediate command on a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/INCREMENTAL_Command.html">INCREMENTAL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets motion commands to be in incremental mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/INDEXTOMASK_Function.html">INDEXTOMASK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Converts an index integer value to a mask integer value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/INSTANTACCEL_Command.html">INSTANTACCEL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Immediately change from one program velocity to another.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/INTERRUPTMOTION%20ON_OFF_Command.html">INTERRUPTMOTION ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on or turns off interrupt motion mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/INTERRUPTMOTION%20RETURNTYPE_Command.html">INTERRUPTMOTION RETURNTYPE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies how the controller returns one or more axes after you issue the INTERRUPTMOTION ON command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ISDONE_Function.html">ISDONE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Tests for asynchronous motion command completion.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/JOYSTICK_Command.html">JOYSTICK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures and turns on joystick mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/LINEAR_Command.html">LINEAR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a linear move on axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/LOADCALFILE_Command.html">LOADCALFILE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Downloads and activates a specified axis calibration file or galvo power correction file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/LOADCAMTABLE_Command.html">LOADCAMTABLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Loads a camming table from a file on the PC.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/LOADCAMVAR_Command.html">LOADCAMVAR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Uses global variables as the cam table.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MAKESTRING_Function.html">MAKESTRING</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Creates a string by using format codes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MASKTODBL_Function.html">MASKTODBL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Returns the integer value of the specified mask of axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MASKTOINDEX_Function.html">MASKTOINDEX</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Converts a mask integer value to an index integer value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MC_Command.html">MC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sends a direct current command to the servo loop.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/METRIC_Command.html">METRIC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets Metric distance and feedrate units.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MFO_Command.html">MFO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the MFO (manual feedrate override) for a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MINUTES_Command.html">MINUTES</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the feedrate to distance units per minute.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MODBUSBIT_Function.html">MODBUSBIT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p class="RedBold">Obsolete. This command will be removed in a future release. </p>
+                    <p>Provides access to a Modbus bit set.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MODBUSREGDOUBLE_Function.html">MODBUSREGDOUBLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p class="RedBold">Obsolete. This command will be removed in a future release. </p>
+                    <p>Provides access to a Modbus register set as double-precision floating-point values.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MODBUSREGINT16_Function.html">MODBUSREGINT16</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p class="RedBold">Obsolete. This command will be removed in a future release. </p>
+                    <p>Provides access to a Modbus register set as 16-bit integer values.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MODBUSREGINT32_Function.html">MODBUSREGINT32</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p class="RedBold">Obsolete. This command will be removed in a future release. </p>
+                    <p>Provides access to a Modbus register set as 32-bit integer values.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MODBUSREGSINGLE_Function.html">MODBUSREGSINGLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p class="RedBold">Obsolete. This command will be removed in a future release. </p>
+                    <p>Provides access to a Modbus register set as single-precision floating-point values.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MOVEABS_Command.html">MOVEABS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes an absolute move on an axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MOVEDELAY_Command.html">MOVEDELAY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Commands axes to remain at zero velocity for the specified quantity of time.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MOVEINC_Command.html">MOVEINC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes an incremental move on axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MOVEOUTLIM_Command.html">MOVEOUTLIM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Moves an axis out of a limit condition.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MOVETOLIM_Command.html">MOVETOLIM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Moves an axis into a limit condition.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MSET_Command.html">MSET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Generates an open-loop current command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MSGBOX_Function.html">MSGBOX</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Shows a message box that shows the user a warning or other information.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MSGCLEAR_Command.html">MSGCLEAR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Clears messages from the <b>Messages</b> tab.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MSGDISPLAY_Command.html">MSGDISPLAY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Writes a message to the <b>Messages</b> tab.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MSGFILESELECT_Function.html">MSGFILESELECT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Opens a Windows file dialog box.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MSGHIDE_Command.html">MSGHIDE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Hides the <b>Messages</b> tab in the interface and shows the <b>Program</b> tab instead.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MSGINPUT_Function.html">MSGINPUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Shows a message box that asks the user to enter data.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MSGLAMP_Command.html">MSGLAMP</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Shows text as illuminated text lamps in the <b>Messages</b> tab of the interface.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MSGMENU_Function.html">MSGMENU</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Shows the user a list of items that they can select.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/MSGSHOW_Command.html">MSGSHOW</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Shows the <b>Messages</b> tab in the interface.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20ACCEPT_Function.html">NETWORK ACCEPT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Accepts an incoming client connection on the specified server socket, which completes the connection to the remote client.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20AUTOFLUSH_Command.html">NETWORK AUTOFLUSH</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on or turns off autoflush.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20CLOSE_Command.html">NETWORK CLOSE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Closes a specified server socket or connection, or closes all open server sockets and connections.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20CONNECT_Function.html">NETWORK CONNECT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Connects to a TCP/IP socket on a remote machine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20FLUSH_Command.html">NETWORK FLUSH</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sends the data in the output buffer to the remote machine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20LISTEN_Function.html">NETWORK LISTEN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Creates a server socket that accepts incoming client connections on the specified TCP/IP port.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20PENDING%20CLIENT_Function.html">NETWORK PENDING CLIENT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Determines if there is a client-connection request that is waiting to be accepted. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20PENDING%20OCTETS_Function.html">NETWORK PENDING OCTETS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Returns the number of bytes that are available for reading from the connection stream.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20READ_Function.html">NETWORK READ</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads the data from the connection stream.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20TIMEOUT_Command.html">NETWORK TIMEOUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the timeout period for the read and write operations on the specified connection.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/NETWORK%20WRITE_Command.html">NETWORK WRITE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes the specified data to the connection stream. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:CNCOption.chm::/Commands/NORMALCY AXES_Command.html">NORMALCY AXES</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the axes to which normalcy is applied.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:CNCOption.chm::/Commands/NORMALCY LEFT_Command.html">NORMALCY LEFT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on NORMALCY LEFT.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:CNCOption.chm::/Commands/NORMALCY OFF_Command.html">NORMALCY OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns off NORMALCY.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:CNCOption.chm::/Commands/NORMALCY RIGHT_Command.html">NORMALCY RIGHT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on NORMALCY RIGHT.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:CNCOption.chm::/Commands/NORMALCY TOLERANCE_Command.html">NORMALCY TOLERANCE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the normalcy tolerance.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ON_Command.html">ON</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets a variable, controller parameter, or I/O to a different specified value if a specified condition is true or if it is false.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ONGOSUB_Command.html">ONGOSUB</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Transfers program execution to a specified program or subroutine if a specified condition is true.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/OPENDLL_Function.html">OPENDLL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Opens a .dll file and assigns it a reference number.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/OSCILLATE_Command.html">OSCILLATE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Generates sinusoidal oscillation on an axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/OVERRIDEASYNC%20ON_OFF_Command.html">OVERRIDEASYNC ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables or disables MFO and Feedhold during jogging.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PCI%20CLOSE_Command.html">PCI CLOSE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Closes communications to a specified card on the PCI bus.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PCI%20OPEN_Function.html">PCI OPEN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Opens communication to a card on the PCI bus and returns a handle (reference number) for the card.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PCI%20READ%20BYTE_Function.html">PCI READ BYTE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads one byte of data from a specified card on the PCI bus.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PCI%20READ%20WORD_Function.html">PCI READ WORD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads one word of data from a specified card on the PCI bus.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PCI%20WRITE%20BYTE_Command.html">PCI WRITE BYTE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes one byte of data to a specified card on the PCI bus.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PCI%20WRITE%20WORD_Command.html">PCI WRITE WORD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes one word of data to a specified card on the PCI bus.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/POPMODES_Command.html">POPMODES</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Restores the value of the modal settings of the program.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PORT_Command.html">PORT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the direction of bidirectional I/O.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/POSOFFSET_Command.html">POSOFFSET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets or clears an arbitrary program offset position.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PRIMARY_Command.html">PRIMARY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets primary units on the current task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROBE%20INPUT_Command.html">PROBE INPUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the probe input.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROBE%20MODE_Command.html">PROBE MODE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Selects the scanning mode that you want to use to monitor the probe input and the active level of the probe input.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROBE%20ON_OFF_Command.html">PROBE ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on or turns off probe input monitoring.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20ASSOCIATE_Command.html">PROGRAM ASSOCIATE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Associates an AeroBasic program that is on the controller with a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20BUFFEREDRUN_Command.html">PROGRAM BUFFEREDRUN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Compiles, loads, and runs a program in <a href="%25ROOT%25/Queue_Mode_Overview.htm">queue mode</a> on a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20LOAD_Command.html">PROGRAM LOAD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Compiles and adds an AeroBasic program to the controller, and then associates the program with a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20PAUSE_Command.html">PROGRAM PAUSE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Pauses execution of the AeroBasic program that is currently running on a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20RESET_Command.html">PROGRAM RESET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Resets the associated AeroBasic program to the first executable line.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20RESTART_Command.html">PROGRAM RESTART</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Resets the associated AeroBasic program to the first executable line and then immediately runs the program.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20RUN_Command.html">PROGRAM RUN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Compiles, loads, and runs an AeroBasic program in another task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20START_Command.html">PROGRAM START</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Runs an AeroBasic program that is already associated with a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20STEPINTO_Command.html">PROGRAM STEPINTO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes one line of an AeroBasic program that is associated with a task, or steps one level into a subroutine call.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20STEPOVER_Command.html">PROGRAM STEPOVER</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes one line of an AeroBasic program that is associated with a task, or steps over a subroutine call.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAM%20STOP_Command.html">PROGRAM STOP</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Stops the AeroBasic program that is running on a task and disassociates the program from that task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PROGRAMCONTROL_Command.html">PROGRAMCONTROL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Restricts (or allows) the program operations that can be done on a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOANALOG%20ARRAY_Command.html">PSOANALOG ARRAY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables the PSO analog update hardware and specifies the starting element in the PSO array.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOANALOG%20ON_OFF_Command.html">PSOANALOG ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on or turns off PSOANALOG functionality.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOANALOG%20OUTPUT_Command.html">PSOANALOG OUTPUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the analog output channel that is updated for PSO.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOANALOG%20TRIGGER_Command.html">PSOANALOG TRIGGER</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the PSO event that triggers the analog output for PSO.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOCONTROL_Command.html">PSOCONTROL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables and disables the PSO hardware.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSODISTANCE_Command.html">PSODISTANCE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the distance that an axis travels between firing events.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOHALT%20DISABLE_Command.html">PSOHALT DISABLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Disables the PSOHALT command functionality.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOHALT%20ENABLE_Command.html">PSOHALT ENABLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables the PSO hardware to respond to high-speed inputs.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOHALT%20INPUT_Command.html">PSOHALT INPUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the input that is used for the PSOHALT functionality.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOHALT%20LATCH_Function.html">PSOHALT LATCH</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads the latched position.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20BIT%20MAP_Command.html">PSOOUTPUT BIT MAP</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20BIT%20MAP%20WINDOW%20EDGE_Command.html">PSOOUTPUT BIT MAP WINDOW EDGE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20COMBINE_Command.html">PSOOUTPUT COMBINE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO combine mode (adding Aux. Output to the Main Output signal).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20CONTROL_Command.html">PSOOUTPUT CONTROL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20PULSE_Command.html">PSOOUTPUT PULSE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20PULSE%20BIT%20MASK_Command.html">PSOOUTPUT PULSE BIT MASK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20PULSE%20BIT%20MASK%20EXTSYNC_Command.html">PSOOUTPUT PULSE BIT MASK EXTSYNC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20PULSE%20EXTSYNC_Command.html">PSOOUTPUT PULSE EXTSYNC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20PULSE%20LASER%20MASK_Command.html">PSOOUTPUT PULSE LASER MASK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20PULSE%20LASER%20MASK%20EXTSYNC_Command.html">PSOOUTPUT PULSE LASER MASK EXTSYNC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20PULSE%20WINDOW%20BIT%20MASK_Command.html">PSOOUTPUT PULSE WINDOW BIT MASK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20PULSE%20WINDOW%20BIT%20MASK%20EXTSYNC_Command.html">PSOOUTPUT PULSE WINDOW BIT MASK EXTSYNC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20PULSE%20WINDOW%20MASK_Command.html">PSOOUTPUT PULSE WINDOW MASK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20PULSE%20WINDOW%20MASK%20EXTSYNC_Command.html">PSOOUTPUT PULSE WINDOW MASK EXTSYNC</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20PULSE2%20WINDOW%20MASK_Command.html">PSOOUTPUT PULSE2 WINDOW MASK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20TOGGLE_Command.html">PSOOUTPUT TOGGLE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOOUTPUT%20WINDOW_Command.html">PSOOUTPUT WINDOW</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the PSO output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOPULSE_Command.html">PSOPULSE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the pulse sequence that is used for PSO.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOPULSE2_Command.html">PSOPULSE2</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the pulse sequence that is used for PSO.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOTRACK%20DIRECTION_Command.html">PSOTRACK DIRECTION</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the PSO distance tracking counters.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOTRACK%20INPUT_Command.html">PSOTRACK INPUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the PSO distance tracking counters.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOTRACK%20RESET_Command.html">PSOTRACK RESET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the PSO distance tracking counters.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOTRACK%20SCALE_Command.html">PSOTRACK SCALE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the PSO distance tracking counters.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOWINDOW%20CONTROL_Command.html">PSOWINDOW CONTROL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies that the two PSO window counters are either co-dependent or independent.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOWINDOW%20INPUT_Command.html">PSOWINDOW INPUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures which encoder channel is connected to each window.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOWINDOW%20LOAD_Command.html">PSOWINDOW LOAD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Loads the specified window counter with a value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOWINDOW%20OFF_Command.html">PSOWINDOW OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Disables the PSO Window Hardware.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOWINDOW%20ON_Command.html">PSOWINDOW ON</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables the PSO Window Hardware.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOWINDOW%20RANGE_Command.html">PSOWINDOW RANGE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the low and high window-range values for the specified PSO window.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOWINDOW%20RANGE%20ARRAY_Command.html">PSOWINDOW RANGE ARRAY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the window range based on data in the PSO array.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PSOWINDOW%20RESET_Command.html">PSOWINDOW RESET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Resets the window counter to 0 based on the encoder marker signal.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PT_Command.html">PT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a time point move on the specified axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PULSE%20ON_OFF_Command.html">PULSE ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on or turns off the pulse output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PULSE%20SET%20OUTPUT_Command.html">PULSE SET OUTPUT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the pulse output mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PUSHMODES_Command.html">PUSHMODES</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Stores the value of the modal settings of the program.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/PVT_Command.html">PVT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a vectorial time point move on the specified axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/QCOMMAND%20READ_Function.html">QCOMMAND READ</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads the raw position and velocity command from the command queue of a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/QCOMMAND%20RESET_Command.html">QCOMMAND RESET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Makes the pre-transformation position commands the same as the actual post-transformation position commands that were generated from a kinematic transformation task</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/QCOMMAND%20WRITE_Function.html">QCOMMAND WRITE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes motion profile data to the command queue of a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/RAMP%20MODE_Command.html">RAMP MODE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the ramp mode calculation type to use.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/RAMP%20RATE_Command.html">RAMP RATE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies rate-based acceleration and deceleration.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/RAMP%20RATE%20DEPENDENT_Command.html">RAMP RATE DEPENDENT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies rate-based acceleration and deceleration on dependent axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/RAMP%20TIME_Command.html">RAMP TIME</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies time-based acceleration and deceleration.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/RAMP%20TYPE_Command.html">RAMP TYPE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the ramp type to use.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/RAND_Function.html">RAND</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Generates a pseudorandom value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/RAPID_Command.html">RAPID</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes single or multi-axis point-to-point motion.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/READCONFIGSTRING_Function.html">READCONFIGSTRING</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads the file path of an active configuration file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/READPARM_Function.html">READPARM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads a parameter from a parameter file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/READPARMSTRING_Function.html">READPARMSTRING</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads a string parameter from a parameter file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/REMOVEPROGRAM_Command.html">REMOVEPROGRAM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Removes an AeroBasic program from the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/REPEAT_Command.html">REPEAT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Repeats a set of code a specified number of times.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/RETURN_Command.html">RETURN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Returns to a program from an ONGOSUB routine, or exits from subroutines and programs.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/ROUND_Function.html">ROUND</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Returns the integral value that is nearest to the specified value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:CNCOption.chm::/Commands/ROUNDING AXES_Command.html">ROUNDING AXES</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the axis pair on which rounding is done.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:CNCOption.chm::/Commands/ROUNDING ON_OFF_Command.html">ROUNDING ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on or turns off corner rounding.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="ms-its:CNCOption.chm::/Commands/ROUNDING TOLERANCE_Command.html">ROUNDING TOLERANCE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the rounding tolerance.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SAFEZONE%20CLEAR_Command.html">SAFEZONE CLEAR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Clears the safe zone boundaries.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SAFEZONE%20ON_OFF_Command.html">SAFEZONE ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on or turns off a safe zone.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SAFEZONE%20SET_Command.html">SAFEZONE SET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the safe zone boundaries.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SAFEZONE%20TYPE_Command.html">SAFEZONE TYPE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the safe zone type.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SCOPELTTRIG_Command.html">SCOPELTTRIG</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Triggers a loop transmission sequence from within a program.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SCOPEOPEN_Command.html">SCOPEOPEN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Starts the <span class="AerotechVariablesApp_DigScope">Digital Scope</span> application.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SCOPETRIG_Command.html">SCOPETRIG</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Starts or stops data collection in a front-end application such as <span class="AerotechVariablesApp_DigScope">Digital Scope</span>.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SCURVE_Command.html">SCURVE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies the S-curve value to use.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SECONDARY_Command.html">SECONDARY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets secondary units on the current task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SECONDS_Command.html">SECONDS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the feedrate to distance units per second.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SERVO%20ON_OFF_Command.html">SERVO ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Changes between open-loop and closed-loop mode for piezo stages.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SET%20GAIN_Command.html">SET GAIN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets four or nine servo loop gains at the same time.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SETCANNEDFUNCTION_Command.html">SETCANNEDFUNCTION</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures a canned function.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SETCLAMPI_Command.html">SETCLAMPI</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the positive and negative current limit values for an axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SETEXTPOS_Command.html">SETEXTPOS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets an arbitrary position value, in encoder counts, in external position register.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SETPARM_Command.html">SETPARM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the value of an axis parameter during program execution.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SETPOSCMD_Command.html">SETPOSCMD</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the position command of the axis at the servo loop level and adjusts the position feedback for position error.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SETPOSFBK_Command.html">SETPOSFBK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the position command and the position feedback of the axis at the servo loop level.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SIGNALLOG%20TRIGGER_Command.html">SIGNALLOG TRIGGER</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+            Triggers <span class="AerotechVariablesFeature_SignalLog">Signal Log</span> to complete data collection and write the collected data to a file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SLAVEADVANCE_Command.html">SLAVEADVANCE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Advances the motion of a slave axis in proportion to the velocity of the master axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SLAVEOFFSET_Command.html">SLAVEOFFSET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Offsets the position of the master axis that is specified in the cam table.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SLICE_Command.html">SLICE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Blends a scanning move and a stepping move into one coordinated move.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/STRCHAR_Function.html">STRCHAR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Looks for characters from a string inside another string.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/STRCMP_Function.html">STRCMP</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Determines if two strings are the same.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/STRFIND_Function.html">STRFIND</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Looks for a string inside another string.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/STRLEN_Function.html">STRLEN</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Returns the length of a string.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/STRLWR_Function.html">STRLWR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Converts a string to lowercase.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/STRMID_Function.html">STRMID</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Selects a substring of characters from a string.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/STRTOASCII_Function.html">STRTOASCII</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Converts a specified character of a string to its ASCII value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/STRTODBL_Function.html">STRTODBL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Converts a string to a double value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/STRUPR_Function.html">STRUPR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Converts a string to uppercase.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SYNCCALL_Command.html">SYNCCALL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a canned function at the same time as coordinated and RAPID motion.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/SYSTEMSTATUS_Function.html">SYSTEMSTATUS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the specified system status item.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/TARGETTRACK_Command.html">TARGETTRACK</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables target tracking, which causes the axis to track its commanded position at a fixed ramp rate and speed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/TASKERROR_Command.html">TASKERROR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Causes a specified task error on a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/TASKSTATUS_Function.html">TASKSTATUS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the specified status item from the specified task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/TASKSTATUSFAST_Command.html">TASKSTATUSFAST</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Gets the specified status item from the specified task at a rate that is faster than 1 kHz.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/TASKWARNING_Command.html">TASKWARNING</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets a specified task warning on a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/THERMOCOMP%20CONFIG%20MODE_Command.html">THERMOCOMP CONFIG MODE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the mode of operation for thermal compensation (THERMOCOMP) on a specified axis calibration table number and specifies the source of the analog input.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/THERMOCOMP%20CONFIG%20RESET_Command.html">THERMOCOMP CONFIG RESET</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Clears any thermal compensation (THERMOCOMP) configuration values.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/THERMOCOMP%20CONFIG%20UPDATEINTERVAL_Command.html">THERMOCOMP CONFIG UPDATEINTERVAL</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures the regular updating interval of thermal compensation (THERMOCOMP) on the specified calibration table.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/THERMOCOMP%20CONFIG%20VALUES_Command.html">THERMOCOMP CONFIG VALUES</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Configures temperature bounds and other coefficients for a specified calibration table.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/THERMOCOMP%20ON_OFF_Command.html">THERMOCOMP ON/OFF</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Enables or disables thermal compensation (THERMOCOMP).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/THERMOCOMP%20UPDATE_Command.html">THERMOCOMP UPDATE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Pauses, resumes, or triggers an automatic update of thermal compensation (THERMOCOMP).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/TIMER_Function.html">TIMER</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads the value of a specified timer on the A3200 or sets the value of the timer to zero.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/UNITSTOCOUNTS_Function.html">UNITSTOCOUNTS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Returns the value in counts of a specified value, in user units.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/USERTASKERROR_Command.html">USERTASKERROR</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets a user-defined task error on a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/USERTASKWARNING_Command.html">USERTASKWARNING</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets a user-defined task warning on a task.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/VELOCITY_Command.html">VELOCITY</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Turns on and turns off the velocity profiling mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/VME%20READ_Function.html">VME READ</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Reads the value of a specified VME register address.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/VME%20WRITE_Command.html">VME WRITE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes a value to a specified VME register address.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/WAIT_Command.html">WAIT</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Pauses program execution until a specified condition is true or the command times out.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/WAIT%20INPOS_Command.html">WAIT INPOS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Waits for move to be done and in position.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/WAIT%20MODE%20AUTO_Command.html">WAIT MODE AUTO</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the wait mode to automatic wait.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/WAIT%20MODE%20INPOS_Command.html">WAIT MODE INPOS</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the wait mode to in position.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/WAIT%20MODE%20MOVEDONE_Command.html">WAIT MODE MOVEDONE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Sets the wait mode to move done.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/WAIT%20MOVEDONE_Command.html">WAIT MOVEDONE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Waits for move to be done.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/WHILE_Command.html">WHILE</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Executes a set of code while a specified condition is true.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/WRITEPARM_Command.html">WRITEPARM</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes a parameter to a parameter file.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p class="Center"><a href="Commands/WRITEPARMSTRING_Command.html">WRITEPARMSTRING</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Writes a string parameter to a parameter file.</p>
+                </td>
+            </tr>
+        </table>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Command_List.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Command_List.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

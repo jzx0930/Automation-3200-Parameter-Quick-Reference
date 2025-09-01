@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|Configuration Examples" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Configuring Parameters for Velocity Mode with the Nservo </title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/When_Statement.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Configuring_Parameters_for_Brush_and_Brushless_Motors.htm">Configuration Examples</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Configuring Parameters for Velocity Mode with the Nservo</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor711"></a><a name="kanchor712"></a><a name="kanchor713"></a>Configuring Parameters for Velocity Mode with the Nservo </h1>
+        <p>You can configure the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span> to be used with an external velocity amplifier. The <span class="AerotechVariablesSimpleName_Nservo">Nservo</span> sends an analog signal that is proportional to position error, which is used as a velocity command to the amplifier. This configuration is typically used with tachometer-based systems. </p>
+        <p>To configure the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span> to operate in this mode, you must know the following information about your system.</p>
+        <ul>
+            <li value="1">What is the scaling of the velocity amplifier (in counts per units for a 1 volt input)? </li>
+        </ul>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To configure the parameters to operate in the velocity mode</h4>
+        <ol style="font-family: Arial;">
+            <li value="1">Set the <a href="Parameters/MotorType.html">MotorType</a> parameter to <span class="procedureTerm">DC Brush</span>. </li>
+            <li value="2">Set the <a href="Parameters/PositionFeedbackType.html">PositionFeedbackType</a> and <a href="Parameters/PositionFeedbackChannel.html">PositionFeedbackChannel</a> parameters to values that are appropriate for your system&#160;(typically <span class="procedureTerm">Local Encoder Counter</span> and <span class="procedureTerm">Default</span> values).</li>
+            <li value="3">Set the <a href="Parameters/VelocityFeedbackType.html">VelocityFeedbackType</a> parameter to <span class="procedureTerm">None</span> (use <span class="procedureTerm">Position Feedback</span>).</li>
+            <li value="4">Set the <span class="procedureTerm">Tachometer Mode</span> setting of the <a href="Parameters/ServoSetup.html">ServoSetup</a> parameter to <span class="procedureTerm">Enabled</span>.</li>
+            <li value="5">Set the <a href="Parameters/GainKp.html">GainKp</a> parameter to 4096.</li>
+            <li value="6">Set the <a href="Parameters/GainKv.html">GainKv</a> parameter to 0.</li>
+            <li value="7">Use the following equation to calculate the value of the <a href="Parameters/GainVff.html">GainVff</a> parameter.</li>
+            <li class="noBulletLevel1">
+                <table style="width: 100%;mc-table-style: url('Resources/TableStyles/When_Statement.css');" class="TableStyle-When_Statement" cellspacing="0">
+                    <col class="Column-Column1" style="width: 50px;" />
+                    <col />
+                    <tbody>
+                        <tr class="Body-Body2">
+                            <td class="BodyB-Column1-Body2">
+                                <p style="text-align: right;">where</p>
+                            </td>
+                            <td class="BodyA--Body2">
+                                <p><span class="equationVariable">Ka</span> is the external amplifier scaling in counts per second for a 1 volt input.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <p class="equation">
+                <img src="GeneratedImages/Equations/Equation179.png" style="width: 164px;height: 30px;" alt="" class="_MCEquation_0 mcReset" />
+            </p>
+            <li class="noBulletLevel1">
+                <div class="example">
+                    <p class="For_example_Head">For Example</p>
+                    <p>If the external velocity amplifier is scaled to generate 20,000 counts per second for a 1 volt input, set this parameter to <b>41943</b>. </p>
+                    <p class="equation">
+                        <img src="GeneratedImages/Equations/Equation180.png" style="width: 155px;height: 30px;" alt="" class="_MCEquation_0 mcReset" /> </p>
+                </div>
+            </li>
+            <li value="8">You must experiment to adjust the values for the <a href="Parameters/GainKpos.html">GainKpos</a> and <a href="Parameters/GainKi.html">GainKi</a> parameters. Using <span class="AerotechVariablesApp_DigScope">Digital Scope</span>, execute a typical move and collect a plot of the position error during the move.</li>
+            <ul style="list-style-type: disc;">
+                <li value="1">For GainKpos, start with a value of 1 and increase the value to decrease following error and settling time. If you increase the gain too much, the position error will show signs of oscillation.</li>
+                <li value="2">Use a small value for GainKi to decrease the position error at the end of a move. Typical values are in the range of 0.1 to 1.</li>
+            </ul>
+            <li value="9">Keep all other servo loop gains set to the default value of 0. </li>
+        </ol>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Configuring_Parameters_for_Velocity_Mode_with_the_Nservo.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Configuring_Parameters_for_Velocity_Mode_with_the_Nservo.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Motion" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Acceleration and Deceleration Ramping Overview</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Motion_Overview.htm">Motion</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Acceleration and Deceleration Ramping</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor969"></a>Acceleration and Deceleration Ramping Overview</h1>
+        <p>The controller uses acceleration and deceleration ramping to gradually change speeds. Refer to the <span class="bold">Ramp Type and Peak Acceleration</span> section. Ramping applies to all motion except handwheel, gearing, and camming motion. You can control the ramping operation by using the parameters and commands in the <span class="bold">Ramping Commands and Parameters</span> section of this topic. If you change the value of one or more of these parameters during motion, the changes do not have an effect until the next move starts.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4081390533_0" onclick="FMCDropDown( this ); return false;" name="kanchor970"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Velocity Profiling</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4081390533_0" style="display: none;">
+                <p>When an axis is commanded to move, the controller generates a velocity profile. At the rate that you specify for the <a href="Parameters/MotionUpdateRate.html">MotionUpdateRate</a> parameter, the controller calculates position and velocity values and sends these values to the position loop of the servo loop. The velocity profile includes the following ramp segments.</p>
+                <ul style="list-style-type: disc;">
+                    <li class="BulletLevel1" value="1">Acceleration</li>
+                    <li class="BulletLevel1" value="2">Constant Velocity</li>
+                    <li class="BulletLevel1" value="3">Deceleration</li>
+                </ul>
+                <p>This topic gives you information about the different properties of the acceleration and deceleration ramps.</p>
+                <h4 class="figure" MadCap:autonum=""><span class="autonumber"><span></span></span>Figure: Acceleration and Deceleration</h4>
+                <p class="img">
+                    <img src="Resources/Images/Figure_AccelerationDecelerationOverview.png" />
+                </p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4081390533_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Types of Motion</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4081390533_1" style="display: none;">
+                <p>Acceleration and deceleration ramping operates differently for different types of motion.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor971"></a>Coordinated Motion</h4>
+                <p>Coordinated motion includes <a href="Commands/LINEAR_Command.html">LINEAR</a>, <a href="Commands/CW_Command.html">CW</a>, <a href="Commands/CCW_Command.html">CCW</a>, and <a href="Commands/BEZIER_Command.html">BEZIER</a> commands. Because coordinated motion synchronizes motion across multiple axes, you must configure ramping per task instead of per axis. Refer to the <span class="bold">Ramping Commands and Parameters</span> section.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor972"></a>Independent Motion</h4>
+                <p>Independent motion includes <a href="Commands/RAPID_Command.html">RAPID</a>, <a href="Commands/HOME_Command.html">HOME</a>, and the <a href="CommandsOLD/Asynchronous_Motion.htm">asynchronous motion</a> commands. Because the controller ramps RAPID, HOME, and asynchronous motion independently on each axis, you must configure ramping per axis instead of per task.  Refer to the <span class="bold">Ramping Commands and Parameters</span> section.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor973"></a>Abort Motion</h4>
+                <p>If you issue an ABORT command before the controller generates its target position, the controller might use a different deceleration rate. Refer to the <a href="Commands/ABORT_Command.html">ABORT</a>&#160;command and the <a href="Parameters/AbortDecelRate.html">AbortDecelerationRate</a> parameter for more information. Because the controller ramps Abort motion independently on each axis, you must configure ramping per axis instead of per task.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor974"></a>HOME Motion</h4>
+                <p>HOME motion ramping, by default, is the same as independent motion ramping. But, you can use the <a href="Parameters/HomeRampRate.html">HomeRampRate</a> parameter to specify a different type of ramping for HOME. Because the controller ramps HOME&#160;motion independently on each axis, you must configure ramping per axis instead of per task.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4081390533_2" onclick="FMCDropDown( this ); return false;" name="Ramp_Types"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Ramp Types and Peak Acceleration</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4081390533_2" style="display: none;">
+                <p>You can configure the ramp as one of the following acceleration and deceleration ramp types. If you specify an acceleration or deceleration rate for the ramp type that you are using, the specified rate is the average rate across the time interval over which the acceleration or deceleration occurs. That time interval is the same for all of the ramp types. Use the <a href="Commands/RAMP%20TYPE_Command.html">RAMP&#160;TYPE</a> command to specify the type of ramp that you want to use.</p>
+                <ul>
+                    <li value="1"><span class="bold">Linear</span>
+                    </li>
+                    <li value="2"><span class="bold">Sinusoidal Half-Sine</span> This is the default. To set the ramp type to sinusoidal (full-sine), clear the <span class="procedureTerm">Half Sine Ramp</span> bit of the <a href="Parameters/SystemCompatibility.html">SystemCompatibility</a> global parameter in <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>.</li>
+                    <li value="3"><span class="bold">S-curve</span>
+                    </li>
+                </ul>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Changes in Velocity Acceleration</h4>
+                <p>The following ramps shows three moves that use a speed of 1,000 mm/sec and a specified ramp rate of 1,000 mm/sec<sup>2</sup>.</p>
+                <h4 class="figure" MadCap:autonum=""><span class="autonumber"><span></span></span>Figure: Linear, Half-Sine, and S-curve Ramping</h4>
+                <p>
+                    <img src="Resources/Images/Figure_Accel_Decel_Overview_Ramps_Combined.png" />
+                </p>
+                <p>The first ramp uses <span class="bold">Linear</span><a name="kanchor976"></a> ramping. </p>
+                <ul>
+                    <li value="1">Shows the lowest peak acceleration, which is 1,000 mm/sec<sup>2</sup>, of all three ramps.</li>
+                    <li value="2">Shows sudden changes in acceleration at the segment boundaries.</li>
+                </ul>
+                <p>The second ramp uses <a name="kanchor977"></a><span class="bold">Sinusoidal Half-Sine</span> ramping. </p>
+                <ul>
+                    <li value="1">Shows a higher peak acceleration, which is 1,570 mm/sec<sup>2 </sup>, than linear ramping.</li>
+                    <li value="2">Sudden changes in acceleration do not occur at the segment boundaries.</li>
+                </ul>
+                <p>The third ramp uses <span class="bold">S-curve</span> ramping at 50 percent.</p>
+                <ul>
+                    <li value="1">Shows a higher peak acceleration, which is 1,333 mm/sec<sup>2 </sup>, than linear ramping.</li>
+                    <li value="2">Sudden changes in acceleration do not occur at the segment boundaries.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4081390533_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Ramp Modes</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4081390533_3" style="display: none;">
+                <p>You can specify <a name="kanchor978"></a>rate-based and <a name="kanchor979"></a>time-based acceleration and deceleration. Acceleration and deceleration occur over the same period with either a sinusoidal or linear ramp type. <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you use rate-based ramping as an alternative to time-based ramping because the maximum acceleration does not change when the commanded velocity changes. Refer to <a href="Commands/RAMP%20MODE_Command.html">RAMP&#160;MODE&#160;RATE</a> command.</p>
+                <table style="mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> When you use time-based ramping, if a move does not have sufficient distance to get to full speed, the ramp time might be smaller than the value that you specified for the <a href="Commands/RAMP%20TIME_Command.html">RAMP&#160;TIME</a>&#160;command. If this occurs the <span class="AerotechVariablesSimpleName_A3200">A3200</span> continues to use the ramp rate that was initially set with the full speed and the specified ramp time, which causes a smaller than expected ramp time.</p>
+                                <p>This has an effect on the <a href="Commands/LINEAR_Command.html">LINEAR</a>, <a href="Commands/CW_Command.html">CW</a>, <a href="Commands/CCW_Command.html">CCW</a>, <a href="Commands/BEZIER_Command.html">BEZIER</a>, <a href="Commands/RAPID_Command.html">RAPID</a>, <a href="Commands/MOVEINC_Command.html">MOVEINC</a>, and <a href="Commands/MOVEABS_Command.html">MOVEABS</a> motion commands.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4081390533_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Peak Acceleration</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4081390533_4" style="display: none;">
+                <p>In the <span class="AerotechVariablesSimpleName_A3200">A3200</span>, you specify acceleration and deceleration ramp rates as an average acceleration value across the ramp. You can use the <a href="Commands/RAMP%20RATE_Command.html">RAMP&#160;RATE</a> command to specify this value by rate or you can use the <a href="Commands/RAMP%20TIME_Command.html">RAMP&#160;TIME</a> command to specify this value by time.&#160;The value that you specify by rate or time is always an average value. Refer to the <span class="bold">Ramp Modes</span> section of this topic for more information.</p>
+                <p>During acceleration and deceleration ramping, the average acceleration value and the ramp type that you specify have an effect on the value of the peak acceleration. On the <span class="AerotechVariablesSimpleName_A3200">A3200</span>, you can use the <a href="Commands/RAMP%20TYPE_Command.html">RAMP&#160;TYPE</a> command to specify the ramp type as LINEAR, SINE, or SCURVE. </p>
+                <h4 class="figure" MadCap:autonum=""><span class="autonumber"><span></span></span>
+                Figure: Velocity and Acceleration          </h4>
+                <p>This figure shows the velocity and acceleration for an S-curve ramp type that has a value of 50.</p>
+                <p class="img">
+                    <img src="Resources/Images/Figure_SCURVE_PeakAcceleration.png" />
+                </p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Linear Ramping</h4>
+                <p>Linear ramping is equivalent to S-curve ramping that has a value of 0.</p>
+                <ul>
+                    <li value="1">The peak acceleration value is equal to the average acceleration value throughout the ramp.</li>
+                    <li value="2">This type of ramping causes the lowest possible peak acceleration.</li>
+                    <li value="3">The ramp instantaneously gets to peak acceleration.</li>
+                    <li value="4">High jerk values can occur at the ramp boundaries.</li>
+                </ul>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Sinusoidal Ramping</h4>
+                <ul>
+                    <li value="1">The peak acceleration value is 1.57 times the average acceleration value.</li>
+                    <li value="2">This type of ramping causes higher peak accelerations than the linear ramp type.</li>
+                    <li value="3">The ramp gradually gets to peak acceleration.</li>
+                    <li value="4">High jerk values are decreased.</li>
+                </ul>
+                <p>Refer to the <span class="bold">Ramp Types and Peak Acceleration</span> section of this topic for more information.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>S-curve Ramping</h4>
+                <p>S-curve ramping that has a value of 0 is equivalent to Linear ramping. For S-curve ramping that has values between 0 and 100, the peak acceleration values are between 1.0 and 2.0 times the average acceleration. For example, an S-curve ramp that has a value of 50 causes a peak acceleration that is 1.33 times the average acceleration.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>S-curve Ramping that has a value of 100</h4>
+                <ul>
+                    <li value="1">The peak acceleration value is 2.0 times the average acceleration value.</li>
+                    <li value="2">This type of ramping causes higher peak accelerations than the linear ramp type.</li>
+                    <li value="3">The ramp gradually gets to peak acceleration.</li>
+                    <li value="4">High jerk values are decreased.</li>
+                </ul>
+                <p>Refer to the <a href="Commands/SCURVE_Command.html">SCURVE</a> command and the <span class="bold">Ramp Types and Peak Acceleration</span> section of this topic for more information.</p>
+            </div>
+        </div><a name="Ramping_Commands_and_Parameters"></a>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4081390533_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Ramping Commands and Parameters</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4081390533_5" style="display: none;">
+                <p>The following table shows the commands you can use to change the acceleration and deceleration behavior for coordinated or independent motion during program execution.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>RAMP&#160;Commands</p>
+                <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 670px;" cellspacing="0" class="TableStyle-Basic">
+                    <col style="width: 136px;" class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 249px;" class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 293px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 150px;" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Ramp Command</p>
+                            </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Per Task for Coordinated 
+ Motion</p>
+                            </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Per Axis for Independent 
+ Motion</p>
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Function</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" rowspan="2">
+                            <p><a href="Commands/RAMP%20MODE_Command.html">RAMP MODE</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;"><pre xml:space="preserve">RAMP&#160;MODE&#160;RATE</pre>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;"><pre xml:space="preserve">RAMP MODE RATE <span class="commandArgument">&lt;Axis&gt;</span> [ <span class="commandArgument">&lt;Axis&gt;</span> ... ]</pre>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the rate-based ramping mode.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;"><pre xml:space="preserve">RAMP&#160;MODE&#160;TIME</pre>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;"><pre xml:space="preserve">RAMP MODE TIME <span class="commandArgument">&lt;Axis&gt;</span> [ <span class="commandArgument">&lt;Axis&gt;</span> ... ]</pre>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the time-based ramping mode.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" rowspan="3">
+                            <p><a href="Commands/RAMP%20TYPE_Command.html">RAMP TYPE</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;"><pre xml:space="preserve">RAMP&#160;TYPE&#160;LINEAR</pre>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;"><pre xml:space="preserve">RAMP TYPE LINEAR <span class="commandArgument">&lt;Axis&gt;</span> [ <span class="commandArgument">&lt;Axis&gt;</span> ... ]</pre>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the linear ramping type.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;"><pre xml:space="preserve">RAMP TYPE&#160;SINE</pre>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;"><pre xml:space="preserve">RAMP TYPE SINE <span class="commandArgument">&lt;Axis&gt;</span> [ <span class="commandArgument">&lt;Axis&gt;</span> ... ]</pre>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the sinusoidal ramping type.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;"><pre xml:space="preserve">RAMP&#160;TYPE&#160;SCURVE</pre>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Not available</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the S-curve ramping type.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" rowspan="3">
+                            <p><a href="Commands/RAMP%20TIME_Command.html">RAMP TIME</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;TIME&#160;<i>&lt;Value&gt;</i></pre>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;TIME&#160;<i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> [ <i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> ... ]</pre>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the time-based acceleration and deceleration.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;TIME&#160;ACCEL&#160;<i>&lt;Value&gt;</i></pre>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;TIME&#160;ACCEL&#160;<i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> [ <i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> ... ]</pre>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the time-based acceleration.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;TIME&#160;DECEL&#160;<i>&lt;Value&gt;</i></pre>
+                            </p>
+                            <p>&#160;</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;TIME&#160;DECEL&#160;<i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> [ <i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> ... ]</pre>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the time-based deceleration.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td rowspan="3" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><a href="Commands/RAMP%20RATE_Command.html">RAMP RATE</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;RATE&#160;<i>&lt;Value&gt;</i></pre>
+                            </p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;RATE&#160;<i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> [ <i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> ... ]</pre>
+                            </p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the rate-based acceleration and deceleration.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;RATE&#160;ACCEL&#160;<i>&lt;Value&gt;</i></pre>
+                            </p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;RATE&#160;ACCEL&#160;<i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> [ <i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> ... ]</pre>
+                            </p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the rate-based acceleration.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;RATE&#160;DECEL&#160;<i>&lt;Value&gt;</i></pre>
+                            </p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;RATE&#160;DECEL&#160;<i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> [ <i>&lt;Axis&gt;</i>&#160;<i>&lt;Value&gt;</i> ... ]</pre>
+                            </p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the rate-based deceleration.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td rowspan="2" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><a href="Commands/RAMP%20RATE%20DEPENDENT_Command.html">RAMP RATE DEPENDENT</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;RATE&#160;DEPENDENT&#160;ACCEL&#160;<i>&lt;Value&gt;</i></pre>
+                            </p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Not available</p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the rate-based acceleration for dependent axes.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>RAMP&#160;RATE&#160;DEPENDENT&#160;DECEL&#160;<i>&lt;Value&gt;</i></pre>
+                            </p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Not available</p>
+                        </td>
+                        <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the rate-based deceleration for dependent axes.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><a href="Commands/SCURVE_Command.html">SCURVE</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><pre>SCURVE&#160;<i>&lt;Value&gt;</i></pre>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Not available</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the S-curve value to use.</p>
+                        </td>
+                    </tr>
+                </table>
+                <p>The following table shows the parameters you can use to specify the default ramping behavior for <a name="kanchor980"></a>coordinated motion. Because coordinated motion involves multiple axes, you must specify these parameters per task. Do not set these parameters in a program because they have an effect only after you reset the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. To change a value in a program, use the applicable commands in <span class="bold">Table: RAMP&#160;Commands</span>.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Task Parameters</p>
+                <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;caption-side: top;width: 650px;" cellspacing="0" class="TableStyle-Basic">
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Task Parameter</p>
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Function</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><a href="Parameters/DefaultCoordinatedRampMode.html">DefaultCoordinatedRampMode</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the default ramp mode as rate-based or time-based.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/DefaultCoordinatedRampRate.html">DefaultCoordinatedRampRate</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the default ramp rate for rate-based ramping.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/DefaultCoordinatedRampTime.html">DefaultCoordinatedRampTime</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the default ramp time for time-based ramping.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p valign="middle"><a href="Parameters/DefaultCoordinatedRampType.html">DefaultCoordinatedRampType</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p valign="middle">Specifies the default ramp type.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p valign="middle"><a href="Parameters/DefaultDependentCoordinatedRampRate.html">DefaultDependentCoordinatedRampRate</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the default ramp rate for dependent axes.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p valign="middle"><a href="Parameters/DefaultSCurve.html">DefaultSCurve</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p valign="middle">Specifies the default S-curve value for S-curve ramping.</p>
+                        </td>
+                    </tr>
+                </table>
+                <p>The following table shows the parameters you can use to specify the default ramping behavior for <a name="kanchor981"></a>independent motion. Because each axis operates independently, you must specify these parameters per axis.  Do not set these parameters in a program because they have an effect only after you reset the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. To change a value in a program, use the applicable commands in <span class="bold">Table: RAMP&#160;Commands</span>.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Axis Parameters</p>
+                <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;caption-side: top;width: 650px;" cellspacing="0" class="TableStyle-Basic">
+                    <col style="width: 140px;" class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 508px;" class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Axis Parameters</p>
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>Function</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p><a href="Parameters/DefaultRampMode.html">DefaultRampMode</a>
+                            </p>
+                        </td>
+                        <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the default ramp mode as rate-based&#160;or time-based.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/DefaultRampRate.html">DefaultRampRate</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the default ramp rate for rate-based ramping.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/DefaultRampTime.html">DefaultRampTime</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the default ramp time for time-based ramping.</p>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                        <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/DefaultRampType.html">DefaultRampType</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Specifies the default ramp type.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4081390533_6" onclick="FMCDropDown( this ); return false;" name="kanchor982"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />ACCEL and DECEL Keywords</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4081390533_6" style="display: none;">
+                <p>If you do not specify the ACCEL and DECEL keywords, the value for the acceleration and deceleration is the same. The controller applies this value equally to the acceleration and deceleration ramps.</p>
+                <p> If you want different behavior for the acceleration and deceleration ramps, use the ACCEL and DECEL keywords to specify different values for acceleration and deceleration in the <a href="Commands/RAMP%20TIME_Command.html">RAMP TIME</a> and <a href="Commands/RAMP%20RATE_Command.html">RAMP&#160;RATE</a> commands.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_4081390533_7" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Additional Ramping Considerations</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_4081390533_7" style="display: none;">
+                <ul type="disc" class="ul_1">
+                    <li value="1">In velocity profiling mode (<a href="Commands/VELOCITY_Command.html">VELOCITY ON</a>), ramping can occur across multiple moves.</li>
+                    <li value="2"><a href="Master_and_Slave_Motion_Overview.htm">Master/Slave</a> motion does not do ramping of the slave axis. The motion of the master axis controls the acceleration and deceleration of the slave axis.</li>
+                    <li value="3"><a href="Commands/PVT_Command.html">PVT</a> motion does not use ramping. The values that you specify in the PVT command for <span class="commandArgument">&lt;Position&gt;</span>,<span class="commandArgument"> &lt;Velocity&gt;</span>, and <span class="commandArgument">&lt;Time&gt;</span> control the acceleration and deceleration.</li>
+                    <li value="4">If an axis fault causes deceleration to occur, none of the values that you specify for the ramp commands and parameters in this topic have an effect on the ramping. As a result, the ramp type is always linear and the ramp rate is always the value that you specify for the <a href="Parameters/AbortDecelRate.html">AbortDecelRate</a> parameter.</li>
+                </ul>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Motion_Overview.htm">Motion Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="Optimizing_Performance_in_VELOCITY_ON_Mode.htm">Optimizing Performance in VELOCITY&#160;ON&#160;Mode</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Acceleration_Deceleration_Ramping_Overview.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Acceleration_Deceleration_Ramping_Overview.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

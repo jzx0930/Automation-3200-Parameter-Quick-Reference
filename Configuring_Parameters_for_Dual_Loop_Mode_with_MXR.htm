@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|Configuration Examples" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Configuring Parameters for Dual Loop Mode with MXR</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Configuring_Parameters_for_Brush_and_Brushless_Motors.htm">Configuration Examples</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Configuring Parameters for Dual Loop Mode with MXR</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor698"></a><a name="kanchor699"></a>Configuring Parameters for Dual Loop Mode with MXR</h1>
+        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> This information does not apply to the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Because the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> is a multi-axis drive, you can configure a single axis for dual-loop mode by using two different channels of the primary encoder multiplier. </p>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To Configure Dual-Loop Mode</h4>
+        <table style="mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;mc-table-style-original: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span>  The <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> has one set of encoder multiplier parameters on each axis. For this configuration, you must use a set of encoder multiplier parameters on one axis to configure the <span class="bold">velocity feedback device</span> and a set of encoder multiplier parameters on a different axis to configure the <span class="bold">position feedback device</span>. To see a list of these parameters, refer to <a href="Parameters/multiplier_Category.html">Multiplier Category</a>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ol>
+            <li value="1">Open <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>.</li>
+            <li value="2">Make sure that you are connected to an <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>.</li>
+            <li value="3">Connect the velocity and position feedback devices. Do the following.</li>
+            <ol style="list-style-type: upper-alpha;">
+                <li value="1">Connect the <span class="bold">velocity feedback device</span> to the channel that corresponds to the axis feedback connector that you are using on the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>. The axis that corresponds to this channel becomes the axis that this procedure refers to as "the axis that you are configuring."</li>
+                <li value="2">Connect the <span class="bold">position feedback device</span> to a channel that is different from the channel that you are using for the velocity feedback device.</li>
+                <p>
+                    <table style="width: 100%;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                    <p><span class="note">NOTE:</span> If you have an ATX series stage,  interchange the <strong>velocity feedback device</strong> and the <span class="bold">position feedback device</span>, and configure the <a href="Parameters/FeedbackSetup.html">FeedbackSetup</a> parameter options. Use the steps that follow. </p>
+                                    <ol style="list-style-type: upper-alpha;">
+                                        <li value="1">Connect the <span class="bold">position feedback device</span> to the channel that corresponds to the axis feedback connector that you are using on the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>. The axis that corresponds to this channel becomes the axis that this procedure refers to as "the axis that you are configuring."</li>
+                                        <li value="2">Connect the <span class="bold">velocity feedback device</span> to a channel that is different from the channel that you are using for the position feedback device.
+</li>
+                                        <li value="3">Change the<span class="bold"> Limit Input Source</span> and <span class="bold">Hall Input Source</span> of the <a href="Parameters/FeedbackSetup.html">FeedbackSetup</a> parameter from <span class="bold">Velocity Feedback Channel</span> to <span class="bold">Position Feedback Channel</span>. </li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+                <div class="MCDropDown">
+                    <div class="MCDropDownHead_For_example_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3577285749_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />For Example — Axis Configurations</a>
+                    </div>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3577285749_0" style="display: none;">
+                        <div class="example">
+                            <p>Your <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> uses the default axis names of X, Y, Z, U, A, and B. Of these axes, X, Y, Z, and U have stages connected while axes A and B are unused.</p>
+                            <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>For the Velocity Feedback Device</h4>
+                            <p>You configure <span class="bold">Axis X</span> for dual-loop mode by using two encoder multiplier channels. Because you are configuring the first axis of the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>, you must connect the <span class="bold">velocity feedback device</span> to <span class="procedureTerm">Channel 0</span>. </p>
+                            <p><span class="bold">Axis X</span> becomes the axis that you configure throughout most of this procedure. The procedure refers to this axis as "the axis that you are configuring".</p>
+                            <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>For the Position Feedback Device</h4>
+                            <p>Usually you can connect the position feedback device to one of the other channels. But axes Y, Z, and U are currently using Channels 1 - 3. Thus you connect the <span class="bold">position feedback device</span> to <span class="procedureTerm">Channel 4</span>, which corresponds to <span class="bold">Axis A</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </ol>
+            <li value="4">Use the <span class="procedureTerm">Axis Parameter Calculator</span> to configure the following Feedback parameters for the <span class="bold">velocity feedback device</span>. Make sure that you specify the values of these parameters on the axis that you are configuring.</li>
+            <p class="linkList"><a href="Parameters/PositionFeedbackChannel.html">PositionFeedbackChannel Parameter</a>
+            </p>
+            <p class="linkList"><a href="Parameters/PositionFeedbackType.html">PositionFeedbackType Parameter</a>
+            </p>
+            <p class="linkList"><a href="Parameters/VelocityFeedbackChannel.html">VelocityFeedbackChannel Parameter</a>
+            </p>
+            <p class="linkList"><a href="Parameters/VelocityFeedbackType.html">VelocityFeedbackType Parameter</a>
+            </p>
+            <p class="linkList"><a href="Parameters/EncoderMultiplicationFactor.html">EncoderMultiplicationFactor Parameter</a>
+            </p>
+            <div class="MCDropDown_DropdownTopMargin_0"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3577285749_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                    Figure: Axis Parameter Calculator
+                </a>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_3577285749_1" style="display: none;">
+                    <p>
+                        <img src="Resources/Images/Image_CM_Calculator_AxisParameter_DualLoopConfiguration_A.png" class="ScreenshotBorder" />
+                    </p>
+                    <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                        <col style="width: 104px;" class="TableStyle-Basic-Column-Column1" />
+                        <col style="width: 650px;" class="TableStyle-Basic-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-Basic-Head-Header1">
+                                <th class="TableStyle-Basic-HeadE-Column1-Header1">Label</th>
+                                <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Basic-Body-Body1">
+                                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p style="text-align: center;">
+                                        <img src="Resources/Images/Common/CalloutLabel_Red_A.png" alt="" title="" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>In the <span class="procedureTerm">Feedback</span> section of the calculator, you can configure the settings for your <span class="bold">position feedback device</span> and <span class="bold">velocity feedback device</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Basic-Body-Body1">
+                                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p style="text-align: center;">
+                                        <img src="Resources/Images/Common/CalloutLabel_Red_B.png" alt="" title="" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>If you manually configure the <a href="Parameters/EncoderMultiplicationFactor.html">EncoderMultiplicationFactor</a> parameter in <span class="bold">Step 5</span>, the value that you use for that parameter must be the same as the value that you specify for the <span class="procedureTerm">Multiplication Factor</span> of the <span class="bold">position feedback device</span>.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Basic-Body-Body1">
+                                <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p style="text-align: center;">
+                                        <img src="Resources/Images/Common/CalloutLabel_Red_C.png" alt="" title="" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                                    <p>The <span class="procedureTerm">Feedback Parameters</span> section of the calculator shows all of the new values for the Feedback parameters that you configured in <span class="bold">Step 4</span>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <li value="5">Manually configure the following parameters for the <span class="bold">position feedback device</span>. Make sure that you specify the values of these parameters on the axis that corresponds to the channel that you specified for the PositionFeedbackChannel parameter.</li>
+            <li class="noBulletLevel1">
+                <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> If only one of your feedback devices requires multiplication, continue to the next step. The <span class="procedureTerm">Axis Parameter Calculator</span> does all of the parameter configurations which means that it is not necessary for you to manually configure parameters.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <ol style="list-style-type: upper-alpha;">
+                <li value="1">Specify a value for the <a href="Parameters/EncoderMultiplicationFactor.html">EncoderMultiplicationFactor</a> parameter. This value must be the same as the value that you specified for the <span class="procedureTerm">Multiplication Factor</span> of the <span class="bold">position feedback device</span> in the <span class="procedureTerm">Axis Parameter Calculator</span>.</li>
+                <li value="2">Configure all of the <a href="Parameters/multiplier_Category.html">Multiplier Category</a> parameters that are applicable to your project settings.</li>
+            </ol>
+            <li value="6">Reset the controller.</li>
+        </ol>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To Tune the Velocity and Position Feedback Devices<a name="kanchor700"></a></h4>
+        <p>You need to tune only the feedback devices that require multiplication. Refer to the <span class="bold">Feedback section</span> of <span class="bold">Table:&#160;Axis Parameter Calculator — Commonly Used Sections</span> in <a href="CM_Using_the_Parameter_Calculator.htm">Using the Axis Parameter Calculator</a> for more information.</p>
+        <ol>
+            <li value="1">In <span class="AerotechVariablesApp_DigScope">Digital Scope</span>, click the <span class="procedureTerm">Axis</span> arrow and select the axis that you are configuring.</li>
+            <li value="2">This step is required only if your <span class="bold">velocity feedback device</span> supports multiplication. Configure the following <a href="Parameters/multiplier_Category.html">Multiplier Category</a> parameters for the <span class="bold">velocity feedback device</span>.</li>
+            <ol style="list-style-type: upper-alpha;">
+                <li value="1">Select the <span class="procedureTerm">Feedback Tuning</span> tab.</li>
+                <li value="2">Click the <span class="procedureTerm">Device</span> arrow and select <span class="procedureTerm">Velocity</span>.</li>
+                <li value="3">To automatically calculate the <span class="procedureTerm">Sine</span> and <span class="procedureTerm">Cosine</span> values for the following parameters, refer to the <span class="procedureTerm">Tuning an Analog Feedback Device</span> procedure in <a href="DS_Feedback_Tuning.htm">Feedback Tuning</a>. Then continue to the next step in this procedure.</li>
+                <p class="linkList"><a href="Parameters/EncoderCosineGain.html">EncoderCosineGain Parameter</a>
+                </p>
+                <p class="linkList"><a href="Parameters/EncoderCosineOffset.html">EncoderCosineOffset Parameter</a>
+                </p>
+                <p class="linkList"><a href="Parameters/EncoderPhase.html">EncoderPhase Parameter</a>
+                </p>
+                <p class="linkList"><a href="Parameters/EncoderSineGain.html">EncoderSineGain Parameter</a>
+                </p>
+                <p class="linkList"><a href="Parameters/EncoderSineOffset.html">EncoderSineOffset Parameter</a>
+                </p>
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3577285749_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Feedback Tuning — Multiplier Category Parameters</a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3577285749_2" style="display: none;">
+                        <p class="img">
+                            <img src="Resources/Images/Image_DS_FeedbackTuning_VelocityFeedbackDevice_A.png" alt="" title="" class="ScreenshotBorder" />
+                        </p>
+                    </div>
+                </div>
+            </ol>
+            <li value="3"> This step is required only if your <span class="bold">position feedback device</span> supports multiplication. Configure the following <a href="Parameters/multiplier_Category.html">Multiplier Category</a> parameters for the <span class="bold">position feedback device</span>.</li>
+            <ol style="list-style-type: upper-alpha;">
+                <li value="1">Select the <span class="procedureTerm">Feedback Tuning</span> tab.</li>
+                <li value="2">Click the <span class="procedureTerm">Device</span> arrow and select <span class="procedureTerm">Position</span>.</li>
+                <li value="3">To automatically calculate the <span class="procedureTerm">Sine</span> and <span class="procedureTerm">Cosine</span> values for the following parameters, refer to the <span class="procedureTerm">Tuning an Analog Feedback Device</span> procedure in <a href="DS_Feedback_Tuning.htm">Feedback Tuning</a>. Then continue to the next step in this procedure.</li>
+                <p class="linkList"><a href="Parameters/EncoderCosineGain.html">EncoderCosineGain Parameter</a>
+                </p>
+                <p class="linkList"><a href="Parameters/EncoderCosineOffset.html">EncoderCosineOffset Parameter</a>
+                </p>
+                <p class="linkList"><a href="Parameters/EncoderPhase.html">EncoderPhase Parameter</a>
+                </p>
+                <p class="linkList"><a href="Parameters/EncoderSineGain.html">EncoderSineGain Parameter</a>
+                </p>
+                <p class="linkList"><a href="Parameters/EncoderSineOffset.html">EncoderSineOffset Parameter</a>
+                </p>
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3577285749_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                    Figure: Feedback Tuning — Multiplier Category Parameters</a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3577285749_3" style="display: none;">
+                        <p class="img">
+                            <img src="Resources/Images/Image_DS_FeedbackTuning_PositionFeedbackDevice_A.png" class="ScreenshotBorder" />
+                        </p>
+                    </div>
+                </div>
+            </ol>
+            <li value="4">Reset the controller.</li>
+        </ol>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Adjusting_Parameters_Based_on_System_Changes.htm">Adjusting Parameters Based on System Changes</a>
+        </p>
+        <p class="relatedTopic"><a href="CM_Using_the_Parameter_Calculator.htm">Using the Axis Parameter Calculator</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Configuring_Parameters_for_Dual_Loop_Mode_with_MXR.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Configuring_Parameters_for_Dual_Loop_Mode_with_MXR.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

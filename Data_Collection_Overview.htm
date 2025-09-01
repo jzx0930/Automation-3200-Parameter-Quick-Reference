@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Data Collection" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Data Collection Overview</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink selected" href="#">Data Collection</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Data Collection Overview</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Data Collection Overview<a name="kanchor803"></a></h1>
+        <p>The <span class="AerotechVariablesSimpleName_A3200">A3200</span> can collect real-time information about the performance of the motion system, including position errors during motion, the currents necessary to do motion, analog and digital input status, and controller status. The <span class="AerotechVariablesSimpleName_A3200">A3200</span> has the following types of data collection.</p>
+        <ul>
+            <li value="1">Use <span class="AerotechVariablesApp_DigScope">Digital Scope</span><a name="kanchor804"></a> to configure, collect, and view the data. You can save the collected data to a text file and then you can open the file  in <span class="AerotechVariablesApp_DigScope">Digital Scope</span>. You can also configure the rate at which <span class="AerotechVariablesApp_DigScope">Digital Scope</span> collects data. In a program, use the <a href="Commands/SCOPETRIG_Command.html" class="MCXref_0">SCOPETRIG Command</a> to start and stop data collection in <span class="AerotechVariablesApp_DigScope">Digital Scope</span>. For more information, refer to <a href="DS_Digital_Scope_Application.htm"><span class="AerotechVariablesApp_DigScope">Digital Scope</span> Application Overview</a>.</li>
+            <li value="2">Use the DATACOLLECT commands to collect and write sampled data from a program without using <span class="AerotechVariablesApp_DigScope">Digital Scope</span>. The file format is compatible with <span class="AerotechVariablesApp_DigScope">Digital Scope</span>. You can collect many types of data and specify the sample time at which the DATACOLLECT&#160;commands collect data. For more information, refer to <a href="Commands/datacollection_Category.html" class="MCXref_0">Data Collection Command Category</a>.</li>
+            <li value="3">Use the DATAACQ commands to collect information at the hardware level with low latency. Data acquisition is triggered by an external signal or an internally generated PSO signal. The controller stores the samples in a drive array. You can retrieve these samples into system variables in your program. For more information, refer to <a href="Commands/dataacq_Category.html" class="MCXref_0">DataAcquisition Command Category</a>.</li>
+            <li value="4">Use <span class="AerotechVariablesFeature_SignalLog">Signal Log</span> to continuously collect a predefined set of diagnostic data. You can use this data to find axis faults and other error conditions. <span class="AerotechVariablesFeature_SignalLog">Signal Log</span> is enabled by default and runs as a background process. For more information, refer to <a href="Signal_Log_Overview.htm"><span class="AerotechVariablesFeature_SignalLog">Signal Log</span> Overview</a>.</li>
+            <li value="5">Write an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program that collects information about the controller and then save this information to a file. Use the <a href="Commands/AXISSTATUS_Function.html" class="MCXref_0">AXISSTATUS Function</a>, <a href="Commands/TASKSTATUS_Function.html" class="MCXref_0">TASKSTATUS Function</a>, and <a href="Commands/SYSTEMSTATUS_Function.html" class="MCXref_0">SYSTEMSTATUS Function</a> to collect controller information and then save this data to program variables. Use the <a href="Commands/FILEWRITE_Command.html" class="MCXref_0">FILEWRITE Command</a> to write the variables to a file. You can create a deterministic sample interval of 1 millisecond or multiples of 1 millisecond by issuing the CRITICAL START and CRITICAL END commands in a critical section of your program.</li>
+        </ul>
+        <p>If the controller finds an error during data collection, some data signals might report NaN (not a number). <span class="AerotechVariablesApp_DigScope">Digital Scope</span> shows a warning if a signal reports NaN. </p>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To prevent invalid signals during data collection</h4>
+        <ol>
+            <li value="1">If you are collecting data on <a href="Virtual_Axes.htm" class="MCXref_0">Virtual Axes</a>, make sure that the data collection rate is 1 kHz or slower. Virtual axes do not support collecting some signals at rates greater than 1 kHz. </li>
+            <li value="2">Make sure that real-time errors do not occur on the controller during data collection. Real-time errors can cause signals to report NaN. You can review real-time errors in the <a href="StatusUtility_DiagnosticScreen.htm" class="MCXref_0">Diagnostics Tab of the Status Utility</a>.</li>
+        </ol>
+        <h3 class="refExProg" MadCap:autonum=""><span class="autonumber"><span></span></span>Reference Example Program</h3>
+        <p class="refExProg"><a href="Samples/Data_Collection.htm">Data Collection Example</a>
+        </p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="DS_Data_Collection.htm">Data Collection in <span class="AerotechVariablesApp_DigScope">Digital Scope</span></a>
+        </p>
+        <p class="relatedTopic"><a href="Parameters/DataCollectionItems.html" class="MCXref_0">DataCollectionItems Parameter</a>
+        </p>
+        <p class="relatedTopic"><a href="Parameters/DataCollectionPoints.html" class="MCXref_0">DataCollectionPoints Parameter</a>
+        </p>
+        <p class="relatedTopic"><a href="Commands/datacollection_Category.html" class="MCXref_0">Data Collection Command Category</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Data_Collection_Overview.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Data_Collection_Overview.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

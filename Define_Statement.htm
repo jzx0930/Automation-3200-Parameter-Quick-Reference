@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Preprocessor Directives" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>#define preprocessor directive</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Compiler_Directive_Command_Overview.htm">Preprocessor Directives</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">#define preprocessor directive</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor1161"></a>#define preprocessor directive<a name="kanchor1162"></a></h1>
+        <table class="TableStyle-Syntax" style="mc-table-style: url('Resources/TableStyles/Syntax.css');margin-left: 0;margin-right: auto;width: 650px;" cellspacing="0">
+            <col style="width: 75px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">
+#define <span class="commandArgument">&lt;targetWord&gt;</span> [<span class="commandArgument">&lt;replacementText&gt;</span>]
+#undef <span class="commandArgument">&lt;targetWord&gt;</span></pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The <span class="preprocessorDirective">#define</span> preprocessor directive lets you do simple text substitution in the source code before the source code is compiled. The <span class="preprocessorDirective">#define</span> statement defines a target word and its corresponding replacement text. On subsequent lines of the source file, all occurrences of the target word are substituted with the replacement text. This directive is only active for all lines that come after the <span class="preprocessorDirective">#define</span> statement. For all lines that come before the <span class="preprocessorDirective">#undef</span><span class="preprocessorDirective">#define</span> statement, occurrences of the target word are not replaced. Refer to <a href="Recognition_of_the_Target_Word.htm">Recognition of the Target 
+ Word</a> for more information.</p>
+        <p>White space can come before the # sign. The <span class="preprocessorDirective">#define</span> preprocessor directive must be separated from the target word by white space. The target word must be separated 
+ from the replacement string by white space. </p>
+        <p>You can override or deactivate a <span class="preprocessorDirective">#define</span> statement at any time. A <span class="preprocessorDirective">#define</span> statement can affect subsequent <span class="preprocessorDirective">#define</span> statements that contain the same target word. Refer to <a href="Replacement_within_Replacement_Strings.htm">Replacement within Replacement Strings</a> for more information.</p>
+        <p>The <span class="preprocessorDirective">#undef</span> statement deactivates all previous <span class="preprocessorDirective">#define</span> statements that have the 
+ same target word. On all lines that come after an  statement, none of the occurrences of the target word are replaced. If you use the <span class="preprocessorDirective">#undef</span> statement with a target word that is not defined or if you use the <span class="preprocessorDirective">#define</span> statement with a target word that is already defined, then you get a warning from the compiler.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Examples</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+' After this statement, "LaserState" is replaced with "$BI[7]".
+#define LaserState $BI[7]</pre>
+        </div>
+        <div class="codeexample"><pre xml:space="preserve">
+' Define a constant.
+#define PI 3.14159</pre>
+        </div>
+        <div class="codeexample"><pre xml:space="preserve">
+' Clear a #define.
+#undef PI</pre>
+        </div>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Replacement String Restrictions</h3>
+        <p>The replacement string can contain white space and multiple lines, but cannot contain a back slash (\), comments, or line termination characters. You can add special characters by specifying them as hexadecimal codes in the format 
+ 0xnn. For example, you can specify the replacement string "A;Z" as "A\x3BZ". This is useful for adding spaces at 
+ the end of replacement strings, because trailing spaces are normally removed from replacement strings.</p>
+        <p>There is no limit to the length of a replacement string. Comments terminate the replacement string, which lets you comment on the <span class="preprocessorDirective">#define</span> statement lines.</p>
+        <div class="example">
+            <p class="For_example_Head">For Example</p><pre class="indentLevel1" xml:space="preserve">#define counter $task[0] ; This comment is not in the replaced text.
+$global[1] = counter ; This comment is retained.</pre>
+            <p>becomes</p><pre class="indentLevel1" xml:space="preserve">$global[1] = $task[0] ; This comment is retained.</pre>
+        </div>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Target Word Restrictions</h3>
+        <p>There is no limit to the length of a target word. The target word can contain each of the characters except for a back slash&#160;("\") or white space. The target word is terminated by the first white-space character. Target words can be keywords such as FOR or LINEAR. But, if you redefine your keywords, the new keywords overwrite the default behavior of the controller for these lines.</p>
+        <p>Target words are case sensitive. Target words are not matched within comments or string literals.</p>
+        <p>Do not make the <span class="commandArgument">&lt;targetWord&gt;</span> be the same as the name of a variable, which includes <a href="Global_Variables.htm">$global variables</a>, <a href="Task_Variables.htm">$task variables</a>, built-in variables, and <a href="Program_Variables.htm">program variables</a> that you create. If the names of the <span class="commandArgument">&lt;targetWord&gt;</span> and a variable are the same, a compile error occurs.</p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Order of Replacement</h3>
+        <p>When the compiler processes a given line in a program, it evaluates all <span class="preprocessorDirective">#define</span> statements that come before that line, before any of the target words are replaced. </p>
+        <div class="example">
+            <p class="For_example_Head">For Example</p><pre class="indentLevel1">#define X Z<br />#define Z Y<br />ENABLE X</pre>
+            <p>becomes</p><pre class="indentLevel1">ENABLE&#160;Z</pre>
+            <p>First, the compiler looks at ENABLE X to determine what to replace. The first  <span class="preprocessorDirective">#define</span> statement (<span class="preprocessorDirective">#define</span> X Z) triggers because the target word (X) is present. The second <span class="preprocessorDirective">#define</span> statement (<span class="preprocessorDirective">#define</span> Z Y) does not  trigger, because the target word (Z) is not present. Then the compiler replaces the first <span class="preprocessorDirective">#define</span> statement target word (X) with its replacement string (Z). The replacement from the first  <span class="preprocessorDirective">#define</span> statement occurs only after the compiler determines that the second <span class="preprocessorDirective">#define</span> statement should not  occur.</p>
+        </div>
+        <h3 class="refExProg" MadCap:autonum=""><span class="autonumber"><span></span></span>Reference Example Programs
+        </h3>
+        <p class="refExProg"><a href="Samples/Program_Flow_Control.htm">Program Flow Control</a>
+        </p>
+        <p class="refExProg"><a href="Samples/String_Manipulation.htm">String (Text) 
+ Manipulation</a>
+        </p>
+        <p class="refExProg"><a href="Samples/Constant_Force_Generation.htm">Constant Force 
+ Generation</a>
+        </p>
+        <p class="refExProg"><a href="Samples/Fast_Task_Execution.htm">Fast Task Execution</a>
+        </p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Compiler_Directive_Command_Overview.htm">Preprocessor Directive Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="Replacement_with_Multiple_Lines.htm">Replacement 
+ with Multiple Lines</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Define_Statement.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Define_Statement.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
