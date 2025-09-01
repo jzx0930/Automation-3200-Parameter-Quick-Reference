@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultSkin Version="1" Title="A3200 Help (6.04.003) - Aerotech, Inc." AutoSyncTOC="true" Tabs="TOC,Index,Search,Favorites" Top="197px" Left="240px" Width="800px" Height="600px" DefaultTab="TOC" UseBrowserDefaultSize="true" Bottom="197px" Right="240px" Anchors="Left,Right,Top,Bottom" UseDefaultBrowserSetup="true" EnableAboutBox="false">
+    <HtmlHelpOptions ShowMenuBar="false" TopmostWindowStyle="false" AutoShowNavigationPane="false" EnableButtonCaptions="true" AdvancedSearch="true" NavigationPaneWidth="0" Buttons="Hide,Locate,Back,Forward,Stop,Refresh,Home,Font,Print,Options" HideNavigationOnStartup="false" SaveUserWindowPosition="true" />
+    <Toc LinesBetweenItems="true" LinesFromRoot="true" SingleClick="false" PlusMinusSquares="true" AlwaysShowSelection="true" UseFolderIcons="false" ImageListWidth="" BinaryStorage="false" />
+    <Stylesheet Link="Stylesheet.xml" />
+    <Index BinaryStorage="true" />
+</CatapultSkin>

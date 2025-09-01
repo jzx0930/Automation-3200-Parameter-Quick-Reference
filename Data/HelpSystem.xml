@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpSystem DefaultUrl="Overview.htm" Alias="Content/Data/Alias.xml" Skin="Data/SkinAutomation 3200 Nview Help/Skin.xml" Multilingual="false" Skins="Automation 3200 Nview Help" BuildTime="9/21/2020 6:23:41 PM" BuildVersion="12.0.5991.25330" TargetType="HtmlHelp" SkinTemplateFolder="Skin/" InPreviewMode="false" MoveOutputContentToRoot="false" ReplaceReservedCharacters="false" MakeFileLowerCase="false" UseCustomTopicFileExtension="false" PreventExternalUrls="false" EnableResponsiveOutput="false" IncludeGlossarySearchResults="true" ResultsPerPage="20" xml:lang="en-us" LanguageName="English">
+    <Subsystems>
+        <Url Source="../../A3200/CNCOI.chm" TocPath="Motion Composer Suite" />
+        <Url Source="../../A3200/MotionDesigner.chm" TocPath="Motion Composer Suite" />
+        <Url Source="../../A3200/MotionSimulator.chm" TocPath="Motion Composer Suite" />
+        <Url Source="../../A3200/CNCOption.chm" TocPath="Controller Options" />
+        <Url Source="../../A3200/DCToolbox.chm" TocPath="Controller Options" />
+        <Url Source="../../A3200/ETModule.chm" TocPath="Controller Options" />
+        <Url Source="../../A3200/ETControl_.chm" TocPath="Controller Options" />
+        <Url Source="../../A3200/FiberOptic.chm" TocPath="Controller Options" />
+        <Url Source="../../A3200/EtherCAT_.chm" TocPath="Controller Options|Fieldbus Options" />
+        <Url Source="../../A3200/PROFINET_.chm" TocPath="Controller Options|Fieldbus Options" />
+        <Url Source="../../A3200/Pro.chm" TocPath="Controller Options" />
+    </Subsystems>
+</HelpSystem>
