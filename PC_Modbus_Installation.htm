@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Modbus Protocol|PC Modbus Overview" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" class="INtime_MasterPage" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>PC Modbus Installation
+		</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Modbus_Protocol.htm">Modbus Protocol</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="PC_Modbus_Overview.htm">PC Modbus Overview</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">PC Modbus Installation</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor877"></a>PC Modbus Installation
+		</h1>
+        <p>This topic tells you how to select and install a supported PCI-Express Ethernet card. </p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Selecting an Ethernet Card</h3>
+        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> You must use a PCI-Express Network Interface Card. Standard PCI cards do not work on every platform.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Select an PCI-Express Ethernet card with available real-time drivers. This card will be used only for PC Modbus and cannot be used for any other purpose (such as Internet access). Two or more Ethernet cards can be installed in one PC, but one must be dedicated for real-time use.</p>
+        <p>The A3200 supports these families of network cards.</p>
+        <ul>
+            <li value="1">Broadcom Gigabit (bge1g.rsl)</li>
+            <li value="2">Intel 10/100Mbps (ie100m.rsl)</li>
+            <li value="3">Intel Gigabit (ie1g.rsl)</li>
+            <li value="4">RealTek 10/100 Mbps&#160;(rtl100m.rsl)</li>
+            <li value="5">RealTek Gigabit (rtl1g.rsl) </li>
+        </ul>
+        <p>For a list of each device that is supported, refer to <a href="Compatible_Network_Interface_Cards.htm">Compatible Network Interface Cards</a>. Or, you can purchase a supported card from <span class="AerotechVariablesCompanyName_Short">Aerotech</span>.</p>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To Install the Ethernet Card</h4>
+        <ol>
+            <li value="1">Make sure that your PC has at least one free PCI-Express slot.</li>
+            <li value="2">Install the Ethernet card in the PCI-Express slot in your PC.</li>
+            <li value="3">Use Windows to load the device driver for the card. If necessary, use the driver that is supplied by the manufacturer.</li>
+            <li value="4"><a name="SupportForNIC"></a>Add <span class="AerotechVariablesROS_Name">INtime</span> support for the NIC.
+					<ol style="list-style-type: upper-alpha;"><li class="TopMargin" value="1">Open <span class="procedureTerm"><span class="AerotechVariablesROS_Name">INtime</span> Device Manager</span>. (<span class="procedureTerm">Start</span> &#8594; <span class="procedureTerm">All Programs</span> &#8594; <span class="procedureTerm"><span class="AerotechVariablesROS_Name">INtime</span></span> &#8594; <span class="procedureTerm"><span class="AerotechVariablesROS_Name">INtime</span> Configuration</span>. Then double-click <span class="procedureTerm"><span class="AerotechVariablesROS_Name">INtime</span> Device Manager</span>)</li><li class="noBulletLevel1"><div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3447208205_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: <span class="AerotechVariablesROS_Name">INtime</span> Configuration Panel — Device Manager</a><div class="MCDropDownBody_0" id="MCDropDownBody_3447208205_0" style="display: none;"><img src="Resources/Images/Image_INtime_ConfigurationPanel.png" /></div></div></li><li value="2">In the <span class="procedureTerm">Windows devices</span> tree, find your network adapter. Right-click your adapter and select <span class="procedureTerm">Pass to <span style="mc-tag-and-class: span;" class="AerotechVariablesROS_Name">INtime</span> using MSI</span>.</li><li value="3">Click <span class="procedureTerm">File</span> and then select <span class="procedureTerm">Save the Configuration</span>. The card will now be listed under the <span style="mc-tag-and-class: span;" class="AerotechVariablesROS_Name">INtime</span><span class="procedureTerm"> devices</span> tree.</li><li value="4">Close <span class="procedureTerm"><span class="AerotechVariablesROS_Name">INtime</span> Device Manager</span>.</li></ol></li>
+        </ol>
+        <p>Proceed to <a href="PC_Modbus_Configuration.htm">PC Modbus Configuration</a>.</p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <col class="Column-Column1" style="width: 204px;" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PC_Modbus_Installation.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PC_Modbus_Installation.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyB-Column2-Body1">
+                            <img src="Resources/Images/Common/LOGO_INtime.png" />
+                        </td>
+                        <td class="BodyA-Column1-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

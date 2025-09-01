@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|System Diagnostics" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Drive Information Tab of the Status Utility</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Status_Utility.htm">System Diagnostics</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Drive Info Tab</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2795"></a>Drive Information Tab of the Status Utility</h1>
+        <p>The <span class="procedureTerm">Drive Info</span> tab of the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> shows hardware information about the connected drives.</p>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_1048834248_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Drive Info Tab in the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1048834248_0" style="display: none;">
+                <p class="img">
+                    <img src="Resources/Images/Image_StatusUtility_DriveInfo.png" class="ScreenshotBorder" />
+                </p>
+            </div>
+        </div>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Drive Info Block Definitions</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');" cellspacing="0" class="TableStyle-Basic">
+            <col style="width: 50px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 50px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 150px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 367px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Block</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Word</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Name</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description</th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td rowspan="4" colspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">0</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">0</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>RESERVED</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Reserved</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">1</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Amplifier Peak Current (Amps)</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the maximum current rating of the amplifier.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">2</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>FPGA Version</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the main FPGA version of the drive.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">3</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Drive Type ID</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Identifies the type of drive that is connected to this axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td rowspan="4" colspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">1</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">0</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Counter 1</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the value of the first PSO counter after you correctly configure the PSO.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">1</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Counter 2</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the value of the second PSO counter after you correctly configure the PSO.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">2</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Window 1</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the value of the first PSO window after you correctly configure the PSO.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">3</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Window 2</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the value of the second PSO window after you correctly configure the PSO.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="4" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">2</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">0</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Counter 3</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the value of the third PSO counter after you correctly configure the PSO.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">1</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Window 1 Array Index</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Window #1 FIFO index (used by PSOWINDOW RANGE ARRAY command)</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">2</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Window 2 Array Index</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Window #2 FIFO index (used by PSOWINDOW RANGE ARRAY command)</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">3</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO&#160;Distance Array Index</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Distance FIFO index (used by PSODISTANCE ARRAY command)</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="4" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">3</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">0</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Amplifier Temperature (C°)</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the amplifier heat sink temperature in degrees Celsius.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">1</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Amplifier Information</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the amplifier type. This applies only to the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> and <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span>.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">2</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>RESERVED</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Reserved</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">3</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO&#160;Bit Array Index</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Laser FIFO index (used by PSOOUTPUT BIT MAP and PSOOUTPUT PULSE BIT MASK commands) </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="4" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">4</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">0</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Resolver Channel 2/1</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the hexadecimal representation of the absolute resolver angle for the optional resolver inputs. The right 
+ four characters represent resolver channel 1. The left four characters apply only to <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span> and <span class="AerotechVariablesDriveType_HPe">HPe</span> and represent resolver channel 2. A value of FFFF represents 360°.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">1</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>MX Absolute Position</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the absolute encoder angle for the feedback types that follow:</p>
+                    <h4 MadCap:autonum=""><span class="autonumber"><span></span></span><span class="AerotechVariablesFireWire">FireWire</span> Feedback Types</h4>
+                    <ul>
+                        <li value="1">-MXH Feedback</li>
+                        <li value="2">-MXR Feedback</li>
+                    </ul>
+                    <p>For the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span> and <span class="AerotechVariablesDriveType_FLS">FLS</span> and the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> and <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, a value of 262,143 represents 360°.</p>
+                    <p> For 
+ the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span> and <span class="AerotechVariablesDriveType_HPe">HPe</span>, and the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>, a value of 65,535 represents 360°.</p>
+                    <h4 MadCap:autonum=""><span class="autonumber"><span></span></span><span class="AerotechVariablesHyperWire">HyperWire</span> Feedback Types</h4>
+                    <ul>
+                        <li value="1">-MX1</li>
+                        <li value="2">-MX2</li>
+                        <li value="3">-MX3</li>
+                        <li value="4">-MX4</li>
+                    </ul>
+                    <p>For the <span class="AerotechVariablesDriveType_GL4">GL4</span> and the <span class="AerotechVariablesDriveType_XL4s">XL4s</span>, a value of 262,143 represents 360°.</p>
+                    <p>For 
+ the <span class="AerotechVariablesDriveType_XC2">XC2</span>, the <span class="AerotechVariablesDriveType_XC4">XC4</span>, the <span class="AerotechVariablesDriveType_XC4e">XC4e</span>, and the <span class="AerotechVariablesDriveType_XR3">XR3</span>, a value of 65,535 represents 360°.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">2</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PSO Status</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the PSO hardware status register. Refer to <a href="PSO_Hardware_Status.htm">PSO 
+ Hardware Status</a> for bit descriptions and hardware applications.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">3</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Drive Timer (usec)</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>On single-axis drives and on the <span class="AerotechVariablesDriveType_XR3">XR3</span> multi-axis drive, the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> shows the Servo Loop Timer, which is the same as the <span class="AerotechVariablesFireWire">FireWire</span> and <span class="AerotechVariablesHyperWire">HyperWire</span> Interrupt Timers.</p>
+                    <p>On Axis 0 of the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>, the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> shows the Servo Loop Timer, which is the same as the <span class="AerotechVariablesFireWire">FireWire</span> Interrupt Timer. On Axis 1, the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> shows the Current Loop Timer.</p>
+                    <p>On Axis 0 of the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span> and <span class="AerotechVariablesDriveType_FLS">FLS</span>, the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> and <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> shows the <span class="AerotechVariablesFireWire">FireWire</span> Interrupt Timer. On Axis 1, the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> shows the Servo Loop Timer.</p>
+                    <p>On Axis 0 of the <span class="AerotechVariablesDriveType_GL4">GL4</span> and the <span class="AerotechVariablesDriveType_XL4s">XL4s</span>, the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> shows the <span class="AerotechVariablesHyperWire">HyperWire</span> Interrupt Timer. On Axis 1 of the <span class="AerotechVariablesDriveType_GL4">GL4</span>, the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> shows the Servo Loop Timer.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="4" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">5</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">0</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Data Acquisition Samples</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the number of samples that you collected using the <a href="Commands/dataacq_Category.html">DATAACQ</a> command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p style="text-align: center;">1</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Servo Update Rate</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the servo rate of the axis in kilohertz.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">2</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Settling time (msec)</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the settling time for the most recently completed move on this axis. The 
+ settling time is the time from the end of the motion command (that is, velocity command reaches zero) to the point at which the axis meets 
+ its in-position criteria. Refer to <a href="Parameters/InPositionDistance.html">InPositionDistance</a> and <a href="Parameters/InPositionTime.html">InPositionTime</a>.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p class="center">3</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Internal Error Code</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>This value represents an internal error code from the drive, usually as a result of catastrophic FireWire communications failure. If you see a nonzero value here, contact <span class="AerotechVariablesCompanyName_Short">Aerotech</span>&#160;<MadCap:conditionalText MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.MotorSizerOnly,AerotechConditions.LensProOnly,AerotechConditions.GalvoCalibrationFileConverterOnly,AerotechConditions.CADFusionOnly"><a href="Technical_Support.htm" class="MCXref_0">Global Technical Support</a></MadCap:conditionalText>.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" rowspan="4">
+                    <p>6</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>0</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Firmware Version</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Shows the current firmware version that is loaded on the drive.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>1</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>RESERVED</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Reserved</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>2</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>RESERVED</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Reserved</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>3</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>RESERVED</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Reserved</p>
+                </td>
+            </tr>
+        </table>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="PSO_Hardware_Status.htm" class="MCXref_0">PSO Hardware Status
+        </a>
+        </p>
+        <p class="relatedTopic"><a href="Status_Utility.htm" class="MCXref_0">System Diagnostics Overview</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=StatusUtility_DriveInfoTab.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=StatusUtility_DriveInfoTab.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

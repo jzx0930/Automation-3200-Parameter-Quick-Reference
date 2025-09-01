@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Writing Custom CALLDLL Handling Functions with the C Library</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Writing Custom CALLDLL Handling Functions With the C Library</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor1158"></a>Writing Custom CALLDLL Handling Functions with the C Library</h1>
+        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> To use the following information, you must be familiar with programming in C or C++ and writing a DLL.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span>&#160;<span class="AerotechVariablesCompanyName_Short">Aerotech</span> does not support C++/CLR DLLs. In the <span class="procedureTerm">Project Settings</span> of your Visual Studio project, make sure that <span class="procedureTerm">Common Language Runtime Support</span> is set to <span class="procedureTerm">No Common Language Runtime Support</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You can access a function inside a DLL during program execution. This is the mechanism that the <span class="AerotechVariablesSimpleName_A3200">A3200</span> uses to handle most <a href="Callback_Commands.htm">CALLBACK functions</a> in the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> Language. These functions include FILEOPEN, FILECLOSE, FILEWRITE, EXE, and LOADCAMTABLE.</p>
+        <p>The following sections demonstrate how to write a simple <a href="Commands/CALLDLL_Function.html">CALLDLL</a> handling function and how to call the function in an&#160;<span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program using CALLDLL. You can use this handling function to extend the controller's 
+ programming language with user-defined functions written with the <span class="AerotechVariablesSimpleName_A3200">A3200</span> C library.</p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Using Program Execution</h3>
+        <p>The CALLDLL function is used as follows.</p><pre class="indentLevel1" xml:space="preserve">CALLDLL &lt;UserDLL&gt;, &lt;UserFunction&gt;, &lt;ArgumentList&gt;</pre>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Program Syntax Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+DVAR $hFile
+
+$hFile = CALLDLL "YourDLL.dll", "SomeFunction", "C:\Program Files\Aerotech\A3200\Samples\AeroBasic\test.dat", 0</pre>
+        </div>
+        <p>You can make the syntax more user-friendly by adding a define to hide the CALLDLL.</p><pre xml:space="preserve" class="indentLevel1">#define SOME_FUNCTION CALLDLL "YourDLL.dll", "SOME_FUNCTION",</pre>
+        <p>After you define "SOME_FUNCTION", you can call the function.</p><pre xml:space="preserve" class="indentLevel1">
+$hFile = SOME_FUNCTION "C:\Program Files\Aerotech\A3200\Samples\AeroBasic\test.dat", 0</pre>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Writing the DLL</h3>
+        <p>The CALLDLL&#160;handling function in the DLL must have the following prototype.</p><pre class="indentLevel1">ErrorData _stdcall SomeFunction(A3200Handle handle, TASKID taskId)</pre>
+        <p>The function must be exported from within the .def file. A task error occurs when trying to execute CALLDLL&#160;from within an&#160;<span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program if the function is not correctly exported.</p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Writing the DLL and Handling Input Arguments</h3>
+        <p>Arguments to the CALLDLL command can be doubles or strings. All argument information can be retrieved using the A3200CallbackArgs C library functions. There is no restriction on the number of arguments that can be passed to the handling function, but there is a size limitation of 600 bytes (where a double argument consumes 8 bytes, and a string argument consumes 1 byte per character in the string).</p>
+        <p>The following C library functions are available to retrieve the argument values passed in the CALLDLL&#160;command. Refer to the A3200CallbackArgs functions in the <span class="procedureTerm">Programming Help</span> file for more information.</p><pre xml:space="preserve" class="indentLevel1">BOOL A3200CallbackArgsGetType(A3200Handle handle, TASKID taskId, DWORD argNumber, CALLBACKARGUMENTTYPE* type)</pre><pre xml:space="preserve" class="indentLevel1">BOOL A3200CallbackArgsGetCount(A3200Handle handle, TASKID taskId, DWORD* count)</pre><pre xml:space="preserve" class="indentLevel1">BOOL A3200CallbackArgsGetDouble(A3200Handle handle, TASKID taskId, DWORD argNumber, DOUBLE* value)</pre><pre width="100%" xml:space="preserve" class="indentLevel1">BOOL A3200CallbackArgsGetInteger(A3200Handle handle, TASKID taskId, DWORD argNumber, INT* value)</pre><pre xml:space="preserve" class="indentLevel1">BOOL A3200CallbackArgsGetString(A3200Handle handle, TASKID taskId, DWORD argNumber, LPSTR value, DWORD maxStringSize)</pre><pre xml:space="preserve" class="indentLevel1">BOOL A3200CallbackArgsMakeString(A3200Handle handle, TASKID taskId, DWORD argNumber, LPSTR string, DWORD maxStringSize, DWORD flags)</pre>
+        <p>Use the A3200CallbackArgsGetCount to retrieve the number of arguments passed to the function. The first argument is always the name or path to the DLL&#160;and the second argument is always the function name. Use the A3200CallbackArgsGetType function to retrieve the data type of the argument. Once the type of argument is known, then you can call the appropriate retrieval function.</p>
+        <p>A3200CallbackArgsMakeString accepts all arguments beginning with the specified argument and creates one string. This is useful when format specifiers are used in one of the string arguments.</p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Writing the DLL to Tell the Controller to Continue and Return Data</h3>
+        <p>Because a callback function can complete in an unknown period, the callback handling function must tell the controller when to continue <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program execution. There are three functions in the C library that are used to tell the controller to continue AeroBasic&#160;execution as well as optionally return a value to the AeroBasic&#160;program.</p><pre xml:space="preserve" class="indentLevel1">BOOL A3200CallbackReturnVoid(A3200Handle handle, TASKID taskId, ErrorData taskError, DOUBLE infoVar0, DOUBLE infoVar1)</pre><pre xml:space="preserve" class="indentLevel1">BOOL A3200CallbackReturnDouble(A3200Handle handle, TASKID taskId, DOUBLE returnValue, ErrorData taskError, DOUBLE infoVar0, DOUBLE infoVar1)</pre><pre width="100%" xml:space="preserve" class="indentLevel1">BOOL A3200CallbackReturnString(A3200Handle handle, TASKID taskId, LPCSTR returnValue, ErrorData taskError, DOUBLE infoVar0, DOUBLE infoVar1)</pre>
+        <p>The handle and taskId parameters are the same parameters passed to the callback function. The value returned for taskError will cause a task error to be generated on the task (no task error is generated when the error code specified is NoError). The infoVar0 and infoVar1 parameters are used to set the values of the task's $info0 and $info1 variables. These are useful for returning error codes or notifications back to the PGM. A3200CallbackReturnDouble and A3200CallbackReturnString are used to return a double or string value to the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span>&#160;program. The <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span>&#160;program can store this return value as demonstrated in this example.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Program Syntax Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+' $file will contain the value passed in the "returnValue" parameter of A3200CallbackReturnDouble or A3200CallbackReturnString.
+$file = SOME_FUNCTION 'Test.dat', 0;
+</pre>
+        </div>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Example Function</h3>
+        <p>The following callback handling function reads in an axis mask, which is specified as a CALLDLL&#160;argument, and then enables all axes in the mask. </p>
+        <p>Given that the function below is exported from a DLL&#160;named "MyDLL.dll", the function can be invoked with this PGM&#160;command line.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Program Syntax Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+' Enables axes 0 and 1.
+CALLDLL "MyDLL.dll", "EnableMask", 3
+</pre>
+        </div>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">ErrorData _stdcall EnableMask(A3200Handle handle, TASKID taskId)
+{
+    ErrorData errorData = ErrorData_NoError;
+    DWORD argCount;
+    AXISMASK axisMask;
+
+    if(!A3200CallbackArgsGetInteger(handle, taskId, 2, (INT *)&amp;axisMask))
+    {
+        errorData = A3200GetLastError();
+        goto cleanup;
+    }
+
+    if(!A3200MotionEnable(handle, TASKID_Library, axisMask))
+    {
+        ' Enable all of the axes that are specified in the axis mask.
+        errorData = A3200GetLastError();
+        goto cleanup;
+    }
+
+cleanup:
+    A3200CallbackReturnVoid(handle, taskId, errorData, 0, 0);
+    return A3200GetLastError();
+}</pre>
+        </div>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Writing_Custom_CALLDLL_Handling_Functions_With_the_C_Library.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Writing_Custom_CALLDLL_Handling_Functions_With_the_C_Library.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

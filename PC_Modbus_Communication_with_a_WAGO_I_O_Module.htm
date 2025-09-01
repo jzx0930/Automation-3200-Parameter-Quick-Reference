@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Modbus Protocol|PC Modbus Overview" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>PC Modbus Communication with a WAGO I/O Module</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/When_Statement.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Modbus_Protocol.htm">Modbus Protocol</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="PC_Modbus_Overview.htm">PC Modbus Overview</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">PC Modbus Communication with a WAGO I/O Module</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor879"></a>PC Modbus Communication with a WAGO I/O Module</h1>
+        <p>Use the following tutorial to configure PC Modbus to communicate with a WAGO slave device. The information for this tutorial is specifically written for the WAGO 750-842 slave device, configured with four WAGO 750-504 modules and four WAGO 750-402 modules. But, you can use much of the information in this tutorial with other WAGO&#160;slave devices that are almost the same as these modules.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Configure the IP&#160;Address of the WAGO&#160;Slave Device</h2>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span> In this section, use a standard network card under Windows control to configure the <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device. Connect the <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device through a network switch with a standard Ethernet cable, or directly connect the <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device to your PC with a crossover cable.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For specific instructions on how to configure the IP address and subnet mask of the Modbus device, refer to the documentation from the manufacturer. You can find the documentation for the WAGO 750-842 slave device on the <a href="http://www.wago.com/wagoweb/documentation/750/eng_manu/coupler_controller/m07500842_00000000_0en.pdf" target="_blank">WAGO</a> website.</p>
+        <p MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">Use the following procedure to configure PC Modbus to communicate with a WAGO slave device.</p>
+        <ol>
+            <li value="1">Install the <span class="procedureTerm">WAGO BootP Server</span> application at <a href="http://www.wagocatalog.com/okv3/Download_files/BootPSer.zip" target="_blank">http://www.wagocatalog.com/okv3/Download_files/BootPSer.zip</a>.</li>
+            <li value="2">Connect the WAGO slave device to the same network to which your PC is connected.</li>
+            <li value="3">Open the <span class="procedureTerm">WAGO BootP Server</span> application.</li>
+            <li value="4">Click the <span class="procedureTerm">Edit Bootptab</span> button. <span class="procedureTerm">Bootptab.txt</span> comes into view so you can edit this file.</li>
+            <ol style="list-style-type: upper-alpha;">
+                <li class="TopMargin" value="1">Edit the colon-separated sections of <span class="procedureTerm">bootptab.txt</span> to define the operating parameters that you want to configure on the WAGO slave device. Refer to the following example.</li>
+                <li class="noBulletLevel1">
+                    <div class="example">
+                        <p class="For_example_Head">For Example</p>
+                        <p>To configure the IP address of a WAGO slave device as 10.101.37.8, the Gateway as 10.101.0.1, and the subnet mask as 255.255.0.0 to a WAGO slave device with a MAC address of 00:30:DE:00:11:03, edit the text as follows.</p>
+                        <p>WAGOFC1:ht=1:ha=0030DE001103:ip=10.101.37.8:sm=255.255.0.0:T3=0A.65.00.01:</p>
+                        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/When_Statement.css');" class="TableStyle-When_Statement" cellspacing="0">
+                            <col class="Column-Column1" />
+                            <col />
+                            <tbody>
+                                <tr class="Body-Body2">
+                                    <td class="BodyE-Column1-Body2" style="border-right-style: none;border-right-width: 1px;border-right-color: #000000;vertical-align: top;">
+                                        <p>Where</p>
+                                    </td>
+                                    <td class="BodyD--Body2" style="vertical-align: top;">
+                                        <p><span class="procedureTerm">WAGOFC1</span> is an identifier. (You can change the name of <span class="procedureTerm">WAGOFC1</span> to a name that you want to use.)</p>
+                                    </td>
+                                </tr>
+                                <tr class="Body-Body2">
+                                    <td class="BodyE-Column1-Body2" style="vertical-align: bottom;padding-left: 0px;padding-right: 5px;border-right-style: none;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>and</p>
+                                    </td>
+                                    <td class="BodyD--Body2">
+                                        <p><span class="procedureTerm">ht</span> is the hardware type. (Set <span class="procedureTerm">ht</span> to 1.)</p>
+                                    </td>
+                                </tr>
+                                <tr class="Body-Body2">
+                                    <td class="BodyE-Column1-Body2" style="vertical-align: bottom;padding-left: 0px;padding-right: 5px;border-right-style: none;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>and</p>
+                                    </td>
+                                    <td class="BodyD--Body2">
+                                        <p><span class="procedureTerm">ha</span> is the hardware address. (This is the MAC address.)</p>
+                                    </td>
+                                </tr>
+                                <tr class="Body-Body2">
+                                    <td class="BodyE-Column1-Body2" style="vertical-align: bottom;padding-left: 0px;padding-right: 5px;border-right-style: none;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>and</p>
+                                    </td>
+                                    <td class="BodyD--Body2">
+                                        <p><span class="procedureTerm">ip</span> is the dot-separated IP address.</p>
+                                    </td>
+                                </tr>
+                                <tr class="Body-Body2">
+                                    <td class="BodyE-Column1-Body2" style="vertical-align: bottom;padding-left: 0px;padding-right: 5px;border-right-style: none;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>and</p>
+                                    </td>
+                                    <td class="BodyD--Body2">
+                                        <p><span class="procedureTerm">sm</span> is the subnet mask.</p>
+                                    </td>
+                                </tr>
+                                <tr class="Body-Body2">
+                                    <td class="BodyB-Column1-Body2" style="vertical-align: bottom;padding-left: 0px;padding-right: 5px;border-right-style: none;border-right-width: 1px;border-right-color: #000000;">
+                                        <p>and</p>
+                                    </td>
+                                    <td class="BodyA--Body2">
+                                        <p><span class="procedureTerm">T3</span> is the gateway.&#160;(You must enter the gateway in hexadecimal notation.)</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+                <li value="2">Find the MAC address of the WAGO slave device. You should see that the MAC address is printed on this device.</li>
+                <li value="3">Select the correct IP address and subnet mask for the WAGO slave device. You must configure the PC Modbus card and WAGO slave device on the same subnet mask so the PC Modbus card and WAGO slave device can communicate correctly.</li>
+                <li class="noBulletLevel1">
+                    <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                        <col />
+                        <tbody>
+                            <tr>
+                                <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                    <p><span class="note">NOTE:</span> The PC Modbus card and <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device can communicate over a variety of network structures. For performance reasons, <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you connect the PC Modbus card and <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device directly with a crossover cable and assign static IP addresses for both the PC Modbus card and <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device. Refer to <a href="PC_Modbus_Overview.htm">PC Modbus Overview</a> for more information.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <li value="4">Make sure that you terminate the line with a colon&#160;(:).</li>
+                <li value="5">After you are done editing <span class="procedureTerm">bootptab.txt</span>, save and close the file.</li>
+            </ol>
+            <li value="5">Make sure that the WAGO slave device is connected to the network card of the PC and that the WAGO slave device is powered <span class="procedureTerm">off</span>.</li>
+            <li value="6">In the <span class="procedureTerm">WAGO BootP Server</span> dialog, click the <span class="procedureTerm">Start</span> button to scan for a bootp packet request.</li>
+            <li value="7">Power <span class="procedureTerm">on</span> the WAGO slave device. After a few seconds occur, the <span class="procedureTerm">WAGO BootP Server</span> dialog comes into view. If the "found" line is shown, then you have successfully assigned an IP address to the WAGO slave device.</li>
+            <li class="noBulletLevel1">
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2560464154_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: WAGO&#160;BootP Server</a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_2560464154_0" style="display: none;">
+                        <p class="noBullet">
+                            <img src="Resources/Images/Image_WAGO_BootP_Server.png" />
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li value="8">On the <span class="procedureTerm">WAGO BootP Server</span> dialog, click the <span class="procedureTerm">Stop</span> button.</li>
+            <li value="9">Close the <span class="procedureTerm">WAGO BootP Server</span> application.</li>
+        </ol>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Configure the <span class="AerotechVariablesSimpleName_A3200">A3200</span> PC Modbus Network Card</h2>
+        <p>In the following procedure, you assign a network card for the <span class="AerotechVariablesSimpleName_A3200">A3200</span> that you can use under INtime control.</p>
+        <ol>
+            <li value="1">Configure a network card that is compatible with INtime and put it under INtime control.</li>
+            <li class="noBulletLevel1">For more information on how to configure a network card, refer to the procedure for <span class="procedureTerm">Installing the Ethernet Card</span> in <a href="PC_Modbus_Installation.htm">PC Modbus Installation</a>.</li>
+            <li value="2">Assign a valid IP address to the network card.</li>
+            <ol style="list-style-type: upper-alpha;">
+                <li class="TopMargin" value="1">Make sure that the IP&#160;address that you assign to the network card is compatible with the IP&#160;address that you assigned to the <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device in the <span class="procedureTerm" MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">Configure the IP Address of the WAGO Slave Device</span> section of this tutorial.</li>
+                <li value="2">Refer to the procedure <span class="procedureTerm">To Configure the Ethernet Stack</span> in <a href="PC_Modbus_Configuration.htm">PC Modbus Configuration</a> to configure the INtime TCP/IP stack. The following figure shows an example configuration.</li>
+                <li class="noBulletLevel1">
+                    <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2560464154_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Connection Settings Dialog</a>
+                        <div class="MCDropDownBody_0" id="MCDropDownBody_2560464154_1" style="display: none;">
+                            <p class="noBullet">
+                                <img src="Resources/Images/Image_ConnectionSettings_FieldbusTab.png" MadCap:targetName="AxisToolbar" class="ScreenshotBorder" />
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <li value="3">
+                <p>Connect the <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device to this network card directly with a crossover cable or through a network switch with a standard Ethernet cable.</p>
+            </li>
+        </ol>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Configure the <span class="AerotechVariablesSimpleName_A3200">A3200</span> PC Modbus Master Connection</h2>
+        <p>Use the following procedure to configure a PC Modbus Master to communicate with the <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device.</p>
+        <ol>
+            <li value="1">Open <span class="procedureTerm"><span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span></span>.</li>
+            <li value="2">Create or open the active parameter file.</li>
+            <li value="3">In the active parameter file, expand <span class="procedureTerm">Fieldbus</span> and click <span class="procedureTerm">PC Modbus Master</span>.</li>
+            <li value="4">Click the <span class="procedureTerm">Edit PC Modbus Master</span> button.</li>
+            <li value="5">Click the <span class="procedureTerm">Add&#160;Connection</span> button <img src="Resources/Images/Icons/Add16x16.png" /> to add a new connection.</li>
+            <li value="6">In the PC Modbus Master Configuration dialog, enter the connection specifications for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device.</li>
+            <li class="noBulletLevel1">
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2560464154_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+               Figure:  PC Modbus Master Configuration
+- WAGO Slave Device Connection       <![CDATA[            ]]></a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_2560464154_2" style="display: none;">
+                        <p>
+                            <img src="Resources/Images/Image_PCModbusMasterConfigurationWAGOConnection.png" />
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <ol style="list-style-type: upper-alpha;">
+                <li class="TopMargin" value="1">Look at the <span class="procedureTerm">Name</span> section to see the name of the <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device you are using. In this section, you can change the name <span class="procedureTerm" MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</span> to a name that you want to use.</li>
+                <li value="2">
+                    <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">The <span class="procedureTerm">Slave ID</span> is not used by the WAGO slave device. Set the value of the <span class="procedureTerm">Slave ID</span> to 0 or 1.</MadCap:conditionalText>
+                </li>
+                <li value="3">
+                    <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">The <span class="procedureTerm">Slave IP Address</span> should be the same as the IP address that you configured for the WAGO slave device using the WAGO BootP Server application. Refer back to the <span class="procedureTerm">Configure the IP Address of the WAGO&#160;Slave Device</span> section of this tutorial for more information.</MadCap:conditionalText>
+                </li>
+                <li value="4">Make sure that the <span class="procedureTerm">Slave Port</span> is set to <span class="procedureTerm">502</span>. This is the default Modbus port.</li>
+            </ol>
+            <li value="7">Add the correct variable mappings to correspond to the I/O of the <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device. For specific instructions on how to add variable mappings, refer to <a href="Creating_Fieldbus_Mappings_for_PC_Modbus_Master.htm">Creating Fieldbus Mappings for PC Modbus Master</a>.</li>
+            <ol style="list-style-type: upper-alpha;">
+                <li class="TopMargin" value="1">
+                    <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">This WAGO Slave device has 16 digital outputs: 4 digital outputs on each of its four 750-504 modules.</MadCap:conditionalText>
+                </li>
+                <ol style="list-style-type: lower-roman;">
+                    <li class="TopMargin" value="1">Write to the outputs of the <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device through the <span class="procedureTerm">Output Bits</span> section, starting at address 0.</li>
+                    <li value="2">Add the following variable mapping.</li>
+                    <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Output Bits Variable Mapping</p>
+                    <li class="noBulletLevel1">
+                        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-Basic-Head-Header1">
+                                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        <p style="text-align: left;">Name</p>
+                                    </th>
+                                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        <p style="text-align: left;">Count</p>
+                                    </th>
+                                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        <p style="text-align: left;">Type</p>
+                                    </th>
+                                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        <p style="text-align: left;">Byte Address</p>
+                                    </th>
+                                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                        <p style="text-align: left;">Bit Address</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-Basic-Body-Body1">
+                                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                        <p>OutBits</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                        <p style="text-align: left;">16</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                        <p>Bit</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                        <p style="text-align: left;">0</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                        <p style="text-align: left;">0</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="noBulletLevel1">
+                        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2560464154_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+               Figure: PC Modbus Master Configuration - Output Bits Variable Mapping
+      <![CDATA[
+            ]]></a>
+                            <div class="MCDropDownBody_0" id="MCDropDownBody_2560464154_3" style="display: none;">
+                                <p>
+                                    <img src="Resources/Images/Image_PCModbusMasterConfigurationOutBitsVariableMappingWAGO.png" />
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+                <li value="2">
+                    <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">This WAGO slave device has 16 digital inputs: 4 digital inputs on each of its four 750-402 modules.</MadCap:conditionalText>
+                </li>
+                <ol style="list-style-type: lower-roman;">
+                    <li class="TopMargin" value="1">Read from the inputs of the <MadCap:conditionalText MadCap:conditions="SnippetConditions_WAGO_AutomationDirect_Slave_Device.WAGOSlaveDevice">WAGO</MadCap:conditionalText> slave device through the <span class="procedureTerm">Input Bits</span> section, starting at address 0.</li>
+                    <li value="2">Add the following variable mapping.</li>
+                    <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Input Bits Variable Mapping</p>
+                    <li class="noBulletLevel1">
+                        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <col class="TableStyle-Basic-Column-Column1" />
+                            <thead>
+                                <tr class="TableStyle-Basic-Head-Header1">
+                                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        <p style="text-align: left;">Name</p>
+                                    </th>
+                                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        <p style="text-align: left;">Count</p>
+                                    </th>
+                                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        <p style="text-align: left;">Type</p>
+                                    </th>
+                                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        <p style="text-align: left;">Byte Address</p>
+                                    </th>
+                                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                        <p style="text-align: left;">Bit Address</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-Basic-Body-Body1">
+                                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                        <p>InBits</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                        <p style="text-align: left;">16</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                        <p>Bit</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                        <p style="text-align: left;">0</p>
+                                    </td>
+                                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                        <p style="text-align: left;">0</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="noBulletLevel1">
+                        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2560464154_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+               Figure: PC Modbus Master Configuration - Input Bits Variable Mapping      <![CDATA[
+            ]]></a>
+                            <div class="MCDropDownBody_0" id="MCDropDownBody_2560464154_4" style="display: none;">
+                                <p>
+                                    <img src="Resources/Images/Image_PCModbusMasterConfigurationInbitsVariableMappingWAGO.png" />
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </ol>
+            <li class="noBulletLevel1">
+                <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> The mappings that you configured in step 7 of this section create the most simple and generic interface in <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span>. A simple array variable is generated where each array index accesses a single bit. You can create mappings that are more complex and specific to your project settings. </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li value="8">Click <span class="procedureTerm">OK</span> to apply the configuration.</li>
+            <li value="9">Save the parameter file.</li>
+            <li value="10">Reset the controller for the changes to have an effect.</li>
+        </ol>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Examples of Using Mappings in an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> Program</h2>
+        <p>The <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> example programs that follow show the various ways in which you can use Fieldbus mappings. Each mapping that you define generates a corresponding <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> variable&#160;(that starts with a '$') that you can use in a program in the same way that you use other variables in a program. The I/O is automatically synchronized in the background by the controller as quickly as possible. Inputs are automatically requested by the controller once per millisecond. Outputs are written to by the controller only when the outputs have been changed.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre>
+' Use a FOR loop to change each of the output bits.
+DVAR $iii
+for $iii = 0 to 15
+    $OutBits[$iii] = !$OutBits[$iii]
+next $iii</pre>
+        </div>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre>
+' Use an input bit as the condition to an action.
+if ($InBits[4] == true)
+    MSGDISPLAY 0, "Bit on!"
+endif</pre>
+        </div>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PC_Modbus_Communication_with_a_WAGO_I_O_Module.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PC_Modbus_Communication_with_a_WAGO_I_O_Module.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

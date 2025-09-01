@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="About the A3200" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>System Architecture</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Overview.htm">About the A3200</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">System Architecture</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor3"></a>System Architecture</h1>
+        <p>The <span class="AerotechVariablesSimpleName_A3200">A3200</span> is a layered software product. Each layer gets instructions from the next higher layer, and after processing, sends commands down to the next lower layer. Real-time activities such as the servo loop are handled at the lower levels. Less time-critical activities such as program display are handled at the higher levels. The following software components are listed from highest to lowest layer. Refer to <span class="procedureTerm">Figure: System Architecture Diagram</span>.</p>
+        <p class="noBulletLevel2">Layer 4. Windows Applications</p>
+        <p class="noBulletLevel2">Layer 3. Programming Interfaces</p>
+        <p class="noBulletLevel2">Layer 2. Real-time Execution</p>
+        <p class="noBulletLevel2">Layer 1. Drive Hardware and Fieldbus Devices   </p>
+        <p>The basic software package that is supplied with the <span class="AerotechVariablesSimpleName_A3200">A3200</span> controller includes the  .NET Library, C Library, and <span class="AerotechVariablesCompanyName_Short">Aerotech</span> utility programs. You can use C Library to make a custom application in C or C++. You can use .NET Library to make a custom application in C#, VB.NET, or any other .NET language. Use the utility programs to configure, troubleshoot, and operate the controller. </p>
+        <p><span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>, <span class="AerotechVariablesCompanyName_Short">Aerotech</span> utility programs, and custom applications can run on the PC at the same time.</p>
+        <h4 class="figure" MadCap:autonum=""><span class="autonumber"><span></span></span>Figure: System Architecture Diagram</h4>
+        <p>
+            <img src="Resources/Images/Figure_System_Architecture_A.png" />
+        </p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Layer 4 — Windows Applications</p>
+        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+            <col class="TableStyle-Basic-Column-Column1" style="width: 241px;" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p style="text-align: left;">Application</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Custom Application</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>A user-written application that uses one or more 
+ of the supplied software interfaces.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="AerotechVariablesApp_Console">Console</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Debug your programs with this low-level command line debug utility.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Develop <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> programs, jog axes, and view status.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Edit parameters and change system settings.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><span class="AerotechVariablesApp_DigScope">Digital Scope</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Collect and analyze data and create one and two-dimensional plots.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="AerotechVariablesSimpleName_MotionDesigner">Motion Designer</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Graphically generate motion profiles that are executed on the controller.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="AerotechVariablesSimpleName_CNCOI">CNC Operator Interface</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Run programs, jog axes, view status, and operate the machine.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><span class="AerotechVariablesApp_FirmLoad">Firmware Loader</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Load new firmware onto connected hardware.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;"><span class="AerotechVariablesApp_StatusUtility">Status Utility</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>See the status of all 32 axes and all four controller tasks. If you purchased the <span class="AerotechVariablesSimpleName_pro">Professional Option</span>, <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> shows the status of all 32 axes and all 32 tasks.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Layer 3 — Programming Interfaces</p>
+        <table style="width: 650px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+            <col class="TableStyle-Basic-Column-Column1" style="width: 187px;" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Application</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_MATLAB">MATLAB</span> Library</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Use <span class="AerotechVariablesSimpleName_MATLAB">MATLAB</span> libraries to control motion and data acquisition from <span class="AerotechVariablesSimpleName_MATLAB">MATLAB</span> or Simulink. Refer to the <span class="AerotechVariablesSimpleName_MATLAB">MATLAB</span> section of the <span class="AerotechVariablesSimpleName_A3200">A3200</span> Programming Help file for more information.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Internal Callback Service</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The Internal Callback Service handles callbacks that do not require a graphical interface. Examples of callbacks that are handled by this service include <a href="Commands/EXE_Command.html">EXE</a>, <a href="Commands/EXEMODAL_Command.html">EXEMODAL</a>, <a href="Commands/CALLDLL_Command.html">CALLDLL</a>, <a href="Commands/datacollection_Category.html">DATACOLLECT</a>, and <a href="Commands/FILEREAD_Function.html">FILEREAD</a>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_LabVIEW">LabVIEW</span> (<span class="AerotechVariablesSimpleName_LabVIEW">LabVIEW</span> VI's)<br /></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Use <span class="AerotechVariablesSimpleName_LabVIEW">LabVIEW</span> compatible VIs to command simple motion sequences, read status, and run programs. Refer to the <span class="AerotechVariablesSimpleName_LabVIEW">LabVIEW</span> section of the <span class="AerotechVariablesSimpleName_A3200">A3200</span> Programming Help file for more information.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>C Library</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Use the C language to develop custom applications for the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. Refer to the C Library section of the <span class="AerotechVariablesSimpleName_A3200">A3200</span> Programming Help file for more information.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>System Library</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The System Library contains the core library functionality of the <span class="AerotechVariablesSimpleName_A3200">A3200</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>.NET Library</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Use .NET languages to develop custom applications for the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. Refer to the .NET Library section of the <span class="AerotechVariablesSimpleName_A3200">A3200</span> Programming Help file for more information.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Communication Service</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p> The Communication Service handles all communication between the Windows software layers and the real-time layer. If you configure the <span class="AerotechVariablesSimpleName_A3200">A3200</span> as <a href="Remote_Server_Installation.htm">Remote Server and Client</a>, the Communication Service that is running on the client PC communicates through Ethernet to the Communication Service that is running on the server PC.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Shared Memory</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>The <span class="AerotechVariablesSimpleName_A3200">A3200</span> uses shared memory to communicate between the Windows programming 
+ environment and the real-time kernel of the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Layer 2 — Real-Time Execution</p>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+            <col class="TableStyle-Basic-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Application</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Library Task</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The Library Task executes immediate (non-task-based) library 
+ commands.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>SMC Tasks</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>SMC tasks do a round robin program execution of <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> programs.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Events</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Events signal the SMC to notify the software library of events such as call-backs.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>SMC Process</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The SMC process is a deterministic real-time process that is responsible for executing <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> programs, generating motion trajectories, and communicating with all network drives.  The SMC controller, which runs under a real-time environment on the PC, communicates to the drives through the <span class="AerotechVariablesFireWire">FireWire</span> or <span class="AerotechVariablesHyperWire">HyperWire</span>. The SMC process has priority over all Windows processes that run on the PC.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Modbus TCP</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The modbus TCP module that accesses <a href="PC_Modbus_Overview.htm">Modbus</a> enabled devices from the SMC. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_EtherCAT">EtherCAT</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The fieldbus module that accesses <span class="AerotechVariablesSimpleName_EtherCAT">EtherCAT</span> enabled devices from the SMC. This requires the <a href="ms-its:EtherCAT_.chm::\EtherCAT_Overview.htm" MadCap:wasOriginalLinkAbs_href="false"><span class="AerotechVariablesSimpleName_EtherCAT">EtherCAT</span></a> license option.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_PROFINET">PROFINET</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The fieldbus module that accesses <span class="AerotechVariablesSimpleName_PROFINET">PROFINET</span> enabled devices from the SMC. This requires the <a href="ms-its:PROFINET_.chm::\PROFINET_Overview.htm" MadCap:wasOriginalLinkAbs_href="false"><span class="AerotechVariablesSimpleName_PROFINET">PROFINET</span></a> license option.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Fieldbus Driver</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>A real-time process that coordinates all Fieldbus communication from the SMC.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>FireWire</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>This is the standard 1394 OHCI compliant FireWire interface.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesHyperWire">HyperWire</span>™</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>The <span class="AerotechVariablesCompanyName_Short">Aerotech</span> <span class="AerotechVariablesHyperWire">HyperWire</span> fiber optic communication interface.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Layer 1 — Drive Hardware and Fieldbus Devices</p>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+            <col class="TableStyle-Basic-Column-Column1" style="width: 233px;" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                        <p>Application</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">Drive 1 - Drive 32</td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>A combination of <span class="AerotechVariablesFireWire">FireWire</span> drives or a combination of <span class="AerotechVariablesHyperWire">HyperWire</span> drives. This firmware is typically pre-installed 
+ on the hardware.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Fieldbus Device 1 - Fieldbus Device N</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p>A combination of <span class="AerotechVariablesSimpleName_EtherCAT">EtherCAT</span> or Modbus devices that are connected through Ethernet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Motor</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>Motors include Brushless Servo, DC Brush Servo, and stepping 
+ motors.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=System_Architecture.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=System_Architecture.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

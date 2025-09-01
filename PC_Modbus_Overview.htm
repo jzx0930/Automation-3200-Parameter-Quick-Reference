@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Modbus Protocol|PC Modbus Overview" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>PC Modbus Overview</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/When_Statement.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Modbus_Protocol.htm">Modbus Protocol</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink selected" href="#">PC Modbus Overview</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">PC Modbus Overview</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor876"></a>PC Modbus Overview</h1>
+        <p>A dedicated thread in the real-time environment implements the Modbus/TCP protocol. To achieve deterministic I/O updates, a real-time TCP/IP stack implementation is used in place of the standard Windows stack. To use the real-time TCP/IP stack implementation, you must have the network interface card (NIC) driver running under real-time control.</p>
+        <p>There are six register sets per connection. These are InputWords, InputBits, OutputWords, OutputBits, OutputWordsStatus, and OutputBitsStatus. Word registers hold 16-bit values, and Bit registers hold 1-bit values. The values are  indexed from 0 to 65,535. This is the maximum size defined in the protocol, but it is limited to a smaller range by the mappings defined in the parameter file. </p>
+        <p>There is a Modbus master and a Modbus slave implementation on the PC. The <span class="AerotechVariablesSimpleName_pro">Professional Option</span> supports up to 16 simultaneous master connections. Use <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> to map I/O on the Modbus device to <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> variables on the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. When the mappings are defined, all I/O synchronization occurs automatically and you can access the data by using variables in <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span>. You can declare mappings as either simple variables or as arrays of contiguous values. Refer to <a href="Creating_Fieldbus_Mappings_for_PC_Modbus_Master.htm">Creating Fieldbus Mappings For PC Modbus Master</a> or <a href="Creating_Fieldbus_Mappings_for_PC_Modbus_Slave.htm">Creating Fieldbus Mappings for PC Modbus Slave</a> for more information.</p>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To Use PC Modbus Master</h4>
+        <ol>
+            <li value="1">Shut down the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. Click <span class="procedureTerm">Start</span> &#8594; <span class="procedureTerm">All Programs</span> &#8594; <span class="procedureTerm"><span style="mc-tag-and-class: span;" class="AerotechVariablesCompanyName_Short">Aerotech</span></span> &#8594; <span class="procedureTerm"><span class="AerotechVariablesSimpleNameLong_Auto3200">Automation 3200</span></span> &#8594; <span class="procedureTerm">Shutdown <span class="AerotechVariablesSimpleName_A3200">A3200</span></span>. A black <span class="procedureTerm">Command Prompt</span> window comes into view momentarily.</li>
+            <li value="2"><a href="PC_Modbus_Installation.htm">Install</a> one of the supported Ethernet network controller cards and add real-time support. Refer to <a href="PC_Modbus_Installation.htm">PC Modbus Installation</a> for more information.</li>
+            <li value="3">Use <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> to configure the real-time NIC driver. Refer to <a href="PC_Modbus_Configuration.htm">PC Modbus Configuration</a> for more information.</li>
+            <li value="4">Configure the remote Modbus device. You must do this with a PC that has a Network Interface Card that is configured for Windows. Do not use a card that is configured for real-time control.</li>
+            <li class="noBulletLevel1">The sections that follow give detailed procedures on how to configure the most commonly used Modbus slave devices (WAGO Fieldbus Controllers (FC) and Programmable Fieldbus Controllers 
+ (PFC)). Other Modbus compliant modules supply similar configuration tools that might be different from these procedures. For more information, refer to the documentation supplied by the manufacturer 
+ of the module you are using.</li>
+            <ol style="list-style-type: upper-alpha;">
+                <li class="TopMargin" value="1">Find a compatible IP address to assign to the WAGO FC/PFC.</li>
+                <li value="2">
+                    <div class="MCDropDown">
+                        <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2937407254_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Assign an IP Address to the WAGO FC/PFC</a>
+                        </div>
+                        <div class="MCDropDownBody_0" id="MCDropDownBody_2937407254_0" style="display: none;">
+                            <ol>
+                                <li class="TopMargin" value="1">Power off the WAGO slave device. </li>
+                                <li value="2">Install the <span class="procedureTerm">WAGO BootP Server</span> application at <a href=" http://www.wagocatalog.com/okv3/Download_files/BootPSer.zip" target="_blank">http://www.wagocatalog.com/okv3/Download_files/BootPSer.zip</a>. </li>
+                                <li value="3">Connect the WAGO slave device to the same network to which your PC is connected.<br /></li>
+                                <li value="4">Open the <span class="procedureTerm">WAGO&#160;BootP Server</span> application.</li>
+                                <li value="5">Click the <span class="procedureTerm">Edit Bootptab</span> button. <span class="procedureTerm">Bootptab.txt</span> comes into view so you can edit this file.</li>
+                                <li value="6">Edit the colon-separated sections of <span class="procedureTerm">Bootptab.txt</span> to define the operating parameters that you want to configure on the WAGO slave device. Refer to the example that follows.</li>
+                                <li class="noBulletLevel1">
+                                    <div class="example">
+                                        <p class="For_example_Head">For Example</p>
+                                        <p>To configure the IP address of the WAGO slave device as 10.101.0.24, the Gateway as 10.101.0.1, and the subnet mask as 255.255.0.0 to a fieldbus controller with a MAC address of 00:30:DE:00:11:03, edit the text as follows.</p>
+                                        <p>WAGOFC1:ht=1:ha=0030DE001103:ip=10.101.0.24:sm=255.255.0.0:T3=0A.65.00.01:</p>
+                                        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/When_Statement.css');" class="TableStyle-When_Statement" cellspacing="0">
+                                            <col class="Column-Column1" />
+                                            <col />
+                                            <tbody>
+                                                <tr class="Body-Body2">
+                                                    <td class="BodyE-Column1-Body2" style="border-right-style: none;border-right-width: 1px;border-right-color: #000000;vertical-align: top;">
+                                                        <p>Where</p>
+                                                    </td>
+                                                    <td class="BodyD--Body2" style="vertical-align: top;">
+                                                        <p><span class="procedureTerm">WAGOFC1</span> is an identifier. (You can change the name of <span class="procedureTerm">WAGOFC1</span> to a name that you want to use.)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="Body-Body2">
+                                                    <td class="BodyE-Column1-Body2" style="vertical-align: bottom;padding-left: 0px;padding-right: 5px;border-right-style: none;border-right-width: 1px;border-right-color: #000000;">
+                                                        <p>and</p>
+                                                    </td>
+                                                    <td class="BodyD--Body2">
+                                                        <p><span class="procedureTerm">ht</span> is the hardware type. (Set <span class="procedureTerm">ht</span> to 1.)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="Body-Body2">
+                                                    <td class="BodyE-Column1-Body2" style="vertical-align: bottom;padding-left: 0px;padding-right: 5px;border-right-style: none;border-right-width: 1px;border-right-color: #000000;">
+                                                        <p>and</p>
+                                                    </td>
+                                                    <td class="BodyD--Body2">
+                                                        <p><span class="procedureTerm">ha</span> is the hardware address. (This is the MAC address.)</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="Body-Body2">
+                                                    <td class="BodyE-Column1-Body2" style="vertical-align: bottom;padding-left: 0px;padding-right: 5px;border-right-style: none;border-right-width: 1px;border-right-color: #000000;">
+                                                        <p>and</p>
+                                                    </td>
+                                                    <td class="BodyD--Body2">
+                                                        <p><span class="procedureTerm">ip</span> is the dot-separated IP address.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="Body-Body2">
+                                                    <td class="BodyE-Column1-Body2" style="vertical-align: bottom;padding-left: 0px;padding-right: 5px;border-right-style: none;border-right-width: 1px;border-right-color: #000000;">
+                                                        <p>and</p>
+                                                    </td>
+                                                    <td class="BodyD--Body2">
+                                                        <p><span class="procedureTerm">sm</span> is the subnet mask.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="Body-Body2">
+                                                    <td class="BodyB-Column1-Body2" style="vertical-align: bottom;padding-left: 0px;padding-right: 5px;border-right-style: none;border-right-width: 1px;border-right-color: #000000;">
+                                                        <p>and</p>
+                                                    </td>
+                                                    <td class="BodyA--Body2">
+                                                        <p><span class="procedureTerm">T3</span> is the gateway.&#160;(You must enter the gateway in hexadecimal notation.)</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li value="7">Make sure that you terminate the line with a colon&#160;(:).</li>
+                                <li value="8">After you are done editing <span class="procedureTerm">bootptab.txt</span>, save and close the file.</li>
+                                <li value="9">In the <span class="procedureTerm">WAGO BootP Server</span> dialog, click the <span class="procedureTerm">Start</span> button to scan for a bootp packet request.</li>
+                                <li value="10">Power on the WAGO slave device. After a few seconds occur, the WAGO BootP Server dialog comes into view. If the "found" line shows, then the IP address is assigned the WAGO slave device.</li>
+                                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_2937407254_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                 Figure: WAGO BootP Server
+                </a>
+                                    <div class="MCDropDownBody_0" id="MCDropDownBody_2937407254_1" style="display: none;">
+                                        <p class="img">
+                                            <img src="Resources/Images/Image_WAGOBootPServer.png" />
+                                        </p>
+                                    </div>
+                                </div>
+                                <li value="11">
+                                    <p>To get the WAGO slave device to reply correctly, open a Windows command prompt and type the text that follows.</p><pre xml:space="preserve" class="indentLevel1">ping <span class="commandArgument">&lt;IP address&gt;</span></pre>
+                                </li>
+                                <li class="noBulletLevel1">
+                                    <div class="example">
+                                        <p class="For_example_Head">For Example</p><pre class="indentLevel1" xml:space="preserve">C:\&gt;ping 10.101.0.24
+Reply from 10.101.0.24: bytes=32 time=10ms TTL=255</pre><pre class="indentLevel1">Reply from 10.101.0.24: bytes=32 time&lt;10ms TTL=255</pre><pre class="indentLevel1">Reply from 10.101.0.24: bytes=32 time&lt;10ms TTL=255</pre>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </li>
+                <li value="3">
+                    <div class="MCDropDown">
+                        <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2937407254_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Make sure the PC and this IP Address are on the same Subnet</a>
+                        </div>
+                        <div class="MCDropDownBody_0" id="MCDropDownBody_2937407254_2" style="display: none;">
+                            <p>IF (REMOTE_IP XOR LOCAL_IP) AND NET MASK = 0, the two nodes are on the same subnet.</p>
+                            <div class="example">
+                                <p class="For_example_Head">For Example</p>
+                                <p>In this example, the two 
+ nodes are on different subnets and the packets are routed to a gateway 
+ from the side of the Host. 
+ When a network packet is routed to a gateway, delays in communication 
+ can be caused by overhead and packet collisions. Because of the 
+ possible delays, do not use an I/O module outside of its own 
+ subnet for time-critical applications.</p>
+                                <table style="mc-table-style: url('Resources/TableStyles/NoLines.css');margin-left: 0;margin-right: auto;" class="TableStyle-NoLines" cellspacing="0">
+                                    <col style="width: 150px;" class="TableStyle-NoLines-Column-Column1" />
+                                    <col style="width: 200px;" class="TableStyle-NoLines-Column-Column1" />
+                                    <col style="width: 50px;" class="TableStyle-NoLines-Column-Column1" />
+                                    <col style="width: 200px;" class="TableStyle-NoLines-Column-Column1" />
+                                    <tr valign="top" class="TableStyle-NoLines-Body-Body1">
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p align="right">Host Node IP:</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p align="right">10.101.0.24</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p class="center">=</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyD-Column1-Body1">
+                                            <p>0x0A650018</p>
+                                        </td>
+                                    </tr>
+                                    <tr valign="top" class="TableStyle-NoLines-Body-Body1">
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p align="right">Host Netmask:</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p align="right">255.255.0.0</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p class="center">=</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyD-Column1-Body1">
+                                            <p>0xFFFF0000</p>
+                                        </td>
+                                    </tr>
+                                    <tr valign="top" class="TableStyle-NoLines-Body-Body1">
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p align="right">Remote Node IP:</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p align="right">10.101.201.25</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p class="center">=</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyD-Column1-Body1">
+                                            <p>0x0A65C919</p>
+                                        </td>
+                                    </tr>
+                                    <tr valign="top" class="TableStyle-NoLines-Body-Body1">
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p align="right">&#160;</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p align="right">&#160;</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p>&#160;</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyD-Column1-Body1">
+                                            <p>&#160;</p>
+                                        </td>
+                                    </tr>
+                                    <tr valign="top" class="TableStyle-NoLines-Body-Body1">
+                                        <td rowspan="1" colspan="2" class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p align="right">0x0A650018 &#160;XOR 
+ &#160;0x0A65C919</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p class="center">=</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyD-Column1-Body1">
+                                            <p>0xC901</p>
+                                        </td>
+                                    </tr>
+                                    <tr valign="top" class="TableStyle-NoLines-Body-Body1">
+                                        <td rowspan="1" colspan="2" class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p align="right">0xC901 AND 0xFFFF0000</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p class="center">=</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyD-Column1-Body1">
+                                            <p>0</p>
+                                        </td>
+                                    </tr>
+                                    <tr valign="top" class="TableStyle-NoLines-Body-Body1">
+                                        <td rowspan="1" colspan="2" class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p align="right">(0x0A650018 XOR 0x0A65C919) AND 0xFFFFFF00</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                                            <p>&#160;</p>
+                                        </td>
+                                        <td class="TableStyle-NoLines-BodyD-Column1-Body1">
+                                            <p>&#160;</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <p>These two machines are 
+ on the same subnet. But, if the netmask of the Host changes to 255.255.255.0, 
+ then</p>
+                                <table style="width: 60.252%;" width="60.252%" cellspacing="0">
+                                    <col style="width: 348px;" />
+                                    <col style="width: 52px;" />
+                                    <col style="width: 200px;" />
+                                    <tr valign="top">
+                                        <td rowspan="1" colspan="1">
+                                            <p align="right">(0x0A650018 &#160;XOR 
+ &#160;0x0A65C919) 
+ AND 0xFFFFFF00</p>
+                                        </td>
+                                        <td>
+                                            <p style="text-align: center;">=</p>
+                                        </td>
+                                        <td>
+                                            <p>0xC900</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <li value="5">Use <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> to configure the slave device and to configure the correct I/O mappings for your device. Refer to the documentation of the remote device for correct configuration. Refer to <a href="Creating_Fieldbus_Mappings_for_PC_Modbus_Master.htm">Creating Fieldbus Mappings for PC Modbus Master</a> for more information.</li>
+            <li value="6">After you configure the device, connect the device directly to the network card that is running under real-time control. <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you connect directly by using a crossover cable or through a network switch.</li>
+        </ol>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="PC_Modbus_Troubleshooting.htm">PC Modbus Troubleshooting</a>
+        </p>
+        <p class="relatedTopic"><a href="PC_Modbus_Installation.htm">PC Modbus Installation</a>
+        </p>
+        <p class="relatedTopic"><a href="PC_Modbus_Configuration.htm">PC Modbus Configuration</a>
+        </p>
+        <p class="relatedTopic"><a href="Compatible_Network_Interface_Cards.htm">Compatible Network Interface Cards</a>
+        </p>
+        <p class="relatedTopic"><a href="Modbus_Protocol.htm">Modbus Protocol</a>
+        </p>
+        <p class="relatedTopic">&#160;</p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PC_Modbus_Overview.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PC_Modbus_Overview.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

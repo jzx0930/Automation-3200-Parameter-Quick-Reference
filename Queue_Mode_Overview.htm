@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Queue Mode Overview</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Queue Mode Overview</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Queue Mode Overview</h1>
+        <p>In <a name="kanchor1062"></a>queue mode, <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> commands or <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> programs are <a name="kanchor1063"></a>buffered on the controller and then executed. When you use queue mode, you can issue consecutive <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> commands quickly and you can run <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> programs that are too large to compile and run in other modes. </p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_939794281_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Issuing <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> Commands In Queue Mode</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_939794281_0" style="display: none;">
+                <p>By using the <span class="AerotechVariablesCompanyName_Short">Aerotech</span> libraries you can execute different <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> commands on a task. By default, the controller runs in <a href="Immediate_Commands.htm">immediate command</a> mode. In immediate command mode, each line of the program completes before the next line is executed. But if you enable queue mode, the task buffers the commands instead of executing them one at a time. </p>
+                <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 750px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 300px;" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Functionality </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">C Library</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">.NET Library</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p>Enable queue mode</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p><span class="AerotechVariablesSimpleName_A3200">A3200</span>ProgramInitializeQueue() </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p><span class="AerotechVariablesCompanyName_Short">Aerotech</span>.A3200.Tasks.Program.InitializeQueue()</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p> Execute a command </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p><span class="AerotechVariablesSimpleName_A3200">A3200</span>CommandExecute() or any function that executes a command on a task.</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p><span class="AerotechVariablesCompanyName_Short">Aerotech</span>.A3200.Commands </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                <p>Disable queue mode</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                <p><span class="AerotechVariablesSimpleName_A3200">A3200</span>ProgramStop() or <span class="AerotechVariablesSimpleName_A3200">A3200</span>ProgramStopAndWait()</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p> <span class="AerotechVariablesCompanyName_Short">Aerotech</span>.A3200.Tasks.Program.Stop()</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>When you enable queue mode, the task enters the <span class="bold">Queue</span> Task State.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_939794281_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Running an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> Program In Queue Mode</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_939794281_1" style="display: none;">
+                <p>Running <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> programs in queue mode is helpful if you have a program that is too large to compile and run in other modes. In queue mode, program lines are read one block at a time and compiled individually. The program lines are then sent to the controller where the lines are buffered and then executed.</p>
+                <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 750px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 320px;" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Functionality </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">AeroBasic </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">C Library</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">.NET Library</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p>Run a buffered program</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p>PROGRAM BUFFEREDRUN </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p><span class="AerotechVariablesSimpleName_A3200">A3200</span>ProgramBufferedRun()</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p><span class="AerotechVariablesCompanyName_Short">Aerotech</span>.<span class="AerotechVariablesSimpleName_A3200">A3200</span>.Tasks.Program.BufferedRun(String)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                <p>Stop a buffered program</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                <p>PROGRAM STOP </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                <p><span class="AerotechVariablesSimpleName_A3200">A3200</span>ProgramStop() or <span class="AerotechVariablesSimpleName_A3200">A3200</span>ProgramStopAndWait()</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p><span class="AerotechVariablesCompanyName_Short">Aerotech</span>.<span class="AerotechVariablesSimpleName_A3200">A3200</span>.Tasks.Program.Stop() </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>When you run a program in queue mode, the task that you specify in the <span class="commandArgument">&lt;Task&gt;</span> argument of the PROGRAM BUFFEREDRUN command  enters the <span class="procedureTerm">Queue</span> Task State and stays in this state while the program executes.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_939794281_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Keeping the Queue Full</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_939794281_2" style="display: none;">
+                <p>In queue mode, the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> compiler compiles and downloads lines to the controller as the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program executes. The controller processes program lines as quickly as possible. If the controller executes the program lines more quickly than it can buffer them, it will run out of lines to execute. This is known as queue starvation.  If you execute LINEAR, CW, CCW, or BEZIER commands in VELOCITY ON mode, and a queue starvation occurs, the controller automatically decelerates the axes to zero velocity to avoid motion problems. If you execute PVT or PT commands and a queue starvation occurs, the controller does not automatically decelerate the axes and motion problems might occur.</p>
+                <p>To prevent queue starvation, do one or more of the following.</p>
+                <ul>
+                    <li value="1">Make sure the value of the <a href="Parameters/QueueBufferSize.html" class="MCXref_0">QueueBufferSize Parameter</a> is sufficiently large to keep the buffer full. The default value of QueueBufferSize is typically sufficient.</li>
+                    <li value="2">Issue a <a href="Commands/DWELL_Command.html" class="MCXref_0">DWELL Command</a> as the first line and in other important locations to let the queue fill before it executes the next line.</li>
+                    <li value="3">Issue a <a href="Commands/PROGRAM%20PAUSE_Command.html" class="MCXref_0">PROGRAM PAUSE Command</a> as the first line. The C or .NET Library application can issue a <a href="Commands/PROGRAM%20START_Command.html" class="MCXref_0">PROGRAM START Command</a> to start the queue running whenever it determines enough lines are in the queue. To see how many lines are in the queue, you can retrieve the DATAITEM_QueueLineCount <a href="Commands/TASKSTATUS_Function.html" class="MCXref_0">TASKSTATUS Function</a> item.</li>
+                    <li value="4">Issue a <a href="Commands/WAIT_Command.html" class="MCXref_0">WAIT Command</a> as the first line, and make that command wait for DATAITEM_QueueLineCount to fill with a specified number of lines.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_939794281_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Additional Notes</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_939794281_3" style="display: none;">
+                <ul>
+                    <li value="1">Programs that run in queue mode cannot use #define, #include, #macro or #bezier preprocessor directives. Use the Auto Include feature of <a href="Program_Automation_MC.htm">Program Automation</a> to include files that contain your #define or #macro directives. Use the TOLERANCE keyword of the <a href="Commands/BEZIER_Command.html">BEZIER</a> command instead of the #bezier preprocessor directive.</li>
+                    <li value="2">Because queue mode compiles programs one line at a time, you can only use single-line commands and the commands must be in sequence. You cannot use some block control structures such as IF-THEN-ELSE blocks, FOR or WHILE loops, or function calls. You cannot use the DVAR command to define variables. To access variables in your program while you are using queue mode, use <a href="Global_Variables.htm">global variables</a> or <a href="Task_Variables.htm">task variables</a>.</li>
+                    <li value="3">From the C Library and .NET Library, you can issue more than one <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> command to one execute call by putting line breaks between each line. This lets you compile more efficiently and downloads the lines to the queue.</li>
+                </ul>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Commands/PROGRAM%20BUFFEREDRUN_Command.html" class="MCXref_0">PROGRAM BUFFEREDRUN Command</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Queue_Mode_Overview.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Queue_Mode_Overview.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

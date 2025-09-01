@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|Parameters" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Parameter File Configuration</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink selected" href="#">Parameters</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Parameters</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor94"></a><a name="kanchor95"></a>Parameter File Configuration</h1>
+        <p>The default parameter file is located in User Files folder. Multiple parameter files can exist on the PC but the controller only downloads 
+ parameters from the active parameter file. The Active file is marked in <b>bold</b> in the Configuration Manager and contains the <b>&lt;Active&gt;</b> tag following the name. </p>
+        <p>If you purchased system integration from Aerotech, the User Files folder contains a parameter file using this naming convention: ######-A-1-1 
+ (for example, 132123-A-1-1.prm). This file is automatically installed from the <span class="AerotechVariablesStorageDevice">installation device</span>. If a file is present with 
+ this naming convention, refer to <a href="Selecting_a_Parameter_File.htm">Selecting a Parameter File</a> in the Getting Started section.</p>
+        <p>If no active parameter file has been established the Configuration Manager will walk you through setting one up starting with the following dialog:</p>
+        <p class="img">
+            <img src="Resources/Images/Image_NoAcitveParameterFileFound.png" class="ScreenshotBorder" />
+        </p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Configuring Axis Names</h2>
+        <p>Right click on the parameter file and select <span class="procedureTerm">Configure Axes</span>. From the resulting dialog, highlight an axis and select <span class="procedureTerm">Rename</span> to change the name. Any axis that is listed in the parameter file, but not physically connected, will be a virtual axis.</p>
+        <p>When the changes are complete, click <span class="procedureTerm">OK</span>. You will need to save the parameter file by clicking the <span class="procedureTerm">Save</span> button in the menu or right clicking the parameter file and selecting <span class="procedureTerm">Save</span>.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Edit Parameters</h2>
+        <p>The following parameters require configuration for all systems and are listed in the recommended order of configuration. This is the minimum 
+ set of parameters required for operation of the system. It is important that you read all parameters before beginning motion. </p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Parameters Required for System Configuration</p>
+        <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;caption-side: top;width: 628px;" cellspacing="0" class="TableStyle-Basic">
+            <col style="width: 150px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 350px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 128px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Function</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: center;">Parameter Type</th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="Parameters/units_Category.html">Units</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Define the scale factor for programming units, displayed units name, and displayed precision.</p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                    <p>Axis</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="Parameters/feedback_Category.html">Feedback Type Channel</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Configure the position and velocity feedback device and channel.</p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">Axis</td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="Parameters/motor_Category.html">Motor Type</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Specify the motor type (brushless, brush, stepper).</p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">Axis</td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="Parameters/fault_Category.html">Faults</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Configure system safety levels and responses.</p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">Axis</td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="Parameters/threshold_Category.html">Thresholds</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Configure thresholds that will govern certain fault conditions.</p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">Axis</td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="Parameters/current_Category.html">Current Loop</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Setup the digital current loop gains.</p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">Axis</td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="Parameters/servo_Category.html">Servo Loop</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Setup the position and velocity loop gains.</p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">Axis</td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="Parameters/limits_Category.html">End of Travel Limits</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Configure the polarity of the end of travel limits.</p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">Axis</td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="Parameters/motion_Category.html">Axis Acceleration and Deceleration Rates</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>For axis motion only, specify axis accelerations and deceleration rates, time, and method of ramping.</p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">Axis</td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="Parameters/motion_Category.html">Coordinated Acceleration and Deceleration Rates</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Configure the acceleration and deceleration rates, times, and method of ramping for coordinated moves.</p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                    <p>Task</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="Parameters/home_Category.html">Homing</a>
+                    </p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Setup the method, speeds, and rates used during the home cycle.</p>
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">Axis</td>
+            </tr>
+        </table>
+        <p> Refer to the <a href="javascript:void(0);" onclick="FMCToggler( this ); return false;" class="MCToggler_0" MadCap:targets="t1"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCTogglerIcon" /> Parameter Group Summary</a> for information about advanced configuration topics. </p>
+        <div MadCap:targetName="t1" style="display: none;">
+            <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Parameter Group Summary</p>
+            <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;caption-side: top;width: 628px;" cellspacing="0" class="TableStyle-Basic">
+                <col style="width: 150px;" class="TableStyle-Basic-Column-Column1" />
+                <col style="width: 350px;" class="TableStyle-Basic-Column-Column1" />
+                <col style="width: 128px;" class="TableStyle-Basic-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-Basic-Head-Header1">
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                            <p style="text-align: left;">Function</p>
+                        </th>
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                            <p style="text-align: left;">Description</p>
+                        </th>
+                        <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                            <p>Parameter Type</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/autotune_Category.html">Autotune</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Configure the axis settings used during the autotune algorithm.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/axis_Category.html">Backlash Compensation</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Specify the quantity of backlash correction applied.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/brake_Category.html">Brake Output</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Specify and configure the type of output that controls the brake.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/axis_Category.html">Dominant and Dependent Axis Types</a>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Specify if the axis generates dominant or dependent motion through the AxisType parameter.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/filters_Category.html">Filters</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Set coefficients for the second order digital filters.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/axis_Category.html">Gantry 
+ Mode</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Specify master and slave gantry axes.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/io_Category.html">Drive I/O Options</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Configure drive related interface options.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/motion_Category.html">Jogging (Axis)</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Setup jog distances and speeds used in all applications.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/motion_Category.html">Joystick 
+ (Axis)</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>
+                            <p>Specify axis related speeds used under joystick control.</p>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/taskjoy_Category.html">Joystick (Task)</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Configure mapping to analog inputs, button configuration, and analog ranges.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Task</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/output_Category.html">Nservo Current Scaling and Offsets</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Set the current scaling when using Nservo and external amplifiers.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/io_Category.html">PSO/SSI 
+ Net</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Configures the Ndrive SSI Net encoder signals and encoder dividers.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/limits_Category.html">Software 
+ Limits</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Configure software limit values and mode of operation.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/input_Category.html">E-Stop</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Configure which input will be used for sensing the tasks emergency stop.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Axis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/motion_Category.html">Speeds</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Setup default speeds and time base units.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Task</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/malloc_Category.html">Global Variables</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Configure the number of global variables.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>System</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><a href="Parameters/malloc_Category.html">Task Variables</a>
+                        </p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Configure the number of variables and other fixed memory used by each task.</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>Task</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Reading_an_Axis_Parameter_from_a_Program.htm">Reading 
+ an Axis Parameter from a Program</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Parameter_File_Configuration.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Parameter_File_Configuration.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

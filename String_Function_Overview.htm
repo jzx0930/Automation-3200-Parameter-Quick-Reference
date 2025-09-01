@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Variables|Variable Types|Strings" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>String Function Overview</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Variables.htm">Variables</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Double_Type_Overview.htm">Variable Types</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="String32_Constants.htm">Strings</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">String Function Overview</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor1108"></a>String Function Overview</h1>
+        <p>Strings can include carriage returns, line feeds, spaces, system text, and printable characters. You can add the date and time, floating-point values, and more complex formatting to a string by issuing the <a href="Commands/MAKESTRING_Function.html">MAKESTRING</a> function. For more information, refer to <a href="String32_Variables.htm">String Variables</a>.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre>
+' Make a string from the program name.
+$strglob[0] = MAKESTRING "#PG1"
+' Make a string from the time.        
+$strglob[1] = MAKESTRING "The time is now: #TM"
+' Add runtime data to the string.
+$strglob[2] = MAKESTRING "Time= #DT, #DT pgm = #PG1"
+				
+' Find the length of a string.
+$global[0] = STRLEN( $strglob[0] )
+' Compare two strings.
+$global[1] = STRCMP( $strglob[0], "end", 0 )
+' Find a string within another string.
+$global[2] = STRFIND( $strglob[0], "=", 0 )
+' Find a set of characters within another string.
+$global[3] = STRCHAR( $strglob[0], "1234567890" )
+' Change a number to a string.
+$strglob[6] = DBLTOSTR( $global[0], 4 )
+' Change a string to a number.
+$global[4] = STRTODBL( $strglob[6] )
+' Find the ASCII value of a character.
+$global[5] = STRTOASCII( $strglob[0], 4 )
+' Remove a string from a larger string
+$strglob[3] = STRMID( $strglob[0], 1, 5 )
+' Change a string to uppercase.
+$strglob[4] = STRUPR( $strglob[0] )
+' Change a string to lowercase.
+$strglob[5] = STRLWR( $strglob[0] )</pre>
+        </div>
+        <p>The previous example (when called STRNGFUN.PGM), produces the following 
+ assignments:</p>
+        <p class="indentLevel1">$strglob[0] = STRNGFUN.PGM</p>
+        <p class="indentLevel1">$strglob[1] = The time is now: 16:05</p>
+        <p class="indentLevel1">$strglob[2] = Time= 12/29/2004, 12/29/2004 pgm =STRNGFUN.PGM</p>
+        <p class="indentLevel1">$strglob[3] = TRNGF</p>
+        <p class="indentLevel1">$strglob[4] = STRNGFUN.PGM</p>
+        <p class="indentLevel1">$strglob[5] = strngfun.pgm</p>
+        <p class="indentLevel1">$strglob[6] = 12.0000</p>
+        <p class="indentLevel1">&#160;</p>
+        <p class="indentLevel1">$global[0] = 12.000000</p>
+        <p class="indentLevel1">$global[1] = 1.000000</p>
+        <p class="indentLevel1">$global[2] = -1.000000</p>
+        <p class="indentLevel1">$global[3] = -1.000000</p>
+        <p class="indentLevel1">$global[4] = 12.000000</p>
+        <p class="indentLevel1">$global[5] = 71.000000
+ 
+</p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Commands/DBLTOSTR_Function.html" class="MCXref_0">DBLTOSTR Function</a>
+        </p>
+        <p class="relatedTopic"><a href="String32_Constants.htm">String Constants</a>
+        </p>
+        <p class="relatedTopic"><a href="String32_Operators.htm">String Operators</a>
+        </p>
+        <p class="relatedTopic"><a href="Commands/string_Category.html" class="MCXref_0">String Command Category</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=String_Function_Overview.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=String_Function_Overview.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

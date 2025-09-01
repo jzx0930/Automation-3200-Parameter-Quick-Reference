@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|Servo Loop" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Servo Loop Transfer Functions</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/When_Statement.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="The_Servo_Loop.htm">Servo Loop</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Servo Loop Transfer Functions</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor735"></a>Servo Loop <a name="kanchor736"></a>Transfer Functions</h1>
+        <p>Refer to <a href="Servo_Control_Loop_Block_Diagram.htm">Servo Loop Block Diagram</a> for an illustration of the servo loop.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>PID Controller</h2>
+        <p><span class="equation">C(z)</span> represents the discrete-time transfer function of the PID controller assuming a single-loop configuration with <span class="equation">GainKv = 1</span>. The transfer function is derived from Position Error to normalized Current Command.</p>
+        <p class="equation_18pt">
+            <img src="GeneratedImages/Equations/Equation183.png" style="width: 1239px;height: 49px;" alt="" class="_MCEquation_0 mcReset" />
+        </p>
+        <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>where</h4>
+        <p class="equation_18pt">
+            <img src="GeneratedImages/Equations/Equation184.png" style="width: 552px;height: 49px;" alt="" class="_MCEquation_0 mcReset" />
+        </p>
+        <p class="equation_18pt">
+            <img src="GeneratedImages/Equations/Equation185.png" style="width: 429px;height: 49px;" alt="" class="_MCEquation_0 mcReset" />
+        </p>
+        <p class="equation_18pt">
+            <img src="GeneratedImages/Equations/Equation186.png" style="width: 312px;height: 49px;" alt="" class="_MCEquation_0 mcReset" />
+        </p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Plant</h2>
+        <p><span class="equation">P(s)</span> represents the continuous-time transfer function of the stage and motor. <span class="equation">P(z)</span> represents the discrete-time transfer of the stage and motor. The transfer functions shown below are derived from the Current Command to the Position Feedback of a simplified model of the plant and do not include any higher order dynamics.</p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Continuous-time</h3>
+        <p class="equation_18pt">
+            <img src="GeneratedImages/Equations/Equation187.png" style="width: 233px;height: 58px;" alt="" class="_MCEquation_0 mcReset" />
+        </p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Discrete-time</h3>
+        <p class="equation_18pt">
+            <img src="GeneratedImages/Equations/Equation188.png" style="width: 528px;height: 50px;" alt="" class="_MCEquation_0 mcReset" />
+        </p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/When_Statement.css');" class="TableStyle-When_Statement" cellspacing="0">
+            <col class="Column-Column1" />
+            <col />
+            <tbody>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2" style="vertical-align: middle;">
+                        <p>where</p>
+                    </td>
+                    <td class="BodyD--Body2" style="vertical-align: middle;">
+                        <img src="GeneratedImages/Equations/Equation189.png" style="width: 231px;height: 18px;" alt="" class="_MCEquation_0 mcReset" /><sup>.</sup>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2" style="vertical-align: middle;">
+                        <p>and</p>
+                    </td>
+                    <td class="BodyD--Body2" style="vertical-align: middle;">
+                        <img src="GeneratedImages/Equations/Equation190.png" style="width: 94px;height: 15px;" alt="" class="_MCEquation_0 mcReset" />.</td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2" style="vertical-align: middle;">
+                        <p>and</p>
+                    </td>
+                    <td class="BodyD--Body2" style="vertical-align: middle;">
+                        <img src="GeneratedImages/Equations/Equation191.png" style="width: 170px;height: 16px;" alt="" class="_MCEquation_0 mcReset" />.</td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2" style="vertical-align: middle;">
+                        <p>and</p>
+                    </td>
+                    <td class="BodyD--Body2" style="vertical-align: middle;">
+                        <p>
+                            <img src="GeneratedImages/Equations/Equation192.png" style="width: 57px;height: 26px;" alt="" class="_MCEquation_0 mcReset" />.</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column1-Body2" style="vertical-align: middle;">
+                        <p>and</p>
+                    </td>
+                    <td class="BodyA--Body2" style="vertical-align: middle;">
+                        <img src="GeneratedImages/Equations/Equation193.png" style="width: 272px;height: 35px;" alt="" class="_MCEquation_0 mcReset" />.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Feedforward</h2>
+        <p><span class="equation">FF(z)</span> represents the discrete-time transfer function of the feedforward controller. The transfer function is derived from Position Command to Current Command.</p>
+        <p class="equation_18pt">
+            <img src="GeneratedImages/Equations/Equation194.png" style="width: 842px;height: 47px;" alt="" class="_MCEquation_0 mcReset" />
+        </p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Digital Filters</h3>
+        <p><span class="equation">F(z)</span> represents the discrete-time transfer function of the servo-loop digital filters. <span class="equation">F(z)</span> depends on the number and type of active digital filters. You can use the <span class="procedureTerm">Filter Calculator</span> in <a href="CM_Configuration_Manager_Overview.htm"><span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span></a> or <a href="DS_Digital_Scope_Application.htm"><span class="AerotechVariablesApp_DigScope">Digital Scope</span></a> to see the frequency response of the digital filter transfer function.</p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Open-loop</h3>
+        <p><span class="equation">L(z)</span> represents the discrete-time open-loop transfer function. The  open-loop transfer function includes the PID controller (<span class="equation">C(z)</span>), the  digital filters (<span class="equation">F(z)</span>) and the plant (<span class="equationVariable">P(z)</span>). The open-loop transfer  function is derived from the Position Error to the Position Feedback.</p>
+        <p class="equation_18pt">
+            <img src="GeneratedImages/Equations/Equation195.png" style="width: 280px;height: 28px;" alt="" class="_MCEquation_0 mcReset" />
+        </p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Closed-loop</h3>
+        <p><span class="equation">CL(z)</span> represents the discrete-time closed-loop transfer function. The closed-loop transfer function includes the PID controller (<span class="equation">C(z)</span>), the digital filters (<span class="equation">F(z)</span>), the feedforward controller (<span class="equation">FF(z)</span>) and the plant (<span class="equation">P(z)</span>). The closed-loop transfer function is derived from Position Command to Position Feedback. <MadCap:conditionalText>The following transfer function assumes that the <span class="procedureTerm">Feedforward Control</span> setting of the <a href="Parameters/ServoSetup.html">ServoSetup</a> parameter is set to <span class="procedureTerm">After Servo Filters</span>.</MadCap:conditionalText></p>
+        <p class="equation_18pt">
+            <img src="GeneratedImages/Equations/Equation196.png" style="width: 243px;height: 46px;" alt="" class="_MCEquation_0 mcReset" />
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Servo_Loop_Transfer_Functions.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Servo_Loop_Transfer_Functions.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
