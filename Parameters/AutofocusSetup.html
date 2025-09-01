@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|Parameters|Axis|Autofocus Loop" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>AutofocusSetup Parameter</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../Parameter_File_Configuration.htm">Parameters</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="axis_Category.html">Axis</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="autofocus_Category.html">Autofocus Loop</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">AutofocusSetup</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>AutofocusSetup Parameter</h1>
+        <table class="TableStyle-Basic" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');">
+            <col style="width: 115px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 200px;" class="TableStyle-Basic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Default Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>0x00000000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Minimum Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Maximum Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Units</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>None</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p class="alignRight">Type</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_3278695701_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+						Parameter Settings and Parameter File Values
+					</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3278695701_0" style="display: none;">
+                <p>The following table gives the value that is assigned in the parameter file when you select a parameter setting.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Parameter Setting Values</p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Option</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Settings</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">Value</th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Loop Polarity</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Normal</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Inverted</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000001</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="3" class="table_bold_left_just">Autofocus Limits</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Disabled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Enabled (Absolute)</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000002</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Enabled (Relative)</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000004</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Focus Mode</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Continuous Focus</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Single Focus</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000008</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Hold Input Polarity</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Active Low</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Active High</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000010</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Motion Mode</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Normal</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Additive</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000020</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="3" class="table_bold_left_just">InPosition Mode</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use Autofocus Deadband</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use Position Error</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000040</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use Autofocus Error</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000080</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">InPosition2 Mode</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use Position Error</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use Autofocus Error</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000100</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Stability0 Mode</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use Position Error</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use Autofocus Error</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000200</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Stability1 Mode</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use Position Error</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Use Autofocus Error</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000400</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Note.css');width: 650px;" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> Autofocus does not apply when used with the <span class="AerotechVariablesDriveType_GL4">GL4</span>, the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span> or <span class="AerotechVariablesDriveType_FLS">FLS</span>, the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span>&#160;<span class="AerotechVariablesDriveType_CLS">CLS</span>, <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, or <span class="AerotechVariablesDriveType_SSaM">SSaM</span>, or the <span class="AerotechVariablesDriveType_XL4s">XL4s</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Use the AutofocusSetup parameter to configure options related to autofocus behavior. The sections that follow give the possible options for this parameter.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3278695701_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Loop Polarity</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3278695701_1" style="display: none;">
+                <p><span class="procedureTerm">Normal</span> is the default. The autofocus loop polarity is normal (positive error causes positive motion).</p>
+                <p>When you select <span class="procedureTerm">Inverted</span>, the autofocus loop polarity is reversed (negative error causes positive motion).</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3278695701_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Autofocus Limits</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3278695701_2" style="display: none;">
+                <p><span class="procedureTerm">Disabled</span> is the default. There are no limits. The autofocus loop can command the axis to move to any position.</p>
+                <p>When you select <span class="procedureTerm">Enabled (Absolute)</span>, the autofocus position limits are relative to the axis home position. Use the <a href="AutofocusLimitHigh.html" class="MCXref_0">AutofocusLimitHigh Parameter</a> and <a href="AutofocusLimitLow.html" class="MCXref_0">AutofocusLimitLow Parameter</a> to specify the autofocus position limits.</p>
+                <div class="example">
+                    <p class="For_example_Head_TEXT">For Example - Enabled (Absolute)</p>
+                    <p>You select <span class="procedureTerm">Enabled (Absolute)</span>, which sets the AutofocusSetup Parameter to 0x2 on the X axis. Then you set the values of the AutofocusLimitLow Parameter to -127 mm and the AutofocusLimitHigh Parameter to 20 mm. The home position of the axis is at 0 mm.  When the axis position is at -50 mm, you issue the AUTOFOCUS&#160;ON&#160;Command to enable autofocus.</p>
+                    <p>Because the autofocus position limits are referenced to the home position and not the current position, the controller clamps the position command at -127 mm or 20 mm.</p>
+                </div>
+                <p>When you select <span class="procedureTerm">Enabled (Relative)</span>, the autofocus position limits are relative to the position where autofocus was enabled. Autofocus is enabled when the <a href="../Commands/AUTOFOCUS_Command.html">AUTOFOCUS&#160;ON&#160;Command</a> is issued.</p>
+                <div class="example">
+                    <p class="For_example_Head_TEXT">For Example - Enabled (Relative)</p>
+                    <p>You select <span class="procedureTerm">Enabled (Relative)</span>, which sets the AutofocusSetup Parameter to 0x4 on the X axis. Then you set the values of the AutofocusLimitLow Parameter to -127 mm and the AutofocusLimitHigh Parameter to 20 mm. The home position of the axis is at 0 mm. When the axis position is at -50 mm, you issue the AUTOFOCUS&#160;ON Command to enable autofocus.</p>
+                    <p>Because the autofocus position limits are referenced to the current position and not the home position, the controller clamps the position command at -177 mm or -30 mm.</p>
+                </div>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3278695701_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Focus Mode</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3278695701_3" style="display: none;">
+                <p><span class="procedureTerm">Continuous Focus</span> is the default. The autofocus routine runs continuously until you issue the <a href="../Commands/AUTOFOCUS_Command.html">AUTOFOCUS&#160;OFF</a> command to manually disable this routine.</p>
+                <p>When you select <span class="procedureTerm">Single Focus</span>, the autofocus routine automatically turns off when the analog input that is specified by the <a href="AutofocusInput.html">AutofocusInput</a> parameter is within the specified deadband of the <a href="AutofocusDeadband.html">AutofocusDeadband</a> parameter.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3278695701_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Hold Input Polarity</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3278695701_4" style="display: none;">
+                <p><span class="procedureTerm">Active Low</span> is the default. The autofocus loop is held when the digital input specified by the <a href="AutofocusHoldInput.html">AutofocusHoldInput</a> parameter is low. For a differential input this corresponds to a low input level, and for an opto-isolated input this corresponds to the optocoupler not being driven.</p>
+                <p>When you select <span class="procedureTerm">Active High</span>, the autofocus loop is held when the digital input specified by the AutofocusHoldInput parameter is high. For a differential input this corresponds to a high input level, and for an opto-isolated input this corresponds to the optocoupler being driven.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3278695701_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Motion Mode</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3278695701_5" style="display: none;">
+                <p><span class="procedureTerm">Normal</span> is the default. The controller uses the output of the autofocus loop as the position command for the axis. In this mode, if you enable autofocus control then you cannot issue other Motion commands to the axis while the autofocus is active.</p>
+                <p>When you select <span class="procedureTerm">Additive</span>, the controller adds the output of the autofocus loop to the position command for the axis.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3278695701_6" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />InPosition Mode</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3278695701_6" style="display: none;">
+                <p MadCap:conditions="SnippetConditions_Parameters.InPositionDistanceAndTime"><span class="procedureTerm">Use Autofocus Deadband</span> is the default. The drive uses the Autofocus Error to set the <span class="procedureTerm">In Position</span> bit of the <a href="../StructsAutoGen/drivestatus.html">Drive Status</a>. When the Autofocus Error is less than the value that you specify for the <a href="AutofocusDeadband.html" MadCap:variableOverride="" class="MCXref_0">AutofocusDeadband Parameter</a>, the drive sets the <span class="procedureTerm">In Position</span> bit to <span class="procedureTerm">TRUE</span>.</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0" MadCap:conditions="SnippetConditions_Parameters.InPositionDistanceAndTime">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> You must turn on autofocus for the <span class="procedureTerm">Use Autofocus Deadband</span> setting to have an effect. If autofocus is off, the results look as if you have selected the <span class="procedureTerm">Use Position Error</span> setting.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.InPositionDistanceAndTime">When you select <span class="procedureTerm">Use Position Error</span>, the drive uses the absolute value of the Position Error to set the <span class="procedureTerm">In Position</span> bit of the <a href="../StructsAutoGen/drivestatus.html">Drive Status</a>.</MadCap:conditionalText> When the absolute value of the Position Error is less than the value that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.InPositionDistanceAndTime"><a href="InPositionDistance.html" MadCap:variableOverride="" class="MCXref_0">InPositionDistance Parameter</a></MadCap:conditionalText> for a minimum of the quantity of time that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.InPositionDistanceAndTime"><a href="InPositionTime.html" MadCap:variableOverride="" class="MCXref_0">InPositionTime Parameter</a></MadCap:conditionalText>, the drive sets the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.InPositionDistanceAndTime">In Position</span> bit to <span class="procedureTerm">TRUE</span>.</p>
+                <p>When you select <span class="procedureTerm">Use Autofocus Error</span>, the drive uses the Autofocus Error to set the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.InPositionDistanceAndTime">In Position</span> bit of the <a href="../StructsAutoGen/drivestatus.html">Drive Status</a>. When the Autofocus Error is less than the value that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.InPositionDistanceAndTime"><a href="InPositionDistance.html" MadCap:variableOverride="" class="MCXref_0">InPositionDistance Parameter</a></MadCap:conditionalText>, the drive sets the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.InPositionDistanceAndTime">In Position</span> bit to <span class="procedureTerm">TRUE</span>. You must specify the value of the <span MadCap:variableOverride="CoefficientsXX.InPositionXDistance:InPositionDistance," class="CoefficientsXXInPositionXDistance">InPositionDistance</span> parameter in volts when you use this setting.</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> If you use the <span class="procedureTerm">Use Autofocus Error</span> setting while the autofocus mode is off or while you issue the <a href="../Commands/AUTOFOCUS_Command.html">AUTOFOCUS&#160;OFF&#160;Command</a>, the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.InPositionDistanceAndTime">In Position</span> bit stays set to <span class="procedureTerm">TRUE</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3278695701_7" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />InPosition2 Mode</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3278695701_7" style="display: none;">
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.InPosition2DistanceAndTime"><span class="procedureTerm">Use Position Error</span> is the default. The drive uses the absolute value of the Position Error to set the <span class="procedureTerm">In Position 2</span> bit of the <a href="../StructsAutoGen/drivestatus.html">Drive Status</a>.</MadCap:conditionalText> When the absolute value of the Position Error is less than the value that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.InPosition2DistanceAndTime"><a href="InPosition2Distance.html" MadCap:variableOverride="" class="MCXref_0">InPosition2Distance Parameter</a></MadCap:conditionalText> for a minimum of the quantity of time that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.InPosition2DistanceAndTime"><a href="InPosition2Time.html" MadCap:variableOverride="" class="MCXref_0">InPosition2Time Parameter</a></MadCap:conditionalText>, the drive sets the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.InPosition2DistanceAndTime">In Position 2</span> bit to <span class="procedureTerm">TRUE</span>.</p>
+                <p>When you select <span class="procedureTerm">Use Autofocus Error</span>, the drive uses the Autofocus Error to set the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.InPosition2DistanceAndTime">In Position 2</span> bit of the <a href="../StructsAutoGen/drivestatus.html">Drive Status</a>. When the Autofocus Error is less than the value that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.InPosition2DistanceAndTime"><a href="InPosition2Distance.html" MadCap:variableOverride="" class="MCXref_0">InPosition2Distance Parameter</a></MadCap:conditionalText>, the drive sets the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.InPosition2DistanceAndTime">In Position 2</span> bit to <span class="procedureTerm">TRUE</span>. You must specify the value of the <span MadCap:variableOverride="CoefficientsXX.InPositionXDistance:InPosition2Distance," class="CoefficientsXXInPositionXDistance">InPosition2Distance</span> parameter in volts when you use this setting.</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> If you use the <span class="procedureTerm">Use Autofocus Error</span> setting while the autofocus mode is off or while you issue the <a href="../Commands/AUTOFOCUS_Command.html">AUTOFOCUS&#160;OFF&#160;Command</a>, the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.InPosition2DistanceAndTime">In Position 2</span> bit stays set to <span class="procedureTerm">TRUE</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3278695701_8" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Stability0 Mode</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3278695701_8" style="display: none;">
+                <p><span class="procedureTerm">Use Position Error</span> is the default.  The controller uses the absolute value of the Position Error to set the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.Stability0">Stability 0</span> bit of the <a href="../StructsAutoGen/axisstatus.html" class="MCXref_0">Axis Status</a>. When the absolute value of the Position Error is less than the value that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.Stability0"><a href="Stability0Threshold.html" class="MCXref_0">Stability0Threshold Parameter</a></MadCap:conditionalText> for a minimum of the quantity of time that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.Stability0"><a href="Stability0Time.html" class="MCXref_0">Stability0Time Parameter</a></MadCap:conditionalText>, the controller sets the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.Stability0">Stability 0</span> bit to <span class="procedureTerm">TRUE</span>.</p>
+                <p>When you select <span class="procedureTerm">Use Autofocus Error</span>, the controller uses the Autofocus Error to set the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.Stability0">Stability 0</span> bit of the <a href="../StructsAutoGen/axisstatus.html">Axis Status</a>. When the Autofocus Error is less than the value that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.Stability0"><a href="Stability0Threshold.html" class="MCXref_0">Stability0Threshold Parameter</a></MadCap:conditionalText>, the controller sets the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.Stability0">Stability 0</span> bit to <span class="procedureTerm">TRUE</span>. You must specify the value of the <span class="CoefficientsXXParameter_StabilityXThreshold">Stability0Threshold</span> parameter in volts when you use this setting.</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> If you use the <span class="procedureTerm">Use Autofocus Error</span> setting while the autofocus mode is off or while you issue the <a href="../Commands/AUTOFOCUS_Command.html">AUTOFOCUS&#160;OFF&#160;Command</a>, the controller sets the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.Stability0">Stability 0</span> bit to <span class="procedureTerm">TRUE</span> after the quantity of time that you specify for the <span class="CoefficientsXXParameter_StabilityXTime">Stability0Time</span> parameter occurs.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3278695701_9" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Stability1 Mode</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3278695701_9" style="display: none;">
+                <p><span class="procedureTerm">Use Position Error</span> is the default.  The controller uses the absolute value of the Position Error to set the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.Stability1">Stability 1</span> bit of the <a href="../StructsAutoGen/axisstatus.html" MadCap:variableOverride="" class="MCXref_0">Axis Status</a>. When the absolute value of the Position Error is less than the value that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.Stability1"><a href="Stability1Threshold.html" MadCap:variableOverride="" class="MCXref_0">Stability1Threshold Parameter</a></MadCap:conditionalText> for a minimum of the quantity of time that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.Stability1"><a href="Stability1Time.html" MadCap:variableOverride="" class="MCXref_0">Stability1Time Parameter</a></MadCap:conditionalText>, the controller sets the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.Stability1">Stability 1</span> bit to <span class="procedureTerm">TRUE</span>.</p>
+                <p>When you select <span class="procedureTerm">Use Autofocus Error</span>, the controller uses the Autofocus Error to set the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.Stability1">Stability 1</span> bit of the <a href="../StructsAutoGen/axisstatus.html">Axis Status</a>. When the Autofocus Error is less than the value that you specify for the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.Stability1"><a href="Stability1Threshold.html" MadCap:variableOverride="" class="MCXref_0">Stability1Threshold Parameter</a></MadCap:conditionalText>, the controller sets the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.Stability1">Stability 1</span> bit to <span class="procedureTerm">TRUE</span>. You must specify the value of the <span MadCap:variableOverride="CoefficientsXX.Parameter_StabilityXThreshold:Stability1Threshold," class="CoefficientsXXParameter_StabilityXThreshold">Stability1Threshold</span> parameter in volts when you use this setting.</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> If you use the <span class="procedureTerm">Use Autofocus Error</span> setting while the autofocus mode is off or while you issue the <a href="../Commands/AUTOFOCUS_Command.html">AUTOFOCUS&#160;OFF&#160;Command</a>, the controller sets the <span class="procedureTerm" MadCap:conditions="SnippetConditions_Parameters.Stability1">Stability 1</span> bit to <span class="procedureTerm">TRUE</span> after the quantity of time that you specify for the <span class="CoefficientsXXParameter_StabilityXTime">Stability1Time</span> parameter occurs.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="autofocus_Category.html">Autofocus Loop Parameter Category</a>
+        </p><a name="kanchor172"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=AutofocusSetup.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=AutofocusSetup.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
