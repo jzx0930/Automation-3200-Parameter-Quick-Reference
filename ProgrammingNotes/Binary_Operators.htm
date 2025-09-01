@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Mathematical and Trigonometric Functions|Operators" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Logical and Bitwise Operators</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Mathematics_and_Trigonometric_Functions.htm">Mathematical and Trigonometric Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Math_and_Comparison_Operators.htm">Operators</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Logical and Bitwise Operators</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor941"></a>Logical and Bitwise Operators</h1>
+        <table class="TableStyle-Syntax" style="mc-table-style: url('../Resources/TableStyles/Syntax.css');margin-left: 0;margin-right: auto;width: 660px;" cellspacing="0">
+            <col style="width: 75px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre xml:space="preserve"><span class="commandArgument">[&lt;Operand&gt;] </span><span class="commandArgument">&lt;Operator&gt; </span><span class="commandArgument">&lt;Operand&gt;</span></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre xml:space="preserve">$Var1 = $Var2 &gt;&gt; 2    ; Shift right by two bits.</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">$Var1 = ~$Var2        ; Do a bitwise NOT.</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Logical operators evaluate an operation on one or two operands. The result of the operation is 1 or 0.</p>
+        <p>Bitwise operators evaluate an operation on one or two 32-bit integer operands. Before the operation is evaluated, all operands are truncated to 32-bit unsigned integers. The result of the operation is a 32-bit unsigned integer.</p>
+        <p>The table that follows shows the operators, their results, and all restrictions 
+ on their input arguments. The first argument shows as the symbol <span style="font-family: Symbol;">a</span>, the second argument shows as the symbol <span style="font-family: Symbol;">b</span>.</p>
+        <div>
+            <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Logical and Bitwise Operator Descriptions</p>
+            <table cellspacing="0" class="TableStyle-Basic" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;">
+                <col style="width: 90px;" class="TableStyle-Basic-Column-Column1" />
+                <col style="width: 110px;" class="TableStyle-Basic-Column-Column1" />
+                <col class="TableStyle-Basic-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-Basic-Head-Header1">
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1">Operator</th>
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1">Alternate Operator</th>
+                        <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description and Input Restrictions</th>
+                    </tr>
+                </thead>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor942"></a>OR</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor943"></a>||</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Logical OR of <span style="font-family: Symbol;">a</span> 
+ and <span style="font-family: Symbol;">b</span></p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor944"></a>AND</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor945"></a>&amp;&amp;</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Logical AND of <span style="font-family: Symbol;">a</span> 
+ and <span style="font-family: Symbol;">b</span></p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor946"></a>NOT</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">!</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Logical NOT of <span style="font-family: Symbol;">a</span></p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor947"></a>BOR</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">|</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Bit-wise OR of <span style="font-family: Symbol;">a</span> 
+ and <span style="font-family: Symbol;">b</span></p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor948"></a>BAND</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">&amp;</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Bit-wise AND of <span style="font-family: Symbol;">a</span> 
+ and <span style="font-family: Symbol;">b</span></p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor949"></a>BNOT</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor950"></a>~</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Bit-wise NOT (inversion) of <span style="font-family: Symbol;">a</span></p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor951"></a>BXOR</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor952"></a>^</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Bit-wise XOR of <span style="font-family: Symbol;">a</span> 
+ and <span style="font-family: Symbol;">b</span></p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor953"></a>BNAND</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">none</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Logical NOT of a bit-wise AND of <span style="font-family: Symbol;">a</span> and <span style="font-family: Symbol;">b</span><sup>(1)</sup></p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor954"></a>BNOR</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">none</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Logical NOT of a bit-wise OR of <span style="font-family: Symbol;">a</span> and <span style="font-family: Symbol;">b</span><sup>(1)</sup></p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center"><a name="kanchor955"></a>&lt;&lt;</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">none</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p><a name="kanchor956"></a>Left shift <span style="font-family: Symbol;">a</span> by 
+ <span style="font-family: Symbol;">b</span> bits, 0 &#8804; <span style="font-family: Symbol;">b</span> &#8804; 31<sup>(2)</sup></p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">&gt;&gt;</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">none</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p><a name="kanchor957"></a>Right shift <span style="font-family: Symbol;">a</span> by 
+ <span style="font-family: Symbol;">b</span> bits, 0 &#8804; <span style="font-family: Symbol;">b</span> &#8804; 31<sup>(2)</sup></p>
+                    </td>
+                </tr>
+                <tfoot>
+                    <tr class="TableStyle-Basic-Foot-Footer1">
+                        <td class="TableStyle-Basic-FootD-Column1-Footer1" colspan="3">
+                            <p colspan="4" class="footnote">(1) The BNAND and BNOR operators are a mixture
+ of logical and bitwise operators. For example, $global[0] BNAND $global[1] is the same as NOT($global[0] BAND $global[1]). $global[0] BNOR $global[1] is the same as NOT($global[0] BOR $global[1]).</p>
+                            <p colspan="4" class="footnote">(2) Bits that are shifted off of on of the two ends 
+ of a 32-bit integer value are discarded. For example, (1&gt;&gt;3) is 0.</p>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <p>The table that follows shows the results of the operations. Logical operators apply non-zero operands as 1. Bitwise operators do these operations on 32 bits at one time. Thus, they do 32 independent operations, one on each related  pair of bits in the arguments.</p>
+        <div>
+            <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Summary of Operations</p>
+            <table cellspacing="0" class="TableStyle-Basic" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+                <col class="TableStyle-Basic-Column-Column1" />
+                <col class="TableStyle-Basic-Column-Column1" />
+                <col class="TableStyle-Basic-Column-Column1" style="width: 85px;" />
+                <col class="TableStyle-Basic-Column-Column1" style="width: 85px;" />
+                <col class="TableStyle-Basic-Column-Column1" style="width: 85px;" />
+                <col class="TableStyle-Basic-Column-Column1" style="width: 85px;" />
+                <col class="TableStyle-Basic-Column-Column1" style="width: 85px;" />
+                <thead>
+                    <tr class="TableStyle-Basic-Head-Header1">
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1"><span style="font-family: Symbol;">a</span> Operand</th>
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1"><span style="font-family: Symbol;">b</span> Operand</th>
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1">OR</th>
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1">AND</th>
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1">XOR</th>
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1">BNAND</th>
+                        <th class="TableStyle-Basic-HeadD-Column1-Header1">BNOR</th>
+                    </tr>
+                </thead>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                </tr>
+                <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p class="center">0</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <p>These examples show correct syntax that uses logical and bitwise operators and summarize their results in binary. 0h or 0x prefixes a <a href="../Hexadecimal_Constants.htm"> hexadecimal constant</a>. The comment that follows the code shows the binary description of the operation.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Examples</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+$var1 = 12                  ' 1100 in binary or 0hC in
+                            ' hexadecimal.
+
+' Logical operators
+$var2 = $var1 OR 0hA        ' 1
+$var2 = $var1 AND 0hA       ' 1
+$var2 = !$var1              ' 0
+$var2 = $var1 BNAND 0h1A    ' 0 (NOT($var1 BAND 0h1A))
+$var2 = $var1 BNOR 0h1A     ' 0 (NOT($var1 BOR 0h1A))
+
+' Bitwise operators
+$var2 = $var1 BOR 0h1A      ' 30         (0h1E)
+$var2 = $var1 BAND 0h1A     ' 8          (0h8)
+$var2 = BNOT $var1          ' 4294967283 (0hFFFFFFF3)
+$var2 = $var1 BXOR 0h1A     ' 22         (0h16)
+$var2 = $var1 &lt;&lt; 2          ' 48         (oh30)
+$var2 = $var1 &gt;&gt; 3          ' 1          (0h1)</pre>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Math_and_Comparison_Operators.htm" class="MCXref_0">Arithmetic and Comparison Operators</a>
+        </p>
+        <p class="relatedTopic"><a href="Double_Computation_Precedence.htm" class="MCXref_0">Double Computation Precedence</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Binary_Operators.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Binary_Operators.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
