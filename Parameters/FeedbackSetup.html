@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|Parameters|Axis|Feedback" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>FeedbackSetup Parameter</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../Parameter_File_Configuration.htm">Parameters</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="axis_Category.html">Axis</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="feedback_Category.html">Feedback</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">FeedbackSetup</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>FeedbackSetup Parameter</h1>
+        <table class="TableStyle-Basic" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');">
+            <col style="width: 115px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 200px;" class="TableStyle-Basic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Default Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>0x00000000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Minimum Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Maximum Value</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="alignRight">Units</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>None</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p class="alignRight">Type</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2144069523_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+						Parameter Settings and Parameter File Values
+					</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2144069523_0" style="display: none;">
+                <p>The following table gives the value that is assigned in the parameter file when you select a parameter setting.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Parameter Setting Values</p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Option</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Settings</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">Value</th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Position Feedback Direction</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Normal</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Inverted</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000200</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Velocity Feedback Direction</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Normal</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Inverted</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000400</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Limit Input Source</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Velocity Feedback Channel</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Position Feedback Channel</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000001</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="3" class="table_bold_left_just">Hall Input Source</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Velocity Feedback Channel</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Position Feedback Channel</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000002</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Nservo Auxiliary I/O</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000004</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Gantry Slave Marker</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Used For Home Alignment</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Ignored</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000010</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Nstep Encoder Inputs</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Differential</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Single-Ended</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000020</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Feedback Averaging</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Disabled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Enabled</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00002000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Auxiliary Feedback Direction</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Normal</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Inverted</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00004000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">Auxiliary Marker Function</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Auxiliary Marker Input</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>PSO Output</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00008000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: top;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p rowspan="2" class="table_bold_left_just">IFOV Input</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Auxiliary Encoder</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00000000</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Sync Port</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                            <p>0x00010000</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>Use the FeedbackSetup parameter to configure options related to feedback. The sections that follow give the possible options for this parameter.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2144069523_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Position Feedback Direction</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2144069523_1" style="display: none;">
+                <p>This option specifies how the drive reads the position feedback device.</p>
+                <p><span class="procedureTerm"> Normal</span> is the default. The drive reads the position feedback device normally. In this mode, the position feedback counts in a positive direction when the rising edge of the COS encoder input comes before the rising edge of the SIN encoder input. </p>
+                <p>When you select <span class="procedureTerm">Inverted</span>, the position feedback device is inverted. In this mode, the position feedback counts in a negative direction when the rising edge of the COS encoder input comes before the rising edge of the SIN encoder input. The function of this setting is to compensate for motor or feedback phasing errors without requiring changes to the wiring.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2144069523_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Velocity Feedback Direction</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2144069523_2" style="display: none;">
+                <p>This option specifies how the drive reads the velocity feedback device. </p>
+                <p><span class="procedureTerm">Normal</span> is the default. The drive reads the velocity feedback device normally. In this mode, the velocity feedback counts in a positive direction when the rising edge of the COS encoder input comes before the rising edge of the SIN encoder input. </p>
+                <p>When you select <span class="procedureTerm">Inverted</span>, the velocity feedback device is inverted. In this mode, the velocity feedback counts in a negative direction when the rising edge of the COS encoder input comes before the rising edge of the SIN encoder input. The function of this setting is to compensate for motor or feedback phasing errors without requiring changes to the wiring.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2144069523_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Limit Input Source
+        </a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2144069523_3" style="display: none;">
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with multi-axis drives. But it does not apply to the <span class="AerotechVariablesDriveType_XR3">XR3</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies which feedback device is used as the source for the end-of-travel limit switches. </p>
+                <p> <span class="procedureTerm">Velocity Feedback Channel</span> is the default. The controller reads the limits from the feedback channel that you specify for the <a href="VelocityFeedbackChannel.html" class="MCXref_0">VelocityFeedbackChannel Parameter</a>.</p>
+                <p>When you select <span class="procedureTerm">Position Feedback Channel</span>, the controller reads the limits from the feedback channel that you specify for the <a href="PositionFeedbackChannel.html" class="MCXref_0">PositionFeedbackChannel Parameter</a>. </p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2144069523_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Hall Input Source
+        </a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2144069523_4" style="display: none;">
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with multi-axis drives. But it does not apply to the <span class="AerotechVariablesDriveType_XR3">XR3</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies which feedback device is used as the source for the Hall-effect switches. </p>
+                <p><span class="procedureTerm">Velocity Feedback Channel</span> is the default. The controller reads the Hall-effect switches from the feedback channel that you specify for the <a href="VelocityFeedbackChannel.html" class="MCXref_0">VelocityFeedbackChannel Parameter</a>.</p>
+                <p>When you select <span class="procedureTerm">Position Feedback Channel</span>, the controller reads the Hall-effect switches from the feedback channel that you specify for the <a href="PositionFeedbackChannel.html" class="MCXref_0">PositionFeedbackChannel Parameter</a>.  </p>
+                <p>On the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span>, the controller can also read the Hall-effect switches from the Auxiliary I/O connector, which you can configure by selecting <span class="procedureTerm">Nservo Auxiliary I/O</span>.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2144069523_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Gantry Slave Marker
+        </a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2144069523_5" style="display: none;">
+                <p>This option specifies if the marker signal from a gantry slave axis is used during the home sequence. </p>
+                <p>Use this setting only on the gantry slave axis.</p>
+                <p><span class="procedureTerm">Used For Home Alignment</span> is the default. The marker signals from both master and slave axes are used during the home sequence. </p>
+                <p>When you select <span class="procedureTerm">Ignored</span>, the marker signal from the slave axis is not used, thus bypassing the gantry de-skewing that normally occurs. </p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2144069523_6" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_Nstep">Nstep</span> Encoder Inputs
+        </a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2144069523_6" style="display: none;">
+                <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the <span class="AerotechVariablesSimpleName_Nstep">Nstep</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies the behavior of the encoder inputs on the <span class="AerotechVariablesSimpleName_Nstep">Nstep</span>. </p>
+                <p><span class="procedureTerm">Differential</span> is the default. The encoder inputs are configured for RS-422 compatible differential signals. </p>
+                <p>When you select <span class="procedureTerm">Single-Ended</span>, the encoder inputs are configured for single-ended operation where negative input voltages indicate a logic low and positive input voltages indicate a logic high.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2144069523_7" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Feedback Averaging</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2144069523_7" style="display: none;">
+                <p>This option enables the controller to average feedback signals from two or more encoder inputs based on the drive type. The controller uses the average of the signals as the position feedback for the axis.</p>
+                <p>To use the <span class="procedureTerm">Feedback Averaging</span> option, you must connect each encoder to the drive so that all the encoders count in the same direction. While <span class="procedureTerm">Feedback Averaging</span> is enabled, you cannot use the<span class="procedureTerm"> Position Feedback Direction</span> to invert the direction of a single encoder input. If you try to use <span class="procedureTerm">Position Feedback Direction</span> during this time, the controller averages the encoder inputs and then inverts the position feedback value of the average.</p>
+                <p><span class="procedureTerm">Disabled</span> is the default. The position feedback operates normally. The controller does not average the feedback signals.</p>
+                <p>When you select <span class="procedureTerm">Enabled</span>, the controller averages the feedback signals and uses the average as the position feedback for the axis. One of the operations that follow occurs:</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>For Single-Axis Drives</h4>
+                <p>The controller averages the feedback signals from the primary and auxiliary encoder inputs. The controller averages these signals after you home the axis.</p>
+                <p>To configure this option, refer to <a href="../Configuring_Parameters_for_Position_Feedback_Averaging_SingleAxisDrives.htm" class="MCXref_0">Configuring Parameters for Position Feedback Averaging on Single-Axis Drives</a>.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>For Multi-Axis Drives</h4>
+                <p>The controller averages the feedback signals from two or more encoder inputs that you specify for the <a href="PositionFeedbackChannel.html">PositionFeedbackChannel</a> and <a href="PositionAveragingChannel.html">PositionAveragingChannel</a> parameters. The controller averages these signals after you home the axis.</p>
+                <p>To configure this option, refer to <a href="../Configuring_Parameters_for_Position_Feedback_Averaging_MultiAxisDrives.htm" class="MCXref_0">Configuring Parameters for Position Feedback Averaging on Multi-Axis Drives</a>.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2144069523_8" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Auxiliary Feedback Direction</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2144069523_8" style="display: none;">
+                <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the <span class="AerotechVariablesDriveType_GL4">GL4</span>, the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span>, <span class="AerotechVariablesDriveType_FLS">FLS</span>, <span class="AerotechVariablesDriveType_Piezo_Linear">QL</span>, or <span class="AerotechVariablesDriveType_Piezo__LinearEnh">QLe</span>, the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span>&#160;<span class="AerotechVariablesDriveType_CLS">CLS</span>, <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, or <span class="AerotechVariablesDriveType_SSaM">SSaM</span>, or the <span class="AerotechVariablesDriveType_XL4s">XL4s</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option specifies how the drive reads the auxiliary feedback device.</p>
+                <p><span class="procedureTerm">Normal</span> is the default. The drive reads the auxiliary feedback device normally. In this mode, the auxiliary feedback counts in a positive direction when the rising edge of the COS encoder input comes before the rising edge of the SIN encoder input.</p>
+                <p>When you select <span class="procedureTerm">Inverted</span>, the auxiliary feedback device is inverted. In this mode, the auxiliary feedback counts in a negative direction when the rising edge of the COS encoder input comes before the rising edge of the SIN&#160;encoder input. The function of this setting is to compensate for motor or feedback phasing without requiring changes to the wiring.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2144069523_9" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Auxiliary Marker Function</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2144069523_9" style="display: none;">
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the <span class="AerotechVariablesDriveType_XC4">XC4</span> or the <span class="AerotechVariablesDriveType_XC4e">XC4e</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option enables a fail-safe differential PSO output mode on Auxiliary I/O Pins 19 and 20 of the Auxiliary I/O connector.</p>
+                <p><span class="procedureTerm">Auxiliary Marker Input</span> is the default. The controller configures the pins  as an RS-422 input and uses that input as the marker input of an auxiliary encoder.</p>
+                <p>When you select <span class="procedureTerm">PSO Output</span>, the controller configures the pins as an RS-422 output and  puts that output into an inactive state.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2144069523_10" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span> Input</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2144069523_10" style="display: none;">
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This setting applies only when used with the <span class="AerotechVariablesDriveType_GL4">GL4</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>This option sets the input source for the encoder feedback to be used with <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span>. </p>
+                <p><span class="procedureTerm">Auxiliary Encoder</span> is the default. The controller configures the auxiliary encoder connector as the encoder feedback input for <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span>.</p>
+                <p>When you select <span class="procedureTerm">Sync Port</span>, the controller configures the sync port connector as the encoder feedback input for <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span>. There are two Sync ports on the controller. If you select <span class="procedureTerm">Sync Port</span> on the  first axis of the controller, then the SYNC A port is configured. If you select <span class="procedureTerm">Sync Port</span> on the  second axis of the controller, then the SYNC B port is configured.</p>
+                <p>For more information on these connectors, refer to the <span class="AerotechVariablesDriveType_GL4">GL4</span> Hardware Manual. </p>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="PositionFeedbackChannel.html">PositionFeedbackChannel Parameter</a>
+        </p>
+        <p class="relatedTopic"><a href="VelocityFeedbackChannel.html">VelocityFeedbackChannel Parameter</a>
+        </p>
+        <p class="relatedTopic"><a href="feedback_Category.html">Feedback Parameter Category</a>
+        </p><a name="kanchor293"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=FeedbackSetup.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=FeedbackSetup.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
