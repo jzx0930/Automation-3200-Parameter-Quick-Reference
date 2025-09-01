@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Touch Probe" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Touch Probe Command Category</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink selected" href="#">Touch Probe</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Touch Probe</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Touch Probe Command Category</h1>
+        <p><a name="kanchor2010"></a>You can monitor touch probe sensors on the <span class="AerotechVariablesSimpleName_A3200">A3200</span> through a virtual binary input or through a digital drive input such as a high-speed position latch. You can use the touch probe input to capture the position feedback of an axis when the controller triggers the probe input. If the controller detects the probe input, the controller generates a probe axis fault and stores the axis position.</p>
+        <p>You must set the <span class="bold">Probe Input Fault</span> bit in the <a href="../Parameters/FaultMask.html">FaultMask</a> parameter so that the controller can detect the touch probe. You can also set the <span class="bold">Probe Input Fault</span> bits in the <a href="../Parameters/FaultMaskDecel.html">FaultMaskDecel</a>, <a href="../Parameters/FaultMaskDisable.html">FaultMaskDisable</a>, and <a href="../Parameters/FaultMaskOutput.html">FaultMaskOutput</a> axis parameters to specify what the axis does if the controller generates a probe axis fault.</p>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span> If you do not set the <span class="bold">Probe Input Fault</span> bit in the FaultMaskDecel or FaultMaskDisable parameter, then the axis that you are using continues to move after the controller triggers a touch probe.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Touch Probe Commands</p>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+            <col class="TableStyle-Basic-Column-Column1" style="width: 162px;" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                        <p>Command</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>PROBE&#160;INPUT</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Configures the drive and the input bit number where the touch probe is connected.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>PROBE&#160;MODE</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Specifies the type of scanning that you want to use.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>PROBE&#160;ON</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Turns on probe input monitoring.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p>PROBE&#160;OFF</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>Turns off probe input monitoring.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Example Programs</h2>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3728842367_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Example: Hardware Mode Scanning</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3728842367_0" style="display: none;">
+                <div class="codeexample"><pre xml:space="preserve">
+' The probe input changes to digital drive input 8 ($DI8.X).
+PROBE INPUT PROBE_INPUT_DRIVE_DIGITAL X 8
+
+' The scanning mode changes to hardware scanning mode.
+' The controller writes the captured positions to $global[4].
+PROBE MODE PROBE_HW_MODE 1 $global[4]
+				
+' Starts probe monitoring.
+PROBE ON X
+				
+' Does motion on X.
+G1 X100 F10
+				
+' Waits for the probe input to capture the axis positions.
+WAIT ((TASKSTATUS(DATAITEM_TaskStatus0) &amp; TASKSTATUS0_ProbeCycle) == 0) -1
+
+' You can get the captured position in $global[4].</pre>
+                </div>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3728842367_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Example: Software Mode Scanning</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3728842367_1" style="display: none;">
+                <div class="codeexample"><pre xml:space="preserve">
+' The probe input changes to digital drive input 8 ($DI8.A).
+PROBE INPUT PROBE_INPUT_DRIVE_DIGITAL A 8
+				
+' The scanning mode changes to software scanning mode.
+' The controller writes the captured positions and
+' starts at $global[0].
+PROBE MODE PROBE_SW_MODE 1 $global[0]
+				
+' Starts probe monitoring. The probe input captures
+' positions on axes X and Y.
+PROBE ON X Y
+				
+' Starts Motion.
+MOVEINC X 1000 10
+MOVEINC Y 1000 10
+				
+' Waits for the probe input to capture the axis positions.
+WAIT ((TASKSTATUS(DATAITEM_TaskStatus0) &amp; TASKSTATUS0_ProbeCycle) == 0) -1
+				
+' $global[0] stores the captured X position.
+' $global[1] stores the captured Y position.
+</pre>
+                </div>
+            </div>
+        </div>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Commands</h2>
+        <ul>
+            <li class="BulletLevel1" value="1"><a href="PROBE%20INPUT_Command.html">PROBE INPUT</a>
+            </li>
+            <li class="BulletLevel1" value="2"><a href="PROBE%20MODE_Command.html">PROBE MODE</a>
+            </li>
+            <li class="BulletLevel1" value="3"><a href="PROBE%20ON_OFF_Command.html">PROBE ON/OFF</a>
+            </li>
+        </ul><a name="kanchor2011"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=touchprobe_Category.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=touchprobe_Category.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

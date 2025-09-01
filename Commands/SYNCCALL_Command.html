@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Program Flow" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>SYNCCALL Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="programflow_Category.html">Program Flow</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">SYNCCALL</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>SYNCCALL Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Executes a canned function at the same time as coordinated and RAPID motion.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="5">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>SYNCCALL&#160;<i>&lt;Task&gt;</i>&#160;BLOCKING&#160;<i>&lt;ProgramName&gt;</i>,&#160;<i>&lt;Subroutine&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>SYNCCALL&#160;<i>&lt;Task&gt;</i>&#160;NONBLOCKING&#160;<i>&lt;ProgramName&gt;</i>,&#160;<i>&lt;Subroutine&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>SYNCCALL&#160;<i>&lt;Task&gt;</i>&#160;BLOCKING&#160;<i>&lt;ProgramName&gt;</i>,&#160;<i>&lt;Subroutine&gt;</i>,&#160;<i>&lt;ArgumentName&gt;</i>&#160;<i>&lt;ArgumentValue&gt;</i> [ <i>&lt;ArgumentName&gt;</i>&#160;<i>&lt;ArgumentValue&gt;</i> ... ]</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>SYNCCALL&#160;<i>&lt;Task&gt;</i>&#160;NONBLOCKING&#160;<i>&lt;ProgramName&gt;</i>,&#160;<i>&lt;Subroutine&gt;</i>,&#160;<i>&lt;ArgumentName&gt;</i>&#160;<i>&lt;ArgumentValue&gt;</i> [ <i>&lt;ArgumentName&gt;</i>&#160;<i>&lt;ArgumentValue&gt;</i> ... ]</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">
+SYNCCALL 2 BLOCKING "PROG2.PGM", "MYSUB", X3</pre><pre xml:space="preserve">SYNCCALL $taskindex NONBLOCKING "", "MYSUB"</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>SYNCCALL Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Task&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">TaskID</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The task on which to execute the subroutine. To execute the subroutine on the current task, use $taskindex as the value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;ProgramName&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">String</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The name of the program to which the controller transfers program execution.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Subroutine&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Label</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The name of the subroutine to which the controller transfers program execution.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;ArgumentName&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Other</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) The name of the argument that you want to pass to the subroutine.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;ArgumentValue&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) The value of the argument that you want to pass to the subroutine.</p>
+                </td>
+            </tr>
+        </table>
+        <p>Use the SYNCCALL command to execute a canned function at the same time as coordinated (LINEAR, CW, CCW, BEZIER) and RAPID motion. After the coordinated motion command completes, the controller executes the canned function.</p>
+        <p MadCap:conditions="SnippetCondiitons_Commands.SETCANNEDFUNCTION,SnippetCondiitons_Commands.SYNCCALL">The <span class="commandArgument">&lt;ProgramName&gt;</span> and <span href="../Labels.htm" class="commandArgument">&lt;Subroutine&gt;</span> arguments can be <a href="../Global_Variables.htm">Global String variables</a> and define the program execution entry point. If you specify "" for the <span class="commandArgument">&lt;ProgramName&gt;</span> argument, the controller uses the label in the calling program.</p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> Program names must be less than 187 characters long. Refer to <a href="../Program_Names.htm">Program Names</a> for more information.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> Subroutine names must be less than 32 characters long. Refer to <a href="../Subroutines_Overview.htm" class="MCXref_0">Subroutines Overview</a> for more information.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Programs can call themselves or other programs. There is no limit to the nesting of calls, except for the limits from <a href="../Available_Memory.htm">available memory</a> and from the <a href="../Parameters/CallStackSize.html">CallStackSize</a> task parameter.</p>
+        <p>Before the controller executes a program called by the <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.SYNCCALL">SYNCCALL</MadCap:conditionalText> command, you must download that program onto the controller. When the program is on the controller, it prevents an invalid file name or path error from occurring. Download the program at startup by using the <a href="../Program_Automation_CM.htm" class="MCXref_0">Program Automation</a> feature. Make sure that you set the <span class="procedureTerm">Mode</span> for the execution type to <span class="procedureTerm">Download</span>.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>SYNCCALL Execution Modes</h2>
+        <p>Use the BLOCKING or NONBLOCKING keyword to change the execution mode of the specified canned function. More information about the execution modes are in the sections that follow.</p>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Blocking Mode</h3>
+        <p>Use the BLOCKING keyword in the SYNCCALL command to execute the canned function as a blocking subroutine. When you do this, the controller does not execute the next motion command until the canned function completes. The controller will decrease the speed of motion to zero before it executes the canned function.</p>
+        <p>This mode is good for executing commands that could interfere with motion. The example that follows shows you how to use blocking mode.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">' Enable incremental programming mode.
+INCREMENTAL
+' Set the corner rounding axes to X and Y.
+ROUNDING AXES X Y
+' Set position tolerance of 0.5 units for corner rounding.
+ROUNDING TOLERANCE 0.5
+' Turn on rounding.
+ROUNDING ON
+' Move the X axis 11 units to the right.
+' The next move makes a rounded corner.
+LINEAR X11
+' Execute a canned function to home the Z axis.
+' The canned function executes after the previous LINEAR command.
+SYNCCALL $taskindex BLOCKING "", "TriggerHome"
+LINEAR Y11
+' Turn off rounding.
+ROUNDING OFF
+
+END PROGRAM
+
+' The canned function.
+DFS TriggerHome
+	HOME Z
+ENDDFS</pre>
+        </div>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Non-Blocking Mode</h3>
+        <p>Use the NONBLOCKING keyword in the SYNCCALL command to execute the canned function as a non-blocking subroutine. When you do this, the controller executes the canned function and then immediately continues to the next motion command without waiting for the canned function to complete.</p>
+        <p>This mode is good for executing commands during a VELOCITY ON sequence of moves without the controller decreasing motion to zero. The example that follows shows you how to use non-blocking mode.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">' Enable velocity blending mode.
+VELOCITY ON
+' Enable incremental programming mode.
+INCREMENTAL
+' Move the X axis 5.0 units.
+LINEAR X5
+' Move the X axis 10.0 units.
+LINEAR X10
+' Execute a canned function to freerun the Z axis.
+' The canned function executes after the previous LINEAR command.
+' The controller does not decelerate the X axis to zero velocity.
+SYNCCALL $taskindex NONBLOCKING "", "TriggerFreerun"
+' Move the X axis 5.0 units.
+LINEAR X5
+' Disable velocity blending mode.
+VELOCITY OFF
+
+END PROGRAM
+
+' The canned function.
+DFS TriggerFreerun
+	FREERUN Z 100
+ENDDFS </pre>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>
+		Related Topics</h3>
+        <p class="relatedTopic"><a href="../Canned_Functions.htm">Canned Function Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="../Program_Automation_CM.htm">Program Automation</a>
+        </p>
+        <p class="relatedTopic"><a href="programflow_Category.html">Program Flow Command Category</a>
+        </p><a name="kanchor1873"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=SYNCCALL_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=SYNCCALL_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
