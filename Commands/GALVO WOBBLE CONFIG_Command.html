@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Galvo" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>GALVO WOBBLE CONFIG Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="galvo_Category.html">Galvo</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">GALVO WOBBLE CONFIG</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>GALVO WOBBLE CONFIG Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Configures the wobble feature, which generates a wobble pattern that is added to the motion command of the GL4 or the Nmark CLS, GCL, or SSaM.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="2">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>GALVO&#160;WOBBLE&#160;<i>&lt;GalvoAxis&gt;</i>&#160;CONFIG&#160;<i>&lt;AmplitudeParallel&gt;</i>,&#160;<i>&lt;AmplitudePerpendicular&gt;</i>,&#160;<i>&lt;Frequency&gt;</i>,&#160;<i>&lt;WobbleMode&gt;</i>,&#160;<i>&lt;WobbleType&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">GALVO WOBBLE x CONFIG 0.1, 0.2, 15, GALVOWOBBLEMODE_TimeBased, GALVOWOBBLETYPE_Figure8Parallel</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>GALVO WOBBLE CONFIG Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;GalvoAxis&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The first axis of the GL4 or the Nmark CLS, GCL, or SSaM on which to generate the wobble motion.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;AmplitudeParallel&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The amplitude of the wobble shape parallel to the vector path.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;AmplitudePerpendicular&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The amplitude of the wobble shape perpendicular to the vector path.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Frequency&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The frequency of the wobble oscillation. Specified in hertz for time-based mode or user units for distance-based mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;WobbleMode&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies whether the wobble is repeated based on a fixed time or a fixed vector distance.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;WobbleType&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The type of figure that is generated by the wobble.</p>
+                </td>
+            </tr>
+        </table>
+        <p>Use the GALVO&#160;WOBBLE&#160;CONFIG&#160;command to configure the galvo wobble feature. When the <span class="AerotechVariablesDriveType_GL4">GL4</span> or the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span>, <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, or <span class="AerotechVariablesDriveType_SSaM">SSaM</span> does marking motion, the galvo wobble feature generates an oscillatory pattern and the controller combines that pattern with the position command of the drive. The oscillatory pattern increases the width of the marking line.</p>
+        <p>Set the <span class="commandArgument">&lt;AmplitudePerpendicular&gt;</span> argument to control the width of the marking line. Set the <span class="commandArgument">&lt;AmplitudeParallel&gt;</span> argument with the <span class="commandArgument">&lt;Frequency&gt;</span> argument to control the overlap that occurs between each wobble oscillation.</p>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_584643751_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="CommandArgument">&lt;WobbleMode&gt;</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_584643751_0" style="display: none;">
+                <p>Set the <span class="commandArgument">&lt;WobbleMode&gt;</span> argument to control if the <span class="commandArgument">&lt;Frequency&gt;</span> of the repeated wobble pattern is time-based or distance-based. When you use time-based mode, the controller repeats the wobble pattern at a fixed time interval. When you use distance-based mode, the controller repeats the wobble pattern at a fixed distance. In distance-based mode, the speed of the marking vector controls the time at which the controller repeats the wobble pattern. To create a uniform overlap of the wobble pattern during acceleration and deceleration, <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you use the distance-based mode.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Galvo Wobble Mode Values</p>
+                <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;margin-left: 0;margin-right: auto;">
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Value</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">AeroBasic Constant</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>GALVOWOBBLEMODE_TimeBased</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>TimeBased</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Wobble is repeated at a fixed time interval.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">1</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>GALVOWOBBLEMODE_DistanceBased</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DistanceBased</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Wobble is repeated at a fixed vector distance.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_584643751_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="CommandArgument">&lt;WobbleType&gt;</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_584643751_1" style="display: none;">
+                <p>Set the <span class="commandArgument">&lt;WobbleType&gt;</span> argument to control the type of wobble pattern that the controller generates. </p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Galvo Wobble Type Values</p>
+                <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;margin-left: 0;margin-right: auto;">
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Value</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">AeroBasic Constant</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>GALVOWOBBLETYPE_Ellipse</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Ellipse</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>An ellipse shape.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">1</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>GALVOWOBBLETYPE_Figure8Parallel</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Figure8Parallel</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>A figure 8 shape parallel to the vector path.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">2</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>GALVOWOBBLETYPE_Figure8Perpendicular</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Figure8Perpendicular</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>A figure 8 shape perpendicular to the vector path.</p>
+                        </td>
+                    </tr>
+                </table>
+                <p>To see the different <span class="commandArgument">&lt;WobbleType&gt;</span> patterns, refer to the following figures.</p>
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_584643751_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                Figure: Wobble Pattern — Ellipse          </a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_584643751_2" style="display: none;">
+                        <p>
+                            <img src="../Resources/Images/Image_WobblePattern_Circular.png" alt="" title="" />
+                        </p>
+                    </div>
+                </div>
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_584643751_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                Figure: Wobble Pattern — Parallel Figure 8
+            </a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_584643751_3" style="display: none;">
+                        <p>
+                            <img src="../Resources/Images/Image_Wobble_Figure8Parallel.png" />
+                        </p>
+                    </div>
+                </div>
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_584643751_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+               Figure: Wobble Pattern — Perpendicular Figure 8
+            </a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_584643751_4" style="display: none;">
+                        <p>
+                            <img src="../Resources/Images/Image_WobblePattern_Figure8Perpendicular.png" alt="" title="" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="galvo_Category.html">Galvo Command Category</a>
+        </p><a name="kanchor2595"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=GALVO WOBBLE CONFIG_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=GALVO WOBBLE CONFIG_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

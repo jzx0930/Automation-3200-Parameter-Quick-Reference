@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Camming" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>LOADCAMVAR Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="camming_Category.html">Camming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">LOADCAMVAR</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>LOADCAMVAR Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Uses global variables as the cam table.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="5">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>LOADCAMVAR&#160;<i>&lt;MasterAxis&gt;</i>,&#160;<i>&lt;TableNumber&gt;</i>,&#160;<i>&lt;SlaveAxis&gt;</i>,&#160;<i>&lt;InterpolationType&gt;</i>,&#160;<i>&lt;TrackingMode&gt;</i>&#160;RANGE&#160;<i>&lt;MasterStart&gt;</i>,&#160;<i>&lt;MasterDelta&gt;</i>,&#160;$global[<i>&lt;VariableStart&gt;</i>],&#160;<i>&lt;VariableNumber&gt;</i>&#160;UNITS&#160;WRAP</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>LOADCAMVAR&#160;<i>&lt;MasterAxis&gt;</i>,&#160;<i>&lt;TableNumber&gt;</i>,&#160;<i>&lt;SlaveAxis&gt;</i>,&#160;<i>&lt;InterpolationType&gt;</i>,&#160;<i>&lt;TrackingMode&gt;</i>&#160;RANGE&#160;<i>&lt;MasterStart&gt;</i>,&#160;<i>&lt;MasterDelta&gt;</i>,&#160;$global[<i>&lt;VariableStart&gt;</i>],&#160;<i>&lt;VariableNumber&gt;</i>&#160;COUNTS&#160;WRAP</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>LOADCAMVAR&#160;<i>&lt;MasterAxis&gt;</i>,&#160;<i>&lt;TableNumber&gt;</i>,&#160;<i>&lt;SlaveAxis&gt;</i>,&#160;<i>&lt;InterpolationType&gt;</i>,&#160;<i>&lt;TrackingMode&gt;</i>&#160;RANGE&#160;<i>&lt;MasterStart&gt;</i>,&#160;<i>&lt;MasterDelta&gt;</i>,&#160;$global[<i>&lt;VariableStart&gt;</i>],&#160;<i>&lt;VariableNumber&gt;</i>&#160;UNITS&#160;NOWRAP</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>LOADCAMVAR&#160;<i>&lt;MasterAxis&gt;</i>,&#160;<i>&lt;TableNumber&gt;</i>,&#160;<i>&lt;SlaveAxis&gt;</i>,&#160;<i>&lt;InterpolationType&gt;</i>,&#160;<i>&lt;TrackingMode&gt;</i>&#160;RANGE&#160;<i>&lt;MasterStart&gt;</i>,&#160;<i>&lt;MasterDelta&gt;</i>,&#160;$global[<i>&lt;VariableStart&gt;</i>],&#160;<i>&lt;VariableNumber&gt;</i>&#160;COUNTS&#160;NOWRAP</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">LOADCAMVAR X, 0, Y, 0, 1 RANGE 0.0, 1.0, $global[0], 100 UNITS NOWRAP
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>LOADCAMVAR Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;MasterAxis&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis that is set as the master axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;TableNumber&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The table number, from 0 to 99.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;SlaveAxis&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis that is set as the slave axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;InterpolationType&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Other</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The interpolation mode to use for camming. Set to 0 for linear splining or 1 for cubic splining.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;TrackingMode&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Other</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Set to 0 to have the slave axis track the position feedback of the master axis. Set to 1 to have the slave axis track the master axis position. Set to 2 to have the slave axis track the auxiliary encoder channel of the master axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;MasterStart&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The master axis starting position.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;MasterDelta&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The master axis position delta.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;VariableStart&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The variable where the table starts.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;VariableNumber&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The number of points in the variables to read.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Wrapping&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) 
+                <p>If the master axis position is outside of the range of master axis values that you specified in the cam table, this argument specifies which wrapping condition the controller uses.  Specify NOWRAP for the NOWRAP condition or WRAP for the WRAP&#160;condition. Refer to the <span class="bold"><span class="commandArgument">&lt;Wrapping&gt;</span></span> section for more information.</p></p>
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span> This command applies only when you use <a href="../Camming_Motion_from_a_File.htm">camming motion</a>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Use the LOADCAMVAR&#160;command to <a name="kanchor2510"></a>load a cam table from variables that contain master axis position and slave axis position or slave axis velocity information and to configure the master and slave axes for the cam table.</p>
+        <p>The LOADCAMVAR&#160;command does not enable camming. Use the <a href="CAMSYNC_Command.html" class="MCXref_0">CAMSYNC Command</a> to enable camming.</p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span> Motion results can be different depending on if you specify a value of 0 for master position feedback or a value of 1 for master position command to the <span class="commandArgument">&lt;TrackingMode&gt;</span> argument.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The LOADCAMVAR&#160;command is almost the same as the <a href="LOADCAMTABLE_Command.html" class="MCXref_0">LOADCAMTABLE Command</a>. These are the differences between each command: </p>
+        <ul>
+            <li value="1">For the LOADCAMVAR command, the cam table gets its points from the command arguments and variable values on the controller. </li>
+            <li value="2">For the LOADCAMTABLE command, the cam table gets its points from a file on the PC. Thus the controller does not execute the LOADCAMTABLE command in real time.</li>
+            <li value="3">For the LOADCAMVAR&#160;command, the format of this command keeps a constant distance between the master axis positions in the table.</li>
+            <li value="4">For the LOADCAMTABLE&#160;command, the format does not keep a constant distance between the master axis positions in the table.</li>
+        </ul>
+        <p>The controller uses the <span class="commandArgument">&lt;VariableNumber&gt;</span>, <span class="commandArgument">&lt;MasterStart&gt;</span>, and <span class="commandArgument">&lt;MasterDelta&gt;</span> arguments to calculate the span of master axis positions in the cam table. These master axis positions are evenly spaced <span class="commandArgument">&lt;MasterDelta&gt;</span> apart, starting at <span class="commandArgument">&lt;MasterStart&gt;</span> and ending at (<span class="commandArgument">&lt;MasterStart&gt;</span> + <span class="commandArgument">&lt;MasterDelta&gt;</span> * (<span class="commandArgument">&lt;VariableNumber&gt;</span> -1)).</p>
+        <p>You can find the first slave axis position, for master axis position = <span class="commandArgument">&lt;MasterStart&gt;</span>, in the variable that you specify for the <span class="commandArgument">&lt;VariableStart&gt;</span> command argument. You can find subsequent slave axis positions in the variables that immediately follow&#160;<span class="commandArgument">&lt;VariableStart&gt;</span>. You must make sure that these variables are in your cam table.</p>
+        <p>If the master axis position on the controller is equal to the master axis position in a variable, the controller uses the value of that variable as the slave axis position. If the master axis position on the controller is between two of the master axis positions in the variables, the controller uses linear or cubic spline interpolation to calculate a slave axis position that is between the two corresponding slave axis positions in the variables.</p>
+        <p>If you use the UNITS keyword, the master positions are in distance units. If you use the COUNTS keyword, the master positions are in encoder counts.</p>
+        <table style="caption-side: top;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span> The SMC automatically disables feedforward (<a href="../Parameters/GainAff.html">GainAff</a> and <a href="../Parameters/GainVff.html">GainVff</a>) on the slave axis when you are camming or gearing from an external position or position feedback.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1443247715_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Interpolation Types:&#160;Linear or Cubic Splining</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1443247715_0" style="display: none;">
+                <p>The <span class="commandArgument">&lt;InterpolationType&gt;</span> argument specifies linear or cubic spline interpolation. Use a&#160;cubic spline for maximum smoothness. Use a linear spline for minimum rippling. <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you use cubic spline interpolation because it makes smoother motion. </p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_1443247715_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Wrapping&gt;</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1443247715_1" style="display: none;">
+                <p>If the master axis position on the controller is outside of the range of master axis positions that you specified in the cam table, then one of the following conditions is true. The value that you specify for the <span MadCap:createDate="2015-03-19T10:52:25.9969259-04:00" MadCap:creator="lgelli" MadCap:initials="LG" MadCap:comment="Is this the correct argument?" MadCap:editor="lgelli" MadCap:editDate="2015-03-19T10:52:31.1814443-04:00" class="commandArgument">&lt;MasterAxis&gt;</span> argument in the LOADCAMTABLE or LOADCAMVAR command has an effect on which condition applies.</p>
+                <ul>
+                    <li value="1"><span class="bold">NOWRAP</span> The master axis position on the controller is equal to the master axis position in the cam table that is nearest to the side of the table that the master axis position on the controller overrides. This condition is the default and is correct for most applications.</li>
+                    <li value="2"><span class="bold">WRAP</span> The master axis position on the controller is wrapped and is in the range of the master axis positions that you specified in the cam table. You can use this condition for some rotary applications.</li>
+                </ul>
+                <p>If <span class="bold">WRAP</span> is true and the first and last slave axis positions that you specified in the cam table are not the same, the controller does a rollover of the slave axis position. This can be helpful in a rotary application if the first slave axis position is 0° and the last slave axis position is 360°.</p>
+            </div>
+        </div>
+        <div>
+            <h3 class="refExProg" MadCap:autonum=""><span class="autonumber"><span></span></span>Reference Example Programs</h3>
+            <p class="refExProg"><a href="../Samples/Camming.htm" class="MCXref_0">Camming Example</a>
+            </p>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="../Camming_Motion_from_a_File.htm" class="MCXref_0">Camming Motion</a>
+        </p>
+        <p class="relatedTopic"><a href="CAMSYNC_Command.html" class="MCXref_0">CAMSYNC Command</a>
+        </p>
+        <p class="relatedTopic"><a href="LOADCAMTABLE_Command.html" class="MCXref_0">LOADCAMTABLE Command</a>
+        </p>
+        <p class="relatedTopic"><a href="../Master_and_Slave_Motion_Overview.htm" class="MCXref_0">Master and Slave Motion Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="SLAVEOFFSET_Command.html" class="MCXref_0">SLAVEOFFSET Command</a>
+        </p>
+        <p class="relatedTopic"><a href="camming_Category.html">Camming Command Category</a>
+        </p><a name="kanchor2511"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=LOADCAMVAR_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=LOADCAMVAR_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

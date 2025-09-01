@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Motion|Advanced" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>MOVETOLIM Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="motion_Category.html">Motion</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="advancedmot_Category.html">Advanced</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">MOVETOLIM</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>MOVETOLIM Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Moves an axis into a limit condition.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="3">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>MOVETOLIM&#160;<i>&lt;Axis&gt;</i>&#160;CW</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>MOVETOLIM&#160;<i>&lt;Axis&gt;</i>&#160;CCW</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">MOVETOLIM X CW</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>MOVETOLIM Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">&lt;Axis&gt;</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Axis_Variable_Type.htm">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis on which to execute the command.</p>
+                </td>
+            </tr>
+        </table>
+        <p>Use the MOVETOLIM&#160;command to move an axis into a limit condition. The CW or CCW keyword that you use controls the direction of the move.</p>
+        <p>This is an asynchronous command which means that program execution continues to the next program line without waiting for the move to complete. Use the <a href="WAIT%20MOVEDONE_Command.html" class="MCXref_0">WAIT MOVEDONE Command</a> or <a href="WAIT%20INPOS_Command.html" class="MCXref_0">WAIT INPOS Command</a> to wait for motion to complete.</p>
+        <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>For Piezo Drives</h4>
+        <p>The MOVETOLIM command moves an axis until one of the following conditions occurs.</p>
+        <ul>
+            <li value="1">The drive detects a hardware end-of-travel limit.</li>
+            <li value="2">The Piezo Voltage Command exceeds the value that you specified for the <a href="../Parameters/PiezoVoltageClampLow.html" class="MCXref_0">PiezoVoltageClampLow Parameter</a> or the <a href="../Parameters/PiezoVoltageClampHigh.html" class="MCXref_0">PiezoVoltageClampHigh Parameter</a>. The direction of the move determines which parameter the Piezo Voltage Command exceeds.</li>
+        </ul>
+        <p>Configure the <a href="../Parameters/HomeSpeed.html" class="MCXref_0">HomeSpeed Parameter</a> to specify the speed of the move. The acceleration and deceleration ramp types are always linear. When the drive detects a limit condition, it stops immediately. The HomeRampRate parameter does not have an effect.</p>
+        <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>For All Other Drives</h4>
+        <p>The MOVETOLIM&#160;command moves an axis until the drive detects a hardware end-of-travel limit.</p>
+        <p>Specify the speed of the move and the acceleration and deceleration rates by configuring the parameters that follow:</p>
+        <p class="linkList"><a href="../Parameters/HomeSpeed.html" class="MCXref_0">HomeSpeed Parameter</a> specifies the speed of the move.</p>
+        <p class="linkList"><a href="../Parameters/HomeRampRate.html" class="MCXref_0">HomeRampRate Parameter</a> specifies the acceleration and deceleration rates of the move. The acceleration and deceleration ramp types are always linear.</p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="MOVEOUTLIM_Command.html" class="MCXref_0">MOVEOUTLIM Command</a>
+        </p>
+        <p class="relatedTopic"><a href="ACKNOWLEDGEALL_Command.html" class="MCXref_0">ACKNOWLEDGEALL Command</a>
+        </p>
+        <p class="relatedTopic"><a href="FAULTACK_Command.html" class="MCXref_0">FAULTACK Command</a>
+        </p>
+        <p class="relatedTopic"><a href="../Fault_and_Error_Overview.htm" class="MCXref_0">Fault and Error Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="../Limits_Overview.htm" class="MCXref_0">Limits Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="advancedmot_Category.html">Advanced Command Category</a>
+        </p><a name="kanchor1237"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=MOVETOLIM_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=MOVETOLIM_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
