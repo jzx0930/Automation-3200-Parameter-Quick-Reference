@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Status" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>DRIVEINFO Function</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="status_Category.html">Status</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">DRIVEINFO</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>DRIVEINFO Function</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Gets the specified drive info item from the specified axis.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="3">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre><i>&lt;return&gt;</i>&#160;=&#160;DRIVEINFO(<i>&lt;Axis&gt;</i>,&#160;<i>&lt;DriveInfoItem&gt;</i>)</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre><i>&lt;return&gt;</i>&#160;=&#160;DRIVEINFO(<i>&lt;Axis&gt;</i>,&#160;<i>&lt;DriveInfoItem&gt;</i>,&#160;<i>&lt;AdditionalData&gt;</i>)</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">$global[5] = DRIVEINFO(X, DRIVEINFO_PSOWindow2)</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>DRIVEINFO Function Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">&lt;Axis&gt;</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Axis_Variable_Type.htm">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis on which to execute the command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;DriveInfoItem&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The DRIVEINFO_ constant that represents the requested drive info item. Possible values are listed in the DRIVEINFO Data Items table.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;AdditionalData&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) Additional data for the specified data item. This argument is required by some data items.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>RETURNS</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The value of the specified drive info item.</p>
+                </td>
+            </tr>
+        </table>
+        <p>Use the DRIVEINFO function to read values from the drive.  The following table shows the values that you can read. </p>
+        <p>For some <span class="commandArgument">&lt;DriveInfoItem&gt;</span> values, you can supply an integer as an optional argument. If you can use an optional argument with the <span class="commandArgument">&lt;DriveInfoItem&gt;</span> value, the <span class="procedureTerm">Additional Data</span> column gives information about the argument.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Table: DRIVE DRIVEINFO Data Items</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');width: 850px;margin-left: 0;margin-right: auto;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">AeroBasic Constant</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Unit</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Description</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Additional Data</th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Amplifier Peak Current</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_AmplifierPeakCurrent</p><a name="kanchor1518"></a><a name="kanchor1519"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Amps</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the peak current rating of the amplifier.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Amplifier Temperature</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_AmplifierTemperature</p><a name="kanchor1520"></a><a name="kanchor1521"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Degrees Celsius</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the amplifier heat sink temperature in degrees Celsius.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Capacitance Sensor Raw Position</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_CapacitanceSensorRawPosition</p><a name="kanchor1522"></a><a name="kanchor1523"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>User Units</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the raw reading from the capacitance sensor feedback device.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Data Acquisition Samples</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_DataAcquisitionSamples</p><a name="kanchor1524"></a><a name="kanchor1525"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the number of data acquisition samples that have been acquired.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Drive Timer</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_DriveTimer</p><a name="kanchor1526"></a><a name="kanchor1527"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Microseconds</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the timer returned by the drive.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Timer Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Drive Timer Max</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_DriveTimerMax</p><a name="kanchor1528"></a><a name="kanchor1529"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Microseconds</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the maximum value of the timer returned by the drive.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Timer Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Drive Type ID</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_DriveTypeID</p><a name="kanchor1530"></a><a name="kanchor1531"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns an ID number identifying the type of drive (e.g., CP, HPe, Npaq etc).</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Encoder Cosine</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_EncoderCosine</p><a name="kanchor1532"></a><a name="kanchor1533"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the encoder cosine in A/D counts.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Channel</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Encoder Sine</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_EncoderSine</p><a name="kanchor1534"></a><a name="kanchor1535"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the encoder sine in A/D counts.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Channel</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>EnDat Absolute Position</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_EnDatAbsolutePosition</p><a name="kanchor1536"></a><a name="kanchor1537"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the EnDat absolute position in counts.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Fault Position Feedback</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_FaultPositionFeedback</p><a name="kanchor1538"></a><a name="kanchor1539"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the position at which the most recent axis fault occurred.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Galvo Laser Power Correction Output</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_GalvoLaserPowerCorrectionOutput</p><a name="kanchor1540"></a><a name="kanchor1541"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Volts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the analog output after laser power correction is applied. If laser power correction is not enabled, it will return zero. Refer to <a href="../Galvo_Power_Correction_Overview.htm">Galvo Power Correction Overview</a> for more information.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Latched Marker Position</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_LatchedMarkerPosition</p><a name="kanchor1542"></a><a name="kanchor1543"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the position at which the marker was detected during the home cycle.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Marker Search Distance</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_MarkerSearchDistance</p><a name="kanchor1544"></a><a name="kanchor1545"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the distance in counts that was traveled while searching for the marker.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>ModbusBit MasterInputBits</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ModbusBitMasterInputBits</p><a name="kanchor1546"></a><a name="kanchor1547"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the specified bit from the Modbus MasterInputBits registers.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Bit Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>ModbusBit MasterOutputBits</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ModbusBitMasterOutputBits</p><a name="kanchor1548"></a><a name="kanchor1549"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the specified bit from the Modbus MasterOutputBits registers.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Bit Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>ModbusRegDouble MasterInputWords</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ModbusRegDoubleMasterInputWords</p><a name="kanchor1550"></a><a name="kanchor1551"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the 64-bit floating point value stored in the specified Modbus MasterInputWords register.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Register Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>ModbusRegDouble MasterOutputWords</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ModbusRegDoubleMasterOutputWords</p><a name="kanchor1552"></a><a name="kanchor1553"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the 64-bit floating point value stored in the specified Modbus MasterOutputWords register.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Register Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>ModbusRegInt16 MasterInputWords</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ModbusRegInt16MasterInputWords</p><a name="kanchor1554"></a><a name="kanchor1555"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the 16-bit integer value stored in the specified Modbus MasterInputWords register.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Register Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>ModbusRegInt16 MasterOutputWords</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ModbusRegInt16MasterOutputWords</p><a name="kanchor1556"></a><a name="kanchor1557"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the 16-bit integer value stored in the specified Modbus MasterOutputWords register.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Register Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>ModbusRegInt32 MasterInputWords</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ModbusRegInt32MasterInputWords</p><a name="kanchor1558"></a><a name="kanchor1559"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the 32-bit integer value stored in the specified Modbus MasterInputWords register.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Register Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>ModbusRegInt32 MasterOutputWords</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ModbusRegInt32MasterOutputWords</p><a name="kanchor1560"></a><a name="kanchor1561"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the 32-bit integer value stored in the specified Modbus MasterOutputWords register.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Register Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>ModbusRegSingle MasterInputWords</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ModbusRegSingleMasterInputWords</p><a name="kanchor1562"></a><a name="kanchor1563"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the 32-bit floating point value stored in the specified Modbus MasterInputWords register.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Register Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>ModbusRegSingle MasterOutputWords</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ModbusRegSingleMasterOutputWords</p><a name="kanchor1564"></a><a name="kanchor1565"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the 32-bit floating point value stored in the specified Modbus MasterOutputWords register.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Register Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Motor Commutation Angle</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_MotorCommutationAngle</p><a name="kanchor1566"></a><a name="kanchor1567"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Degrees</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the angle of commutation for the motor.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Motor Temperature</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_MotorTemperature</p><a name="kanchor1568"></a><a name="kanchor1569"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Degrees Celsius</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the motor temperature in degrees Celsius.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>MX Absolute Position</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_MXAbsolutePosition</p><a name="kanchor1570"></a><a name="kanchor1571"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the absolute encoder angle for the optional Encoder Multiplier.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Channel</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Phase A Current Feedback</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PhaseACurrentFeedback</p><a name="kanchor1572"></a><a name="kanchor1573"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Amps</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the phase A current feedback.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Phase B Current Feedback</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PhaseBCurrentFeedback</p><a name="kanchor1574"></a><a name="kanchor1575"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Amps</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the phase B current feedback.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Position Detector Voltage</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PositionDetectorVoltage</p><a name="kanchor1576"></a><a name="kanchor1577"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Volts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the common mode voltage for the Nmark CLS position detector circuit.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO Bit Array Index</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PSOBitArrayIndex</p><a name="kanchor1578"></a><a name="kanchor1579"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the current array index for the PSOOUTPUT BIT MAP or PSOOUTPUT PULSE BIT MASK commands.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO Counter 1</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PSOCounter1</p><a name="kanchor1580"></a><a name="kanchor1581"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of PSO counter 1 in counts.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO Counter 2</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PSOCounter2</p><a name="kanchor1582"></a><a name="kanchor1583"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of PSO counter 2 in counts.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO Counter 3</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PSOCounter3</p><a name="kanchor1584"></a><a name="kanchor1585"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of PSO counter 3 in counts.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO Distance Array Index</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PSODistanceArrayIndex</p><a name="kanchor1586"></a><a name="kanchor1587"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the current array index for the PSODISTANCE ARRAY command.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO External Sync Frequency</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PSOExternalSyncFrequency</p><a name="kanchor1588"></a><a name="kanchor1589"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>KHz</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the frequency in KHz of the PSO external sync signal.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO Status</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PSOStatus</p><a name="kanchor1590"></a><a name="kanchor1591"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the <a href="../StructsAutoGen/psostatus.html">PSO Status</a> word.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Mask</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO Window 1</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PSOWindow1</p><a name="kanchor1592"></a><a name="kanchor1593"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the PSO window 1 counter in counts.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO Window 1 Array Index</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PSOWindow1ArrayIndex</p><a name="kanchor1594"></a><a name="kanchor1595"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the current array index for window 1 when using the PSOWINDOW RANGE ARRAY command.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO Window 2</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PSOWindow2</p><a name="kanchor1596"></a><a name="kanchor1597"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the PSO window 2 counter in counts.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO Window 2 Array Index</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_PSOWindow2ArrayIndex</p><a name="kanchor1598"></a><a name="kanchor1599"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the current array index for window 2 when using the PSOWINDOW RANGE ARRAY command.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Resolute Absolute Position</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ResoluteAbsolutePosition</p><a name="kanchor1600"></a><a name="kanchor1601"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the Resolute absolute position in counts.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Resolute Status</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ResoluteStatus</p><a name="kanchor1602"></a><a name="kanchor1603"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>None</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the <a href="../StructsAutoGen/resolutestatus.html">Resolute Status</a> word.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Mask</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Resolver Channel 1</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ResolverChannel1</p><a name="kanchor1604"></a><a name="kanchor1605"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the first resolver channel in counts.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Resolver Channel 2</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ResolverChannel2</p><a name="kanchor1606"></a><a name="kanchor1607"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Counts</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the value of the second resolver channel in counts.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Servo Update Rate</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_ServoUpdateRate</p><a name="kanchor1608"></a><a name="kanchor1609"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Kilohertz</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the servo update rate in kilohertz.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Settling Time</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_SettlingTime</p><a name="kanchor1610"></a><a name="kanchor1611"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Milliseconds</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the settling time in milliseconds for the most recently completed move.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Temperature Sensor</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_TemperatureSensor</p><a name="kanchor1612"></a><a name="kanchor1613"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Degrees Celsius</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the temperature as reported by the 1-Wire temperature sensor in degrees Celsius (Npaq only).</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Number</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Time Since Reset</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVEINFO_TimeSinceReset</p><a name="kanchor1614"></a><a name="kanchor1615"></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>seconds</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>This item returns the amount of time since the last reset.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p />
+                </td>
+            </tr>
+        </table>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="AXISSTATUS_Function.html">AXISSTATUS</a>
+        </p>
+        <p class="relatedTopic"><a href="TASKSTATUS_Function.html">TASKSTATUS</a>
+        </p>
+        <p class="relatedTopic"><a href="SYSTEMSTATUS_Function.html">SYSTEMSTATUS</a>
+        </p>
+        <p class="relatedTopic"><a href="status_Category.html">Status Command Category</a>
+        </p><a name="kanchor1616"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=DRIVEINFO_Function.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=DRIVEINFO_Function.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

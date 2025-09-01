@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Advanced|Analog" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>ANALOG TRACK Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="adv_Category.html">Advanced</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="analog_Category.html">Analog</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">ANALOG TRACK</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>ANALOG TRACK Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Configures the system to continuously set an analog output to be a real-time internal servo loop value.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="4">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>ANALOG&#160;TRACK&#160;<i>&lt;Axis&gt;</i>,&#160;<i>&lt;AnalogOutput&gt;</i>,&#160;<i>&lt;ServoValue&gt;</i>&#160;SCALE&#160;<i>&lt;ScaleFactor&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>ANALOG&#160;TRACK&#160;<i>&lt;Axis&gt;</i>,&#160;<i>&lt;AnalogOutput&gt;</i>,&#160;<i>&lt;ServoValue&gt;</i>&#160;SCALE&#160;<i>&lt;ScaleFactor&gt;</i>&#160;OFFSET&#160;<i>&lt;OffsetValue&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>ANALOG&#160;TRACK&#160;<i>&lt;Axis&gt;</i>,&#160;<i>&lt;AnalogOutput&gt;</i>,&#160;<i>&lt;ServoValue&gt;</i>&#160;SCALE&#160;<i>&lt;ScaleFactor&gt;</i>&#160;OFFSET&#160;<i>&lt;OffsetValue&gt;</i>&#160;LIMIT&#160;<i>&lt;MinVoltage&gt;</i>,&#160;<i>&lt;MaxVoltage&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre>
+ANALOG TRACK X, 0, 5 SCALE 0.33</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>ANALOG TRACK Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Axis&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis from which the controller tracks the servo loop value.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;AnalogOutput&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+								
+										The analog output to which the servo loop value is sent. For information about how to use this argument with different drive types, refer to the <b>Using the &lt;AnalogOutput&gt; Argument</b> section in this topic.
+									
+							</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;ServoValue&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+								
+										Specifies the servo loop value that the controller tracks. To see the possible values, refer to <b>Table: &lt;ServoValue&gt; Argument Values</b>.
+									
+							</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;ScaleFactor&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+                        <p>The value that you use to change the servo loop units to the analog output voltage.</p>
+                        <div class="MCDropDown"><a class="MCDropDownHotSpot_For_example_0" href="javascript:void(0);" id="MCDropDownHotSpot_1478329420_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+               For Example
+            </a>
+                            <div class="MCDropDownBody_0" id="MCDropDownBody_1478329420_0" style="display: none;">
+                                <div class="example">
+                                    <p>If you track the Position Command for the <span class="commandArgument">&lt;ServoValue&gt;</span> argument and you want 1 volt to equal 1000 counts for the Position Command, set the value of the <span class="commandArgument">&lt;ScaleFactor&gt;</span> argument to <span class="bold">.001</span>.</p>
+                                    <p>To calculate this value for the <span class="commandArgument">&lt;ScaleFactor&gt;</span> argument, use the following equation.</p>
+                                    <p class="equation_18pt">
+                                        <img src="../GeneratedImages/Equations/Equation214.png" style="width: 464px;height: 36px;" alt="" class="_MCEquation_0 mcReset" />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;OffsetValue&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) This value is applied with the tracking value to the analog output. Use this argument if you want to track position on a stage where the position can never be negative. The units are volts.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;MinVoltage&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) 
+                  
+                      Specifies the minimum voltage for the analog output.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;MaxVoltage&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) 
+                  
+                      Specifies the maximum voltage for the analog output.</p>
+                </td>
+            </tr>
+        </table>
+        <p>Use the ANALOG TRACK command to configure the system to continuously set an analog output to be a real-time internal servo loop value. You can have one ANALOG TRACK command set to ON for each analog output in the system.</p>
+        <p>The table that follows shows the possible settings for the <span class="commandArgument">&lt;ServoValue&gt;</span> argument.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;ServoValue&gt;</span> Argument Values</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+            <col style="width: 70px;" class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        Value
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                        Description
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                        Units
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>None (off)</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Position Command</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Counts</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>2</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Position Feedback</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Counts</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>3</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Velocity Command</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Counts&#160;/&#160;servo interrupt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>4</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Velocity Feedback</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Counts&#160;/&#160;servo interrupt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>5</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Current Command<sup>(1)</sup></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Amps</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>6</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Current Feedback<sup>(1)</sup></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Amps</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>7</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Acceleration Command</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Counts&#160;/&#160;msec<sup>2</sup></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>8</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Position Error</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Counts</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>9</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Piezo Voltage Command<sup>(2)</sup></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Volts</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                        <p>10</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: left;">
+                        <p>Vector Speed Command<sup>(3)</sup></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>Counts&#160;/&#160;servo interrupt</p>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="TableStyle-Basic-Foot-Footer1">
+                    <td class="TableStyle-Basic-FootD-Column1-Footer1" colspan="3">
+                        <p colspan="3" class="footnote">(1) If the axis is configured as a gantry axis, the value indicated for current is the average value of the master and slave axes.</p>
+                        <p colspan="3" class="footnote">(2) This setting is supported only on the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_Piezo_Linear">QL</span> and <span class="AerotechVariablesDriveType_Piezo__LinearEnh">QLe</span>.</p>
+                        <p colspan="3" class="footnote">(3) This setting is supported only on the <span class="AerotechVariablesDriveType_GL4">GL4</span> and the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> and  <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>.</p>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>For each drive type, the table that follows shows the update rates for the analog output.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><a name="kanchor2027"></a>Analog Output Update Rates</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+            <col style="width: 300px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 300px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                        Drive Type
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        Analog Output Update Rate
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><span class="AerotechVariablesDriveType_GL4">GL4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p style="text-align: center;">192 kHz</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p style="text-align: center;">192 kHz</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FLS">FLS</span></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>8 kHz</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_Piezo_Linear">QL</span> and <span class="AerotechVariablesDriveType_Piezo__LinearEnh">QLe</span></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>24 kHz</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> and <span class="AerotechVariablesDriveType_SSaM">SSaM</span></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>8 kHz</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>192 kHz</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Servo Drives</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>8 kHz</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p><span class="AerotechVariablesDriveType_XL4s">XL4s</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>192 kHz</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Using the <span class="commandArgument">&lt;AnalogOutput&gt;</span> Argument</h2>
+        <div>
+            <p>On the <span class="AerotechVariablesDriveType_XR3">XR3</span>, the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>, and all single-axis drives, you must use the analog output that is related to the axis from which the controller tracks the specified <span class="commandArgument">&lt;Axis&gt;&lt;ServoValue&gt;</span>.</p>
+            <p>On all other multi-axis drives, you can use any analog output of the drive to track the specified <span class="commandArgument">&lt;Axis&gt;&lt;ServoValue&gt;</span>. You are not limited to using only the analog output that is related to the specified <span class="commandArgument">&lt;Axis&gt;</span>.</p>
+            <p>For information about how I/O is mapped to different drive types, refer to <a href="../Specifying_IO_Numbers.htm" class="MCXref_0">Specifying I/O Numbers</a>.</p>
+            <div class="MCDropDown">
+                <div class="MCDropDownHead_For_example_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1478329420_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Examples of Tracking the <span>&lt;ServoValue&gt;</span> from the <span class="AerotechVariablesDriveType_GL4">GL4</span></a>
+                </div>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_1478329420_1" style="display: none;">
+                    <div class="example">
+                        <p>Say that you have a <span class="AerotechVariablesDriveType_GL4">GL4</span> where Axis X is the first axis and Axis Y is the second axis. Analog outputs 0 and 1 are related only to Axis X. The <span class="commandArgument">&lt;ServoValue&gt;</span> is set to 5, which is the value of the Current Command. The <span class="commandArgument">&lt;ScaleFactor&gt;</span> is set to 0.33. You want to track the <span class="commandArgument">&lt;ServoValue&gt;</span> of the first axis and can do so as follows.</p>
+                        <p>To track the Current Command from the first axis (X) of a <span class="AerotechVariablesDriveType_GL4">GL4</span> on analog output 0:</p>
+                        <p><span class="pre">ANALOG&#160;TRACK X, 0, 5 SCALE 0.33</span>
+                        </p>
+                        <p>To track the Current Command from the first axis (X) of a <span class="AerotechVariablesDriveType_GL4">GL4</span> on analog output 1:</p>
+                        <p><span class="pre">ANALOG&#160;TRACK X, 1, 5 SCALE 0.33</span>
+                        </p>
+                        <p>Now you want to track the <span class="commandArgument">&lt;ServoValue&gt;</span> of the second axis. You keep this value set to 5 and keep the <span class="commandArgument">&lt;ScaleFactor&gt;</span> set to 0.33. Even though the analog outputs are related to Axis X, you use the ANALOG&#160;TRACK&#160;command to track a <span class="commandArgument">&lt;ServoValue&gt;</span> from Axis Y.</p>
+                        <p>To track the Current Command from the second axis (Y) of a <span class="AerotechVariablesDriveType_GL4">GL4</span> on analog output 0:</p>
+                        <p><span class="pre">ANALOG&#160;TRACK Y, 0, 5 SCALE 0.33</span>
+                        </p>
+                        <p>To track the Current Command from the second axis (Y) of a <span class="AerotechVariablesDriveType_GL4">GL4</span> on analog output 1:</p>
+                        <p><span class="pre">ANALOG&#160;TRACK Y, 1, 5 SCALE 0.33</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="../I_O_Summary.htm">I/O Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="../Specifying_IO_Numbers.htm" class="MCXref_0">Specifying I/O Numbers</a>
+        </p>
+        <p class="relatedTopic"><a href="../Programming_Units_and_Modes.htm">Programming Units and Modes</a>
+        </p>
+        <p class="relatedTopic"><a href="analog_Category.html">Analog Command Category</a>
+        </p><a name="kanchor2028"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=ANALOG TRACK_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=ANALOG TRACK_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

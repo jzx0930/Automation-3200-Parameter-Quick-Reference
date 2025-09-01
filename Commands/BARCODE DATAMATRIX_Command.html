@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Barcode" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>BARCODE DATAMATRIX Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="barcode_Category.html">Barcode</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">BARCODE DATAMATRIX</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>BARCODE DATAMATRIX Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Encodes a string into the binary representation of a Data Matrix ECC 200 barcode.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="2">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>BARCODE&#160;DATAMATRIX&#160;<i>&lt;StringToEncode&gt;</i>,&#160;<i>&lt;EncodingType&gt;</i>,&#160;<i>&lt;EncodingFormat&gt;</i>,&#160;<i>&lt;BarcodeOptions&gt;</i>,&#160;<i>&lt;OutputArray&gt;</i>,&#160;<i>&lt;NumberOfRows&gt;</i>,&#160;<i>&lt;ItemsPerRow&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">BARCODE DATAMATRIX "Aerotech", DATAMATRIXENCODING_Ascii, DATAMATRIXFORMAT_Auto, BARCODEOPTIONS_None, $OutputArray, $NumberOfRows, $ItemsPerRow</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>BARCODE DATAMATRIX Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;StringToEncode&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">String</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The string to encode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;EncodingType&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The type of encoding to use. Select the encoding based on the input data.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;EncodingFormat&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The format of the encoding to use. The format determines the size of the output data matrix.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;BarcodeOptions&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>A bitwise set of options for encoding the data.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;OutputArray&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point variable</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The double array variable where the output data is kept.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;NumberOfRows&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer variable</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The variable that is used to keep the number of rows of encoded data.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;ItemsPerRow&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer variable</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The variable that is used to keep the number of items (variables) per row of encoded data.</p>
+                </td>
+            </tr>
+        </table>
+        <p>Use the BARCODE DATAMATRIX command to encode a string into the binary representation of a Data Matrix ECC 200 barcode. The encoded data is kept in the <span class="commandArgument">&lt;OutputArray&gt;</span> variable and is in the correct format that is necessary for the <a href="PSOOUTPUT%20BIT%20MAP_Command.html">PSOOUTPUT BIT&#160;MAP</a>&#160;command, where each bit in the output array corresponds to one of the cells in the 2D (two-dimensional) barcode. The encoding algorithm adds one row of quiet space (padding) to the top and bottom of the barcode and one column of quiet space&#160;to the left and right of the barcode.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_441493646_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;EncodingType&gt;</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_441493646_0" style="display: none;">
+                <p>Specify the <span class="commandArgument">&lt;EncodingType&gt;</span> based on the type of data that is in the input string. When you use the <span class="procedureTerm">DATAMATRIXENCODING_Auto</span> option, the BARCODE&#160;DATAMATRIX command selects the optimal encoding type. </p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Data Matrix Encoding Values</p>
+                <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;margin-left: 0;margin-right: auto;">
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Value</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">AeroBasic Constant</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXENCODING_Auto</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Auto</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Automatic encoding</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">1</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXENCODING_Ascii</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Ascii</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Ascii encoding</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">2</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXENCODING_C40</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>C40</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>C40 encoding</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">3</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXENCODING_Text</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Text</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Text encoding</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">4</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXENCODING_X12</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>X12</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>X12 encoding</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">5</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXENCODING_Edifact</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Edifact</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Edifact encoding</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">6</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXENCODING_Binary</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Binary</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Binary encoding</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_441493646_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;EncodingFormat&gt;</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_441493646_1" style="display: none;">
+                <p>Specify the <span class="commandArgument">&lt;EncodingFormat&gt;</span> based on the size that you want for the 2D barcode. When you use the <span class="procedureTerm">DATAMATRIXFORMAT_Auto</span> option, the BARCODE DATAMATRIX command selects the smallest format that holds the input string.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Data Matrix Format Values</p>
+                <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;margin-left: 0;margin-right: auto;">
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Value</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">AeroBasic Constant</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">-1</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_Auto</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>SizeAuto</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The format is determined automatically.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_10x10</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size10x10</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 10x10 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">1</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_12x12</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size12x12</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 12x12 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">2</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_14x14</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size14x14</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 14x14 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">3</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_16x16</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size16x16</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 16x16 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">4</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_18x18</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size18x18</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 18x18 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">5</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_20x20</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size20x20</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 20x20 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">6</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_22x22</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size22x22</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 22x22 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">7</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_24x24</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size24x24</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 24x24 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">8</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_26x26</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size26x26</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 26x26 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">9</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_32x32</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size32x32</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 32x32 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">10</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_36x36</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size36x36</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 36x36 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">11</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_40x40</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size40x40</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 40x40 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">12</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_44x44</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size44x44</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 44x44 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">24</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_8x18</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size8x18</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 8x18 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">25</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_8x32</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size8x32</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 8x32 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">26</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_12x26</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size12x26</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 12x26 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">27</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_12x36</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size12x36</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 12x36 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">28</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_16x36</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size16x36</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 16x36 matrix.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">29</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>DATAMATRIXFORMAT_16x48</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Size16x48</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The output is a 16x48 matrix.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_441493646_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;BarcodeOptions&gt;</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_441493646_2" style="display: none;">
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Barcode Options Values</p>
+                <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;margin-left: 0;margin-right: auto;">
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Value</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">AeroBasic Constant</th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>BARCODEOPTIONS_None</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>None</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>No encoding options</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">1</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>BARCODEOPTIONS_InvertPolarity</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>InvertPolarity</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>The polarity determines whether a dark cell will be represented by a 1 or 0 in the output data.</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_441493646_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Example Program</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_441493646_3" style="display: none;">
+                <p>The output array is formatted for use with the PSO. Use the <a href="ARRAY%20WRITE_Command.html">ARRAY WRITE</a> command to download the encoded data to the drive array. The example program that follows shows you how to configure the PSO for the <span class="AerotechVariablesDriveType_GL4">GL4</span>, the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span>, and the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>. It also shows you how to download the barcode information to the PSO&#160;array and sequence the marking motion.</p>
+                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                <div class="codeexample"><pre xml:space="preserve">
+DVAR $OuterLoopIndex
+DVAR $InnerLoopIndex
+DVAR $OutputArray[100]
+DVAR $NumberOfRows
+DVAR $ItemsPerRow
+DVAR $PassesPerRow
+DVAR $RowWidth
+
+' Size of a single barcode cell in user units.
+#define CellSize 0.6
+
+' Spot size of the laser used to mark the barcode.
+#define LaserSpotSize 0.02
+
+' Configure the PSO for fixed-distance firing.
+PSOCONTROL X RESET
+PSOTRACK X INPUT 0
+PSOOUTPUT X CONTROL 0 1
+PSODISTANCE X FIXED (ABS(UNITSTOCOUNTS(X, CellSize)))
+
+' Encode the barcode.
+$strglob[0] = "Aerotech"
+BARCODE DATAMATRIX $strglob[0], DATAMATRIXENCODING_Auto, DATAMATRIXFORMAT_Auto, BARCODEOPTIONS_InvertPolarity, $OutputArray, $NumberOfRows, $ItemsPerRow
+
+' Calculate the distance that you must travel to traverse a single row.
+$RowWidth = 32 * $ItemsPerRow * CellSize
+
+' Calculate the number of passes that are necessary to mark a single row.
+$PassesPerRow = (CellSize / LaserSpotSize)
+
+' Do the marking motion.
+INCREMENTAL
+CRITICAL START
+
+FOR $OuterLoopIndex = 0 TO $NumberOfRows - 1
+
+        ' Write the marking sequence for this row to the PSO array.
+        ARRAY X WRITE $OutputArray[$OuterLoopIndex * $ItemsPerRow] 0 $ItemsPerRow
+		
+        FOR $InnerLoopIndex = 0 TO $PassesPerRow - 1
+	    
+                ' Configure the PSO.
+                PSOOUTPUT X BIT MAP 0 $ItemsPerRow 1
+                PSOCONTROL X ARM 
+		
+                ' Mark the pattern.
+                LINEAR X $RowWidth
+                WAIT INPOS X
+		
+                ' Index move for the next row.
+                RAPID X -$RowWidth Y -LaserSpotSize
+                WAIT INPOS X Y
+		
+        NEXT $InnerLoopIndex
+NEXT $OuterLoopIndex
+
+CRITICAL END
+
+END PROGRAM
+</pre>
+                </div>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="barcode_Category.html">Barcode Command Category</a>
+        </p><a name="kanchor2598"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=BARCODE DATAMATRIX_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=BARCODE DATAMATRIX_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

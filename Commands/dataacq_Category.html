@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|DataAcquisition" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>DataAcquisition Command Category</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink selected" href="#">DataAcquisition</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">DataAcquisition</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>DataAcquisition Command Category</h1>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> The DATAACQ&#160;commands do not apply when used with the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span>, <span class="AerotechVariablesDriveType_FLS">FLS</span>, <span class="AerotechVariablesDriveType_Piezo_Linear">QL</span>, or <span class="AerotechVariablesDriveType_Piezo__LinearEnh">QLe</span>, the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_SSaM">SSaM</span>, or the <span class="AerotechVariablesSimpleName_Nstep">Nstep</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a name="kanchor2496"></a>Use the DATAACQ&#160;commands to collect encoder positions or analog inputs and save them to the drive array. You can use an external signal or a PSO firing event signal to collect the data. These commands define the source of the data acquisition event and the data that you capture. The captured data can be a maximum of 32-bits of information.</p>
+        <p>You can read the number of collected data elements by using the <a href="DRIVEINFO_Function.html">DRIVEINFO</a>&#160;function. For an example program, refer to the <a href="../Samples/End_Point_Modification.htm">End-Point Modification Example</a>.</p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> You cannot use the DATAACQ commands during homing.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> Because the DATAACQ ARRAY command enables data acquisition, you must issue the DATAACQ TRIGGER and DATAACQ INPUT commands before using the DATAACQ ARRAY&#160;command.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The table that follows shows the maximum rate at which the drive can collect data samples and write them to the array.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>DATAACQ Maximum Data Collection Rates</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+            <col style="width: 174px;" class="TableStyle-Basic-Column-Column1" MadCap:conditions="" />
+            <col style="width: 185px;" class="TableStyle-Basic-Column-Column1" MadCap:conditions="" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;vertical-align: bottom;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        Drive Type
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="vertical-align: bottom;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        DATAACQ Rate (Samples per Second)                 </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesDriveType_GL4">GL4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span class="DATAACQ_RatesDATAACQ_Rate">128,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_CP">CP</span></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span MadCap:variableOverride="DATAACQ_Rates.DATAACQ_Rate:8\,000," class="DATAACQ_RatesDATAACQ_Rate">8,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span> and <span class="AerotechVariablesDriveType_HPe">HPe</span></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span MadCap:variableOverride="DATAACQ_Rates.DATAACQ_Rate:32\,000," class="DATAACQ_RatesDATAACQ_Rate">32,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_ML">ML</span></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span MadCap:variableOverride="DATAACQ_Rates.DATAACQ_Rate:32\,000," class="DATAACQ_RatesDATAACQ_Rate">32,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_MP">MP</span></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span MadCap:variableOverride="DATAACQ_Rates.DATAACQ_Rate:8\,000," class="DATAACQ_RatesDATAACQ_Rate">8,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> and <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span></p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span class="DATAACQ_RatesDATAACQ_Rate">128,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_Npaq">Npaq</span><sup>(1)</sup> (standard feedback)</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span MadCap:variableOverride="DATAACQ_Rates.DATAACQ_Rate:16\,000," class="DATAACQ_RatesDATAACQ_Rate">16,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_Npaq">Npaq</span><sup>(1)</sup> (-MXR feedback)</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span MadCap:variableOverride="DATAACQ_Rates.DATAACQ_Rate:4\,000," class="DATAACQ_RatesDATAACQ_Rate">4,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesSimpleName_Nservo">Nservo</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span MadCap:variableOverride="DATAACQ_Rates.DATAACQ_Rate:16\,000," class="DATAACQ_RatesDATAACQ_Rate">16,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesDriveType_XC2">XC2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span class="DATAACQ_RatesDATAACQ_Rate">128,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesDriveType_XC4">XC4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span class="DATAACQ_RatesDATAACQ_Rate">128,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesDriveType_XC4e">XC4e</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span class="DATAACQ_RatesDATAACQ_Rate">128,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p><span class="AerotechVariablesDriveType_XL4s">XL4s</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span class="DATAACQ_RatesDATAACQ_Rate">128,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="AerotechVariablesDriveType_XR3">XR3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p><span class="DATAACQ_RatesDATAACQ_Rate">128,000</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;" colspan="2">
+                        <p class="footnote">(1) The <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span> contains multiple <span class="AerotechVariablesDriveType_ML">ML</span> or <span class="AerotechVariablesDriveType_MP">MP</span> drives. Refer to the <span class="AerotechVariablesDriveType_ML">ML</span> or <span class="AerotechVariablesDriveType_MP">MP</span> section of this table to get the values for your <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="datacollection_Category.html">Data Collection Command Category</a>
+        </p>
+        <p class="relatedTopic"><a href="../Drive_Array_Overview.htm">Drive Array Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="../PSO_Block_Diagrams.htm">PSO Block Diagrams</a>
+        </p>
+        <p class="relatedTopic"><a href="../Samples/skill__5.html">PSO Examples</a>
+        </p>
+        <p class="relatedTopic"><a href="../PSO_Command_Overview.htm">PSO Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="SCOPETRIG_Command.html">SCOPETRIG Command</a>
+        </p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Commands</h2>
+        <ul>
+            <li class="BulletLevel1" value="1"><a href="ARRAY%20READ_Command.html">ARRAY READ</a>
+            </li>
+            <li class="BulletLevel1" value="2"><a href="DATAACQ%20ARRAY_Command.html">DATAACQ ARRAY</a>
+            </li>
+            <li class="BulletLevel1" value="3"><a href="DATAACQ%20INPUT_Command.html">DATAACQ INPUT</a>
+            </li>
+            <li class="BulletLevel1" value="4"><a href="DATAACQ%20OFF_Command.html">DATAACQ OFF</a>
+            </li>
+            <li class="BulletLevel1" value="5"><a href="DATAACQ%20TRIGGER_Command.html">DATAACQ TRIGGER</a>
+            </li>
+        </ul><a name="kanchor2497"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=dataacq_Category.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=dataacq_Category.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Motion" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>CCW Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="motion_Category.html">Motion</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">CCW</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>CCW Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Executes a counterclockwise circular move on axes.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="5">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>CCW&#160;<i>&lt;Axis1&gt;</i>&#160;<i>&lt;Axis1Endpoint&gt;</i>&#160;<i>&lt;Axis2&gt;</i>&#160;<i>&lt;Axis2Endpoint&gt;</i>&#160;R&#160;<i>&lt;Radius&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>CCW&#160;<i>&lt;Axis1&gt;</i>&#160;<i>&lt;Axis1Endpoint&gt;</i>&#160;<i>&lt;Axis2&gt;</i>&#160;<i>&lt;Axis2Endpoint&gt;</i>&#160;I&#160;<i>&lt;Axis1Center&gt;</i>&#160;J&#160;<i>&lt;Axis2Center&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>CCW&#160;<i>&lt;Axis1&gt;</i>&#160;<i>&lt;Axis1Endpoint&gt;</i>&#160;<i>&lt;Axis2&gt;</i>&#160;<i>&lt;Axis2Endpoint&gt;</i>&#160;R&#160;<i>&lt;Radius&gt;</i>&#160;F&#160;<i>&lt;CoordinatedSpeed&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>CCW&#160;<i>&lt;Axis1&gt;</i>&#160;<i>&lt;Axis1Endpoint&gt;</i>&#160;<i>&lt;Axis2&gt;</i>&#160;<i>&lt;Axis2Endpoint&gt;</i>&#160;I&#160;<i>&lt;Axis1Center&gt;</i>&#160;J&#160;<i>&lt;Axis2Center&gt;</i>&#160;F&#160;<i>&lt;CoordinatedSpeed&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">CCW X2.5 Y1 I-.5 J-2.5</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>CCW Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Axis1&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The first axis on which to do counterclockwise circular motion.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Axis2&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The second axis on which to do counterclockwise circular motion.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Axis1Endpoint&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The end point of the movement on the first specified axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Axis2Endpoint&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The end point of the movement on the second specified axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Radius&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) The radius of the circle to use.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Axis1Center&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) The relative offset of the center point from the starting position of the first axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Axis2Center&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) The relative offset of the center point from the starting position of the second axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;CoordinatedSpeed&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) The speed of the coordinated circular motion.</p>
+                </td>
+            </tr>
+        </table>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3892079800_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: Circular Arc that the CCW Syntax Example Specifies    </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3892079800_0" style="display: none;">
+                <p>
+                    <img src="../Resources/Images/Figure_CCW_CircularInterpolation.png" />
+                </p>
+            </div>
+        </div>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> This command applies only to dominant axes. Refer to <a href="../Axis_Type_Overview.htm">Axis Type Overview</a> for more information about dominant axes.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a name="kanchor1243"></a><a name="kanchor1244"></a>The CCW command generates a counterclockwise circular arc. To create the arc, you must use this command to specify the center of the arc and to explicitly specify the end point of the arc. If you use the <a href="INCREMENTAL_Command.html">INCREMENTAL</a> distance mode, the end point that you specify is related to the current axis positions. If you use the <a href="ABSOLUTE_Command.html">ABSOLUTE</a> distance mode, the end point that you specify is related to the home or software home position.</p>
+        <p>To specify the center of the arc, use the <span class="bold">IJ Method</span> or the <span class="bold">R Method</span>.</p>
+        <p>For information about how to prevent positional errors that can occur in <MadCap:conditionalText MadCap:conditions="AerotechConditions.Option_MainA3200">CW and CCW motion</MadCap:conditionalText>, refer to <a href="../Imprecision_of_Generated_Circular_Motion.htm" MadCap:conditions="AerotechConditions.Option_MainA3200">Imprecision of Generated Circular Motion</a>.</p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> When you are in VELOCITY ON&#160;mode and using BEZIER, or if you are using CW, CCW, G2, or G3 arcs with small radii, use the <a href="../Parameters/CoordinatedCircularAccelLimit.html">CoordinatedCircularAccelLimit</a> parameter to limit the axis accelerations caused by traveling the arc. High axis accelerations can cause position errors, servo loop oscillation, and other motion problems. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> VELOCITY ON mode does not blend <a href="PVT_Command.html">PVT</a> commands with LINEAR, CW, CCW, or BEZIER commands. After the final PVT move in a sequence, the controller always immediately returns to zero velocity, even if VELOCITY ON is active. To prevent axis jerking, set the final PVT move to return to zero velocity. LINEAR, CW, CCW, and BEZIER commands decelerate to zero before proceeding to a PVT command, even if VELOCITY&#160;ON&#160;is active.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Methods of Determining the Circular Center Point</h3>
+        <p>Use one of these methods to specify the center of an arc. To specify the center of an arc as an offset from the start of a circle, use the <span class="bold">IJ Method</span>. To specify the center of an arc as a radius, use the <span class="bold">R Method</span>.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3892079800_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />IJ Method</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3892079800_1" style="display: none;">
+                <p>Use this method to specify the center of the arc as an incremental offset from the starting position of a circle. The controller always specifies the offsets as INCREMENTAL so that they are related to the axis position. The <a href="ABSOLUTE_Command.html">ABSOLUTE</a> or <a href="INCREMENTAL_Command.html">INCREMENTAL</a> distance mode that you specify does not have an effect on how the controller specifies the offsets.</p>
+                <p>The radius of the generated arc is the distance between the starting position and the specified offset. The I offset corresponds to the first axis that you specify in the end point. The J offset corresponds to the second axis that you specify in the end point.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3892079800_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Creating a Full Circle with the IJ Method</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3892079800_2" style="display: none;">
+                <p>To create a full 360° circle with the IJ Method, specify an end point that is the same location as the starting point of the CCW motion.</p>
+                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                <div class="codeexample"><pre xml:space="preserve">
+' The controller moves the axes to (4,5) and then generates a circle of
+' radius 1 that has a center point at (5,5).
+' To create a full circle, the specified endpoint must have 
+' the current axis locations.
+' The center point (I,J) is relative to the current location
+' of the axes.
+' This example circle has a center point that is one unit in
+' the positive X direction from the current axis locations.
+ABSOLUTE
+' Move to the start point.
+LINEAR X4 Y5
+' Generate the circle.
+CCW X4 Y5 I1 J0</pre>
+                </div>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3892079800_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />R Method</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3892079800_3" style="display: none;">
+                <table style="width: 650px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p MadCap:conditions="AerotechConditions.Option_MainA3200"><span class="note">Note:</span> You cannot use the R Method to create a full 360° circle. To create a full circle, use the <span class="bold">IJ Method</span>.</p>
+                                <p><span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you do not use the R Method to program arcs that are almost full circles or almost half circles. In these arcs, a small error in the location of the end point causes a much larger error in the center point of the arc. As an alternative, <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you either divide the arc into two or more smaller arcs or use the <span MadCap:conditions="AerotechConditions.Option_MainA3200" class="bold">IJ</span> <span class="bold">Method</span> to construct the arc.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>If you use the R Method, make sure that you specify the correct arc that you want to use.</p>
+                <ul>
+                    <li value="1">If the radius is positive, the controller generates a shorter arc that is always 180° or less.</li>
+                    <li value="2">If the radius is negative, the controller generates a longer arc that is always between 180° and 360°.</li>
+                </ul>
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3892079800_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: R Method Arcs
+            </a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3892079800_4" style="display: none;">
+                        <p>
+                            <img src="../Resources/Images/Figure_CircularRMethod.png" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>F Command</h3>
+        <p>Use the RAMP&#160;commands to configure the coordinated acceleration and deceleration. Refer to <a href="../Acceleration_Deceleration_Ramping_Overview.htm">Acceleration and Deceleration Ramping Overview</a> for more information.</p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="CW_Command.html">CW Command</a>
+        </p>
+        <p class="relatedTopic"><a href="../Motion_Done_Overview.htm">Motion Done Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="../Programming_Units_and_Modes.htm">Programming Units and Modes</a>
+        </p>
+        <p class="relatedTopic"><a href="../Imprecision_of_Generated_Circular_Motion.htm">Imprecision of Generated Circular Motion</a>
+        </p>
+        <p class="relatedTopic"><a href="../CommandsOLD/F_E_and_S_Codes.htm">F and E Commands</a>
+        </p>
+        <p class="relatedTopic"><a href="motion_Category.html">Motion Command Category</a>
+        </p><a name="kanchor1245"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=CCW_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=CCW_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

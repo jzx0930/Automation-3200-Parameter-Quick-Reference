@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Advanced|Data Collection" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Data Collection Command Category</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/BasicColumns.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="adv_Category.html">Advanced</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink selected" href="#">Data Collection</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Data Collection</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Data Collection Command Category</h1>
+        <div>
+            <p>Use the DATACOLLECT commands to configure and trigger data collection from an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program without the use of <span class="AerotechVariablesApp_DigScope">Digital Scope</span>. A Windows thread monitors the data collection, uploading blocks of data from the SMC as they are collected. When the collection is complete, the Windows thread writes the data to an ASCII text file. The resulting file can be read at a later time, and displayed using <span class="AerotechVariablesApp_DigScope">Digital Scope</span>.</p>
+            <table style="width: 650px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                <col />
+                <tbody>
+                    <tr>
+                        <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note:</span> <a href="../DS_Digital_Scope_Application.htm"><span class="AerotechVariablesApp_DigScope">Digital Scope</span></a> will not correctly open files created by DATACOLLECT unless the file has a .DAT file extension.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>DATACOLLECT Commands</p>
+            <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/BasicColumns.css');margin-left: 0;margin-right: auto;" class="TableStyle-BasicColumns" cellspacing="0">
+                <col style="width: 280px;" class="TableStyle-BasicColumns-Column-Column1" />
+                <col class="TableStyle-BasicColumns-Column-Column2" />
+                <tr class="TableStyle-BasicColumns-Body-Body1">
+                    <td style="text-align: left;" bgcolor="#C8C8C8" class="TableStyle-BasicColumns-BodyE-Column1-Body1">
+                        <p class="tableHeaderRight">Erase prior DATACOLLECT configuration</p>
+                    </td>
+                    <td class="TableStyle-BasicColumns-BodyD-Column2-Body1"><pre>DATACOLLECT&#160;ITEM&#160;RESET</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-BasicColumns-Body-Body1">
+                    <td style="text-align: left;" bgcolor="#C8C8C8" class="TableStyle-BasicColumns-BodyE-Column1-Body1">
+                        <p class="tableHeaderRight">Specify a data item to collect</p>
+                    </td>
+                    <td class="TableStyle-BasicColumns-BodyD-Column2-Body1">
+                        <p><pre>DATACOLLECT&#160;ITEM&#160;<i>&lt;ItemNumber&gt;</i>,&#160;<i>&lt;Index&gt;</i>,&#160;<i>&lt;DataItem&gt;</i></pre>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-BasicColumns-Body-Body1">
+                    <td style="text-align: left;" bgcolor="#C8C8C8" class="TableStyle-BasicColumns-BodyE-Column1-Body1">
+                        <p class="tableHeaderRight">Start data collection</p>
+                    </td>
+                    <td class="TableStyle-BasicColumns-BodyD-Column2-Body1">
+                        <p><pre>DATACOLLECT&#160;START&#160;<i>&lt;FileHandle&gt;</i>,&#160;<i>&lt;NumSamples&gt;</i>,&#160;<i>&lt;SampleTime&gt;</i></pre>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-BasicColumns-Body-Body1">
+                    <td colspan="1" rowspan="1" style="text-align: left;" bgcolor="#C8C8C8" class="TableStyle-BasicColumns-BodyE-Column1-Body1">
+                        <p class="tableHeaderRight">Stop data collection</p>
+                    </td>
+                    <td colspan="1" rowspan="1" class="TableStyle-BasicColumns-BodyD-Column2-Body1"><pre>DATACOLLECT&#160;STOP</pre>
+                    </td>
+                </tr>
+            </table>
+            <p>Use the DATACOLLECT ITEM command to specify the data items to collect, and DATACOLLECT START to begin collecting.</p>
+            <p>You must use the DATACOLLECT STOP command to terminate the data collection. Use the <a href="FILEOPEN_Function.html">FILEOPEN</a> function and <a href="FILECLOSE_Command.html">FILECLOSE</a> command in conjunction with DATACOLLECT START and DATACOLLECT STOP to open and close the file to which the data samples are written.</p>
+            <p>Data collection is real time and the intervals between samples in one DATACOLLECT START execution are deterministic. The time between when DATACOLLECT START is issued and the first data point occurs, and the time between the last data point collected and when the DATACOLLECT STOP is issued, is not completely deterministic. This is because the start and stop operations are performed from a Windows thread and have a variability of 10 milliseconds or more. Note that the <a href="dataacq_Category.html">DATAACQ</a> command can be used for hardware-based triggering of encoder positions for more precise position capturing.</p>
+            <p>To append data to the end of an existing output file, either start another acquisition with DATACOLLECT START before closing the file or reopen an existing data file with FILEOPEN mode 2. The latency between successive collections is not deterministic because file operations are performed by Windows.</p>
+        </div>
+        <p><a name="kanchor2029"></a>For more information about <span class="AerotechVariablesApp_DigScope">Digital Scope</span>, refer to <a href="../DS_Digital_Scope_Application.htm"><span class="AerotechVariablesApp_DigScope">Digital Scope</span> Application Overview. </a></p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics
+        </h3>
+        <p class="relatedTopic"><a href="../Samples/Data_Collection.htm">Data Collection Example</a>
+        </p>
+        <p class="relatedTopic"><a href="../DATACOLLECT_Output_Format.htm">DATACOLLECT Output File Format</a>
+        </p>
+        <p class="relatedTopic"><a href="../Data_Collection_Overview.htm">Data Collection Overview</a>
+        </p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Commands</h2>
+        <ul>
+            <li class="BulletLevel1" value="1"><a href="DATACOLLECT%20ITEM_Command.html">DATACOLLECT ITEM</a>
+            </li>
+            <li class="BulletLevel1" value="2"><a href="DATACOLLECT%20ITEM%20RESET_Command.html">DATACOLLECT ITEM RESET</a>
+            </li>
+            <li class="BulletLevel1" value="3"><a href="DATACOLLECT%20START_Command.html">DATACOLLECT START</a>
+            </li>
+            <li class="BulletLevel1" value="4"><a href="DATACOLLECT%20STOP_Command.html">DATACOLLECT STOP</a>
+            </li>
+            <li class="BulletLevel1" value="5"><a href="SCOPELTTRIG_Command.html">SCOPELTTRIG</a>
+            </li>
+            <li class="BulletLevel1" value="6"><a href="SCOPEOPEN_Command.html">SCOPEOPEN</a>
+            </li>
+            <li class="BulletLevel1" value="7"><a href="SCOPETRIG_Command.html">SCOPETRIG</a>
+            </li>
+        </ul><a name="kanchor2030"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=datacollection_Category.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=datacollection_Category.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
