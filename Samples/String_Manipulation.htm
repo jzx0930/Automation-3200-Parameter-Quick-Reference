@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Example Programs|Basic Programming" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:conditions="" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>String Manipulation Example</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/CodeEx.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Example_Programs.htm">Example Programs</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="skill__0.html">Basic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">String Manipulation</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table><a name="kanchor2622"></a>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>String Manipulation Example</h1>
+        <p>Before you run an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> example program, copy the example to your User Files directory. Copying the example makes sure that you have access to compile and run the program and prevents changes that you make from being overwritten if you install updated software.</p>
+        <p>View the example program in <span class="AerotechVariablesSimpleName_A3200">A3200</span> <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>. <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> adds color in the code which makes it easier to read. For best results, do one of the following.</p>
+        <ul>
+            <li class="BulletLevel1" value="1">Open a new file in <span class="procedureTerm"><span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span></span>. Copy and paste the code into the file.</li>
+            <li class="noBulletLevel1">OR</li>
+            <li class="BulletLevel1" value="2">To examine the source code, open the example program from your User Files directory. You might have to copy the example program from the \<span class="AerotechVariablesSimpleName_A3200">A3200</span>\Samples\<span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> folder first.</li>
+        </ul>
+        <p>This example is one of many example programs. For a complete list of examples, refer to <a href="Example_Programs.htm">Example Programs</a>.</p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly">To see a list of available hardware manuals, refer to <a href="../Other_Documentation.htm" MadCap:conditions="AerotechConditions.Option_MainA3200">Other Documentation</a>.</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-CodeEx" style="mc-table-style: url('../Resources/TableStyles/CodeEx.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col style="width: 647px;" class="TableStyle-CodeEx-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-CodeEx-Body-Body1">
+                    <td class="TableStyle-CodeEx-BodyA-Column1-Body1"><pre>'				StringManipulation.pgm
+'
+'
+' This program uses the Format specifiers with the  
+' MSGDISPLAY command.
+'
+' Some of the format specifiers follow the C-language
+' modifiers for string formatting. The following list
+' includes possible modifiers, their functions, and 
+' the data types they modify.
+'
+' Integer Type
+' --------------------------------------------------
+' %d	Decimal value
+' %i	Decimal value
+' %o	Octal value
+' %X	Hexadecimal value (print in capital letters)
+' %x	Hexadecimal value (print in lowercase letters)
+' %u	Unsigned decimal
+'
+' Floating point / Double Precision type
+' --------------------------------------------------
+' %f	Fixed-point value
+' %E	Exponential Notation value (uppercase E)
+' %e	Exponential Notation value (lowercase e)
+' %G	Variant (sometimes fixed, sometimes exponential, 
+'       based on precision; uses uppercase E)
+' %g	Variant (sometimes fixed, sometimes exponential, 
+'       based on precision; uses lowercase e)
+'
+' Formatting Values
+' --------------------------------------------------
+' The format string takes this form:
+' %[-][&lt;fieldwidth&gt;][.&lt;precision&gt;]&lt;modifier&gt;
+'
+' Where &lt;modifier&gt; is the type specifier (from above). 
+' The minus sign is optional and specifies
+' left justification of the value; otherwise, 
+' right justification is used (if &lt;fieldwidth&gt; is 
+' specified). &lt;fieldwidth&gt; is a number that specifies 
+' the width of the field in characters.
+' Additional characters are added as padding if it is
+' shorter than the field width.
+'
+' The period specifies the &lt;precision&gt;, which is the number of 
+' decimal places for floating-point values or the 
+' maximum number of digits for an integer.
+'
+' --------------------------------------------------
+
+DVAR $Value				' declare a variable
+
+' Will display the following to the user Message display tab:
+'     Hello, World!
+' --------------------------------------------------
+MSGDISPLAY 1, "Hello, World!"
+
+' Will Display the same as above, except with quotation marks:
+'     "Hello, World!"
+' --------------------------------------------------
+' A quote is ASCII character 34
+$strtask[0] = MAKESTRING "{#C}" 34	
+$strtask[1] = $strtask[0] + "Hello, World!" + $strtask[0]
+MSGDISPLAY 1, $strtask[1]
+' Display a blank line
+MSGDISPLAY 1, " "
+
+' --------------------------------------------------
+' ---------- String to Number Conversion -----------
+' --------------------------------------------------
+'
+' Examples of converting a string to a number.
+'
+#DEFINE NumValueString "137.428763"
+#DEFINE NumValue       137.428763
+ 
+' Returns "137.428763" 
+$Value = STRTODBL(NumValueString)
+' Returns "137"
+$Value = INT(NumValue)
+' Returns "0.428763"   
+$Value = FRAC(NumValue)
+
+' --------------------------------------------------
+' ---------- Use of the format specifiers ----------
+' --------------------------------------------------
+'
+' Examples of displaying numbers with various format 
+'  specifiers
+'
+' The optional argument list contains the variables 
+' (or constants, if desired) that will be associated with 
+' each '%' reference in the format string.  
+' Review the previous list to determine which data 
+' types can be printed with the '%' format characters.
+' --------------------------------------------------
+
+' No format specifier is used
+' Will display:	137.428763
+MSGDISPLAY 1, NumValue
+' Display the number as an integer decimal value
+' Will display: Integer = 137
+MSGDISPLAY 1, "{%d}" "Integer = " NumValue
+' Display the number as an integer octal number
+' Will display: Octal = 211
+MSGDISPLAY 1, "{%o}" "Octal = " NumValue
+' Display the number as an integer hexadecimal number
+' Will display: Hex. = 89
+MSGDISPLAY 1, "{%x}" "Hex. = " NumValue
+' Display the number as integer un-signed number
+' Will display: Un-signed = 137
+MSGDISPLAY 1, "{%u}" "Un-signed = " NumValue
+' Display the number as a floating point value
+' Will display: Floating = 137.428763
+MSGDISPLAY 1, "{%f}" "Floating = " NumValue
+' Display the number as an exponential value
+' Will display: Exponential = 1.374288+e002
+MSGDISPLAY 1, "{%e}" "Exponential = " NumValue
+' Display the number as a variant
+' Will display: Variant = 137.429
+MSGDISPLAY 1, "{%g}" "Variant = " NumValue
+' No format specifier is used
+' Will display: Formatted = 0137
+MSGDISPLAY 1, "{%04d}" "Formatted = " NumValue
+
+END PROGRAM</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=String_Manipulation.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=String_Manipulation.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

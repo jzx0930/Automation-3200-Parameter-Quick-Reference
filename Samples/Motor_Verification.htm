@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Example Programs|Advanced Motion Programming" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:conditions="" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Motor Verification Example</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/CodeEx.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Example_Programs.htm">Example Programs</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="skill__3.html">Advanced Motion Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Motor Verification</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table><a name="kanchor2637"></a>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Motor Verification Example</h1>
+        <p>Before you run an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> example program, copy the example to your User Files directory. Copying the example makes sure that you have access to compile and run the program and prevents changes that you make from being overwritten if you install updated software.</p>
+        <p>View the example program in <span class="AerotechVariablesSimpleName_A3200">A3200</span> <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>. <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> adds color in the code which makes it easier to read. For best results, do one of the following.</p>
+        <ul>
+            <li class="BulletLevel1" value="1">Open a new file in <span class="procedureTerm"><span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span></span>. Copy and paste the code into the file.</li>
+            <li class="noBulletLevel1">OR</li>
+            <li class="BulletLevel1" value="2">To examine the source code, open the example program from your User Files directory. You might have to copy the example program from the \<span class="AerotechVariablesSimpleName_A3200">A3200</span>\Samples\<span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> folder first.</li>
+        </ul>
+        <p>This example is one of many example programs. For a complete list of examples, refer to <a href="Example_Programs.htm">Example Programs</a>.</p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly">To see a list of available hardware manuals, refer to <a href="../Other_Documentation.htm" MadCap:conditions="AerotechConditions.Option_MainA3200">Other Documentation</a>.</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-CodeEx" style="mc-table-style: url('../Resources/TableStyles/CodeEx.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col style="width: 647px;" class="TableStyle-CodeEx-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-CodeEx-Body-Body1">
+                    <td class="TableStyle-CodeEx-BodyA-Column1-Body1"><pre>'				MotorVerification.pgm
+'
+'
+' This program will determine IF the motor connected
+' has been wired and setup correctly.  If a problem
+' is detected suggestion will be made towards
+' a solution.
+
+DVAR $Amps, $Halls, $Hall[3], $ElectricalAngle, $First, $Counts, $ComErr, $Angle[6]
+DVAR $Tmp, $AngleRead, $Response, $StartCounts, $EndCounts
+DVAR $DriveStatus
+DVAR $PositionFeedback
+
+CALL InitVars
+MSGCLEAR -1
+$strglob[4] = MSGINPUT  DF_MSGBOX_OKONLY+DF_INPUT_STRING	"Axis Name (Be sure CaSe is correct !;Enter Axis Name;" $strglob[4]
+$Amps = MSGINPUT 1, "MSET Current, refer to Help file for your motor;Enter SAFE cont. current in amperes !;", (MaxCurrentClamp.%$strglob[4]% / 2)
+
+' Motor Plus direction
+MSGDISPLAY 1, " "
+MSGDISPLAY 1, "Watch the motor/Forcer to be sure it moves CW/Plus,"
+MSGDISPLAY 1, "and NEVER moves CCW/Negative (backwards),"
+MSGDISPLAY 2, "The program will continue in 5 seconds"
+DWELL 5
+MSGCLEAR -1
+MSGDISPLAY 1, " "
+MSGDISPLAY 1, "Moving ..."
+
+' 1 electrical cycle
+WHILE( $ElectricalAngle &lt; 350)
+	MSET %$strglob[4]% $Amps $ElectricalAngle
+	DWELL 5
+	$ElectricalAngle = $ElectricalAngle + 60
+WEND
+
+DISABLE %$strglob[4]%
+
+$Response = MSGBOX DF_MSGBOX_YESNO + DF_ICON_QUESTION, "Did the motor/forcer move ONLY CW/Plus, never backwards (Refer to Help file)"
+IF( $Response == NO_BUTTON )
+   MSGDISPLAY 1, "Power down, and swap any two motor leads and re-start this program"
+   END PROGRAM
+ENDIF
+
+' new hall checking per motor phase
+' should be hall A on only
+MSET %$strglob[4]% $Amps 240 				
+DWELL 5
+' Read halls, mask extra bits
+$DriveStatus = AXISSTATUS(%$strglob[4]%, DATAITEM_DriveStatus)	
+$Halls = $DriveStatus BAND 0xE0	
+
+' Verify only one hall signal is on
+IF( $Halls == $Angle[ 240/60 ] )     	
+	' Just hall A is on
+ELSEIF( $Halls == $Angle[ 120/60 ] )
+	' Just hall B is on
+ELSEIF( $Halls == $Angle[ 0 ] )
+	' Just hall C is on
+ELSE					
+	' A problem has been detected
+	MSGDISPLAY 1, "In the Configuration Manager, enter 30 or 330 into the"
+	MSGDISPLAY 1, "CommutationOffset axis parameter for this axis,"
+	MSGDISPLAY 1, "(so only one hall signal is on)"
+	CALL ReRun
+	END PROGRAM
+ENDIF
+
+' which if any hall signal needs to be swapped
+IF( $Halls == $Angle[ 240/60 ] )     	
+	' Just hall A is on
+	' ok no error
+ELSEIF( $Halls == $Angle[ 120/60 ] )
+	' Just hall B is on
+	MSGDISPLAY 1, "Power down and swap Hall A and Hall B signals"
+	CALL ReRun
+	END PROGRAM
+ELSEIF( $Halls == $Angle[ 0 ] )     		
+	' Just hall C is on
+	MSGDISPLAY 1, "Power down and swap Hall A and Hall C signals"
+	CALL ReRun
+	END PROGRAM
+ENDIF
+
+MSET %$strglob[4]% $Amps 120
+DWELL 5
+' Read halls, mask extra bits
+$DriveStatus = AXISSTATUS(%$strglob[4]%, DATAITEM_DriveStatus)	
+$Halls = $DriveStatus BAND 0xE0	
+
+' Which if any hall signal needs to be swapped
+IF( $Halls == $Angle[ 240/60 ] )
+	' Just hall A is on
+	MSGDISPLAY 1, "Error: This should not occur !"
+	MSGDISPLAY 1, "Power down and swap Hall A and Hall B signals"
+	CALL ReRun
+	END PROGRAM
+ELSEIF( $Halls == $Angle[ 120/60 ] )
+	' Just hall B is on
+	' ok no error	
+ELSEIF( $Halls == $Angle[ 0 ] )     		
+	' Just hall C is on
+	MSGDISPLAY 1, "Power down and swap Hall B and Hall C signals"
+	CALL ReRun
+	END PROGRAM
+ENDIF	
+	
+; Hall C is assumed to be correct (and present) if we made it this far
+
+; hall phasing
+MSGCLEAR -1
+MSGDISPLAY 1, " "
+MSGDISPLAY 1, "Moving ..."
+$ElectricalAngle = 0
+
+' 1 electrical cycle
+WHILE( $ElectricalAngle &lt; 350)
+	MSET %$strglob[4]% $Amps $ElectricalAngle
+	DWELL 5
+	' Read halls, mask extra bits
+	$DriveStatus = AXISSTATUS(%$strglob[4]%, DATAITEM_DriveStatus)	
+	$Halls = $DriveStatus BAND 0xE0	
+	; display states
+	CALL DispHalls			
+	$ElectricalAngle = $ElectricalAngle + 60
+WEND
+
+DISABLE %$strglob[4]%
+MSGDISPLAY 1, "If all offsets shown are not the same value, some hall signals"
+MSGDISPLAY 1, " are connected incorrectly."
+$Response = MSGBOX DF_MSGBOX_YESNO + DF_ICON_QUESTION, "Would you like to continue?"
+IF( $Response != YES_BUTTON )
+   END PROGRAM
+ENDIF
+
+MSGCLEAR -1
+MSGDISPLAY 1, " "
+MSGDISPLAY 1, "Encoder Phasing Test"
+MSGDISPLAY 1, " "
+' set the electrical angle to 300 degrees
+MSET %$strglob[4]% $Amps 300				
+' wait 5 second to settle encoder
+DWELL 5										
+' read starting encoder position
+CALL ReadPosition
+' store start position counts
+$StartCounts = $EndCounts						
+MSGDISPLAY 1, "{#D}" "Starting Encoder Position = " $StartCounts
+
+$ElectricalAngle = 0
+' 1 electrical cycle
+WHILE( $ElectricalAngle &lt; 350)
+   	MSET %$strglob[4]% $Amps $ElectricalAngle
+	DWELL 1
+	$ElectricalAngle = $ElectricalAngle + 60
+WEND
+DISABLE %$strglob[4]%
+' read starting encoder position
+CALL ReadPosition
+MSGDISPLAY 1, "{#D}" "Ending Encoder Position = " $EndCounts
+MSGDISPLAY 1, " "
+MSGDISPLAY 1, "{#D}" "Encoder Position change was " ( $EndCounts - $StartCounts )
+MSGDISPLAY 1, " (which is also approximately the counts/electrical cycle)"
+IF( ($EndCounts - $StartCounts) &gt; 0 )
+     MSGDISPLAY 1, " "
+     MSGDISPLAY 1, "Your encoder is phased/counting correctly"
+     MSGDISPLAY 1, "Testing is complete"
+ELSE
+ 	MSGDISPLAY 1, "Your encoder is phased/counting backwards  ! "
+	MSGDISPLAY 2, "Refer to the Help file and hardware manual to correct the encoder phasing."
+    MSGDISPLAY 1, "Correct the encoder phasing and re-run this program"
+ENDIF
+
+END PROGRAM
+
+; read encoder position
+DFS ReadPosition                            		
+	IF( VelocityFeedbackType.%$strglob[4]% == 0 ) 	
+		' single loop mode
+		' read Pri. encoder position
+		$PositionFeedback = AXISSTATUS(%$strglob[4]%, DATAITEM_PositionFeedback)
+  	ELSE											
+		' dual loop mode
+		' read Aux. encoder position	
+		$PositionFeedback = AXISSTATUS(%$strglob[4]%, DATAITEM_PositionFeedbackAuxiliary)
+  	ENDIF
+	
+	' Convert the feedback value from units to counts
+	IF (ReverseMotionDirection.%$strglob[4]% == 0) THEN
+		$EndCounts = $PositionFeedback * CountsPerUnit.%$strglob[4]%
+	ELSE
+		$EndCounts = $PositionFeedback * CountsPerUnit.%$strglob[4]% * -1
+	ENDIF
+ENDDFS  	
+
+DFS DispHalls
+	IF( NOT $First )
+	     MSGCLEAR -1
+	     CALL DisplayHeader
+		 ' done flag
+	     $First = 1			
+	ENDIF
+	' find commutation offset
+   	CALL CalcOffset
+	' convert data to "H"'s
+	CALL ConvertHalls
+	IF( $ElectricalAngle == 0 )
+	    MSGDISPLAY 1,"{#C #C #C #D}" "000       "$Hall[0]"     "$Hall[1]"     "$Hall[2]"     "$ComErr ;"        "$AngleRead
+	ELSEif $ElectricalAngle == 60
+	   	MSGDISPLAY 1,"{#C #C #C #D}" "060       "$Hall[0]"     "$Hall[1]"     "$Hall[2]"     "$ComErr ;"        "$AngleRead
+	ELSE
+	   	MSGDISPLAY 1,"{#D #C #C #C #D}" $ElectricalAngle"       "$Hall[0]"     "$Hall[1]"     "$Hall[2]"     "$ComErr ;"        "$AngleRead
+   ENDIF
+ENDDFS
+
+DFS ConvertHalls
+	FOR $Counts = 0 to 2
+		' shift hall# to LSB
+		IF($Halls &gt;&gt; (5+$Counts) ) BAND 1
+			' character "H"
+			$Hall[$Counts] = 72				
+		ELSE
+			' character " " (Space)
+	    	$Hall[$Counts] = 32
+		ENDIF
+	NEXT $Counts
+ENDDFS
+
+DFS CalcOffset
+	' If halls don't match
+   	IF( $Halls != $Angle[ $ElectricalAngle/60 ] )
+    	$Tmp = 0
+	  	' compare all 6 states
+      	WHILE( $Tmp &lt;= 5 )
+	  		' state match ?
+         	IF( $Halls == $Angle[ $Tmp ] )
+            	$AngleRead = $Tmp * 60
+				' calc. offset
+            	$ComErr = $ElectricalAngle - ($Tmp*60)
+				' fix large + offsets
+				IF( $ComErr &gt; 180 )
+					$ComErr = 360 - $ComErr
+				ENDIF
+				' fix large - offsets
+				IF( $ComErr &lt; -180 )
+				$ComErr = 360 + $ComErr
+				ENDIF
+        	ENDIF
+         	$Tmp = $Tmp + 1
+      	WEND
+		' no state match
+      	IF( $ComErr == 0 )
+        	MSGDISPLAY 1, "Error invalid hall states !"
+      	ENDIF
+	' halls match
+   	ELSE
+		' no error
+      	$ComErr = 0
+		' = cmd. angle
+      	$AngleRead = $ElectricalAngle
+   	ENDIF
+ENDDFS
+
+DFS InitVars
+	' hall states at   0 degrees
+   	$Angle[0] = 4 &lt;&lt; 5
+   	' hall states at  60 degrees
+   	$Angle[1] = 6 &lt;&lt; 5
+	' hall states at 120 degrees
+   	$Angle[2] = 2 &lt;&lt; 5
+	' hall states at 180 degrees
+   	$Angle[3] = 3 &lt;&lt; 5
+	' hall states at 240 degrees
+   	$Angle[4] = 1 &lt;&lt; 5
+	' hall states at 300 degrees
+   	$Angle[5] = 5 &lt;&lt; 5
+
+	' angle counter
+	$ElectricalAngle = 0
+	' flag to display column labels
+	$First = 0
+	$Counts = 0
+ENDDFS
+
+DFS DisplayHeader
+	MSGDISPLAY 1, "Angle HallA HallB HallC Required Offset"
+	MSGDISPLAY 1, "----- ----- ----- ----- ---------------"
+ENDDFS
+
+DFS ReRun
+	MSGDISPLAY 1, "then re-start this program"
+	DISABLE %$strglob[4]%
+ENDDFS</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Motor_Verification.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Motor_Verification.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

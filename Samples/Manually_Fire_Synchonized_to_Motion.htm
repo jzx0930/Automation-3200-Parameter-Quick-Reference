@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Example Programs|PSO Programming" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:conditions="" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Manually Fire, Synchronized to Motion Example</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/CodeEx.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Example_Programs.htm">Example Programs</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="skill__5.html">PSO Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Manually Fire, Synchronized to Motion</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table><a name="kanchor2665"></a>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Manually Fire, Synchronized to Motion Example</h1>
+        <p>Before you run an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> example program, copy the example to your User Files directory. Copying the example makes sure that you have access to compile and run the program and prevents changes that you make from being overwritten if you install updated software.</p>
+        <p>View the example program in <span class="AerotechVariablesSimpleName_A3200">A3200</span> <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>. <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> adds color in the code which makes it easier to read. For best results, do one of the following.</p>
+        <ul>
+            <li class="BulletLevel1" value="1">Open a new file in <span class="procedureTerm"><span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span></span>. Copy and paste the code into the file.</li>
+            <li class="noBulletLevel1">OR</li>
+            <li class="BulletLevel1" value="2">To examine the source code, open the example program from your User Files directory. You might have to copy the example program from the \<span class="AerotechVariablesSimpleName_A3200">A3200</span>\Samples\<span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> folder first.</li>
+        </ul>
+        <p>This example is one of many example programs. For a complete list of examples, refer to <a href="Example_Programs.htm">Example Programs</a>.</p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly">To see a list of available hardware manuals, refer to <a href="../Other_Documentation.htm" MadCap:conditions="AerotechConditions.Option_MainA3200">Other Documentation</a>.</MadCap:conditionalText>
+        </p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> You can use this example program only on the <span class="AerotechVariablesDriveType_GL4">GL4</span> or the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> or <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-CodeEx" style="mc-table-style: url('../Resources/TableStyles/CodeEx.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col style="width: 647px;" class="TableStyle-CodeEx-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-CodeEx-Body-Body1">
+                    <td class="TableStyle-CodeEx-BodyA-Column1-Body1"><pre>'                             ManuallyFireSynchronizedtoMotion.pgm
+'
+' NOTE: You can use this example program only on the GL4 or the Nmark CLS or GCL.
+'
+' This sample program shows how to use the PSO for manually firing, aligned to 48 kHz time slices.
+' After you configure PSO, you can issue the GALVO LASEROVERRIDE ON command to manually fire the
+' pulse generator. The fires are synchronized to 48 kHz time slices.
+
+#DEFINE SPEED  50
+#DEFINE AXIS1  X
+#DEFINE AXIS2  Y
+
+ABSOLUTE
+
+' Use WAIT MODE AUTO so that there is not a delay between linear moves.
+WAIT MODE AUTO
+
+' Use MotionUpdateRate=48 so that PSO fires and linear moves occur at 48 kHz.
+MotionUpdateRate=48
+
+ENABLE AXIS1 AXIS2
+HOME AXIS1 AXIS2 CONDITIONAL
+
+' Reset the PSO configuration.
+PSOCONTROL AXIS1 RESET
+
+' Set PSO output for laser output 1.
+PSOOUTPUT AXIS1 CONTROL 0 1
+
+' Set the PSO pulse time.
+PSOPULSE AXIS1 TIME 200, 200
+
+' Use PULSE LASER MASK output so that you can fire PSO with a GALVO LASEROVERRIDE ON comamnd.
+PSOOUTPUT AXIS1 PULSE LASER MASK
+
+' Make sure the laser output is turned off before you enter manually fire mode
+GALVO LASEROVERRIDE AXIS1 OFF
+
+' Turn on the manually fire mode.
+PSOCONTROL AXIS1 ARM GALVO
+
+SCOPETRIG
+
+' Start the critical section so moves occur faster than specified by the ExecuteNumLines parameter.
+CRITICAL START
+
+' Move the axis and fire the PSO pulse generator to draw a 9-dot grid.
+
+LINEAR AXIS1 0.75  AXIS2 0.75 F SPEED
+CALL FirePso
+LINEAR AXIS1 0.5   AXIS2 0.75 F SPEED
+CALL FirePso
+LINEAR AXIS1 0.25  AXIS2 0.75 F SPEED
+CALL FirePso
+
+
+LINEAR AXIS1 0.75  AXIS2 0.5 F SPEED
+CALL FirePso
+LINEAR AXIS1 0.5   AXIS2 0.5 F SPEED
+CALL FirePso
+LINEAR AXIS1 0.25  AXIS2 0.5 F SPEED
+CALL FirePso
+
+LINEAR AXIS1 0.75  AXIS2 0.25 F SPEED
+CALL FirePso
+LINEAR AXIS1 0.5   AXIS2 0.25 F SPEED
+CALL FirePso
+LINEAR AXIS1 0.25  AXIS2 0.25 F SPEED
+CALL FirePso
+
+CRITICAL END
+
+DISABLE AXIS1  AXIS2 
+END PROGRAM
+
+' This subroutine triggers the pulse generator, and dwells so that the pulse can finish before
+' the axis starts to move again.
+DFS FirePso
+		' Turn on the laser override bit to cause the laser to fire.
+		GALVO LASEROVERRIDE AXIS1  ON
+		' Delay one 48kHz cycle so the Laser ON OFF is executed.
+		MOVEDELAY AXIS1 , 1/48
+		' Turn the bit off. This does not have an effect on the actual width of the pulse.
+		GALVO LASEROVERRIDE AXIS1  OFF
+		' Wait to move until after the period specified by the PSOPULSE TIME command so that the
+		' laser does not move while it is on.
+		MOVEDELAY AXIS1 , 10/48
+ENDDFS</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Manually_Fire_Synchonized_to_Motion.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Manually_Fire_Synchonized_to_Motion.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
