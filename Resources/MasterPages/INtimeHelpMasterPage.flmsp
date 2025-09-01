@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="733" MadCap:lastWidth="2179">
+    <head>
+        <link href="../TableStyles/Header.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../TableStyles/MasterPage_Footer.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Stylesheets/AerotechHelpStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <MadCap:snippetBlock src="../Snippets/Common/MasterPage_Headers.flsnp" />
+        <MadCap:bodyProxy />
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="3" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <col class="Column-Column1" style="width: 204px;" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=[%=AerotechVariables.SimpleName_A3200%]&amp;type=help&amp;id=[%=System.SourceFile%]&amp;version=[%=_AUTOGEN_Variables_DONOTEDIT.Version_Autogen_DONOTEDIT%]&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=[%=AerotechVariables.SimpleName_A3200%]&amp;type=help&amp;id=[%=System.SourceFile%]&amp;version=[%=_AUTOGEN_Variables_DONOTEDIT.Version_Autogen_DONOTEDIT%]&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyB-Column2-Body1">
+                            <img src="../Images/Common/LOGO_INtime.png" />
+                        </td>
+                        <td class="BodyA-Column1-Body1" style="text-align: right;">
+                            <MadCap:snippetBlock src="../Snippets/Common/MasterPage_FooterText.flsnp" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+    </body>
+</html>

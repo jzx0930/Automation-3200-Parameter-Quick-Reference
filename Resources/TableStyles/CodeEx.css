@@ -1,0 +1,530 @@
+﻿/* MadCap Table Style: */
+
+/*<meta Version="9" />*/
+
+mcTableStyle
+{
+	name: CodeEx;
+	border-collapse: collapse;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	cell-padding-left: 6px;
+	cell-padding-right: 6px;
+	cell-padding-top: 0px;
+	cell-padding-bottom: 0px;
+	border-left-color: #8f8f8f;
+	border-right-color: #8f8f8f;
+	border-top-color: #8f8f8f;
+	border-bottom-color: #8f8f8f;
+	max-id: 1;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	font-weight: normal;
+	font-style: normal;
+	name: Column1;
+	id: 0;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	font-weight: normal;
+	separator-style: solid;
+	separator-width: 1px;
+	separator-color: #8f8f8f;
+	background-color: #d3d3d3;
+	font-style: normal;
+	name: Body1;
+	id: 1;
+}
+
+
+/* Cell Styles: */
+ 
+.TableStyle-CodeEx
+{
+	border-collapse: collapse;
+	border-left-style: solid;
+	border-left-color: #8f8f8f;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-color: #8f8f8f;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-top-color: #8f8f8f;
+	border-top-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #8f8f8f;
+	border-bottom-width: 1px;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-CodeEx-Column-Column1
+{
+	
+}
+
+.TableStyle-CodeEx-HeadI-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadI-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadE-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadE-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadF-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadF-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadH-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadH-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadD-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadD-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadC-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadC-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadB-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadB-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadA-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadA-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadG-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-HeadG-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootI-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootI-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootE-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootE-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootF-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootF-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootH-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootH-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootD-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootD-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootC-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootC-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootB-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootB-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootA-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootA-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootG-Column1-
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-FootG-Column1- p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-Body-Body1
+{
+	
+}
+
+.TableStyle-CodeEx-BodyI-Column1-Body1
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: #d3d3d3;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyI-Column1-Body1 p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyE-Column1-Body1
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: #d3d3d3;
+	border-bottom-width: 1px;
+	border-bottom-color: #8f8f8f;
+	border-bottom-style: solid;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyE-Column1-Body1 p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyF-Column1-Body1
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: #d3d3d3;
+	border-bottom-width: 1px;
+	border-bottom-color: #8f8f8f;
+	border-bottom-style: solid;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyF-Column1-Body1 p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyH-Column1-Body1
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: #d3d3d3;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyH-Column1-Body1 p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyD-Column1-Body1
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: #d3d3d3;
+	border-bottom-width: 1px;
+	border-bottom-color: #8f8f8f;
+	border-bottom-style: solid;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyD-Column1-Body1 p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyC-Column1-Body1
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: #d3d3d3;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyC-Column1-Body1 p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyB-Column1-Body1
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: #d3d3d3;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyB-Column1-Body1 p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyA-Column1-Body1
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: #d3d3d3;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyA-Column1-Body1 p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyG-Column1-Body1
+{
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background-color: #d3d3d3;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.TableStyle-CodeEx-BodyG-Column1-Body1 p
+{
+	font-weight: normal;
+	font-style: normal;
+}
+

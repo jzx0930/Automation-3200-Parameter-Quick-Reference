@@ -1,0 +1,3433 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+body
+{
+	margin: 0px;
+	margin-left: 8px;
+	font-size: 10pt;
+	font-family: Verdana, Arial, SansSerif;
+	color: #000000;
+}
+
+h1
+{
+	font-weight: bold;
+	font-size: 18pt;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	mc-auto-number-format: '{ }';
+	color: #007bb4;
+	font-family: 'Droid Sans';
+}
+
+h1._GCalFileConverterHeading
+{
+	color: #0280d5;
+	font-size: 22pt;
+}
+
+h1._COVER
+{
+	font-weight: bold;
+	font-size: 18pt;
+	margin-right: 0px;
+	margin-left: 0px;
+	text-align: center;
+	margin: 0;
+	margin-bottom: 6pt;
+	margin-top: 20pt;
+	mc-auto-number-format: '{ }';
+}
+
+h1._title_noChapterNumber_Front_Material
+{
+	font-weight: bold;
+	font-size: 18pt;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	mc-auto-number-format: '{ }';
+	page-break-before: always;
+}
+
+h1._title_noChapterNumber_Front_Material_Do_Not_Display_In_TOC
+{
+	font-weight: bold;
+	font-size: 18pt;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	mc-auto-number-format: '{ }';
+	page-break-before: always;
+}
+
+h1._title_w_alpha_ChapterNumbers
+{
+	mc-auto-number-format: '{ }';
+}
+
+h1._title_with_ChapterNumbers
+{
+	mc-auto-number-format: '{ }';
+}
+
+h2
+{
+	font-weight: bold;
+	margin-bottom: 8px;
+	margin-right: 0px;
+	margin-left: 0px;
+	mc-auto-number-format: '{ }';
+	font-size: 14pt;
+	margin-top: 16px;
+	font-family: 'Droid Sans';
+	color: #007bb4;
+}
+
+h2._title_noChapterNumber_Front_Material
+{
+	mc-auto-number-format: '{ }';
+	page-break-before: always;
+}
+
+h2._title_w_alpha_ChapterNumbers
+{
+	mc-auto-number-format: '{ }';
+}
+
+h2._title_with_ChapterNumbers
+{
+	font-weight: bold;
+	font-size: 18pt;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	mc-auto-number-format: '{ }';
+}
+
+h2.White
+{
+	color: #ffffff;
+	text-align: center;
+}
+
+h3
+{
+	font-weight: bold;
+	margin-bottom: 8px;
+	margin-top: 14px;
+	margin-right: 0px;
+	margin-left: 0px;
+	mc-auto-number-format: '{ }';
+	font-size: 12pt;
+	color: #007bb4;
+	font-family: 'Droid Sans';
+}
+
+h3._title_with_ChapterNumbers
+{
+	mc-auto-number-format: '{ }';
+}
+
+h3.motionDesigner
+{
+	color: #ffffff;
+}
+
+h3.refExProg
+{
+	mc-auto-number-format: '{ }';
+	color: #333333;
+}
+
+h3.relatedTopics
+{
+	mc-auto-number-format: '{ }';
+	color: #333333;
+}
+
+h4
+{
+	margin-bottom: 6px;
+	margin-top: 14px;
+	mc-auto-number-format: '{ }';
+	font-family: 'Droid Sans';
+	font-weight: bold;
+	color: #007bb4;
+	font-size: 10.5pt;
+}
+
+h4._title_with_ChapterNumbers
+{
+	mc-auto-number-format: '{ }';
+	color: #007bb4;
+}
+
+h4.DoNotPublish
+{
+	color: #ff0000;
+	mc-auto-number-format: '{ }';
+}
+
+h4.exampleHeading
+{
+	mc-auto-number-format: '{ }';
+	font-size: 12pt;
+	margin-bottom: -5px;
+	color: #333333;
+	font-family: monospace;
+	text-transform: uppercase;
+}
+
+h4.figure
+{
+	color: #006600;
+	mc-auto-number-format: '{ }';
+	font-weight: 600;
+	text-decoration: none;
+	display: block;
+	page-break-after: avoid;
+}
+
+h4.motiondesigner
+{
+	color: #0095da;
+}
+
+h4.Procedure
+{
+	mc-auto-number-format: '{ }';
+	text-transform: uppercase;
+	margin-bottom: 12px;
+	font-size: 10pt;
+	color: #693132;
+	letter-spacing: 0.2px;
+	font-weight: 500;
+	font-family: 'Droid Sans';
+}
+
+h4.tableCaption
+{
+	margin-bottom: -10px;
+	mc-auto-number-format: '{ }';
+	font-family: Arial, Verdana, SansSerif;
+	color: #333333;
+}
+
+h5
+{
+	font-family: 'Chaparral Pro';
+	color: #333333;
+	font-size: 11pt;
+	font-weight: bold;
+	margin-right: 0em;
+	margin: 0em;
+	margin-left: 25px;
+	margin-top: 8px;
+	margin-bottom: 0px;
+}
+
+h6
+{
+	font-style: italic;
+	margin: 0;
+	margin-left: 25px;
+	padding-bottom: -8px;
+	margin-top: 10px;
+	color: #333333;
+	font-family: 'Chaparral Pro';
+	font-size: 11pt;
+}
+
+p
+{
+	margin-bottom: 12px;
+	margin-top: 12px;
+	font-size: 10pt;
+	font-weight: normal;
+	font-family: Verdana, Arial, SansSerif;
+	color: #000000;
+}
+
+p.A3200Header
+{
+	margin-bottom: 0px;
+	margin-left: -10px;
+	margin-top: -10px;
+	background-color: #004b85;
+	margin-right: 0px;
+}
+
+p.center
+{
+	text-align: center;
+}
+
+p.Cover_2nd_heading
+{
+	text-align: center;
+	margin: 0pt;
+	margin-bottom: 2pt;
+	margin-top: 2pt;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+p.cover1
+{
+	font-weight: bold;
+	margin: 0;
+	text-align: center;
+	font-size: 18pt;
+	margin-top: 200pt;
+	margin-bottom: 0pt;
+}
+
+p.CoverFooterBodoni
+{
+	margin: 0pt;
+	font-family: 'Bodoni Bd BT';
+}
+
+p.doNotPublish
+{
+	font-weight: bold;
+	font-size: 10pt;
+	margin-bottom: 6px;
+	margin-top: 14px;
+	color: #ff0000;
+}
+
+p.ensembleHeader
+{
+	margin-bottom: 0px;
+	margin-left: -10px;
+	margin-top: -10px;
+	margin-right: 0px;
+	background-color: #6dabe8;
+}
+
+p.equation
+{
+	margin-left: 25px;
+	font-family: serif;
+	font-size: 110%;
+}
+
+p.ExampleHeader
+{
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 12pt;
+}
+
+p.ExampleIndent
+{
+	text-indent: 0.5in;
+}
+
+p.Figure_center_bold
+{
+	font-weight: bold;
+	text-align: center;
+	mc-auto-number-format: 'CF:Figure:     ';
+}
+
+p.Figure_center_bold_No_CHapter
+{
+	text-align: center;
+	font-weight: bold;
+	mc-auto-number-format: 'GA:{b}Figure {Gn+}:{/b}     ';
+}
+
+p.footer
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 8pt;
+}
+
+p.Footer_left_Justified_PageNum_RomanNumeral
+{
+	text-align: left;
+	font-size: 14pt;
+	mc-auto-number-format: '{r+}';
+}
+
+p.footer_leftJustify
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 8pt;
+	text-align: left;
+}
+
+p.Footer_right_justified_PageNum_RomanNumeral
+{
+	text-align: right;
+	font-size: 14pt;
+	mc-auto-number-format: '{r+}';
+}
+
+p.footer_rightJustify
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 8pt;
+	text-align: right;
+}
+
+p.footnote
+{
+	font-size: 8pt;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+p.GlossaryText
+{
+	margin-bottom: 12px;
+	margin-top: 12px;
+	font-size: 9pt;
+	margin: 0pt;
+	font-family: Verdana, Arial, SansSerif;
+}
+
+p.GlossaryText_Header
+{
+	margin-bottom: 12px;
+	margin-top: 12px;
+	font-size: 9pt;
+	font-style: italic;
+	font-weight: bold;
+	font-family: Verdana, Arial, SansSerif;
+}
+
+p.hallStates
+{
+	text-align: center;
+	letter-spacing: 5px;
+}
+
+p.hallStatesNoLeading
+{
+	text-align: center;
+	letter-spacing: 5px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+p.Header_Footer_Center_Justified
+{
+	font-size: 14pt;
+	text-align: center;
+}
+
+p.Header_Footer_left_Justified
+{
+	text-align: left;
+	font-size: 14pt;
+}
+
+p.Header_Footer_right_justified
+{
+	text-align: right;
+	font-size: 14pt;
+}
+
+p.img
+{
+	margin-bottom: 0px;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+p.indentLevel1
+{
+	margin-left: 25px;
+}
+
+p.indentLevel1_Numbered
+{
+	margin-left: 25px;
+	mc-auto-number-format: '{b}Step {n+}:{/b}     ';
+}
+
+p.indentLevel2
+{
+	margin-left: 50px;
+}
+
+p.indentLevel3
+{
+	margin-left: 75px;
+}
+
+p.linkList
+{
+	margin-bottom: 2px;
+	margin-top: 2px;
+	margin-left: 25px;
+}
+
+p.motionDesignerHeader
+{
+	margin-left: -10px;
+	margin-right: -1000px;
+	margin-top: -10px;
+	background-color: #004b85;
+	margin-bottom: -6px;
+	padding-bottom: -8px;
+}
+
+p.pagebreak
+{
+	font-size: 10pt;
+	margin-bottom: 12px;
+	margin-top: 12px;
+	page-break-after: always;
+	font-family: Verdana, Arial, SansSerif;
+}
+
+p.popupImageMap
+{
+	font-size: 8pt;
+	white-space: nowrap;
+	margin: 0px;
+	padding: 0px;
+}
+
+p.refExProg
+{
+	margin-bottom: 2px;
+	margin-top: 2px;
+	margin-left: 25px;
+}
+
+p.relatedTopic
+{
+	margin-bottom: 2px;
+	margin-top: 2px;
+	margin-left: 25px;
+}
+
+p.SoloistHeader
+{
+	margin-bottom: 0px;
+	margin-left: -10px;
+	margin-top: -10px;
+	margin-right: 0px;
+	background-color: #7bc13c;
+}
+
+p.SyntaxTableHeader
+{
+	text-align: left;
+	font-family: monospace;
+	font-size: 12pt;
+}
+
+p.table_bold_left_just
+{
+	font-size: 10pt;
+	text-align: left;
+	margin-bottom: 0pt;
+	margin-top: 0pt;
+	margin: 0pt;
+	font-weight: bold;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+p.Table_Title_bold_Numbered
+{
+	font-weight: bold;
+	margin-bottom: -10px;
+	mc-auto-number-format: 'CT:Table:     ';
+}
+
+p.tableHeaderCenter
+{
+	font-size: 10pt;
+	text-align: center;
+	margin-bottom: 6px;
+	margin-top: 6px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	vertical-align: bottom;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+p.tableHeaderLeft
+{
+	font-size: 10pt;
+	text-align: left;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	vertical-align: bottom;
+	margin-bottom: 6px;
+	margin-top: 6px;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+p.tableHeaderRight
+{
+	font-size: 10pt;
+	text-align: right;
+	margin-bottom: 6px;
+	margin-top: 6px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	vertical-align: bottom;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+p.table_paragraph
+{
+	margin-top: 0pt;
+	margin-bottom: 11pt;
+	margin-right: 0pt;
+	margin-left: 0pt;
+	font-size: 10pt;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+p.TOC1
+{
+	font-size: 12pt;
+	margin: 0;
+	margin-top: 6pt;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+p.TOC2
+{
+	margin: 0;
+	padding-left: 0.5in;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+p.TOC3
+{
+	margin: 0;
+	padding-left: 1in;
+}
+
+p.TOC4
+{
+	margin: 0;
+	padding-left: 1.5in;
+}
+
+p.TOC5
+{
+	margin: 0;
+	padding-left: 2in;
+}
+
+p.trademarkandCopyright
+{
+	font-size: 8pt;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-left: 6px;
+}
+
+p.underlined
+{
+	text-decoration: underline;
+}
+
+p.Vertical_Text
+{
+	azimuth: -90;
+}
+
+p.WarrantyText
+{
+	margin-bottom: 12px;
+	margin-top: 12px;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 9pt;
+	padding-bottom: 4pt;
+	padding-top: 4pt;
+	padding-right: 2pt;
+	text-align: justify;
+}
+
+p.WarrantyText_Header
+{
+	margin-bottom: 12px;
+	margin-top: 12px;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	padding-top: 4pt;
+	padding-left: 4pt;
+}
+
+pre
+{
+	font-family: 'Courier New', Courier, 'Numbus Mono L', monospace;
+	font-size: 9.5pt;
+	line-height: 20px;
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
+
+pre.indentLevel1
+{
+	margin-left: 25px;
+}
+
+img
+{
+	border: none;
+	border-left-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom-style: none;
+	margin-top: 5px;
+	border-top-width: 600px;
+}
+
+img.Figure
+{
+	border-left-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	border-top-width: 600px;
+	border-bottom-style: none;
+	width: 473px;
+	height: 423px;
+	margin-top: 6pt;
+	text-align: center;
+}
+
+img.Figure_centered
+{
+	border-left-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	border-top-width: 600px;
+	border-bottom-style: none;
+	margin-top: 5px;
+}
+
+img.LabVIEW
+{
+	margin-bottom: 20px;
+	margin-left: 60px;
+	margin-top: 25px;
+}
+
+img.motionDesignerHeader
+{
+	bottom: -5px;
+	border-right-style: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-right: none 0px;
+	background-color: #004b85;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-bottom: 0px;
+	margin-bottom: -3px;
+}
+
+a.Popup
+{
+	
+}
+
+MadCap|bodyProxy.EvenPage
+{
+	mc-page-number-format: decimal;
+	mc-printer-page-size: letter;
+	mc-printer-page-margin-bottom: 1.25in;
+	mc-printer-page-margin-top: 1.25in;
+	mc-page-type: even;
+	mc-printer-page-margin-right: 1in;
+	mc-printer-page-margin-left: 2.5in;
+}
+
+MadCap|bodyProxy.OddPage
+{
+	mc-page-number-start-value: 1;
+	mc-page-number-format: decimal;
+	mc-printer-page-size: letter;
+	mc-printer-page-margin-bottom: 1.25in;
+	mc-printer-page-margin-top: 1.25in;
+	mc-page-type: odd;
+	mc-printer-page-margin-right: 2.5in;
+	mc-printer-page-margin-left: 1in;
+}
+
+MadCap|breadcrumbsProxy
+{
+	font-size: 8pt;
+	background-color: #98c4ef;
+	border-bottom: solid 1px #6cabe7;
+	margin-left: -40px;
+	margin-bottom: 0px;
+	padding-bottom: 6px;
+	background-repeat: repeat;
+	text-indent: 40px;
+	mc-breadcrumbs-count: 6;
+	padding-top: 0px;
+	margin-right: 0px;
+}
+
+MadCap|breadcrumbsProxy.a3200
+{
+	color: #ffffff;
+	background-color: #3780b8;
+	border-bottom-color: #004b85;
+}
+
+MadCap|breadcrumbsProxy.ensemble
+{
+	background-color: #c4e2ff;
+	border-bottom-color: #0095da;
+}
+
+MadCap|breadcrumbsProxy.soloist
+{
+	background-color: #c4f49f;
+	border-bottom-color: #00be00;
+}
+
+MadCap|breadcrumbsProxy.MD
+{
+	background-color: #ffffff;
+	margin-top: 10px;
+	border-bottom-color: #004b85;
+	padding-top: 0px;
+	border-bottom: solid 1px;
+	color: #004b85;
+	mc-breadcrumbs-prefix: 'You are here: ';
+}
+
+MadCap|breadcrumbsProxy.GCalFileConverter
+{
+	background-color: #ffffff;
+}
+
+MadCap|conditionalText.DoNotBuild
+{
+	color: #ff0000;
+	font-weight: bold;
+}
+
+MadCap|dropDown
+{
+	
+}
+
+MadCap|dropDownBody
+{
+	margin-left: 19px;
+}
+
+MadCap|dropDownHead
+{
+	color: #215572;
+	cursor: hand;
+	font-size: 10.5pt;
+	font-weight: 600;
+	font-family: 'Droid Sans';
+}
+
+MadCap|dropDownHead.figure
+{
+	cursor: hand;
+	color: #006600;
+	page-break-after: avoid;
+}
+
+MadCap|dropDownHead.tables
+{
+	
+}
+
+MadCap|dropDownHotspot
+{
+	color: #215572;
+	cursor: hand;
+	font-weight: 600;
+	font-size: 10.5pt;
+}
+
+MadCap|dropDownHotspot.figure
+{
+	cursor: hand;
+	color: #006600;
+}
+
+MadCap|dropDownHotspot.figure:focus
+{
+	color: #006600;
+}
+
+MadCap|dropDownHotspot.figure:hover
+{
+	color: #00be00;
+}
+
+MadCap|dropDownHotspot:hover
+{
+	color: #78b7d8;
+}
+
+MadCap|expandingBody
+{
+	color: #777777;
+	font-style: italic;
+}
+
+MadCap|expandingHead
+{
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: #006600;
+	font-style: normal;
+}
+
+MadCap|tocProxy.lofProxy
+{
+	
+}
+
+MadCap|xref
+{
+	text-decoration: none;
+	mc-format: '{para}';
+	color: #0066cc;
+}
+
+MadCap|xref.Chapter_Ref_NumandText
+{
+	mc-format: '{paranum}{paratext}';
+}
+
+MadCap|xref.Chapter_Ref_With_Text
+{
+	mc-format: '{paratext}';
+}
+
+MadCap|xref.Figure_Ref
+{
+	mc-format: '{paranumonly}';
+}
+
+MadCap|xref.Section_Ref_With_Text
+{
+	mc-format: '{paratext}';
+}
+
+MadCap|xref.Table_Ref
+{
+	mc-format: '{paranumonly}';
+}
+
+ol
+{
+	margin-left: 30px;
+	margin-top: -6px;
+}
+
+ol ul
+{
+	margin-top: 6px;
+	margin-bottom: 6px;
+	list-type: disc;
+}
+
+ol ul ul
+{
+	margin-top: 6px;
+	margin-bottom: 6px;
+	list-type: square;
+}
+
+ol ul ul ul
+{
+	margin-top: 6px;
+	margin-bottom: 6px;
+	list-type: circle;
+}
+
+ol li ol li
+{
+	margin-left: -5px;
+}
+
+ul
+{
+	margin-left: 25px;
+	list-type: disc;
+}
+
+ul ul
+{
+	list-type: square;
+}
+
+ul ul ul
+{
+	list-type: circle;
+}
+
+ul.steps
+{
+	
+}
+
+li
+{
+	display: list-item;
+	margin-bottom: 6px;
+	margin-top: 6px;
+	font-family: Verdana, Arial, SansSerif;
+}
+
+li.BulletLevel1
+{
+	list-style: disc;
+}
+
+li.BulletLevel2
+{
+	margin-left: 25px;
+}
+
+li.BulletLevel3
+{
+	margin-left: 50px;
+}
+
+li.BulletLevel4
+{
+	margin-left: 75px;
+}
+
+li.doNotPublish
+{
+	font-weight: bold;
+	font-size: 10pt;
+	margin-bottom: 6px;
+	margin-top: 14px;
+	color: #ff0000;
+}
+
+li.NumberLevel1
+{
+	
+}
+
+li.NumberLevel2
+{
+	margin-left: 25px;
+}
+
+li.NumberLevel3
+{
+	margin-left: 50px;
+}
+
+li.UpperAlphaStep_underh3
+{
+	font-size: 10pt;
+	font-weight: normal;
+	list-style: upper-alpha;
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+li.Steps
+{
+	display: list-item;
+	margin-bottom: 6px;
+	margin-top: 6px;
+	margin-left: 25px;
+	mc-auto-number-format: '{b}Step {n+}:{b}     ';
+	list-style-image: none;
+	list-style-type: none;
+}
+
+caption
+{
+	font-size: 10pt;
+	text-align: left;
+	margin-top: 30px;
+	font-weight: bold;
+}
+
+table
+{
+	margin-top: 10px;
+	margin-bottom: 12px;
+}
+
+th
+{
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	vertical-align: bottom;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+th.Vertical_Text
+{
+	
+}
+
+th p
+{
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: bottom;
+	font-weight: bold;
+	margin-bottom: 2px;
+	margin-top: 2px;
+}
+
+td
+{
+	font-size: 10pt;
+	vertical-align: top;
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+td p
+{
+	vertical-align: middle;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 4px;
+	margin-bottom: 8px;
+}
+
+td li
+{
+	vertical-align: middle;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	text-indent: 2pt;
+}
+
+td p.for_NoLinesTable
+{
+	vertical-align: middle;
+	font-family: Verdana, Arial, SansSerif;
+	margin-top: 4px;
+	margin-bottom: 8px;
+}
+
+tr
+{
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+span.bold
+{
+	font-weight: bold;
+}
+
+span.commandArgument
+{
+	font-style: italic;
+}
+
+span.driveNote
+{
+	color: #215572;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+}
+
+span.equation
+{
+	text-indent: 0px;
+	margin-left: 0px;
+	font-size: 110%;
+	font-family: serif;
+	font: serif;
+	font-weight: 300;
+	font-style: italic;
+}
+
+span.equationVariable
+{
+	font-family: 'Bitstream Vera Serif';
+	font-size: 10pt;
+	font-style: italic;
+}
+
+span.equipmentNote
+{
+	color: #008000;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-variant: small-caps;
+}
+
+span.GearandCam
+{
+	color: #8b0000;
+	font-weight: bold;
+}
+
+span.italic
+{
+	font-style: italic;
+}
+
+span.note
+{
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+span.pre
+{
+	font-family: 'Courier New', Courier, 'Numbus Mono L', monospace;
+	font-size: 9.5pt;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	line-height: 20px;
+}
+
+span.procedureTerm
+{
+	font-weight: bold;
+}
+
+span.underlined
+{
+	text-decoration: underline;
+}
+
+sup
+{
+	font-size: 0.80em;
+}
+
+sub
+{
+	font-size: 0.80em;
+}
+
+hr
+{
+	color: #000000;
+}
+
+hr.border
+{
+	border-left-style: solid;
+	border-right-style: solid;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border: solid 1px #000000;
+	height: 0px;
+	margin-bottom: 0px;
+	margin-left: -25px;
+	margin-right: -10px;
+	margin-top: 12px;
+	width: 102%;
+	color: #000000;
+}
+
+hr.ensemble
+{
+	margin-bottom: 0px;
+	margin-top: 12px;
+	border: solid 1px #1b455c;
+	height: 0px;
+	margin-left: -25px;
+	width: 102%;
+}
+
+.alignRight
+{
+	text-align: right;
+}
+
+.AlwaysSansSerif
+{
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+.AlwaysSansSerifBold
+{
+	font-weight: bolder;
+}
+
+.BodyText
+{
+	margin-top: 6pt;
+}
+
+.BodyText_bold
+{
+	font-weight: bold;
+}
+
+.DoNotBreak
+{
+	mc-hyphenate: never;
+}
+
+.HiddenText
+{
+	display: none;
+}
+
+.noBullet
+{
+	margin-left: -25px;
+	list-style-position: outside;
+	list-style-type: none;
+	display: block;
+}
+
+.noBulletLevel1
+{
+	list-style-position: outside;
+	list-style-type: none;
+	display: block;
+}
+
+.noBulletLevel2
+{
+	margin-left: 25px;
+	list-style-position: outside;
+	list-style-type: none;
+	display: block;
+}
+
+.noBulletLevel3
+{
+	margin-left: 50px;
+	list-style-position: outside;
+	list-style-type: none;
+	display: block;
+}
+
+.Underh3_noBulletLevel1
+{
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	list-style-position: outside;
+	list-style-type: none;
+	display: block;
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+.noLeading
+{
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.noLeadingCenter
+{
+	margin-bottom: 0px;
+	margin-top: 0px;
+	text-align: center;
+}
+
+.noLeadingIndent1
+{
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-left: 25px;
+}
+
+.ALLCAPS
+{
+	text-transform: uppercase;
+}
+
+.noWrap
+{
+	white-space: nowrap;
+}
+
+@media print
+{
+	body
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		color: #000000;
+	}
+
+	h1
+	{
+		mc-auto-number-format: '{ }';
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		color: #000000;
+	}
+
+	h1._COVER
+	{
+		margin-top: 100pt;
+		mc-auto-number-format: '  ';
+		color: #000000;
+		font-size: 18pt;
+	}
+
+	h1._title_noChapterNumber_Front_Material
+	{
+		color: #000000;
+	}
+
+	h1._title_noChapterNumber_Front_Material_Do_Not_Display_In_TOC
+	{
+		mc-heading-level: 0;
+		color: #000000;
+	}
+
+	h1._title_w_alpha_ChapterNumbers
+	{
+		mc-auto-number-format: 'GB:Appendix {A+}{ =0}: ';
+		color: #000000;
+	}
+
+	h1._title_with_ChapterNumbers
+	{
+		mc-auto-number-format: 'GA:Chapter {n+}{ =0}{ }{ }: ';
+		color: #000000;
+	}
+
+	h1._title_with_ChapterNumbers_nobreak
+	{
+		mc-auto-number-format: 'GA:Chapter {n+}{ =0}{ }{ }: ';
+		page-break-before: avoid;
+		color: #000000;
+	}
+
+	h2
+	{
+		mc-auto-number-format: '{ }';
+		margin: 0pt;
+		font-size: 14pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		page-break-before: avoid;
+		color: #000000;
+	}
+
+	h2._title_w_alpha_ChapterNumbers
+	{
+		mc-auto-number-format: 'GB:{A}.{n+}. ';
+		page-break-before: always;
+		color: #000000;
+	}
+
+	h2._title_with_ChapterNumbers
+	{
+		page-break-before: always;
+		font-size: 14pt;
+		mc-auto-number-format: 'GA:{n}.{n+}.{ =0}{ } ';
+		color: #000000;
+	}
+
+	h2._title_with_ChapterNumbers_nobreak
+	{
+		mc-auto-number-format: 'GA:{n}.{n+}.{ =0}{ } ';
+		margin-bottom: 8pt;
+		margin-top: 14pt;
+		page-break-before: avoid;
+		color: #000000;
+	}
+
+	h3
+	{
+		mc-auto-number-format: '{ }';
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		page-break-before: avoid;
+		font-size: 12pt;
+		color: #000000;
+	}
+
+	h3._title_with_ChapterNumbers
+	{
+		mc-auto-number-format: 'GA:{n}.{n}.{n+}. { =0}';
+		font-size: 12pt;
+		page-break-before: always;
+		color: #000000;
+	}
+
+	h3.refExProg
+	{
+		mc-heading-level: 0;
+	}
+
+	h3.relatedTopics
+	{
+		mc-heading-level: 0;
+	}
+
+	h3._title_with_ChapterNumbers_nobreak
+	{
+		mc-auto-number-format: 'GA:{n}.{n}.{n+}. { =0}';
+		font-size: 12pt;
+		page-break-before: avoid;
+		color: #000000;
+	}
+
+	h4
+	{
+		page-break-before: avoid;
+		font-size: 10.5pt;
+		color: #000000;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	h4._title_with_ChapterNumbers
+	{
+		mc-auto-number-format: 'GA:{n}.{n}.{n}.{n+}. ';
+		page-break-before: always;
+		font-size: 10pt;
+		color: #000000;
+	}
+
+	h4._title_with_ChapterNumbers_nobreak
+	{
+		mc-auto-number-format: 'GA:{n}.{n}.{n}.{n+}. ';
+		font-size: 10pt;
+		page-break-before: avoid;
+		color: #000000;
+	}
+
+	h4.exampleHeading
+	{
+		margin-bottom: 5px;
+		text-transform: uppercase;
+		line-height: 1.5px;
+		margin-top: 17px;
+		color: #000000;
+	}
+
+	h5
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		color: #000000;
+	}
+
+	h6
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		color: #000000;
+	}
+
+	p
+	{
+		widows: 3;
+		orphans: 3;
+		font-size: 10pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		mc-hyphenate: never;
+		color: #000000;
+	}
+
+	p.A3200Header
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		page-break-before: always;
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+
+	p.Cover_2nd_heading
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-weight: bold;
+		font-size: 12pt;
+	}
+
+	p.cover1
+	{
+		margin-top: 180pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		mc-hyphenate: never;
+	}
+
+	p.CoverFooterBodoni
+	{
+		font: bodoni;
+		margin: 0pt;
+	}
+
+	p.ensembleHeader
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		page-break-after: avoid;
+		page-break-before: always;
+		page-break-inside: avoid;
+	}
+
+	p.ExampleHeader
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		text-transform: inherit;
+	}
+
+	p.ExampleIndent
+	{
+		margin-bottom: 3pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Figure_center_bold
+	{
+		mc-auto-number-format: 'CH:Figure {chapnum}-{n+}:     ';
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-style: normal;
+		margin-top: 2px;
+	}
+
+	p.Figure_center_italic
+	{
+		mc-auto-number-format: 'CH:Figure {chapnum}-{n+}:     ';
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-size: 9pt;
+		font-style: italic;
+		font-weight: normal;
+		text-align: center;
+	}
+
+	p.Figure_center_bold_No_CHapter
+	{
+		orphans: 3;
+		widows: 3;
+		mc-auto-number-format: 'CH: Figure {Gn+}:     ';
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.footer
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Footer_left_Justified_PageNum_RomanNumeral
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.footer_leftJustify
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Footer_right_justified_PageNum_RomanNumeral
+	{
+		mc-auto-number-format: '{r+}';
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.footer_rightJustify
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.footnote
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		margin: 0;
+		margin-bottom: 2px;
+		margin-top: 2px;
+	}
+
+	p.GlossaryText
+	{
+		font-size: 9pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.GlossaryText_Header
+	{
+		font-size: 9pt;
+		font-style: italic;
+		font-weight: bold;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Header_Footer_Center_Justified
+	{
+		text-align: center;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Header_Footer_left_Justified
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Header_Footer_right_justified
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Index1
+	{
+		font-size: 9pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		mc-leader-align: right;
+		mc-reference-separator: ',';
+		mc-leader-indent: 5pt;
+		white-space: normal;
+		mc-leader-offset: 5pt;
+		mc-reference-initial-separator: '     ';
+		mc-multiline-indent: 0.5in;
+	}
+
+	p.Index2
+	{
+		font-size: 9pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		mc-leader-align: right;
+		mc-leader-indent: 5pt;
+		white-space: normal;
+		mc-leader-offset: 5pt;
+		mc-multiline-indent: 0.50in;
+		mc-reference-separator: ',';
+		mc-reference-initial-separator: '     ';
+	}
+
+	p.IndexHeading
+	{
+		font-size: 9pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.linkList
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.pagebreak
+	{
+		page-break-after: always;
+		widows: 0;
+		orphans: 0;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.proxy_List_Style
+	{
+		margin: 0pt;
+		mc-leader-format: '.';
+		mc-leader-align: right;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-size: 10pt;
+		mc-multiline-indent: 77px;
+		mc-leader-indent: 5pt;
+	}
+
+	p.refExProg
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.relatedTopic
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Stage_bodytext
+	{
+		text-align: justify;
+		margin-top: 0px;
+		margin-bottom: 10px;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Stage_table_text
+	{
+		padding-left: 3px;
+		padding-right: 3px;
+		font-size: 9pt;
+		padding-bottom: 1px;
+		padding-top: 1px;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Steps
+	{
+		mc-auto-number-format: 'H:Step {n+}: ';
+		display: block;
+		mc-auto-number-position: outside-head;
+		mc-auto-number-offset: 50px;
+		text-align: left;
+		margin-left: 0.5in;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.table_bold_left_just
+	{
+		margin-bottom: 0pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Table_Title_bold_Numbered
+	{
+		font-weight: bold;
+		mc-auto-number-format: 'CT:Table {chapnum}-{n+}:     ';
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		page-break-after: avoid;
+		widows: 1;
+		orphans: 1;
+		margin: 0;
+		padding: 0px;
+	}
+
+	p.tableHeaderCenter
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.tableHeaderLeft
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.tableHeaderRight
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.TOC1
+	{
+		padding: 0px;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		margin-bottom: 0pt;
+	}
+
+	p.TOC2
+	{
+		padding-bottom: 0pt;
+		padding-top: 0pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		text-indent: 0.5in;
+		margin-bottom: 0pt;
+		margin-top: 0pt;
+	}
+
+	p.TOC3
+	{
+		padding-bottom: 0pt;
+		padding-top: 0pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		text-indent: 1in;
+		margin-bottom: 0pt;
+		margin-top: 0px;
+	}
+
+	p.TOC4
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		text-indent: 1.5in;
+		margin-bottom: 0px;
+		margin-top: 0pt;
+		padding-left: 1.5in;
+	}
+
+	p.TOC5
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		text-indent: 2in;
+	}
+
+	p.TOC6
+	{
+		margin: 0;
+		text-indent: 2.5in;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.TOC7
+	{
+		margin: 0px;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.TOC8
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.TOC9
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Vertical_Text
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.WarrantyText
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-size: 9pt;
+		margin: 0pt;
+		padding-bottom: 4pt;
+		padding-top: 4pt;
+	}
+
+	p.WarrantyText_Header
+	{
+		margin: 0pt;
+		font-size: 9pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-weight: bold;
+		padding-top: 4pt;
+		padding-left: 4pt;
+		font-style: italic;
+	}
+
+	img.Figure
+	{
+		text-align: center;
+		margin-top: 6pt;
+	}
+
+	img.Figure_centered
+	{
+		margin-top: 6pt;
+		text-align: center;
+	}
+
+	a.Popup
+	{
+		color: #000000;
+		text-decoration: none;
+	}
+
+	MadCap|dropDownBody
+	{
+		margin-left: 0px;
+	}
+
+	MadCap|dropDownHead
+	{
+		font-weight: normal;
+		font-size: 0pt;
+		color: #000000;
+	}
+
+	MadCap|dropDownHead.figure
+	{
+		color: #000000;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-weight: bold;
+		margin-top: 6pt;
+		margin-bottom: 6pt;
+		text-align: center;
+		mc-auto-number-format: 'CH:Figure {chapnum}-{n+}:     ';
+		font-size: 10pt;
+		display: block;
+		page-break-after: avoid;
+	}
+
+	MadCap|dropDownHead.tables
+	{
+		color: #ffffff;
+		font-size: 0pt;
+		font-weight: normal;
+	}
+
+	MadCap|dropDownHotspot.figure
+	{
+		color: #ffffff;
+		font-weight: normal;
+		font-size: 0pt;
+	}
+
+	MadCap|expandingHead
+	{
+		color: #ffffff;
+	}
+
+	MadCap|xref.Chapter_Ref_With_Text
+	{
+		mc-format: '{paratext}';
+	}
+
+	MadCap|xref.Figure_Ref
+	{
+		mc-format: '{paranumonly}';
+	}
+
+	MadCap|xref.Section_Ref
+	{
+		mc-format: 'Section {paranumonly}.';
+	}
+
+	MadCap|xref.Section_Ref_With_Text
+	{
+		mc-format: 'Section {paranum}{paratext}';
+	}
+
+	MadCap|xref.Table_Ref
+	{
+		mc-format: '{paranumonly}';
+	}
+
+	ol
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	ol ol
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	ol ul
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	ul
+	{
+		font-family: 'Times New Roman', serif;
+	}
+
+	ul.steps
+	{
+		mc-auto-number-format: '{b}Step {n+}:{/b}     ';
+	}
+
+	ul ol
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	ul ul
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	li
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		mc-hyphenate: never;
+		color: #000000;
+		font-weight: normal;
+	}
+
+	li.Steps
+	{
+		margin-left: 25px;
+		mc-auto-number-format: '{b}Step {n+}:{/b}     ';
+	}
+
+	caption
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	table
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		margin-top: 2px;
+		mc-caption-repeat: true;
+		mc-caption-continuation: ' (continued)';
+	}
+
+	th
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		vertical-align: bottom;
+	}
+
+	th p
+	{
+		vertical-align: middle;
+		padding: 0pt;
+		margin-bottom: 1pt;
+		margin-top: 1pt;
+		font-size: 9pt;
+		font-weight: bold;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	td
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	td p
+	{
+		margin-bottom: 1pt;
+		margin-top: 1pt;
+		vertical-align: middle;
+		padding: 0pt;
+		font-size: 10pt;
+		font-weight: inherit;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	td li
+	{
+		margin-bottom: 2pt;
+		margin-top: 2pt;
+		padding: 0pt;
+		text-indent: 2pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	td ol
+	{
+		padding: 0pt;
+		margin-bottom: 2pt;
+		margin-top: 2pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	td ul
+	{
+		margin-top: 2pt;
+		margin-bottom: 2pt;
+		padding: 0pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	td.Stage_table_subheading
+	{
+		background-color: #c0c0c0;
+		vertical-align: middle;
+		text-align: left;
+		padding-left: 8px;
+		orphans: 3;
+		widows: 3;
+		font-size: 9pt;
+		font-weight: bold;
+	}
+
+	tr
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	pre
+	{
+		margin-bottom: 4px;
+		margin-top: 4px;
+	}
+
+	b
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-weight: bold;
+	}
+
+	big
+	{
+		font-family: 'Times New Roman', serif;
+	}
+
+	span.commandArgument
+	{
+		font-family: 'Times New Roman', serif;
+	}
+
+	span.note
+	{
+		text-transform: uppercase;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	span.procedureTerm
+	{
+		mc-hyphenate: never;
+		font-weight: bold;
+	}
+
+	span.underlined
+	{
+		font-family: 'Times New Roman', serif;
+	}
+
+	.alignRight
+	{
+		font-family: 'Courier New', Courier, 'Numbus Mono L', monospace;
+	}
+
+	.AlwaysSansSerif
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	.AlwaysSansSerifBold
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	.BodyText
+	{
+		font-family: serif;
+	}
+
+	.noBullet
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	.noBulletLevel1
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	.noBulletLevel2
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	.noBulletLevel3
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	.noLeading
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	.noLeadingCenter
+	{
+		font-family: 'Times New Roman', serif;
+	}
+
+	.noLeadingIndent1
+	{
+		font-family: 'Times New Roman', serif;
+	}
+
+	.nVariable
+	{
+		font-family: 'Courier New', Courier, 'Numbus Mono L', monospace;
+	}
+
+	li.BulletLevel4
+	{
+		margin-left: 63px;
+	}
+
+	p.SubHeading
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	p.Figure_center
+	{
+		text-align: center;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	MadCap|listOfProxy
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-size: 10pt;
+		margin-top: 10px;
+	}
+
+	MadCap|footnote
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-size: 8pt;
+		font-style: italic;
+	}
+
+	span.driveNote
+	{
+		text-transform: capitalize;
+	}
+
+	a:link
+	{
+		color: #000000;
+	}
+
+	p.SoloistHeader
+	{
+		page-break-after: avoid;
+		page-break-before: always;
+		page-break-inside: avoid;
+	}
+
+	.MCDropDownBody
+	{
+		display: block !important;
+	}
+
+	.MCExpandingBody
+	{
+		display: inline !important;
+	}
+
+	.MCTogglerBody
+	{
+		display: inline !important;
+	}
+
+	MadCap|tocProxy.lofProxy
+	{
+		margin: 0px;
+		padding: 0px;
+	}
+
+	p.ListOf
+	{
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	p.SubHeading_Italic
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-style: italic;
+	}
+
+	div.example
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		color: #000000;
+		border-top-color: #000000;
+		border-top: solid 1px;
+		border-bottom: solid 1px;
+		border-bottom-color: #000000;
+		background-color: #e8f5fb;
+		border-right-width: 0px;
+	}
+
+	MadCap|xref
+	{
+		color: #0000ff;
+	}
+
+	p.img
+	{
+		margin-left: 0px;
+		text-align: center;
+	}
+
+	h1.Tutorial_with_ChapterNumbers
+	{
+		mc-auto-number-format: 'GA:Tutorial {chapnum}{ =0}{ }{ }: ';
+		mc-hyphenate: never;
+		color: #000000;
+	}
+
+	h2.Tutorial_with_ChapterNumbers_nobreak
+	{
+		mc-auto-number-format: 'GA:{chapnum}.{n+}.{ =0}{ } ';
+	}
+
+	h2.Tutorial_with_ChapterNumbers
+	{
+		mc-auto-number-format: 'GA:{chapnum}.{n+}.{ =0}{ } ';
+		page-break-before: always;
+	}
+
+	p.Index3
+	{
+		mc-leader-align: right;
+		white-space: normal;
+		mc-leader-offset: 5pt;
+		mc-multiline-indent: 0.5in;
+		mc-reference-initial-separator: '     ';
+		mc-reference-separator: ',';
+	}
+
+	MadCap|indexProxy
+	{
+		mc-leader-align: right;
+		mc-leader-offset: 5pt;
+		white-space: normal;
+		mc-reference-initial-separator: '     ';
+		mc-leader-indent: 5pt;
+		mc-multiline-indent: 0.5in;
+		mc-hyphenate: never;
+	}
+
+	p.For_example_Head
+	{
+		text-indent: 0px;
+		margin-left: 0px;
+		font-size: 11pt;
+		letter-spacing: 1px;
+		text-decoration: none;
+		border-bottom: solid 0px;
+		border-bottom-style: none;
+		text-transform: capitalize;
+		font-family: sans-serif;
+		font-weight: bolder;
+	}
+
+	div.codeexample
+	{
+		background-color: #d3d3d3;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		border-top-width: 1px;
+		border-top-style: solid;
+		border-right-color: #d3d3d3;
+		border-top-color: #d3d3d3;
+		border-left-color: #d3d3d3;
+		border-bottom-color: #d3d3d3;
+		border-bottom: solid 0px;
+		border-left: solid 0px;
+		border-right: solid 0px;
+		border-top: solid 0px;
+		font: Arial;
+		font-size: 10.5pt;
+		font-style: normal;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	h4.Procedure
+	{
+		text-transform: uppercase;
+		color: #693132;
+		font-size: 10pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	img.Icon16x16	/*Should be used only on 32x32 px icons. This tag is for icons that will be used in both print and online outputs. Note that when you use this tag, you also need to apply the Print Output - Icons image profile in MadCap Capture.*/
+	{
+		max-height: 16px;
+		max-width: 16px;
+	}
+
+	p.cover1new
+	{
+		text-align: right;
+		font: Arial;
+		font-family: Verdana, ' Arial', ' Sans Serif';
+		font-size: 28pt;
+		mc-heading-level: 1;
+	}
+
+	p.Clear_Float	/*This tag is similar to a page break in print. We use this tag when we want to clear content that would otherwise continue to float around an image. Note that this tag is very small because the amount of space that it consumes is set to 2 pt font.*/
+	{
+		clear: both;
+		font-size: 2pt;
+	}
+
+	p.Figure_left_bold	/*We use this tag for the titles of images that we want to float right. Use this tag before adding a div.Float_Right tag, so that the image title can correctly float right from the left edge of the page.*/
+	{
+		font-style: normal;
+		font-weight: bold;
+		mc-auto-number-format: 'CH:Figure {chapnum}-{n+}:     ';
+		margin-bottom: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 10px;
+		vertical-align: 10px;
+		text-align: left;
+		padding-left: 20px;
+	}
+
+	div.Float_Right	/*We use this tag to contain both an image and an image title, and float them to the right side of the page. This tag has specific margins, 10px left, 10px bottom, 0px top, and 0px right, that allow it to align with the right side of the page and have enough padding that prevents the words from running into the image.*/
+	{
+		float: right;
+		margin: 10px;
+		margin-right: 0px;
+		margin-top: 0px;
+	}
+
+	img.Callout24X24	/*Should be used only for the print-based callout images. This tag is for callout images that will be used in both print and online outputs. Note that when you use this tag, you also need to apply the CalloutLabels_Red_Print image profile in MadCap Capture.*/
+	{
+		max-height: 24px;
+		max-width: 24px;
+	}
+
+	MadCap|xref.Print_With_Page_Number
+	{
+		color: #000000;
+		mc-format: '{para} on page {page}';
+	}
+
+	MadCap|dropDownHead.Print_in_h2
+	{
+		color: #000000;
+		font-family: Arial, Verdana, SansSerif;
+		font-size: 14pt;
+		font-weight: bold;
+	}
+
+	h1._title_noChapterNumber_Front_Material_no_break
+	{
+		color: #000000;
+	}
+
+	h1._GCalFileConverterHeading
+	{
+		
+	}
+
+	h4.tableCaption
+	{
+		color: #000000;
+	}
+
+	h2._title_noChapterNumber_Front_Material
+	{
+		color: #000000;
+	}
+
+	h4.paragraphHeading
+	{
+		color: #000000;
+	}
+
+	MadCap|dropDownHead.h4_Procedure
+	{
+		font-weight: bold;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	MadCap|dropDownHead.print_in_h4
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-size: 10.5pt;
+		font-weight: bold;
+	}
+
+	h4.figure
+	{
+		color: #000000;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 10pt;
+		mc-auto-number-format: 'CH:Figure {chapnum}-{n+}:     ';
+		text-align: center;
+	}
+
+	p.SubHeading_pagebreak
+	{
+		page-break-before: always;
+	}
+
+	img.ScreenshotBorder	/*Shows an orange border for online images. Does not show an orange border for print images.*/
+	{
+		border: none 0px;
+		border-width: 0px;
+	}
+
+	div
+	{
+		font-family: Arial, Verdana;
+	}
+
+	h4.Procedure_SmallerMargins
+	{
+		font-size: 10pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		text-transform: uppercase;
+		color: #693132;
+		margin-top: 7px;
+		margin-bottom: 7px;
+	}
+
+	div.external_reference
+	{
+		font-size: 10pt;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		border-bottom-color: #000000;
+		border-top-width: 0px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		margin-right: 10px;
+		margin-bottom: 5px;
+		margin-top: 5px;
+		padding-bottom: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 10px;
+		text-indent: 0px;
+		background-color: #f0e68c;
+		color: #000000;
+	}
+
+	h1.cover1new
+	{
+		text-align: right;
+		font: Arial;
+		font-family: Verdana, ' Arial', ' Sans Serif';
+		font-size: 28pt;
+	}
+
+	h1._title_noChapterNumber_Cover
+	{
+		font-size: 28pt;
+		text-align: right;
+	}
+
+	h1._GuideTo
+	{
+		text-align: right;
+		font-size: 24pt;
+	}
+
+	img.PrintSmall
+	{
+		width: 400px;
+	}
+
+	.ALLCAPS
+	{
+		
+	}
+
+	sup.smaller_HyperWireCard_Brochure
+	{
+		font-size: 0.40em;
+		vertical-align: 30px;
+	}
+
+	caption.Table
+	{
+		font-weight: bold;
+		margin-bottom: -10px;
+		mc-auto-number-format: 'Ct:Table {chapnum}-{Cn+}:     ';
+	}
+}
+
+@media non-print
+{
+	h1._title_with_ChapterNumbers
+	{
+		mc-auto-number-format: '{ }';
+	}
+
+	h2
+	{
+		font-size: 14pt;
+	}
+
+	h2._title_with_ChapterNumbers
+	{
+		mc-auto-number-format: '{ }';
+	}
+
+	h3
+	{
+		font-size: 12pt;
+	}
+
+	h3._title_with_ChapterNumbers
+	{
+		mc-auto-number-format: '{ }';
+	}
+
+	h4._title_with_ChapterNumbers
+	{
+		mc-auto-number-format: '{ }';
+	}
+
+	p
+	{
+		font-family: Arial;
+		color: #000000;
+	}
+
+	p.Figure_center_bold
+	{
+		mc-auto-number-format: 'CF:Figure:     ';
+	}
+
+	p.Figure_center_bold_No_CHapter
+	{
+		mc-auto-number-format: 'GA:Figure:     ';
+	}
+
+	p.Table_Title_bold_Numbered
+	{
+		mc-auto-number-format: 'Table:     ';
+	}
+
+	p.tableHeaderLeft
+	{
+		font-weight: bold;
+	}
+
+	MadCap|dropDownHead.figure
+	{
+		color: #006600;
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+	}
+
+	MadCap|dropDownHead.tables
+	{
+		font-family: Arial, Helvetica, Verdana, sans-serif;
+		font-size: 12pt;
+		font-weight: 400;
+	}
+
+	MadCap|xref.Section_Ref
+	{
+		mc-format: '{paratext}';
+	}
+
+	p.SubHeading
+	{
+		font-size: 10pt;
+	}
+
+	div.example
+	{
+		border-top: solid 1px #dda0dd;
+		padding-left: 5px;
+	}
+
+	h4.exampleHeading
+	{
+		text-transform: uppercase;
+	}
+
+	p.ExampleIndent
+	{
+		font-family: Arial;
+	}
+
+	a:hover
+	{
+		color: #fcb131;
+	}
+
+	img.Icon16x16
+	{
+		
+	}
+
+	h4.tableCaption
+	{
+		
+	}
+
+	h4.paragraphHeading
+	{
+		margin-bottom: -10px;
+	}
+
+	div.codeexample	/**/
+	{
+		
+	}
+
+	div.Float_Right
+	{
+		
+	}
+
+	p.Figure_left_bold
+	{
+		mc-leader-indent: 5pt;
+	}
+
+	img.ScreenshotBorder
+	{
+		border-bottom-color: #ffa500;
+		border-color: #ffa500;
+		border-style: dashed;
+		border-width: 3px;
+		border: dashed 3px #ffa500;
+	}
+
+	body
+	{
+		color: #000000;
+	}
+
+	h4.Procedure_SmallerMargins
+	{
+		color: #693132;
+		font-size: 10pt;
+		text-transform: uppercase;
+		margin-bottom: 7px;
+		margin-top: 7px;
+	}
+
+	p.For_example_Head_TEXT	/*This is the same example header that we use in div.example tags, but it does not indent or have margins. We can use this for in-text examples that we don't want to put in div tags.*/
+	{
+		
+	}
+}
+
+h3.White
+{
+	color: #ffffff;
+}
+
+p.SubHeading
+{
+	margin-bottom: 12px;
+	margin-top: 12px;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+p.Figure_center
+{
+	margin-bottom: 12px;
+	margin-top: 12px;
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: center;
+	font-family: Verdana, Arial, SansSerif;
+}
+
+MadCap|listOfProxy
+{
+	border-top-color: #ffffff;
+	border-top-width: 0px;
+	border-top-style: none;
+}
+
+MadCap|tocProxy
+{
+	border-top-color: #ffffff;
+	border-top-style: none;
+	border-top-width: 0px;
+}
+
+MadCap|indexProxy
+{
+	border-top-color: #ffffff;
+	border-top-style: none;
+	border-top-width: 0px;
+}
+
+div.codeexample
+{
+	border-top: solid 1px #b5b5f0;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-bottom: solid 1px #bfbff2;
+	margin-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	color: #000000;
+	font-family: monospace;
+	border-top-color: #808080;
+	border-bottom-color: #808080;
+	background-color: #edecec;
+	border-right: solid 1px #ffffff;
+}
+
+div.example
+{
+	border-top: solid 1px #b5b5f0;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-bottom: solid 1px #bfbff2;
+	font-family: Arial, Verdana, sans-serif;
+	margin-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	border-bottom-color: #007bb4;
+	border-top-color: #007bb4;
+	background-color: #e8f5fb;
+	color: #004b85;
+	border-right: solid 1px #ffffff;
+}
+
+p.For_example_Head
+{
+	font-family: 'Arial Narrow';
+	font-weight: bolder;
+	letter-spacing: 3px;
+	text-indent: -5px;
+	margin-top: 0px;
+	margin-left: -8px;
+	text-transform: capitalize;
+	color: #004b85;
+}
+
+p.For_example_Head_TEXT
+{
+	font-family: 'Arial Narrow';
+	font-weight: bolder;
+	letter-spacing: 3px;
+	text-indent: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	text-transform: capitalize;
+	color: #004b85;
+}
+
+div.example p
+{
+	color: #004b85;
+}
+
+div.feedback
+{
+	/*.feedback is used on the masterpage */
+	width: 40px;
+	height: 25px;
+	background-color: #EAEAEA;
+	cursor: pointer;
+	float: left;
+	margin-right: 8px;
+	border: 1px solid #A9A9A9;
+}
+
+div.feedback:hover
+{
+	border: 1px solid #808080;
+	text-decoration: none;
+}
+
+div.feedback p
+{
+	font-family: 'Droid Sans';
+	color: #007bb4;
+	font-size: 11pt;
+	text-align: center;
+	line-height: 12pt;
+	vertical-align: middle;
+}
+
+p.feedback
+{
+	color: #42525D;
+	font-family: 'Droid Sans';
+	font-size: 12pt;
+}
+
+ol.UseWithListSnippets
+{
+	margin-top: -24px;
+}
+
+ul.UseWithListSnippets
+{
+	margin-top: -24px;
+}
+
+p.SubHeading_Italic
+{
+	margin-bottom: 12px;
+	margin-top: 12px;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+p.A3200ProgHeader
+{
+	margin-bottom: 0px;
+	margin-left: -10px;
+	margin-right: -1000px;
+	margin-top: -10px;
+	background-color: #99cdff;
+}
+
+p.Stage_bodytext
+{
+	font-size: 10pt;
+}
+
+li.h3NumberedList
+{
+	font-size: 12pt;
+	font-weight: bold;
+	margin-bottom: 8px;
+	margin-top: 14px;
+}
+
+li.BulletLevel1_underh3
+{
+	font-size: 10pt;
+	font-weight: normal;
+	list-style: disc;
+	margin-left: 25px;
+}
+
+span.danger
+{
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+span.warning
+{
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+span.hot
+{
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+html.INtime_MasterPage
+{
+	mc-master-page: url('../MasterPages/INtimeHelpMasterPage.flmsp');
+}
+
+p.equation_18pt
+{
+	font-family: serif;
+	margin-left: 25px;
+	font-size: 140%;
+}
+
+p.equation_10pt
+{
+	font-family: serif;
+	margin-left: 25px;
+	font-size: 90%;
+}
+
+p.LinkList_indented
+{
+	margin-bottom: 2px;
+	margin-top: 2px;
+	margin-left: 50px;
+}
+
+MadCap|equation
+{
+	font-family: serif;
+	font-style: normal;
+	font-variant: normal;
+	font: serif;
+	font-size: 120%;
+	font-weight: normal;
+}
+
+MadCap|equation.Large
+{
+	font-size: 150%;
+}
+
+MadCap|xref.Section_Ref
+{
+	mc-format: 'Section {paranumonly}.';
+}
+
+p.motorsizerHeader
+{
+	margin-left: -10px;
+	margin-right: 0px;
+	background-repeat: no-repeat;
+	background-image: none;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: -3px;
+	margin-bottom: -3px;
+	background-color: #018ccf;
+}
+
+html.KW_MasterPage
+{
+	
+}
+
+MadCap|bodyProxy
+{
+	margin-right: 10px;
+}
+
+h1.Tutorial_with_ChapterNumbers
+{
+	mc-auto-number-format: '{ }';
+}
+
+h2.Tutorial_with_ChapterNumbers_nobreak
+{
+	
+}
+
+p.RedBold
+{
+	font-weight: bold;
+	font-size: 10pt;
+	margin-bottom: 6px;
+	margin-top: 14px;
+	color: #ff0000;
+}
+
+MadCap|conceptLink
+{
+	mc-label: 'Related Topics';
+	mc-help-control-display: popup;
+	color: #004080;
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+li.UpperAlphaLevel1_underh3
+{
+	font-size: 10pt;
+	font-weight: normal;
+	list-style: upper-alpha;
+	margin-left: 25px;
+}
+
+td ul
+{
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+td ol
+{
+	margin-top: 6px;
+	margin-left: 25px;
+	margin-bottom: 6px;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: #0066cc;
+}
+
+a:visited
+{
+	color: #8b008b;
+	text-decoration: none;
+}
+
+a:focus
+{
+	text-decoration: none;
+	color: #17abed;
+}
+
+a:hover
+{
+	color: #17abed;
+	text-decoration: underline;
+}
+
+MadCap|xref.Chapter_Ref_Num
+{
+	mc-format: '{paranumonly}';
+}
+
+span.DoNotBreak
+{
+	mc-hyphenate: never;
+}
+
+h1._title_noChapterNumber_Front_Material_no_break
+{
+	font-weight: bold;
+	font-size: 18pt;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	mc-auto-number-format: '{ }';
+}
+
+img.Icon16x16	/*Do not use this for the help file. Create a new icon that is sized as 16x16 and inlcude that in the file name. i.e., EnableDisableAxis16x16.png, EnableDisableAxis32x32.png*/
+{
+	max-height: 16px;
+	max-width: 16px;
+}
+
+h4.paragraphHeading
+{
+	margin-bottom: -6px;
+	color: #333333;
+}
+
+MadCap|dropDownHead.for_in_tables
+{
+	font-size: 10pt;
+	font-weight: 400;
+}
+
+h4.likeDropdown
+{
+	color: #215572;
+	font-size: 10.5pt;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+p.cover1new
+{
+	font-weight: bold;
+	margin: 0;
+	text-align: center;
+	font-size: 18pt;
+	margin-bottom: 0pt;
+}
+
+span.preprocessorDirective
+{
+	font-family: 'Courier New', ' Courier', ' Numbus Mono L', ' monospace';
+}
+
+:after
+{
+	color: #004080;
+}
+
+:before
+{
+	color: #004080;
+}
+
+MadCap|xref:focus
+{
+	color: #007bb4;
+}
+
+MadCap|xref:hover
+{
+	color: #17abed;
+	text-decoration: underline;
+}
+
+MadCap|xref:visited
+{
+	color: #8b008b;
+	text-decoration: none;
+}
+
+MadCap|xref.Print_With_Page_Number
+{
+	mc-format: '{para}';
+}
+
+h4._title_with_ChapterNumbers_nobreak
+{
+	color: #007bb4;
+}
+
+MadCap|dropDownHead.Print_in_h2
+{
+	
+}
+
+MadCap|dropDownHead.h4_Procedure
+{
+	margin-bottom: 12px;
+	font-size: 10pt;
+	color: #693132;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-family: 'Droid Sans';
+	letter-spacing: 0.05em;
+}
+
+MadCap|dropDownHead.print_in_h4
+{
+	
+}
+
+li.TopMargin
+{
+	margin-top: 16px;
+}
+
+p.for_NoLinesTable
+{
+	
+}
+
+p.SubHeading_pagebreak
+{
+	margin-bottom: 12px;
+	margin-top: 12px;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-weight: bold;
+	text-align: left;
+	font-size: 12pt;
+}
+
+a.tableHeader
+{
+	
+}
+
+a.tableHeader:link
+{
+	color: #a1dcf6;
+}
+
+a.tableHeader:visited
+{
+	color: #fa8afa;
+}
+
+a.tableHeader:focus
+{
+	color: #a1dcf6;
+}
+
+ul.disc
+{
+	list-style-type: disc;
+}
+
+ul.disc > li::marker
+{
+	list-style-type: disc;
+}
+
+ul.disc > li > ul > li::marker
+{
+	list-style-type: disc;
+}
+
+ul.disc > li > ul > li > ul > li::marker
+{
+	list-style-type: disc;
+}
+
+ul.disc > li > ul > li > ul > li > ul > li::marker
+{
+	list-style-type: disc;
+}
+
+ul.disc > li > ul > li > ul > li > ul > li > ul > li::marker
+{
+	list-style-type: disc;
+}
+
+img.ScreenshotBorder	/*Shows an orange border for online images. Does not show an orange border for print images.*/
+{
+	border-color: #ffa500;
+	border-style: dashed;
+	border-width: 3px;
+	border: dashed 3px #ffa500;
+}
+
+MadCap|dropDown.DropdownTopMargin	/*Moves down a drop down section that is nested under a number or letter.*/
+{
+	margin-bottom: 6px;
+	margin-top: 8px;
+}
+
+MadCap|dropDownHead.For_example	/*Use this tag for "For Example" sections that are drop downs, especailly in any of the autogenerated tables (e.g., Command Arguments tables).*/
+{
+	color: #004b85;
+	font-family: 'Arial Narrow';
+	font-size: 10pt;
+	font-weight: bolder;
+	text-transform: capitalize;
+	margin-right: 0px;
+	margin-top: 0px;
+	text-indent: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin: 0em;
+	letter-spacing: 3px;
+}
+
+h4.Procedure_SmallerMargins
+{
+	margin-bottom: 7px;
+	margin-top: 7px;
+	color: #693132;
+	font-size: 10pt;
+	text-transform: uppercase;
+}
+
+div.Float_right_online
+{
+	float: right;
+	margin: 15px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	margin-top: 0px;
+}
+
+div.figure
+{
+	page-break-inside: avoid;
+}
+
+MadCap|dropDown.DropdownBackground
+{
+	margin-right: 20px;
+	background-color: #e8f5ff;
+}
+
+h1._title_noChapterNumber_Cover
+{
+	font-weight: bold;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	mc-auto-number-format: '{ }';
+	page-break-before: always;
+}
+
+h1._GuideTo
+{
+	font-weight: bold;
+	font-size: 18pt;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin: 0;
+	margin-bottom: 6pt;
+	margin-top: 20pt;
+	mc-auto-number-format: '{ }';
+}
+
+img.PrintSmall
+{
+	width: 600px;
+	height: auto;
+}
+
+sup.smaller_HyperWireCard_Brochure
+{
+	font-size: 0.80em;
+}
+
+.Optional
+{
+	mc-auto-number-format: 'Optional. ';
+}
+

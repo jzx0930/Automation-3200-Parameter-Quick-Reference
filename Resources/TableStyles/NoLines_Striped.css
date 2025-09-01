@@ -1,0 +1,1163 @@
+﻿/* MadCap Table Style: */
+
+/*<meta Version="9" />*/
+
+@media print
+{
+	mcTableStyle
+	{
+		
+	}
+
+	mcTableColumnStyle
+	{
+		
+	}
+
+	mcTableColumnStyle
+	{
+		
+	}
+
+	mcTableHeadStyle
+	{
+		
+	}
+
+	mcTableBodyStyle
+	{
+		
+	}
+
+	mcTableBodyStyle
+	{
+		font-family: sans-serif;
+	}
+
+	mcTableFootStyle
+	{
+		
+	}
+}
+
+mcTableStyle
+{
+	name: NoLines_Striped;
+	border-collapse: collapse;
+	border-left-style: none;
+	border-left-width: 1px;
+	border-right-style: none;
+	border-right-width: 1px;
+	border-top-style: none;
+	border-top-width: 1px;
+	border-bottom-style: none;
+	border-bottom-width: 1px;
+	max-id: 6;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	id: 6;
+	name: Column1;
+	text-align: right;
+	cell-padding-right: 14px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+mcTableColumnStyle
+{
+	span: 50;
+	id: 5;
+	name: Column2;
+	font-family: sans-serif;
+}
+
+mcTableHeadStyle
+{
+	span: 1;
+	separator-style: none;
+	separator-width: 1px;
+	name: Header1;
+	id: 2;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	separator-style: none;
+	separator-width: 1px;
+	name: Body1;
+	id: 1;
+	background-color: #eef3f7;
+	font-family: sans-serif;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	id: 4;
+	name: Body2;
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+}
+
+mcTableFootStyle
+{
+	span: 1;
+	separator-style: none;
+	separator-width: 1px;
+	name: Footer1;
+	id: 3;
+	font-size: 8pt;
+	font-family: sans-serif;
+}
+
+
+/* Cell Styles: */
+ 
+@media print
+{
+	.TableStyle-NoLines_Striped
+	{
+		border-spacing: 0px 0px;
+	}
+}
+
+.TableStyle-NoLines_Striped
+{
+	border-collapse: collapse;
+	border-left-style: none;
+	border-left-width: 1px;
+	border-right-style: none;
+	border-right-width: 1px;
+	border-top-style: none;
+	border-top-width: 1px;
+	border-bottom-style: none;
+	border-bottom-width: 1px;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-NoLines_Striped-Column-Column1
+{
+	
+}
+
+.TableStyle-NoLines_Striped-Column-Column2
+{
+	
+}
+
+.TableStyle-NoLines_Striped-Head-Header1
+{
+	
+}
+
+.TableStyle-NoLines_Striped-HeadI-Column1-Header1
+{
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadI-Column1-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadE-Column1-Header1
+{
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoLines_Striped-HeadE-Column1-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadF-Column1-Header1
+{
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoLines_Striped-HeadF-Column1-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadH-Column1-Header1
+{
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadH-Column1-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadD-Column1-Header1
+{
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoLines_Striped-HeadD-Column1-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadC-Column1-Header1
+{
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadC-Column1-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadB-Column1-Header1
+{
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadB-Column1-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadA-Column1-Header1
+{
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadA-Column1-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadG-Column1-Header1
+{
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadG-Column1-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadI-Column2-Header1
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadI-Column2-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadE-Column2-Header1
+{
+	font-family: sans-serif;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoLines_Striped-HeadE-Column2-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadF-Column2-Header1
+{
+	font-family: sans-serif;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoLines_Striped-HeadF-Column2-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadH-Column2-Header1
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadH-Column2-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadD-Column2-Header1
+{
+	font-family: sans-serif;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+}
+
+.TableStyle-NoLines_Striped-HeadD-Column2-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadC-Column2-Header1
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadC-Column2-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadB-Column2-Header1
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadB-Column2-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadA-Column2-Header1
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadA-Column2-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadG-Column2-Header1
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-HeadG-Column2-Header1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-Foot-Footer1
+{
+	
+}
+
+.TableStyle-NoLines_Striped-FootI-Column1-Footer1
+{
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootI-Column1-Footer1 p
+{
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootE-Column1-Footer1
+{
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-top-width: 1px;
+	border-top-style: none;
+}
+
+.TableStyle-NoLines_Striped-FootE-Column1-Footer1 p
+{
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootF-Column1-Footer1
+{
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-top-width: 1px;
+	border-top-style: none;
+}
+
+.TableStyle-NoLines_Striped-FootF-Column1-Footer1 p
+{
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootH-Column1-Footer1
+{
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootH-Column1-Footer1 p
+{
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootD-Column1-Footer1
+{
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-top-width: 1px;
+	border-top-style: none;
+}
+
+.TableStyle-NoLines_Striped-FootD-Column1-Footer1 p
+{
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootC-Column1-Footer1
+{
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootC-Column1-Footer1 p
+{
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootB-Column1-Footer1
+{
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootB-Column1-Footer1 p
+{
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootA-Column1-Footer1
+{
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootA-Column1-Footer1 p
+{
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootG-Column1-Footer1
+{
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootG-Column1-Footer1 p
+{
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootI-Column2-Footer1
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootI-Column2-Footer1 p
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootE-Column2-Footer1
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-top-width: 1px;
+	border-top-style: none;
+}
+
+.TableStyle-NoLines_Striped-FootE-Column2-Footer1 p
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootF-Column2-Footer1
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-top-width: 1px;
+	border-top-style: none;
+}
+
+.TableStyle-NoLines_Striped-FootF-Column2-Footer1 p
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootH-Column2-Footer1
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootH-Column2-Footer1 p
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootD-Column2-Footer1
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+	border-top-width: 1px;
+	border-top-style: none;
+}
+
+.TableStyle-NoLines_Striped-FootD-Column2-Footer1 p
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootC-Column2-Footer1
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootC-Column2-Footer1 p
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootB-Column2-Footer1
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootB-Column2-Footer1 p
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootA-Column2-Footer1
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootA-Column2-Footer1 p
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootG-Column2-Footer1
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-FootG-Column2-Footer1 p
+{
+	font-family: sans-serif;
+	font-size: 8pt;
+}
+
+.TableStyle-NoLines_Striped-Body-Body1
+{
+	
+}
+
+.TableStyle-NoLines_Striped-BodyI-Column1-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyI-Column1-Body1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyE-Column1-Body1
+{
+	background-color: #eef3f7;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyE-Column1-Body1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyF-Column1-Body1
+{
+	background-color: #eef3f7;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyF-Column1-Body1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyH-Column1-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyH-Column1-Body1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyD-Column1-Body1
+{
+	background-color: #eef3f7;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyD-Column1-Body1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyC-Column1-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyC-Column1-Body1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyB-Column1-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyB-Column1-Body1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyA-Column1-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyA-Column1-Body1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyG-Column1-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyG-Column1-Body1 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyI-Column2-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyI-Column2-Body1 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyE-Column2-Body1
+{
+	background-color: #eef3f7;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyE-Column2-Body1 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyF-Column2-Body1
+{
+	background-color: #eef3f7;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyF-Column2-Body1 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyH-Column2-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyH-Column2-Body1 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyD-Column2-Body1
+{
+	background-color: #eef3f7;
+	border-bottom-width: 1px;
+	border-bottom-style: none;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyD-Column2-Body1 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyC-Column2-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyC-Column2-Body1 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyB-Column2-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyB-Column2-Body1 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyA-Column2-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyA-Column2-Body1 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyG-Column2-Body1
+{
+	background-color: #eef3f7;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyG-Column2-Body1 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-Body-Body2
+{
+	
+}
+
+.TableStyle-NoLines_Striped-BodyI-Column1-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyI-Column1-Body2 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyE-Column1-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyE-Column1-Body2 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyF-Column1-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyF-Column1-Body2 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyH-Column1-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyH-Column1-Body2 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyD-Column1-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyD-Column1-Body2 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyC-Column1-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyC-Column1-Body2 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyB-Column1-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyB-Column1-Body2 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyA-Column1-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyA-Column1-Body2 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyG-Column1-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 14px;
+}
+
+.TableStyle-NoLines_Striped-BodyG-Column1-Body2 p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.TableStyle-NoLines_Striped-BodyI-Column2-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyI-Column2-Body2 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyE-Column2-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyE-Column2-Body2 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyF-Column2-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyF-Column2-Body2 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyH-Column2-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyH-Column2-Body2 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyD-Column2-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyD-Column2-Body2 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyC-Column2-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyC-Column2-Body2 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyB-Column2-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyB-Column2-Body2 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyA-Column2-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyA-Column2-Body2 p
+{
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyG-Column2-Body2
+{
+	background-color: #d6e6f6;
+	font-family: sans-serif;
+}
+
+.TableStyle-NoLines_Striped-BodyG-Column2-Body2 p
+{
+	font-family: sans-serif;
+}
+
