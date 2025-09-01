@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|System Diagnostics" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Axis Status</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../Status_Utility.htm">System Diagnostics</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Axis Status</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Axis Status<a name="kanchor1067"></a></h1>
+        <p>
+				This value provides status information about this axis. The following table describes each bit of this value. More status information for the axis is reported in <a href="drivestatus.html">Drive Status</a>.
+			</p>
+        <p>You can use the <a href="../Commands/AXISSTATUS_Function.html">AXISSTATUS</a> function to retrieve this value.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Axis Status Bit Descriptions</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;margin-left: 0;margin-right: auto;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Bit</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Value</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">AeroBasic Constant</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Homed"><p class="center">0</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Homed"><p class="center">0x00000001</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_Homed</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Homed</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis is homed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Profiling"><p class="center">1</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Profiling"><p class="center">0x00000002</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_Profiling</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Profiling</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The axis is performing coordinated (<a href="../Commands/LINEAR_Command.html">LINEAR</a>, <a href="../Commands/CW_Command.html">CW</a>, <a href="../Commands/CCW_Command.html">CCW</a>, <a href="../Commands/BEZIER_Command.html">BEZIER</a>), <a href="../Commands/RAPID_Command.html">RAPID</a>, or <a href="../Commands/PVT_Command.html">PVT</a> motion.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="WaitDone"><p class="center">2</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="WaitDone"><p class="center">0x00000004</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_WaitDone</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Wait Done</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The controller finished waiting for motion on this axis to complete. The behavior of this bit depends on the selected wait mode. When in <a href="../Commands/WAIT%20MODE%20MOVEDONE_Command.html">WAIT MODE MOVEDONE</a>, this bit will mimic the Move Done bit, but when in <a href="../Commands/WAIT%20MODE%20INPOS_Command.html">WAIT MODE INPOS</a>, this bit will not be active until both the Move Done bit and the In Position bit are both active.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="CommandValid"><p class="center">3</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="CommandValid"><p class="center">0x00000008</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_CommandValid</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Command Valid</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Motion on the axis is controlled from the SMC.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Homing"><p class="center">4</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Homing"><p class="center">0x00000010</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_Homing</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Homing</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis is currently homing.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Enabling"><p class="center">5</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Enabling"><p class="center">0x00000020</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_Enabling</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Enabling</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis is currently enabling.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="JogGenerating"><p class="center">7</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="JogGenerating"><p class="center">0x00000080</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_JogGenerating</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Jog Generating</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						This bit represents internal status.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Jogging"><p class="center">8</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Jogging"><p class="center">0x00000100</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_Jogging</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Jogging</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The axis is performing asynchronous motion (<a href="../Commands/MOVEINC_Command.html">MOVEINC</a>, <a href="../Commands/MOVEABS_Command.html">MOVEABS</a>, <a href="../Commands/FREERUN_Command.html">FREERUN</a>).
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="DrivePending"><p class="center">9</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="DrivePending"><p class="center">0x00000200</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_DrivePending</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Drive Pending</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The SMC sent a command to the drive that will cause the drive to take control of the motion, but the drive has not yet done so.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="DriveAbortPending"><p class="center">10</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="DriveAbortPending"><p class="center">0x00000400</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_DriveAbortPending</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Drive Abort Pending</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The SMC sent an abort command to the drive, but the drive has not yet started the abort.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="TrajectoryFiltering"><p class="center">11</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="TrajectoryFiltering"><p class="center">0x00000800</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_TrajectoryFiltering</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Trajectory Filtering</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Trajectory filtering is enabled for this axis using either the <a href="../Parameters/TrajectoryIIRFilter.html">TrajectoryIIRFilter</a> or <a href="../Parameters/TrajectoryFIRFilter.html">TrajectoryFIRFilter</a> parameters.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="IFOVEnabled"><p class="center">12</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="IFOVEnabled"><p class="center">0x00001000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_IFOVEnabled</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>IFOV Enabled</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Infinite Field of View (IFOV) is enabled for this axis. Enable IFOV by issuing the <a href="../Commands/IFOV%20ON_OFF_Command.html">IFOV ON</a> command. Disable IFOV by issuing the <a href="../Commands/IFOV%20ON_OFF_Command.html">IFOV OFF</a> command.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="NotVirtual"><p class="center">13</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="NotVirtual"><p class="center">0x00002000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_NotVirtual</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Not Virtual</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						A physical drive is associated with this axis. Axes with no drive attached will clear this bit and operate as <a href="../Virtual_Axes.htm">virtual axes</a>.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="CalEnabled1D"><p class="center">14</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="CalEnabled1D"><p class="center">0x00004000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_CalEnabled1D</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Calibration Enabled 1D</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The specified 1D calibration file contains a calibration table that corrects this axis. The state of this bit is not affected by the <a href="../Commands/CALENABLE_Command.html">CALENABLE</a> or <a href="../Commands/CALDISABLE_Command.html">CALDISABLE</a> commands.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="CalEnabled2D"><p class="center">15</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="CalEnabled2D"><p class="center">0x00008000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_CalEnabled2D</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Calibration Enabled 2D</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The specified 2D calibration file contains a calibration table that corrects this axis. The state of this bit is not affected by the <a href="../Commands/CALENABLE_Command.html">CALENABLE</a> or <a href="../Commands/CALDISABLE_Command.html">CALDISABLE</a> commands.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MasterSlaveControl"><p class="center">16</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MasterSlaveControl"><p class="center">0x00010000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_MasterSlaveControl</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Master/Slave Control</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis is currently performing motion under master/slave control (gearing, camming, or handwheel).</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="JoystickControl"><p class="center">17</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="JoystickControl"><p class="center">0x00020000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_JoystickControl</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Joystick Control</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The axis is currently performing motion under control of the <a href="../Commands/JOYSTICK_Command.html">JOYSTICK</a> command.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="BacklashActive"><p class="center">18</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="BacklashActive"><p class="center">0x00040000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_BacklashActive</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Backlash Active</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Backlash compensation is enabled for this axis using the <a href="../Parameters/BacklashDistance.html">BacklashDistance</a> parameter or the <a href="../Commands/BACKLASH%20ON_Command.html">BACKLASH ON</a> command.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="GainMappingEnabled"><p class="center">19</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="GainMappingEnabled"><p class="center">0x00080000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_GainMappingEnabled</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Gain Mapping Enabled</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						A Gain Mapping table was specified for this axis.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Stability0"><p class="center">20</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Stability0"><p class="center">0x00100000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_Stability0</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Stability 0</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The axis is considered to be <span class="bold">stable</span> as configured by the <a href="../Parameters/Stability0Threshold.html">Stability0Threshold</a> and <a href="../Parameters/Stability0Time.html">Stability0Time</a> parameters.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MotionBlocked"><p class="center">21</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MotionBlocked"><p class="center">0x00200000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_MotionBlocked</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Motion Blocked</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Motion on this axis is being prevented by the <a href="../Commands/BLOCKMOTION_Command.html">BLOCKMOTION command</a>.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MoveDone"><p class="center">22</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MoveDone"><p class="center">0x00400000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_MoveDone</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Move Done</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Motion on this axis is done, meaning that the velocity command reached zero.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MotionClamped"><p class="center">23</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MotionClamped"><p class="center">0x00800000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_MotionClamped</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Motion Clamped</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Motion on this axis is being clamped due to a software limit clamp or safe zone. Refer to the <a href="../Parameters/SoftwareLimitSetup.html">SoftwareLimitSetup</a> parameter, and the <a href="../Safe_Zone_Overview.htm">Safe zone overview</a>.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="GantryAligned"><p class="center">24</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="GantryAligned"><p class="center">0x01000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_GantryAligned</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Gantry Aligned</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>This axis is part of a gantry pair and the gantry is correctly aligned. This bit will not be active until the gantry axes have been homed.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="GantryRealigning"><p class="center">25</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="GantryRealigning"><p class="center">0x02000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_GantryRealigning</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Gantry Realigning</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis is currently performing gantry realignment motion.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Stability1"><p class="center">26</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Stability1"><p class="center">0x04000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_Stability1</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Stability 1</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The axis is considered to be <span class="bold">stable</span> as configured by the <a href="../Parameters/Stability1Threshold.html">Stability1Threshold</a> and <a href="../Parameters/Stability1Time.html">Stability1Time</a> parameters.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="ThermoCompEnabled"><p class="center">27</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="ThermoCompEnabled"><p class="center">0x08000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>AXISSTATUS_ThermoCompEnabled</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>ThermoComp Enabled</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The ThermoComp feature is currently turned on.</p>
+                </td>
+            </tr>
+        </table>
+        <p class="HiddenText">AxisStatus</p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=axisstatus.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=axisstatus.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

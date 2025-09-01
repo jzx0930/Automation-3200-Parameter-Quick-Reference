@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|System Diagnostics" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Drive Status</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../Status_Utility.htm">System Diagnostics</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Drive Status</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Drive Status<a name="kanchor1069"></a></h1>
+        <p>
+				This value provides status information from the drive connected to this axis. The following table describes each bit of this value. More status information for the axis is reported in <a href="axisstatus.html">Axis Status</a>.
+			</p>
+        <p>You can use the <a href="../Commands/AXISSTATUS_Function.html">AXISSTATUS</a> function to retrieve this value.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Drive Status Bit Descriptions</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;margin-left: 0;margin-right: auto;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Bit</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Value</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">AeroBasic Constant</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Enabled"><p class="center">0</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Enabled"><p class="center">0x00000001</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_Enabled</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Enabled</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis is enabled.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Cw_EOT_Limit"><p class="center">1</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Cw_EOT_Limit"><p class="center">0x00000002</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_CwEOTLimit</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>CW End Of Travel Limit Input Level</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						This represents the state of the CW end of travel limit input. It is not affected by the active polarity, which is configured by the <a href="../Parameters/EndOfTravelLimitSetup.html">EndOfTravelLimitSetup</a> parameter.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Ccw_EOT_Limit"><p class="center">2</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Ccw_EOT_Limit"><p class="center">0x00000004</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_CcwEOTLimit</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>CCW End Of Travel Limit Input Level</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						This represents the state of the CCW end of travel limit input. It is not affected by the active polarity, which is configured by the <a href="../Parameters/EndOfTravelLimitSetup.html">EndOfTravelLimitSetup</a> parameter.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Home_Limit"><p class="center">3</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Home_Limit"><p class="center">0x00000008</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_HomeLimit</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Home Limit Input Level</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						This represents the state of the home limit input. It is not affected by the active polarity, which is configured by the <a href="../Parameters/EndOfTravelLimitSetup.html">EndOfTravelLimitSetup</a> parameter.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Marker_Input"><p class="center">4</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Marker_Input"><p class="center">0x00000010</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_MarkerInput</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Marker Input Level</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>This represents the state of the marker input.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Hall_A_Input"><p class="center">5</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Hall_A_Input"><p class="center">0x00000020</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_HallAInput</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Hall A Input Level</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>This represents the state of the Hall-effect sensor A input.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Hall_B_Input"><p class="center">6</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Hall_B_Input"><p class="center">0x00000040</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_HallBInput</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Hall B Input Level</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>This represents the state of the Hall-effect sensor B input.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Hall_C_Input"><p class="center">7</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Hall_C_Input"><p class="center">0x00000080</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_HallCInput</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Hall C Input Level</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>This represents the state of the Hall-effect sensor C input.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Sine_Encoder_Error"><p class="center">8</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Sine_Encoder_Error"><p class="center">0x00000100</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_SineEncoderError</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Sine Encoder Input Error</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>An error condition is present on the Sine encoder input of the position feedback device.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Cosine_Encoder_Error"><p class="center">9</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Cosine_Encoder_Error"><p class="center">0x00000200</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_CosineEncoderError</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Cosine Encoder Input Error</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>An error condition is present on the Cosine encoder input of the position feedback device.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="ESTOP_Input"><p class="center">10</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="ESTOP_Input"><p class="center">0x00000400</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_ESTOPInput</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Emergency Stop Input Level</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>This represents the state of the emergency stop sense input.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Brake_Output"><p class="center">11</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Brake_Output"><p class="center">0x00000800</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_BrakeOutput</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Brake Output Level</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>This bit shows the state of the dedicated brake output. The GL4, the Ndrive QL and QLe, the Nservo, the Nstep, and the XL4s support the <a href="../Commands/BRAKE_Command.html">BRAKE Command</a> in the firmware, but do not have a dedicated brake output.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Galvo_Power_Correction"><p class="center">12</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Galvo_Power_Correction"><p class="center">0x00001000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_GalvoPowerCorrection</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Galvo Power Correction is configured on this axis.</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Galvo Power Correction is configured on this axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="No_Motor_Supply"><p class="center">14</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="No_Motor_Supply"><p class="center">0x00004000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_NoMotorSupply</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>No Motor Supply</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The drive detected that no motor supply voltage is present.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Current_Clamp"><p class="center">15</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Current_Clamp"><p class="center">0x00008000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_CurrentClamp</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Current Clamp</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						For piezo drives, the controller clamps the motor output to the value of the <a href="../Parameters/PiezoVoltageClampLow.html">PiezoVoltageClampLow</a> or the <a href="../Parameters/PiezoVoltageClampHigh.html">PiezoVoltageClampHigh</a> parameter. For all other drives, the controller clamps the motor output to the value of the <a href="../Parameters/MaxCurrentClamp.html">MaxCurrentClamp</a> parameter.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Marker_Latch"><p class="center">16</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Marker_Latch"><p class="center">0x00010000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_MarkerLatch</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Marker Latch</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The position of the marker is latched.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Power_Limiting"><p class="center">17</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Power_Limiting"><p class="center">0x00020000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_PowerLimiting</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Power Limiting</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The motor output is being limited to prevent damage to the amplifier.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="PSO_Halt_Latch"><p class="center">18</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="PSO_Halt_Latch"><p class="center">0x00040000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_PSOHaltLatch</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>PSO Halt Latch</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Internal drive state was latched by the PSOHALT logic.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="High_Res_Mode"><p class="center">19</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="High_Res_Mode"><p class="center">0x00080000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_HighResMode</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>High Resolution Mode</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The amplifier is operating in high resolution current feedback mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Galvo_Cal_Enabled"><p class="center">20</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Galvo_Cal_Enabled"><p class="center">0x00100000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_GalvoCalEnabled</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Galvo Calibration Enabled</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The specified 2D calibration file contains a galvo calibration table that corrects this axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Autofocus_Active"><p class="center">21</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Autofocus_Active"><p class="center">0x00200000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_AutofocusActive</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Autofocus Active</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The axis is operating under control of the <a href="../Commands/AUTOFOCUS_Command.html">AUTOFOCUS</a> loop.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Program_Flash"><p class="center">22</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Program_Flash"><p class="center">0x00400000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_ProgramFlash</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Programming Flash</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The drive is programming its internal flash memory.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Program_MXH"><p class="center">23</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Program_MXH"><p class="center">0x00800000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_ProgramMXH</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Programming MXH</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The on-board encoder multiplier is performing a programming operation.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Servo_Control"><p class="center">24</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Servo_Control"><p class="center">0x01000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_ServoControl</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Servo Control</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis is operating under servo control.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="In_Position"><p class="center">25</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="In_Position"><p class="center">0x02000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_InPosition</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>In Position</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The axis is considered to be <span class="bold">in position</span> as configured by the <a href="../Parameters/InPositionDistance.html">InPositionDistance</a> and <a href="../Parameters/InPositionTime.html">InPositionTime</a> parameters.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Move_Active"><p class="center">26</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Move_Active"><p class="center">0x04000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_MoveActive</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Move Active</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis is performing drive generated motion.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Accel_Phase"><p class="center">27</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Accel_Phase"><p class="center">0x08000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_AccelPhase</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Acceleration Phase</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis is accelerating.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Decel_Phase"><p class="center">28</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Decel_Phase"><p class="center">0x10000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_DecelPhase</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Deceleration Phase</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis is decelerating.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Encoder_Clipping"><p class="center">29</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Encoder_Clipping"><p class="center">0x20000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_EncoderClipping</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Encoder Clipping</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The on-board encoder multiplier detected that the input signals may be exceeding the maximum input range, which results in clipping of the encoder signals.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Dual_Loop_Active"><p class="center">30</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Dual_Loop_Active"><p class="center">0x40000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_DualLoopActive</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Dual Loop Active</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis is operating in dual-loop mode using two different feedback devices.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="In_Position_2"><p class="center">31</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="In_Position_2"><p class="center">0x80000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>DRIVESTATUS_InPosition2</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>In Position 2</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The axis is considered to be <span class="bold">in position</span> as configured by the <a href="../Parameters/InPosition2Distance.html">InPosition2Distance</a> and <a href="../Parameters/InPosition2Time.html">InPosition2Time</a> parameters.
+					</p>
+                </td>
+            </tr>
+        </table>
+        <p class="HiddenText">DriveStatus</p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=drivestatus.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=drivestatus.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

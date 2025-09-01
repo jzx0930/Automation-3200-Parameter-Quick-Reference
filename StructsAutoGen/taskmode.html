@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|System Diagnostics" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Task Mode</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="../Status_Utility.htm">System Diagnostics</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Task Mode</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Task Mode<a name="kanchor1090"></a></h1>
+        <p>
+				This value provides status information about this task. The following table describes each bit of this value. More status information for the task is reported in <a href="taskstatus0.html">Task Status 0</a>, <a href="taskstatus1.html">Task Status 1</a>, and <a href="taskstatus2.html">Task Status 2</a>.
+			</p>
+        <p>You can use the <a href="../Commands/TASKSTATUS_Function.html">TASKSTATUS</a>&#160;function to retrieve this value. You can also view the status of these bits in the <span class="procedureTerm">Task Mode</span> tab of the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span>.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Task Mode Bit Descriptions</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;margin-left: 0;margin-right: auto;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Bit</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Value</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">AeroBasic Constant</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Secondary"><p class="center">0</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Secondary"><p class="center">0x00000001</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_Secondary</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Secondary</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Secondary units mode is in use.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Absolute"><p class="center">1</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Absolute"><p class="center">0x00000002</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_Absolute</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Absolute</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Absolute programming mode is in use.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="AccelTypeLinear"><p class="center">2</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="AccelTypeLinear"><p class="center">0x00000004</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_AccelTypeLinear</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Accel Type Linear</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The acceleration type is configured for linear ramping.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="AccelModeRate"><p class="center">3</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="AccelModeRate"><p class="center">0x00000008</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_AccelModeRate</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Accel Mode Rate</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The acceleration mode is rate-based.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="InverseDominance"><p class="center">4</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="InverseDominance"><p class="center">0x00000010</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_InverseDominance</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Inverse Dominance</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Inverse dominance (<a href="ms-its:cncoption.chm::/CommandsOLD/G98_Command_(Set_Inverse_Dominance_Mode).htm" MadCap:wasOriginalLinkAbs_href="true">G98</a>) mode is active.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MotionContinuous"><p class="center">5</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MotionContinuous"><p class="center">0x00000020</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_MotionContinuous</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Motion Continuous</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Motion continuous (<a href="../Commands/VELOCITY_Command.html">VELOCITY ON</a>) mode is active.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="InverseCircular"><p class="center">6</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="InverseCircular"><p class="center">0x00000040</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_InverseCircular</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Inverse Circular</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Inverse circular (<a href="ms-its:cncoption.chm::/CommandsOLD/G111_Command_(Inverse_Circular_Interpolation).htm" MadCap:wasOriginalLinkAbs_href="true">G111</a>) mode is active.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="SpindleStopOnProgramHalt"><p class="center">7</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="SpindleStopOnProgramHalt"><p class="center">0x00000080</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_SpindleStopOnProgramHalt</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Spindle Stop On Program Halt</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Spindles will abort on a program stop (<a href="ms-its:cncoption.chm::/CommandsOLD/G101_Command_(Enable_Spindle_Shutdown_Mode).htm" MadCap:wasOriginalLinkAbs_href="true">G101</a>).
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="BlockDelete"><p class="center">8</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="BlockDelete"><p class="center">0x00000100</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_BlockDelete</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Block Delete</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Block Delete mode is active (<a href="ms-its:cncoption.chm::/CommandsOLD/G112_Command_(Set_Block_Delete_Mode).htm" MadCap:wasOriginalLinkAbs_href="true">G112</a>).
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="OptionalPause"><p class="center">9</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="OptionalPause"><p class="center">0x00000200</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_OptionalPause</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Optional Pause</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Optional Pause mode is active (<a href="ms-its:cncoption.chm::/CommandsOLD/G114_Command_(Set_Optional_Stop_Mode).htm" MadCap:wasOriginalLinkAbs_href="true">G114</a>).
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="AccelTypeScurve"><p class="center">10</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="AccelTypeScurve"><p class="center">0x00000400</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_AccelTypeScurve</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Accel Type Scurve</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The acceleration type is configured for S-curve ramping.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MFOLock"><p class="center">11</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MFOLock"><p class="center">0x00000800</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_MFOLock</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>MFO Lock</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						MFO Lock mode is active (<a href="ms-its:cncoption.chm::/CommandsOLD/M48_Command_(Manual_Feedrate_Override_Lock).htm" MadCap:wasOriginalLinkAbs_href="true">M48</a>).
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MSOLock"><p class="center">12</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MSOLock"><p class="center">0x00001000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_MSOLock</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>MSO Lock</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						MSO Lock mode is active (<a href="ms-its:cncoption.chm::/CommandsOLD/M50_Command_(Spindle_Feedrate_Override_Lock).htm" MadCap:wasOriginalLinkAbs_href="true">M50</a>).
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="DecelTypeLinear"><p class="center">13</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="DecelTypeLinear"><p class="center">0x00002000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_DecelTypeLinear</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Decel Type Linear</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The deceleration type is configured for linear ramping.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="DecelTypeScurve"><p class="center">14</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="DecelTypeScurve"><p class="center">0x00004000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_DecelTypeScurve</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Decel Type Scurve</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The deceleration type is configured for S-curve ramping.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="AutoMode"><p class="center">15</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="AutoMode"><p class="center">0x00008000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_AutoMode</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Auto Mode</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>When this bit is true the task is executing in Auto mode. When this bit is false the task is executing in Step mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="ProgramFeedRateMPU"><p class="center">16</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="ProgramFeedRateMPU"><p class="center">0x00010000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_ProgramFeedRateMPU</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Program Feed Rate MPU</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Programmed feed rates are specified in MPU (<a href="ms-its:cncoption.chm::/CommandsOLD/G93_Command_(Specify_Feedrate_Mode).htm" MadCap:wasOriginalLinkAbs_href="true">G93</a>).
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="ProgramFeedRateUPR"><p class="center">17</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="ProgramFeedRateUPR"><p class="center">0x00020000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_ProgramFeedRateUPR</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Program Feed Rate UPR</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Programmed feed rates are specified in units per revolution (<a href="ms-its:cncoption.chm::/CommandsOLD/G95_Command_(Specify_Spindle_Feedrate_Units_Mode).htm" MadCap:wasOriginalLinkAbs_href="true">G95</a>).
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="BlockDelete2"><p class="center">22</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="BlockDelete2"><p class="center">0x00400000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_BlockDelete2</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Block Delete 2</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						Block Delete 2 mode is active (<a href="ms-its:cncoption.chm::/CommandsOLD/G212_Command_(Set_Block_Delete2_Mode).htm" MadCap:wasOriginalLinkAbs_href="true">G212</a>).
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="OverMode"><p class="center">23</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="OverMode"><p class="center">0x00800000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_OverMode</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Over Mode</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>When this bit is true the task is executing in Over mode. When this bit is false the task is executing in Into mode.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="DecelModeRate"><p class="center">24</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="DecelModeRate"><p class="center">0x01000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_DecelModeRate</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Decel Mode Rate</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The deceleration mode is rate-based.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MFOActiveOnJog"><p class="center">26</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="MFOActiveOnJog"><p class="center">0x04000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_MFOActiveOnJog</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>MFO Active On Jog</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						MFO will affect asynchronous motion (<a href="../Commands/OVERRIDEASYNC%20ON_OFF_Command.html">OVERRIDEASYNC ON/OFF</a>).
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Wait_For_In_Pos"><p class="center">27</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Wait_For_In_Pos"><p class="center">0x08000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_WaitForInPos</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Wait For In Position</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						The <a href="../Commands/WAIT%20MODE%20INPOS_Command.html">WAIT MODE INPOS</a> wait mode is active.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Minutes"><p class="center">28</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="Minutes"><p class="center">0x10000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_Minutes</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Minutes</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+						When this bit is true the time mode is <a href="../Commands/MINUTES_Command.html">MINUTES</a>. When this bit is false the time mode is <a href="../Commands/SECONDS_Command.html">SECONDS</a>.
+					</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="WaitAuto"><p class="center">30</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1"><a name="WaitAuto"><p class="center">0x40000000</p></a>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>TASKMODE_WaitAuto</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Wait Auto</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The WAIT MODE AUTO wait mode is active.</p>
+                </td>
+            </tr>
+        </table>
+        <p class="HiddenText">TaskMode</p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=taskmode.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=taskmode.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
