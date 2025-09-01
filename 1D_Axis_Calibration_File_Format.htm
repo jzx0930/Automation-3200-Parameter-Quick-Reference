@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|Axis Calibration|1D Axis Calibration Overview" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>1D Axis Calibration File Format</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Axis_Calibration.htm">Axis Calibration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="1D_Axis_Calibration_Overview.htm">1D Axis Calibration Overview</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">1D Axis Calibration File Format</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor687"></a><a name="kanchor688"></a>1D Axis Calibration File Format</h1>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span> You must reset the controller for these changes to have an effect.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>1D axis calibration files are text files with *.cal extensions. Each 1D axis calibration file contains one or more calibration tables. You can specify a maximum of 100 calibration tables in the calibration file. You can specify a maximum of eight calibration tables for each corrected axis.</p>
+        <p>A calibration table is delimited by the :START and :END tokens. A calibration table can have more than one :START line. If a calibration table has more than one :START line, only the first :START token should be followed by the axis index of the corrected axis. For an example, refer to <a href="1D_Axis_Calibration_Sample_File.htm" class="MCXref_0">1D Axis Calibration Sample File</a>. The axis index is followed by more keywords. The SAMPLEDIST keyword is required. The other keywords are optional. The keywords are described in <span class="bold">Table: 1D Axis Calibration File Format Settings</span>.</p>
+        <p>The position of the master axis of the nth table correction entry is calculated as the sample distance <span class="equation">* n</span>. The first table entry is for <span class="equation">n = 0</span>. If you enter a nonzero correction value for the 0 position, all of the correction values are offset so that the correction value at the 0 position of the master axis is zero. The OFFSET keyword can be specified to shift the starting position of the master axis of the calibration file.</p>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span> Typically, axis indices are specified as zero-based integers. But calibration files specify axis indices as one-based integers.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example: 1D Axis Calibration File Format</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+' Comment (Typically Customer Name, Customer Order Number, etc.)
+:START axis_index [MASTER=masteraxis] [POSUNIT=unit] [CORUNIT=unit]  
+:START SAMPLEDIST=dist [OFFSET=offset] [EXPANDCOEFF=exponent]   
+:START [MATERIALTEMP=temperature] [NEGPOS] [NEGCOR] [HOMEDIRECTION=direction] 
+:START [HOMEOFFSET=homeoffset] [ABSOLUTEFEEDBACKOFFSET=absolutefeedbackoffset] [FULLTRAVEL=fulltravel]
+:START [SERIALNUMBER="serialnumber"]
+Correction_Value Correction_Value ...
+' Comment
+:END</pre>
+        </div>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>1D Axis Calibration File Format Settings</p>
+        <table class="TableStyle-Basic" style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col style="width: 172px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 519px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        Setting					</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        Description
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>axis_index</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The index (1-32) of the axis to which the correction values in the calibration table are applied. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[MASTER=master_axis_index]</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p style="color: #000000;">Optional. The axis index (1-32) of the axis that causes the  correction. Applies the correction values in the calibration table to the corrected axis&#160;(axis_index) based on the position of the MASTER axis.</p>
+                    <p style="color: #000000;">If you do not specify this keyword, the controller uses the axis specified in axis_index as the MASTER axis.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[POSUNIT=unit]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Optional. Specifies the position units of the SAMPLEDIST and OFFSET keywords. Valid unit-based keywords are PRIMARY, SECONDARY, and COUNTS. </p>
+                    <p>You can use the forward slash character (/) to include an optional divisor that lets you specify position units as microns, nanometers, or other units. If you use an optional divisor, make sure that you do not include white space before or after the forward slash character.</p>
+                    <div class="example">
+                        <p class="For_example_Head">For Example</p>
+                        <p>POSUNIT=PRIMARY/1000</p>
+                        <p>If the primary units that you use are millimeters, then the units of the values in the calibration table are microns.</p>
+                    </div>
+                    <p>If you do not specify this POSUNIT, the controller uses encoder counts for the position units of the SAMPLEDIST and OFFSET keywords.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[CORUNIT=unit]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Optional. Specifies the correction units of the correction values in your calibration table, which show as <span class="pre">Correction_Value</span> in <span class="bold">Example: 1D Axis Calibration File Format</span>.  Valid unit-based keywords are PRIMARY, SECONDARY, and COUNTS. </p>
+                    <p>You can use the forward slash character&#160;(/) to include an optional divisor that lets you specify correction units as microns, nanometers, or other units. If you use an optional divisor, make sure that you do not include white space before or after the forward slash character.</p>
+                    <div class="example">
+                        <p class="For_example_Head">For Example</p>
+                        <p>CORUNIT=PRIMARY/1000</p>
+                        <p>If the primary units that you use are millimeters, then the units of the values in the calibration table are microns.</p>
+                    </div>
+                    <p>If you do not specify CORUNIT, the controller uses the units that you specify for POSUNIT = unit as the correction units. If POSUNIT = unit is not specified, the controller uses CORUNIT = COUNTS as the correction units.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>SAMPLEDIST=dist</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Specifies 
+ the fixed sample distance between correction values. The calibration table 
+ is assumed to start at the home position.  This value is typically negative when the Home Position 
+ is CW (+).</p>
+                    <p>The units of this keyword are specified by the POSUNIT keyword.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[OFFSET=offset]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <div>
+                        <p>Optional. Changes the starting location of the calibration 
+ table. If you do not specify this keyword, or if the <span class="procedureTerm">offset</span> argument 
+ is set to 0, the first entry in the table corresponds to the 
+ home position of the axis.</p>
+                        <p>The offset value can be positive or negative 
+ and always follows the sign of the encoder. The <a href="Parameters/ReverseMotionDirection.html">ReverseMotionDirection</a> parameter does not have an effect on the offset value.</p>
+                    </div>
+                    <p>The units of this keyword are specified by the POSUNIT keyword.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[EXPANDCOEFF=exponent]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Optional. Specifies the expansion coefficient of the material on which the encoder scale is mounted. Units: 1/°C.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[MATERIALTEMP=temperature]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Optional. Specifies the temperature at which the correction values were taken. Units: 1/°C.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[NEGPOS]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Optional. Changes the sign 
+ of all of the position values.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[NEGCOR]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Optional. Changes the sign 
+ of all of the correction values.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[ROLLOVER=rolloverdist]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Optional. Specifies the distance, in counts, at which calibration rollover occurs. If you do not specify this keyword, the <a href="Parameters/RolloverCounts.html">RolloverCounts</a> parameter controls the rollover behavior.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[HOMEDIRECTION=direction]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Optional. Specifies the home direction that is used at the time the calibration table is created. Because the axis home is determined by the encoder direction, changing the axis home direction can change the home position. Refer to <a href="Parameters/HomeSetup.html">HomeSetup</a> parameter for more information. This flag specifies the home direction used at the time the calibration file is created, and also enables the HOMEOFFSET and FULLTRAVEL keywords. If HOMEDIRECTION is not specified, these values are ignored. If you specify HOMEDIRECTION, you should also specify HOMEOFFSET, otherwise the controller will assume the HOMEOFFSET keyword is zero. Possible values are CW and CCW (for example, HOMEDIRECTION=CW).
+</p>
+                    <p>If you change the <a href="Parameters/HomeOffset.html">HomeOffset</a> parameter after the calibration table is created, the controller automatically adjusts the calibration table only if the HOMEDIRECTION&#160;keyword is specified.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[HOMEOFFSET=homeoffset]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+Optional. Specifies the value of the <a href="Parameters/HomeOffset.html">HomeOffset</a> parameter that was active when you collected the data that you used to generate the calibration file. Because you specify this value in the calibration file, the controller can dynamically shift the calibration table if you change the value of the HomeOffset parameter at a different time. Changes that you make to the HomeOffset parameter do not have an effect on calibration until you reset the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[ABSOLUTEFEEDBACKOFFSET=absolutefeedbackoffset]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>
+Optional. Specifies the value of the <a href="Parameters/AbsoluteFeedbackOffset.html">AbsoluteFeedbackOffset</a> parameter that was active when you collected the data that you used to generate the calibration file. Because you specify this value in the calibration file, the controller can dynamically shift the calibration table if you change the value of the AbsoluteFeedbackOffset parameter at a different time. Changes that you make to the AbsoluteFeedbackOffset parameter do not have an effect on calibration until you reset the controller.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[FULLTRAVEL=fulltravel]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Optional. Specifies the full travel of the stage. If the stage has only one marker signal, you do not have to specify this keyword because the home position is the same on every home, regardless of home direction. If the stage has more than one marker, use this keyword to specify the new home position in relation to the old home position when the home direction is changed, assuming that the value of the HomeOffset parameter is not changed. You can use this keyword with the HOMEOFFSET keyword to generate a dynamic shift in the axis calibration table. This shift is required on rotary translational stages and rotary tables with gearboxes. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>[SERIALNUMBER="serialnumber"]</p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Optional. Specifies the serial number of the <span class="AerotechVariablesCompanyName_Short">Aerotech</span> system on which the calibration file was created. This keyword is for reference only. Do not change the serial number in your calibration file.</p>
+                </td>
+            </tr>
+        </table>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Axis_Calibration.htm">Axis Calibration</a>
+        </p>
+        <p class="relatedTopic"><a href="1D_Axis_Calibration_Overview.htm">1D Axis Calibration Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="1D_Axis_Calibration_Sample_File.htm">1D Axis Calibration Sample File</a>
+        </p>
+        <p class="relatedTopic"><a href="2D_Axis_Calibration_Overview.htm">2D Axis Calibration Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="Parameters/HomeOffset.html">HomeOffset Parameter</a>
+        </p>
+        <p class="relatedTopic"><a href="Parameters/CountsPerUnit.html">CountsPerUnit Parameter</a>
+        </p>
+        <p class="relatedTopic"><a href="Temperature_Compensation.htm">Temperature 
+ Compensation</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=1D_Axis_Calibration_File_Format.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=1D_Axis_Calibration_File_Format.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
