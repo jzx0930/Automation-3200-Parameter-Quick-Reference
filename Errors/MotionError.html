@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Troubleshooting|Controller|Motion" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>MotionError </title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Troubleshooting.htm">Troubleshooting</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Controller_Category.html">Controller</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Motion_Category.html">Motion</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">MotionError</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>MotionError </h1>
+        <p class="BodyText">An error occurred with a motion command: &lt;Location&gt;</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Location Codes</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;">
+            <col style="width: 170px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 469px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Location Code</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 4px;padding-right: 2px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Interpretation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">1</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Circular offsets are not allowed when using G0 or RAPID commands.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">2</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Circular offsets are not allowed when using G1 or LINEAR commands.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">3</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Circular offsets were not specified to a G2 or G3 command.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">4</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The Bezier start position is different than the controller position.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p class="center">5</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>The BEZIER command requires the ABSOLUTE programming mode.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The sections that follow tell you what might cause the error and give you solutions.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3659623224_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Circular offsets are not allowed when using G0 or RAPID commands.</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3659623224_0" style="display: none;">
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Cause</h4>
+                <p>You tried to execute <a href="../Commands/RAPID_Command.html">RAPID</a> motion but specified circular offsets using the R or IJ keywords as part of the RAPID command.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Solution</h4>
+                <p>Change your program to specify the correct arguments to the command.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3659623224_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Circular offsets are not allowed when using G1 or LINEAR commands.</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3659623224_1" style="display: none;">
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Cause</h4>
+                <p>You tried to execute <a href="../Commands/LINEAR_Command.html">LINEAR</a>&#160;motion but specified circular offsets using the R or IJ keywords as part of the LINEAR&#160;command.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Solution</h4>
+                <p>Change your program to specify the correct arguments to the command.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3659623224_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Circular offsets were not specified to a G2 or G3 command.</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3659623224_2" style="display: none;">
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Cause</h4>
+                <p style="font-weight: normal;">You did not specify circular offsets as arguments to a <a href="ms-its:cncoption.chm::/CommandsOLD/CW_(G2)_Command.htm" MadCap:wasOriginalLinkAbs_href="true">G2</a> or a <a href="ms-its:cncoption.chm::/CommandsOLD/CCW_(G3)_Command.htm" MadCap:wasOriginalLinkAbs_href="true">G3</a> command.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Solution</h4>
+                <p>You must specify the appropriate arguments when commanding a circle. (Refer to the <a href="ms-its:cncoption.chm::/CommandsOLD/CW_(G2)_Command.htm" MadCap:wasOriginalLinkAbs_href="true">G2</a> or <a href="ms-its:cncoption.chm::/CommandsOLD/CCW_(G3)_Command.htm" MadCap:wasOriginalLinkAbs_href="true">G3</a> commands for more information about required arguments.)</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3659623224_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />The Bezier start position is different than the controller position.</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3659623224_3" style="display: none;">
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Cause</h4>
+                <p>You issued a <a href="../Commands/BEZIER_Command.html">BEZIER</a> command and Control Point P0 (the first control point) is not that same as the programmed position of the controller.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Solution</h4>
+                <p>Change your program using one of the following procedures.</p>
+                <ul>
+                    <li value="1">Use the <a href="../Commands/POSOFFSET_Command.html">POSOFFSET</a> command before the BEZIER command to make the programmed position of the controller the same as &lt;P0_H&gt; and &lt;P0_V&gt; values. </li>
+                    <li value="2">Use the <a href="../Commands/LINEAR_Command.html">LINEAR</a> or the <a href="../Commands/RAPID_Command.html">RAPID</a> command before the BEZIER command to move the horizontal and vertical axes to the correct &lt;P0 H&gt; and &lt;P0_V&gt; value.</li>
+                    <li value="3">Change the control points of the BEZIER command so that the starting position is the same as the programmed position of the controller. </li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3659623224_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />The BEZIER command requires the ABSOLUTE programming mode.</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3659623224_4" style="display: none;">
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Cause</h4>
+                <p>You issued a <a href="../Commands/BEZIER_Command.html">BEZIER</a> command and the task is in the INCREMENTAL programming mode. The task must be in the ABSOLUTE programming mode. </p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Solution</h4>
+                <p>The BEZIER command only supports absolute coordinates. Change the programming mode of the task to absolute by issuing the <a href="../Commands/ABSOLUTE_Command.html">ABSOLUTE</a> command in your <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program. </p>
+            </div>
+        </div>
+        <p>If you cannot find the cause of this error, or if you tried the recommended solution and receive the error again, record the text of the error message and contact <span class="AerotechVariablesCompanyName_Short">Aerotech</span>&#160;<MadCap:conditionalText MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.MotorSizerOnly,AerotechConditions.LensProOnly,AerotechConditions.GalvoCalibrationFileConverterOnly,AerotechConditions.CADFusionOnly"><a href="../Technical_Support.htm" class="MCXref_0">Global Technical Support</a></MadCap:conditionalText>.</p><a name="kanchor3092"></a><a name="kanchor3093"></a><a name="kanchor3094"></a>
+        <p class="HiddenText">Motion Error</p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=MotionError.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=MotionError.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
