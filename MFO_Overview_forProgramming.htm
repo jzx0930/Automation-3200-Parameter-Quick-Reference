@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Controlling Axis Speeds" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>MFO Overview</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Feedrate_Overview.htm">Controlling Axis Speeds</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Manual Feedrate Override (MFO)</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>MFO Overview<a name="kanchor793"></a><a name="kanchor794"></a><a name="kanchor795"></a><a name="kanchor796"></a></h1>
+        <p>The MFO command specifies the manual feedrate override (MFO) percentage for the task and scales the programmed feedrate for all coordinated motion (<a href="Commands/LINEAR_Command.html">LINEAR</a>, <a href="Commands/CW_Command.html">CW</a>, <a href="Commands/CCW_Command.html">CCW</a>) and <a href="Commands/RAPID_Command.html">RAPID</a> motion. The MFO percentage multiplied by the programmed feedrate determines the true feedrate of the move. The MFO value can vary from the value set in the <a href="Parameters/MinimumMFO.html">MinimumMFO</a> parameter to the value set in the <a href="Parameters/MaximumMFO.html">MaximumMFO</a> parameter.</p>
+        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> The MFO value does not change if the MFOLock task mode is active. For information, refer to <a href="ms-its:cncoption.chm::/CommandsOLD/M48_Command_(Manual_Feedrate_Override_Lock).htm" MadCap:wasOriginalLinkAbs_href="true">M48 Command.</a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The MFO that you set might be internally limited if satisfying that MFO setting will cause any of the following to occur:</p>
+        <ul>
+            <li value="1">Any individual axis speed will exceed the <a href="Parameters/MaxSpeedClamp.html">MaxSpeedClamp</a> parameter setting.</li>
+            <li value="2">Any individual axis speed in a <a href="Commands/CW_Command.html">CW</a> or <a href="Commands/CCW_Command.html">CCW</a> move will exceed the <a href="Parameters/CoordinatedCircularAccelLimit.html">CoordinatedCircularAccelLimit</a> parameter setting.</li>
+            <li value="3">A coordinated move duration is shorter than the <a href="Parameters/CoordinatedMoveDurationMinimum.html">CoordinatedMoveDurationMinimum</a> parameter setting.</li>
+            <li value="4">The MFO is set to greater than 100% and the controller is executing a RAPID move. In this case, the controller will clamp the MFO to 100% during the RAPID move. </li>
+        </ul>
+        <p class="noBulletLevel2">If limiting occurs, the Limit MFO Active bit of Task Status 2 will be turned on for the duration of the move. </p>
+        <p>The MFO does not have an effect on coordinated moves if they are in the deceleration phase (end phase) of the move.</p>
+        <p>Normally, the operation of an MFO change during a coordinated move is delayed by a time interval in milliseconds, determined by the                              <a href="Parameters/MotionUpdateRate.html">MotionUpdateRate</a> parameter.</p>
+        <p>MFO does not have an effect on PVT, slave motion (handwheel axes, camming, or gearing slaves), or HOME motion. Refer to <a href="ms-its:cncoption.chm::/CommandsOLD/MSO_Command.htm" MadCap:wasOriginalLinkAbs_href="true">MSO Command</a> to control spindle speed.</p>
+        <p>The <a href="Commands/OVERRIDEASYNC%20ON_OFF_Command.html">OVERRIDEASYNC ON/OFF</a> command determines whether MFO can affect asynchronous motion, such as jogging, <a href="Commands/MOVEINC_Command.html">MOVEINC</a>, and <a href="Commands/MOVEABS_Command.html">MOVEABS</a>.</p>
+        <p>If the <a href="Parameters/AnalogMFOInput.html">AnalogMFOInput</a> parameter is active, the controller overwrites the MFO value with the value obtained from the specified analog input.</p>
+        <p>Programmed acceleration rates (or times) are used during all MFO changes (acceleration or deceleration). MFO changes always result in linear ramping, even if the ramp mode is sinusoidal.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1523987189_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />What occurs when MFO is not equal to 100 percent?</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1523987189_0" style="display: none;">
+                <p>If the MFO is not set to one hundred percent when a movement starts, acceleration and deceleration ramping is altered.</p>
+                <p>If rate-based ramping is active, the <span class="AerotechVariablesSimpleName_A3200">A3200</span> will adjust the acceleration rate of a move to maintain the acceleration time that would have occurred if MFO had been equal to 100 percent.</p>
+                <p>If time-based ramping is active, the <span class="AerotechVariablesSimpleName_A3200">A3200</span> will determine the acceleration rate differently. (Refer to the following figure for more information.)</p>
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_1523987189_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure MFO and Velocity-Time Motion Curves
+            </a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_1523987189_1" style="display: none;">
+                        <p>
+                            <img src="Resources/Images/Figure_MFORegularVT.png" />
+                        </p>
+                    </div>
+                </div>
+                <p>In the figure the slope of the motion lines shows the acceleration. When MFO is equal to one hundred percent, the axis accelerates to the maximum velocity at a rate determined by acceleration ramping, which dictates the slope of the blue line. This acceleration occurs over a time (<span class="equationVariable">t</span>), which is dependent on the feedrate and acceleration ramping.</p>
+                <p>When MFO is not equal to one hundred percent, the <span class="AerotechVariablesSimpleName_A3200">A3200</span> uses <span class="equationVariable">t</span> (and the MFO value) to determine the acceleration. This results in an acceleration different that the one specified by acceleration and deceleration ramping (as seen in the yellow and green lines). </p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1523987189_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />What occurs when MFO is negative?</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1523987189_2" style="display: none;">
+                <p>Setting the MFO to a negative value activates Retrace mode. Refer to <a href="ms-its:cncoption.chm::/Retrace_Overview.htm" MadCap:wasOriginalLinkAbs_href="true">Retrace Overview</a> for more information.</p>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Parameters/taskmfo_Category.html">MFO Parameter Category</a>
+        </p>
+        <p class="relatedTopic"><a href="Commands/MFO_Command.html">MFO&#160;Command</a>
+        </p>
+        <p class="relatedTopic"><a href="Commands/AXISSTATUS_Function.html">AXISSTATUS Function</a>
+        </p>
+        <p class="relatedTopic"><a href="Commands/SYSTEMSTATUS_Function.html">SYSTEMSTATUS Function</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=MFO_Overview_forProgramming.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=MFO_Overview_forProgramming.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

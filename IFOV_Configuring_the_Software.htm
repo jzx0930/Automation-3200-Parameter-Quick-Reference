@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Galvo Drives|[%=AerotechVariables.SimpleName_IFOV%] ([%=AerotechVariables.SimpleName_IFOV_2%])" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>IFOV: Configuring the Software</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Galvo_Overview.htm">Galvo Drives</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Infinite_Field_of_View_IFOV.htm">Infinite Field of View (IFOV)</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Configuring the Software</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span>: Configuring the Software<a name="kanchor826"></a></h1>
+        <p>The information in this topic uses these axis configurations:</p>
+        <ul class="DriveSpecificNote">
+            <li value="1"><span class="bold">X</span> and <span class="bold">Y</span> are servo axes.</li>
+            <li value="2"><span class="bold">A</span> and <span class="bold">B</span> are galvo axes.</li>
+            <li value="3"><span class="bold">X</span> and <span class="bold">A</span> move in the same direction.</li>
+            <li value="4"><span class="bold">Y</span> and <span class="bold">B</span> move in the same direction.</li>
+        </ul>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>TO CONFIGURE THE <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span> SOFTWARE</h4>
+        <ol>
+            <li class="TopMargin" value="1">In <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>, set the <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a href="Parameters/IFOVConfigurations.html" class="MCXref_0">IFOVConfigurations Parameter</a></MadCap:conditionalText> to <span class="bold">1</span> or <span class="bold">2</span>. </li>
+            <li value="2">Reset the controller.</li>
+            <li value="3">Set the task-based speeds and ramp rates. Do the steps that follow:</li>
+            <ol style="list-style-type: upper-alpha;">
+                <li class="TopMargin" value="1">Use the <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a href="Commands/RAMP%20RATE_Command.html" class="MCXref_0">RAMP RATE Command</a></MadCap:conditionalText> to set the task-based acceleration and deceleration rates. To get the best performance from your <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span> system, use a large ramp rate or an infinite ramp rate of RAMP RATE 0. </li>
+                <li value="2">Use the <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a href="Commands/RAMP%20MODE_Command.html" class="MCXref_0">RAMP MODE Command</a></MadCap:conditionalText> to set the task-based acceleration and deceleration modes to rate-based ramping. Rate-based ramping is the default.</li>
+                <li value="3">Use the <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a href="CommandsOLD/F_E_and_S_Codes.htm">F Command</a></MadCap:conditionalText> to set the coordinated speed. To calculate the maximum permitted speed, refer to <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a href="IFOV_Calculating_Maximum_Permitted_Speed.htm" class="MCXref_0">IFOV: Calculating the Maximum Permitted Speed</a></MadCap:conditionalText>.</li>
+            </ol>
+            <li value="4">Set the axis-based speeds and ramp rates on each of the two galvo axes. Do the steps that follow:</li>
+            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0" MadCap:conditions="OutputTypeConditions.ScreenOnly">
+                <col style="width: 650px;" />
+                <tbody>
+                    <tr>
+                        <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                            <p><span class="note">NOTE:</span> You can use <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span> without changing the axis-based speeds and ramp rates of the servo axes. In <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span> mode, when you program motion on the galvo axes the controller automatically limits the speed and acceleration of the servo axes.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ol style="list-style-type: upper-alpha;">
+                <li value="1">Use the <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a href="Commands/RAMP%20RATE_Command.html" class="MCXref_0">RAMP RATE Command</a></MadCap:conditionalText> with the <span class="commandArgument">&lt;Axis&gt;</span> argument to set the ramp rate for each of the two galvo axes. To get the best performance from your <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span> system, use a large ramp rate or an infinite ramp rate of RAMP RATE 0. </li>
+                <li value="2"> Use the <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a href="Commands/RAMP%20MODE_Command.html" class="MCXref_0">RAMP MODE Command</a></MadCap:conditionalText> with the <span class="commandArgument">&lt;Axis&gt;</span> argument to set the axis-based acceleration and deceleration modes to rate-based ramping for each of the two galvo axes.</li>
+                <li value="3">Use the <span class="commandArgument">&lt;AxisName&gt;</span>F<span class="commandArgument">&lt;Speed&gt;</span> syntax to set the axis-based speed command for each of the two galvo axes. To calculate the maximum permitted speed, refer to <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a href="IFOV_Calculating_Maximum_Permitted_Speed.htm" class="MCXref_0">IFOV: Calculating the Maximum Permitted Speed</a></MadCap:conditionalText>.</li>
+                <div class="example">
+                    <p class="For_example_Head">For Example</p>
+                    <p>If one of the galvo axes has the name <span class="bold">A</span>, then AF<span class="commandArgument">&lt;Speed&gt;</span> sets the axis-based speed on the <span class="bold">A</span> axis. If the other galvo axis has the name <span class="bold">B</span>, then BF<span class="commandArgument">&lt;Speed&gt;</span> sets the axis-based speed on the <span class="bold">B</span> axis.</p>
+                </div>
+            </ol>
+            <li value="5">Configure <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span> by issuing the commands that follow.</li>
+            <p class="Table_Title_bold_Numbered" MadCap:conditions="OutputTypeConditions.ScreenOnly" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span> Configuration <a name="kanchor827"></a>Commands</p>
+            <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 792px;" class="TableStyle-Basic" cellspacing="0" MadCap:conditions="OutputTypeConditions.ScreenOnly">
+                <col class="TableStyle-Basic-Column-Column1" style="width: 269px;" />
+                <col class="TableStyle-Basic-Column-Column1" style="width: 521px;" />
+                <thead>
+                    <tr class="TableStyle-Basic-Head-Header1">
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Command</th>
+                        <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                            <p><a href="Commands/IFOV%20AXISPAIR_Command.html" class="MCXref_0">IFOV AXISPAIR Command</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p>Issue this command two times to map the two galvo axes to the corresponding servo axes. </p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                            <p><a href="Commands/IFOV%20SYNCAXES_Command.html" class="MCXref_0">IFOV SYNCAXES Command</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p>Specify more axes to command in <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span>. If you do not want to synchronize more axes, specify NONE for this command.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                            <p><a href="Commands/IFOV%20SIZE_Command.html" class="MCXref_0">IFOV SIZE Command</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p>Specify, in user units, the field-of-view size of the <a name="kanchor828"></a>galvo scan head.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                            <p><a href="Commands/IFOV%20TIME_Command.html" class="MCXref_0">IFOV TIME Command</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p>Specify the maximum search time, in milliseconds, that the controller looks ahead. <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you start with a value of 200 milliseconds for the <span class="commandArgument">&lt;SearchTime&gt;</span> argument.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                            <p><a href="Commands/IFOV%20TRACKINGSPEED_Command.html" class="MCXref_0">IFOV TRACKINGSPEED Command</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p>Specify the maximum speed of the servo axes.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                            <p><a href="Commands/IFOV%20TRACKINGACCEL_Command.html" class="MCXref_0">IFOV TRACKINGACCEL Command</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p>Specify the maximum acceleration of the servo axes.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </ol>
+        <p MadCap:conditions="OutputTypeConditions.ScreenOnly">&#160;</p>
+        <div MadCap:conditions="OutputTypeConditions.ScreenOnly">
+            <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Steps to Configure <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span>:</h3>
+            <ol>
+                <li class="TopMargin" MadCap:conditions="SnippetConditions_Links_NoLinks.IFOV_ConnectingEncoderFeedbackCables_Link" value="1"><a href="IFOV_Connecting_Encoder_Feedback_Cables.htm" class="MCXref_0">IFOV: Connecting the Encoder Feedback Cables</a>
+                </li>
+                <li value="2"><a href="IFOV_Verifying_Hardware_Configuration.htm" MadCap:conditions="SnippetConditions_Links_NoLinks.IFOV_VerifyingHardwareConfig_Link" class="MCXref_0">IFOV: Verifying the Hardware Configuration</a>
+                </li>
+                <li value="3"><a href="IFOV_Verifying_Wiring_Polarity.htm" MadCap:conditions="SnippetConditions_Links_NoLinks.IFOV_VerifyingWiringPolarity_Link" class="MCXref_0">IFOV: Verifying the Wiring Polarity</a>
+                </li>
+                <li value="4"><a href="IFOV_Verifying_Galvo_Mounting.htm" MadCap:conditions="SnippetConditions_Links_NoLinks.IFOV_VerifyingGalvoMounting_Link" class="MCXref_0">IFOV: Verifying the Galvo Mounting</a>
+                </li>
+                <li value="5"><a href="IFOV_Verifying_Servo_and_Galvo_Axes.htm" MadCap:conditions="SnippetConditions_Links_NoLinks.IFOV_VerifyingServoandGalvoCollinear_Link" class="MCXref_0">IFOV: Verifying That the Servo and Galvo Axes Are Collinear</a><![CDATA[
+                ]]></li>
+                <li value="6"><a href="IFOV_Calculating_Maximum_Permitted_Speed.htm" MadCap:conditions="SnippetConditions_Links_NoLinks.IFOV_CalculatingMaxPermittedSpeed_Link" class="MCXref_0">IFOV: Calculating the Maximum Permitted Speed</a>
+                </li>
+                <li value="7">
+                    <MadCap:conditionalText MadCap:conditions="SnippetConditions_Links_NoLinks.IFOV_ConfiguringSoftware_NoLink">IFOV: Configuring the Software</MadCap:conditionalText>
+                </li>
+                <li value="8"><a href="IFOV_Configuring_Encoder_Feedback_Overview.htm" MadCap:conditions="SnippetConditions_Links_NoLinks.IFOV_ConfiguringEncoderFeedback_Link" class="MCXref_0">IFOV: Configuring the Encoder Feedback</a>
+                </li>
+                <li value="9"><a href="IFOV_Programming_Motion.htm" MadCap:conditions="SnippetConditions_Links_NoLinks.IFOV_ProgrammingMotion_Link" class="MCXref_0">IFOV: Programming Motion</a>
+                </li>
+            </ol>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Infinite_Field_of_View_IFOV.htm" class="MCXref_0">Infinite Field of View (IFOV) Overview</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=IFOV_Configuring_the_Software.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=IFOV_Configuring_the_Software.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

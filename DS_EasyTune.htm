@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Digital Scope" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>EasyTune</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="DS_Digital_Scope_Application.htm">Digital Scope</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">EasyTune</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2771"></a><span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span>
+        </h1>
+        <p><span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> is a tool in <span class="AerotechVariablesApp_DigScope">Digital Scope</span> that automatically tunes and optimizes an axis. You can use <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> to stabilize an unstable axis or to improve the performance of an unoptimized axis. When <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> is finished, the optimized servo gains and servo filters are committed to the controller. Every time you run <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span>, a log file is automatically saved to the <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> directory in your User Files directory.</p>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">NOTE:</span> <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> does not support voice coil stages or galvo scanners.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To run <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span></h4>
+        <ol>
+            <li value="1">Make sure that it is safe for motion to occur on the selected axis.
+			<ul class="disc"><li value="1">Make sure that the selected axis is away from any end-of-travel limits or software limits.</li><li value="2">Make sure that there is nothing blocking the selected axis.</li></ul></li>
+            <li value="2">To run <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> on a position mode gantry, make sure that the parameters that follow are configured correctly.<ul class="disc"><li value="1">The <a href="Parameters/GantrySeparationThreshold.html" class="MCXref_0">GantrySeparationThreshold Parameter</a> must be set to a non-zero value. The value must be the same on the master gantry axis and the slave gantry axis.</li><li value="2">On the <a href="Parameters/FaultMask.html" class="MCXref_0">FaultMask Parameter</a>, the <span class="bold">Gantry Misalignment Fault</span> must be  enabled on the master gantry axis and on the slave gantry axis.</li><li value="3">On the <a href="Parameters/FaultMaskDisable.html" class="MCXref_0">FaultMaskDisable Parameter</a>, the <span class="bold">Gantry Misalignment Fault</span> must be enabled on the master gantry axis and on the slave gantry axis.</li></ul></li>
+            <li value="3">In <span class="AerotechVariablesApp_DigScope">Digital Scope</span>, on the <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> tab, click <span class="procedureTerm">Start</span>.</li>
+            <li value="4">On some axes, <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> must command additional motion to identify the selected axis. </li>
+            <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3465289548_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                    Figure:&#160;<span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> — Constant Velocity
+                </a>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_3465289548_0" style="display: none;">
+                    <img src="Resources/Images/Image_DS_EasyTune_ConstantVelocityPrompt.png" alt="" title="" />
+                </div>
+            </div>
+            <ul style="list-style-type: disc;">
+                <li value="1">Review the default values for <span class="procedureTerm">Travel Distance</span> and <span class="procedureTerm">Speed</span>. If they are safe, click <span class="procedureTerm">Continue</span>.</li>
+                <li value="2">If <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> does not supply default values, enter values for <span class="procedureTerm">Travel Distance</span> and <span class="procedureTerm">Speed</span> that are safe for the selected axis. Then click <span class="procedureTerm">Continue</span>.</li>
+                <li class="noBulletLevel1">For <span class="procedureTerm">Travel Distance</span>, start with a value of 1 mm for an axis that produces linear motion or 20° for an axis that produces rotational motion. For <span class="procedureTerm">Speed</span>, start with a value that is 1/10 of the Travel Distance.</li>
+            </ul>
+            <li value="5">When <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> is complete, the optimized servo gains and servo filters are committed to the controller.</li>
+            <li value="6">Test the performance of the selected axis. If it is necessary, you can select a performance target that is sufficient for your system and then start <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> again. See the <span class="bold">Using a Custom Performance Target</span> section of this topic.</li>
+        </ol>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To stop <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span></h4>
+        <p>If it is necessary to stop <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span>, click <span class="procedureTerm">Stop</span> or click the <span class="procedureTerm">Abort</span> button <img src="Resources/Images/Icons/Abort16x16.png" />.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Using a Custom Performance Target</h2>
+        <p>You can select a custom performance target to help you get to specific performance goals for the selected axis. The first time that you run <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> on an axis, use the default value of <span class="procedureTerm">Normal</span>. After the selected axis is optimized, you can test the performance of the axis and change the target that <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> uses.</p>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To change the performance target</h4>
+        <ol>
+            <li value="1">Select <span class="procedureTerm">Use a Custom Performance Target</span>.</li>
+            <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3465289548_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                    Figure:&#160;<span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> — Custom Performance Target</a>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_3465289548_1" style="display: none;">
+                    <img src="Resources/Images/Image_DS_EasyTune_CustomPerformanceTarget.png" alt="" title="" />
+                </div>
+            </div>
+            <li value="2">Move the slider to a performance target that is sufficient for your system.<ul style="list-style-type: disc;"><li value="1">If the axis is undershooting when it moves into position, try a more aggressive performance target.</li><li value="2">If the axis is overshooting when it moves into position, try a more conservative performance target.</li></ul></li>
+            <li value="3">Click <span class="procedureTerm">Start</span>. <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> tries to get to the selected performance target.</li>
+        </ol>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Troubleshooting <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span></h2>
+        <p><span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> might not always complete successfully. Here are some common issues that occur and how you might fix them.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+            <col style="width: 230px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 420px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Error Message</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Solution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> could not identify the axis.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Before you start <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span>, make sure you are getting valid position feedback from the selected axis.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p><span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> could not complete because an axis fault occurred.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>If the axis fault is an end-of-travel limit fault or software limit fault, make sure the axis is away from any limits and start <span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> again.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p><span class="AerotechVariablesFeature_AutomaticTuning">EasyTune</span> cannot run on task (number) because the task state is...	</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>Make sure the selected task in <span class="AerotechVariablesApp_DigScope">Digital Scope</span> is not <span class="procedureTerm">InActive</span>, not <span class="procedureTerm">PLCReserved</span>, and not <span class="procedureTerm">Queue</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If you cannot find the cause of this error, or if you tried the recommended solution and receive the error again, record the text of the error message and contact <span class="AerotechVariablesCompanyName_Short">Aerotech</span>&#160;<MadCap:conditionalText MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.MotorSizerOnly,AerotechConditions.LensProOnly,AerotechConditions.GalvoCalibrationFileConverterOnly,AerotechConditions.CADFusionOnly"><a href="Technical_Support.htm" class="MCXref_0">Global Technical Support</a></MadCap:conditionalText>.</p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="DS_Digital_Scope_Application.htm">Digital Scope Application Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="Parameters/filters_Category.html" class="MCXref_0">Filters Parameter Category</a>
+        </p>
+        <p class="relatedTopic"><a href="Parameters/servogain_Category.html" class="MCXref_0">Gains Parameter Category</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=DS_EasyTune.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=DS_EasyTune.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

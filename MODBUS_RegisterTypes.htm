@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Modbus Protocol" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Modbus Register Types</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Modbus_Protocol.htm">Modbus Protocol</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Modbus Register Types</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Modbus Register Types</h1>
+        <table style="width: 650px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming">
+            <col class="Column-Column1" />
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span> The information in this topic is for use with the MODBUSREGXXX and MODBUSBIT commands, which are marked as obsolete and will be removed in a future version. Refer to the <a href="Drive_Modbus_Overview.htm">Drive Modbus Overview</a> or the <a href="PC_Modbus_Overview.htm">PC Modbus&#160;Overview</a>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Modbus Diagram </h2>
+            <table style="mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                <col />
+                <tbody>
+                    <tr>
+                        <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                            <p><span class="note">Note:</span> Master devices use only the master registers and slave devices use only the slave registers. </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="figure" MadCap:autonum=""><span class="autonumber"><span></span></span>Figure: Modbus Diagram</h4>
+            <p>
+                <img src="Resources/Images/Figure_MODBUS_RegisterTypes.png" />
+            </p>
+        </div>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Register Names</h2>
+        <p>When you use the MODBUSREGxxx, or MODBUSBIT commands, you must specify the register set on which the command should operate.</p>
+        <p><span class="bold"> Each of the following register sets is used for a different purpose.</span>
+        </p>
+        <p class="linkList">MasterInputWords</p>
+        <p class="linkList">MasterInputBits</p>
+        <p class="linkList">MasterOutputWords</p>
+        <p class="linkList">MasterOutputBits</p>
+        <p class="linkList">SlaveInputWords</p>
+        <p class="linkList">SlaveInputBits</p>
+        <p class="linkList">SlaveOutputWords</p>
+        <p class="linkList">SlaveOutputBits</p>
+        <p><span class="bold">You can divide each register name into three parts to understand exactly what each name is used for.</span>
+        </p>
+        <ol>
+            <li value="1"><span class="bold">Master</span> or <span class="bold">Slave</span></li>
+            <ul style="list-style-type: disc;">
+                <li value="1">Indicates the type of modbus interface you are commanding.</li>
+                <li value="2">The <span class="bold">A3200 PC Modbus </span> supports both Master and Slave configurations.</li>
+                <ul style="list-style-type: square;">
+                    <li value="1">There is only one <span class="bold">Slave</span> connection. You must make the <span class="commandArgument">&lt;ConnectionNumber&gt;</span> argument 0 or omit it.</li>
+                    <li value="2">There are 16 configurable <span class="bold">Master</span> connections. The <span class="commandArgument">&lt;ConnectionNumber&gt;</span> argument specifies which connection is being commanded. If you omit the <span class="commandArgument">&lt;ConnectionNumber&gt;</span> argument, the default connection is 0.</li>
+                </ul>
+                <li value="3">The  <span class="bold">A3200 Drive Modbus</span> supports only one <span class="bold">Master</span> configuration per drive.</li>
+            </ul>
+            <li value="2"><span class="bold">Input</span> or <span class="bold">Output</span></li>
+            <ul style="list-style-type: disc;">
+                <li value="1">Specifies which set of the Modbus function code is used to transmit the data.</li>
+                <li value="2">Indicates the direction of the data transfer from the perspective of the master device in the system&#160;(Inputs from the Slave to the Master, Outputs from the Master to the Slave). However, some devices do not follow this convention and use Outputs for everything.</li>
+                <li value="3">The <span class="bold">Outputs</span> support both <span class="bold">read</span> and <span class="bold">write</span> functions&#160;(from the Master).</li>
+                <li value="4">The <span class="bold">Inputs</span> can only be <span class="bold">read</span> by the Master&#160;(written to by the Slave).</li>
+            </ul>
+            <li value="3"><span class="bold">Words</span> or  <span class="bold">Bits</span></li>
+            <ul style="list-style-type: disc;">
+                <li value="1">Indicates the type of data being transmitted, and how the data is indexed. </li>
+                <li value="2">Words are 16-bit chunks of data. Each 16 bits of data has an index number.<ul style="list-style-type: square;"><li value="1">Commonly used to store <span class="bold">analog</span> data.</li><li value="2">Data can be interpreted as each of the data types with any data packing. <ul style="list-style-type: disc;"><li value="1">Your ability to Interpret data depends on the implementation and interpretation of the slave device. </li><li value="2">You can store larger data types by combining multiple consecutive words and interpreting the data as that type.</li></ul></li></ul></li>
+                <li value="3"><span class="bold">Bits</span> are 1-bit sized values, where each bit has an index number.<ul style="list-style-type: square;"><li value="1">Used to store <span class="bold">binary</span> data.<ul style="list-style-type: disc;"><li value="1">Lights</li><li value="2">Switches</li><li value="3">Buttons</li></ul></li><li value="2">Can only store a value of true or false.</li></ul></li>
+            </ul>
+        </ol>
+        <p>When you use the Modbus commands, you must specify the correct registers. The Modbus commands do not let you specify incorrect registers. The registers that you use also depend on the other Modbus device that the <span class="AerotechVariablesSimpleName_A3200">A3200</span> communicates with. Many devices do not implement the entire Modbus specification and use a subset from the registers that are available. To determine the correct registers to use for a specific purpose, refer to the documentation for the Modbus device you are using.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Modbus Register Read and Write Access</p>
+        <table style="caption-side: top;width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+            <col style="width: 200px;" class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                        <p>Register Name</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p>Write Access</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p>Read Access</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>MasterInputWords</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>MasterInputBits</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>MasterOutputWords</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>MasterOutputBits</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>SlaveInputWords</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>SlaveInputBits</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>SlaveOutputWords</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                </tr>
+                <tr style="height: 16px;" class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p>SlaveOutputBits</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1" style="text-align: center;">
+                        <p>X</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=MODBUS_RegisterTypes.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=MODBUS_RegisterTypes.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

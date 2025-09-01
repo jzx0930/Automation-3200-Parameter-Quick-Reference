@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Motion|Lookahead" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Motion-Synchronized Commands</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Motion_Overview.htm">Motion</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Program_Block_Look-Ahead_Overview.htm">Lookahead</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Motion-Synchronized Commands</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor1000"></a>Motion-Synchronized Commands</h1>
+        <p>When lookahead is not active, all commands are synchronized to motion.  Some <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> commands are  synchronized to motion when lookahead is active and when it is not active. During the lookahead pre-execution of the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program, the program executes through the synchronized command, but motion-synchronized commands are not executed until the motion before it has completed. For more information about lookahead, refer to <a href="Program_Block_Look-Ahead_Overview.htm" class="MCXref_0">    Program Block Lookahead Overview</a>.</p>
+        <p> These are the motion-synchronized commands:</p>
+        <ul>
+            <li value="1">Axis speed commands (XF,YF,…)</li>
+            <li value="2">DWELL</li>
+            <li value="3">EXECCANNEDFUNCTION</li>
+            <li value="4">GALVO LASEROVERRIDE AUTO</li>
+            <li value="5">GALVO LASEROVERRIDE OFF</li>
+            <li value="6">GALVO LASEROVERRIDE ON</li>
+            <li value="7">I/O sets ($AO, $BI, $BO, $DO, $RI, $RO, $WO, $PORT)</li>
+            <li value="8">MOVEDELAY</li>
+            <li value="9">PSOANALOG ARRAY</li>
+            <li value="10">PSOANALOG OFF</li>
+            <li value="11">PSOANALOG ON</li>
+            <li value="12">PSOANALOG OUTPUT</li>
+            <li value="13">PSOANALOG TRIGGER</li>
+            <li value="14">PSOCONTROL ARM</li>
+            <li value="15">PSOCONTROL ARM GALVO</li>
+            <li value="16">PSOCONTROL ARM PWM</li>
+            <li value="17">PSOCONTROL FIRE</li>
+            <li value="18">PSOCONTROL FIRE CONTINUOUS</li>
+            <li value="19">PSOCONTROL OFF</li>
+            <li value="20">PSOCONTROL ON</li>
+            <li value="21">PSOCONTROL PULSE DISABLE</li>
+            <li value="22">PSOCONTROL RESET</li>
+            <li value="23">PSODISTANCE</li>
+            <li value="24">PSOOUTPUT</li>
+            <li value="25">PSOPULSE</li>
+            <li value="26">PSOPULSE2</li>
+            <li value="27">PSOTRACK</li>
+            <li value="28">PSOWINDOW CONTROL</li>
+            <li value="29">PSOWINDOW INPUT</li>
+            <li value="30">PSOWINDOW LOAD</li>
+            <li value="31">PSOWINDOW OFF</li>
+            <li value="32">PSOWINDOW ON</li>
+            <li value="33">PSOWINDOW RANGE</li>
+            <li value="34">PSOWINDOW RANGE ARRAY</li>
+            <li value="35">PSOWINDOW RESET</li>
+            <li value="36">RAMP MODE</li>
+            <li value="37">RAMP RATE</li>
+            <li value="38">RAMP TIME</li>
+            <li value="39">SCOPETRIG</li>
+            <li value="40">SCURVE</li>
+            <li value="41">SYNCCALL</li>
+            <li value="42">TRACE END</li>
+        </ul>
+        <table style="mc-table-style: url('Resources/TableStyles/Note.css');width: 650px;margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> I/O reads are not motion-synchronized. For information about how this changes the behavior of the command during lookahead, refer to <a href="Program_Block_Look-Ahead_Overview.htm" class="MCXref_0">    Program Block Lookahead Overview</a>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To synchronize the execution of other AeroBasic commands with motion, use the <a href="Commands/SYNCCALL_Command.html" class="MCXref_0">SYNCCALL Command</a>.</p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="ms-its:cncoption.chm::/Corner_Rounding.htm" MadCap:wasOriginalLinkAbs_href="true">Corner Rounding Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="ms-its:cncoption.chm::/Cutter_Radius_Compensation_Overview.htm" MadCap:wasOriginalLinkAbs_href="true">Cutter Radius Compensation Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="Program_Block_Look-Ahead_Overview.htm" class="MCXref_0">    Program Block Lookahead Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="Commands/VELOCITY_Command.html" class="MCXref_0">VELOCITY Command</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Motion-Synchronized_Commands.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Motion-Synchronized_Commands.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

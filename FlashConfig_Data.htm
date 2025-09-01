@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|FlashConfig" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>FlashConfig Data</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="FlashConfig_Overview.htm">FlashConfig</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">FlashConfig Data</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> Data</h1>
+        <p><a name="kanchor720"></a>The <span class="procedureTerm">Restore <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span></span> dialog box lists the status of all data that is available from the stage. If you purchased integration from <span class="AerotechVariablesCompanyName_Short">Aerotech</span>, you can restore axis parameters, calculator information, and calibration data (if applicable). If you did not purchase integration, you can restore calculator information.  For more information, refer to <a href="FlashConfig_RestoringData.htm" class="MCXref_0">Restoring FlashConfig Data</a>.</p>
+        <p>The data stored in <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> is also used to sense if you connect a new stage, connect a stage to a different drive, or disconnect a stage. If the controller senses one of these conditions, you must resolve the mismatch condition before you can restore individual axes with the data that is stored in <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> on the stage. Refer to <a href="FlashConfig_ResolvingMismatches.htm" class="MCXref_0">Resolving FlashConfig Mismatches</a>.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Types of <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> Data</h2>
+        <p>The table that follows lists the types of data that are kept in a <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stage and describes how the data is restored to the controller.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Types of FlashConfig Data</p>
+        <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 90%;" class="TableStyle-Basic" cellspacing="0">
+            <col class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Type of Data</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Data Status</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Description</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="table_bold_left_just">Parameters</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>No data</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>The stage does not contain parameters. </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The axis parameters on the controller stay the same.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Invalid</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>The stage contains parameters that are for a different motion controller and cannot be restored.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The axis parameters on the controller stay the same.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Valid</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>	The stage contains parameters. </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The axis parameters on the controller are overwritten with the parameters from the stage.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="table_bold_left_just">Calculator</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Valid</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>The stage contains calculator information.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>If the active parameter file on the controller contains calculator information, it is overwritten by the data from the stage.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="4" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="table_bold_left_just">1D Calibration</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>No data</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>The stage does not contain 1D calibration tables.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>In most conditions, the 1D calibration tables on the controller stay the same. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Invalid</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>The stage contains orthogonality or straightness correction tables. </p>
+                        <p>The tables cannot be restored because the tables for the master axis or corrected axis will not be restored.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">The 1D calibration tables on the controller are removed.</td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Partial</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>In most conditions, the stage contains accuracy correction tables and orthogonality or straightness correction tables.</p>
+                        <p>A minimum of one calibration table will be restored. Some of the tables cannot be restored because the tables for the master axis or corrected axis will not be restored.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The 1D calibration tables on the controller are overwritten with the 1D tables from the stage.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Valid</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>The stage contains accuracy correction tables, orthogonality correction tables, or straightness correction tables.</p>
+                        <p>All 1D calibration tables can be restored.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">The 1D calibration tables on the controller are overwritten with the 1D tables from the stage.</td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="4" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="table_bold_left_just">2D Calibration</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>No data</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>The stage does not contain 2D calibration tables.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>In most conditions, the 2D calibration tables on the controller stay the same.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">Invalid	</td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>The stage contains 2D calibration tables.</p>
+                        <p>The tables cannot be restored because the tables for one or more of the master axes or the correction axes will not be restored. </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The 2D calibration tables on the controller are removed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Partial</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>	The stage contains 2D calibration tables.</p>
+                        <p>A minimum of one of the calibration tables will be restored. Some of the tables cannot be restored because the tables for one or more of the master axes or the correction axes will not be restored. </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>The 2D calibration tables on the controller are overwritten with the 2D tables from the stage.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Valid</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p>	The stage contains 2D calibration tables. </p>
+                        <p>All 2D calibration tables can be restored.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>The 2D calibration tables on the controller are overwritten with the 2D tables from the stage.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');width: 650px;" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> You might not be able to restore 2D calibration from a stage that supports <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> if the number of corrections used to initially calibrate the stage is greater than the maximum calibration table size that can be stored in <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span>. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Removal of Existing Calibration from Other Axes</h2>
+        <p>When you restore data from <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span>, <a name="kanchor721"></a>calibration might be removed from axes on the controller that you do not select in the <span class="procedureTerm">Restore <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span></span> dialog box. Before you restore data, you can review the list of axes in the <span class="procedureTerm">Existing Calibration</span> section of the dialog. Refer to the examples that follow.</p>
+        <div class="example">
+            <p class="For_example_Head">Example 1</p>
+            <p>The controller has 1D calibration for Axes X and Y. Each axis has an accuracy correction table. There is also an orthogonality correction table so that Axis X corrects Axis Y.</p>
+            <p>Both axes are connected to stages that support <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span>. The same types of calibration tables (accuracy correction and orthogonality correction) are kept in <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> on the stages.</p>
+            <p>In the <span class="procedureTerm">Restore <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span></span> dialog box, you restore configuration data from the stage connected to Axis X. You do not restore data from Axis Y.</p>
+            <p>The orthogonality correction table for Axis X and Axis Y on the controller is removed. The accuracy correction table for Axis X is transferred from <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> to the controller. The accuracy correction table for Axis Y stays the same on the controller.</p>
+        </div>
+        <div class="example">
+            <p class="For_example_Head">Example 2</p>
+            <p>The controller has 2D calibration for Axes X, Y, and Z. One table contains corrections for Axis X and Axis Y. A different table contains corrections for Axis Y and Axis Z.</p>
+            <p>You connect stages that support <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> to Axis X and Axis Z. The stages contain a 2D table that corrects Axis X and Axis Z.</p>
+            <p>In the <span class="procedureTerm">Restore <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span></span> dialog box, you restore configuration data from the stages connected to Axis X and Axis Z. Axis Y does not show and cannot be selected because a <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stage is not connected to it.</p>
+            <p>Both tables on the controller are removed, which has an effect on the calibration of Axis Y. The table that corrects Axis X and Axis Y must be removed because data is being restored for Axis X. The table that corrects Axis Y and Axis Z must be removed because data is being restored for Axis Z.</p>
+            <p>The calibration data that corrects Axis X and Axis Z is transferred from <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> to the controller.</p>
+        </div>
+        <div>
+            <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+            <p class="relatedTopic"><a href="CM_Configuration_Manager_Overview.htm" class="MCXref_0">Configuration Manager Overview</a>
+            </p>
+            <p class="relatedTopic"><a href="FlashConfig_Overview.htm" class="MCXref_0">FlashConfig Overview</a>
+            </p>
+        </div>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=FlashConfig_Data.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=FlashConfig_Data.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

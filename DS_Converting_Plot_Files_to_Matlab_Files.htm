@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Digital Scope" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:conditions="ApplicationsSections.DigitalScope" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Converting Plot Files to Matlab Files</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="DS_Digital_Scope_Application.htm">Digital Scope</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Converting Plot Files to Matlab Files</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2768"></a>Converting Plot Files to Matlab Files</h1>
+        <p><span class="AerotechVariablesApp_DigScope">Digital Scope</span><a name="kanchor2769"></a> can convert your plot files to <span class="AerotechVariablesSimpleName_MATLAB">MATLAB</span> files. You can access this ability by using the command line to call the <span class="AerotechVariablesApp_DigScope">Digital Scope</span> executable file with a series of arguments, which are explained in the following sections. You can find the <span class="AerotechVariablesApp_DigScope">Digital Scope</span> executable file in the [Installation Directory]\bin folder. </p>
+        <table style="width: 660px;mc-table-style: url('Resources/TableStyles/Syntax.css');margin-left: 0;margin-right: auto;" class="TableStyle-Syntax" cellspacing="0">
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre xml:space="preserve">digitalscope -matlab <span class="commandArgument">&lt;InputFile&gt;</span> [-dominantunit <span class="commandArgument">&lt;DominantUnit&gt;</span>] 
+[-dependentunit <span class="commandArgument">&lt;DependentUnit&gt;</span>] [-timeunit <span class="commandArgument">&lt;TimeUnit&gt;</span>] 
+[-o <span class="commandArgument">&lt;OutputFile&gt;</span>] [-silent] [-responsetype <span class="commandArgument">&lt;ResponseType&gt;</span>]</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example: </p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">digitalscope -matlab "c:\plot files\A3200Data.plta" -dominantunit 3 
+-dependentunit 2 -timeunit 2
+; Converts a plot file to a matlab data file 
+; ("c:\plot files\A3200Data.mat") using dominant primary units,  
+; dependent primary units / 1000 and milliseconds. If 
+; "c:\plot files\A3200Data.mat" exists, the user will be prompted to 
+; choose whether or not it is overwritten.
+digitalscope -matlab "c:\plot files\A3200Data.plta" 
+-o  "c:\plot files\A3200Output.mat"
+; Converts a plot file to a matlab data file 
+; ("c:\plot files\A3200Output.mat"). No unit conversion will be done so 
+; the matlab data units will be counts and seconds. If 
+; "c:\plot files\A3200Data.mat" exists, the user will be prompted to 
+; choose whether or not it is overwritten.</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Arguments</h3>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="dropDownHotspot_1" href="javascript:void(0);" id="MCDropDownHotSpot_3835828223_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />&lt;InputFile&gt;</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3835828223_0" style="display: none;">
+                <p>This required argument specifies name of the scope or loop transmission file that <span class="AerotechVariablesApp_DigScope">Digital Scope</span> will convert to a <span class="AerotechVariablesSimpleName_MATLAB">MATLAB</span> file.  This argument is always required.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3835828223_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />-dominantunit <span class="commandArgument">&lt;DominantUnit&gt;</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3835828223_1" style="display: none;">
+                <p>This optional argument specifies the units to use in the <span class="AerotechVariablesSimpleName_MATLAB">MATLAB</span> file. The <span class="commandArgument">&lt;DominantUnit&gt;</span> value specifies the units for dominant axes.</p>
+                <table class="TableStyle-Basic" style="margin-left: 0;margin-right: auto;caption-side: top;width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');" cellspacing="0">
+                    <col style="width: 126px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1"><span class="commandArgument">&lt;DominantUnit&gt;</span> Value
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0 </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>  counts (default) </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p> 1  </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p> secondary units   </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p> 2 </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p> secondary units / 1000 </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>3</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>primary units</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>4</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>primary units / 1000</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3835828223_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />-dependentunit <span class="commandArgument">&lt;DependentUnit&gt;</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3835828223_2" style="display: none;">
+                <p>This optional argument specifies the units to use in the <span class="AerotechVariablesSimpleName_MATLAB">MATLAB</span> file. The <span class="commandArgument">&lt;DependentUnit&gt;</span> value specifies the units for dependent axes.</p>
+                <table class="TableStyle-Basic" style="margin-left: 0;margin-right: auto;caption-side: top;width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');" cellspacing="0">
+                    <col style="width: 126px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1"><span class="commandArgument">&lt;DependentUnit&gt;</span> Value
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0 </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>  counts (default) </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>primary units</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>primary units / 1000</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3835828223_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />-timeunit <span class="commandArgument">&lt;TimeUnit&gt;</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3835828223_3" style="display: none;">
+                <p>This optional argument specifies the units for the time data in the <span class="AerotechVariablesSimpleName_MATLAB">MATLAB</span> file.</p>
+                <table class="TableStyle-Basic" style="margin-left: 0;margin-right: auto;caption-side: top;width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');" cellspacing="0">
+                    <col style="width: 126px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1"><span class="commandArgument">&lt;TimeUnit&gt;</span> Value
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p> 0 </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>  minutes </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p> 1 </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>  seconds (default)  </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p> 2 </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>  milliseconds </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3835828223_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />-o <span class="commandArgument">&lt;OutputFile&gt;</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3835828223_4" style="display: none;">
+                <p>This optional argument allows you to specify the name of the <span class="AerotechVariablesSimpleName_MATLAB">MATLAB</span> output file. If you do not specify a name, the resulting output file will have the same name as the input file, but with a <b>.mat</b> extension.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3835828223_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />-silent</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3835828223_5" style="display: none;">
+                <p>By default, <span class="AerotechVariablesApp_DigScope">Digital Scope</span> asks you to confirm that an output file should be overwritten if it already exists. This  optional argument will prevent the application from displaying the prompt and will always cause an existing file to be overwritten.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_3835828223_6" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />-responsetype <span class="commandArgument">&lt;ResponseType&gt;</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_3835828223_6" style="display: none;">
+                <p>This optional argument specifies the response type to use when exporting a Loop Transmission (*.ltda) file.</p>
+                <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;caption-side: top;width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col style="width: 149px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: center;"><span class="commandArgument">&lt;ResponseType&gt;</span> Value
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Open-loop (default)</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>1</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Plant</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>2</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Sensitivity</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>3</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Complementary Sensitivity</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>4</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Process Sensitivity</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>5</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Closed-loop</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>6</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Closed-loop error</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>7</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>PID Controller</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>8</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>PID Controller and Servo Filters</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>9</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Feedforward</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>10</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p>Inverse Feedforward</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=DS_Converting_Plot_Files_to_Matlab_Files.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=DS_Converting_Plot_Files_to_Matlab_Files.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

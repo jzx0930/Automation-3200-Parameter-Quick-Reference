@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Programming Notes|Motion" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Joystick Configuration</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ProgrammingNotes/Constant_Torque.htm">Programming Notes</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Motion_Overview.htm">Motion</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Joystick Configuration</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor991"></a><a name="kanchor992"></a>Joystick Configuration</h1>
+        <p>The following sections describe which parameters to configure for correct joystick operation.</p>
+        <p>After you have successfully configured the joystick, you can activate it by using the <a href="Commands/JOYSTICK_Command.html">JOYSTICK&#160;ON</a>&#160;command. </p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Analog and Digital Input Settings</h2>
+        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> To configure the joystick to the analog inputs that you want, use the <a href="Parameters/JoystickInput0.html">JoystickInput0</a>, <a href="Parameters/JoystickInput1.html">JoystickInput1</a>, and <a href="Parameters/JoystickInput2.html">JoystickInput2</a> axis parameters. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To configure Joystick Button A, Joystick Button B, and Joystick Button C to the digital inputs that you want, configure the <a href="Parameters/JoystickAxesSelect.html">JoystickAxesSelect</a> and <a href="Parameters/JoystickSpeedSelect.html">JoystickSpeedSelect</a> axis parameters as shown in the following table.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Joystick Buttons</p>
+        <table class="TableStyle-Basic" style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;" cellspacing="0">
+            <col style="width: 136px;" class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 189px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                                Button Name
+                            </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                Description
+                            </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                Configuration Parameter(s)
+                            </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">A</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Use this button to change between axis pairs that are specified by the AXISGROUP&#160;keyword of the <a href="Commands/JOYSTICK_Command.html">JOYSTICK</a> command. </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>JoystickAxesSelect</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p class="center">B</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Use this button to change between axis speeds that are specified by the <a href="Parameters/JoystickLowSpeed.html">JoystickLowSpeed</a> and <a href="Parameters/JoystickHighSpeed.html">JoystickHighSpeed</a> axis parameters.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>JoystickSpeedSelect</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p class="center">C</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p>Use this button to cancel or deactivate the joystick. </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>JoystickAxesSelect and JoystickSpeedSelect </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Configure the JoystickInterlock parameter to specify a joystick interlock signal. This safety feature makes sure that joystick motion does not occur from an unconnected analog channel. </p>
+        <p>Some joystick parameter settings are different for each drive type. </p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2340580873_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> with a Standard <span class="AerotechVariablesCompanyName_Short">Aerotech</span> JI Joystick Interface</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2340580873_0" style="display: none;">
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> Joystick Parameters</p>
+                <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 180px;" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 120px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 120px;" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                        Parameter Name
+                                    </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                        Input Type
+                                    </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                                        Axis
+                                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                                        Input Number
+                                    </th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInput0.html">JoystickInput0</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Drive Analog</p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="5" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Number of the axis on which the joystick is connected</p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">0</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInput1.html">JoystickInput1</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Drive Analog</p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">1</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickAxesSelect.html">JoystickAxesSelect</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">0</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickSpeedSelect.html">JoystickSpeedSelect</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">1</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInterlock.html">JoystickInterlock</a>
+                            </p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td valign="middle" class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">2</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2340580873_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Npaq with a Standard <span class="AerotechVariablesCompanyName_Short">Aerotech</span> JI Joystick Interface</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2340580873_1" style="display: none;">
+                <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This section does not apply to the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="AerotechVariablesSimpleName_Npaq">Npaq</span> Joystick Parameters</p>
+                <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 180px;" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 120px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 120px;" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        Parameter Name
+                                    </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        Input Type
+                                    </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                                        Axis
+                                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                                        Input Number
+                                    </th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInput0.html">JoystickInput0</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Analog</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 1</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">0</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInput1.html">JoystickInput1</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Analog</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 1</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">1</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickAxesSelect.html">JoystickAxesSelect</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">8</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickSpeedSelect.html">JoystickSpeedSelect</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">9</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInterlock.html">JoystickInterlock</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>Axis 0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">10</p>
+                        </td>
+                    </tr>
+                </table>
+                <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">Note:</span> When configuring a joystick for the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>, you must also set the <a href="Parameters/IOSetup.html">IOSetup</a> parameter for the first <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> axis (usually Axis Y). Set the <span class="procedureTerm">Analog Input 0 Range</span> and <span class="procedureTerm">Analog Input 1 Range</span> settings to <span class="procedureTerm">+/- 10 Volts</span>.</p>
+                                <p>If you do not configure the IOSetup parameter, the analog input range will not be sufficient to accommodate the entire voltage range of the analog joystick.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2340580873_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_Nservo">Nservo</span> with a Standard <span class="AerotechVariablesCompanyName_Short">Aerotech</span> JI Joystick Interface</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2340580873_2" style="display: none;">
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="AerotechVariablesSimpleName_Nservo">Nservo</span> Joystick Parameters</p>
+                <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 180px;" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 120px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 120px;" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        Parameter Name
+                                    </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        Input Type
+                                    </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                                        Axis
+                                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                                        Input Number
+                                    </th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInput0.html">JoystickInput0</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Analog</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 1</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">1</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInput1.html">JoystickInput1</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Analog</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 1</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">0</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickAxesSelect.html">JoystickAxesSelect</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">8</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickSpeedSelect.html">JoystickSpeedSelect</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">9</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInterlock.html">JoystickInterlock</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>Axis 0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">10</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2340580873_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesDriveType_XC2">XC2</span>, <span class="AerotechVariablesDriveType_XC4">XC4</span>, or <span class="AerotechVariablesDriveType_XC4e">XC4e</span> with a Standard <span class="AerotechVariablesCompanyName_Short">Aerotech</span> Multi-Axis  Joystick Interface</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2340580873_3" style="display: none;">
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="AerotechVariablesDriveType_XC4">XC4</span> and <span class="AerotechVariablesDriveType_XC4e">XC4e</span> Joystick Parameters</p>
+                <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 180px;" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 120px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 120px;" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        Parameter Name
+                                    </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        Input Type
+                                    </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                                        Axis
+                                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                                        Input Number
+                                    </th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInput0.html">JoystickInput0</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Analog</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" colspan="2" rowspan="5" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                            <p>The values for Axis and Input Number are different for different system configurations. </p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInput1.html">JoystickInput1</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Analog</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickAxesSelect.html">JoystickAxesSelect</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickSpeedSelect.html">JoystickSpeedSelect</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInterlock.html">JoystickInterlock</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2340580873_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesDriveType_XR3">XR3</span> with a Standard <span class="AerotechVariablesCompanyName_Short">Aerotech</span> Multi-Axis Joystick Interface</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2340580873_4" style="display: none;">
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="AerotechVariablesDriveType_XR3">XR3</span> Joystick Parameters</p>
+                <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 180px;" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 120px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 120px;" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        Parameter Name
+                                    </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">
+                                        Input Type
+                                    </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                                        Axis
+                                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                                        Input Number
+                                    </th>
+                        </tr>
+                    </thead>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInput0.html">JoystickInput0</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Analog</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">0</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInput1.html">JoystickInput1</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Analog</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">1</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickAxesSelect.html">JoystickAxesSelect</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">16</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickSpeedSelect.html">JoystickSpeedSelect</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p class="center">Axis 0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">17</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><a href="Parameters/JoystickInterlock.html">JoystickInterlock</a>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p>Drive Digital</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                            <p>Axis 0</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                            <p class="center">18</p>
+                        </td>
+                    </tr>
+                </table>
+                <p>&#160;</p>
+            </div>
+        </div>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Voltage Settings (Optional)</h2>
+        <p>You can use the following parameters to specify a voltage range for the joystick. </p>
+        <ul>
+            <li value="1"><a href="Parameters/JoystickInput0MinVoltage.html">JoystickInput0MinVoltage</a>
+            </li>
+            <li value="2"><a href="Parameters/JoystickInput0MaxVoltage.html">JoystickInput0MaxVoltage</a>
+            </li>
+            <li value="3"><a href="Parameters/JoystickInput0Deadband.html">JoystickInput0Deadband</a>
+            </li>
+            <li value="4"><a href="Parameters/JoystickInput1MinVoltage.html">JoystickInput1MinVoltage</a>
+            </li>
+            <li value="5"><a href="Parameters/JoystickInput1MaxVoltage.html">JoystickInput1MaxVoltage</a>
+            </li>
+            <li value="6"><a href="Parameters/JoystickInput1Deadband.html">JoystickInput1Deadband</a>
+            </li>
+            <li value="7"><a href="Parameters/JoystickInput2MinVoltage.html">JoystickInput2MinVoltage</a>
+            </li>
+            <li value="8"><a href="Parameters/JoystickInput2MaxVoltage.html">JoystickInput2MaxVoltage</a>
+            </li>
+            <li value="9"><a href="Parameters/JoystickInput2Deadband.html">JoystickInput2Deadband</a>
+            </li>
+        </ul>
+        <p>Calculate the center voltage for a joystick input by using the MinVoltage and MaxVoltage parameters. The MinVoltage and MaxVoltage defaults are set to 0V and 5V, which gives a central voltage of 2.5V. Use the Deadband parameters to specify a voltage range in which the joystick is in the center position and no motion occurs. The default Deadband parameters are set to 0.1V, which means that motion will not occur when the joystick voltage is between 2.4V and 2.6V. </p>
+        <p>When you first issue the JOYSTICK command, the joystick (including Joystick Buttons A, B, and C) is not active and will not take control of the axes until all joystick analog inputs are within the deadband range. The deadband range is ± one voltage deadband (set deadband range with the Deadband parameters) of the central voltage of the joystick range (set joystick range with MinVoltage and MaxVoltage parameters). For example, with default parameter values, if the joystick is being held so the voltage on the vertical input is 5 volts, the joystick will not control the axes until the voltage returns to within the range of 2.4V to 2.6V.</p>
+        <p>After you issue the JOYSTICK command and the joystick is controlling the axes, Joystick Buttons B and C will function at any time. However, Button A will only function if the joystick is in the deadband when you press the button. </p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Feedrate Settings</h2>
+        <p>The <span class="AerotechVariablesSimpleName_A3200">A3200</span> supplies two joystick speed ranges that you can configure with parameters that follow. When you activate the joystick, the joystick initially operates in the low speed range. To change between the low and high-speed ranges, use the joystick button defined by the JoystickSpeedSelect parameter&#160;(typically Joystick Button B). </p>
+        <ul>
+            <li value="1"><a href="Parameters/JoystickLowSpeed.html">JoystickLowSpeed</a>
+            </li>
+            <li value="2"><a href="Parameters/JoystickHighSpeed.html">JoystickHighSpeed</a>
+            </li>
+        </ul>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Axis Group Settings</h2>
+        <p>Use the AXISGROUP keyword of the JOYSTICK command to configure axis groups. One set of axes must be defined as an axis group. If you do not designate an axis group with the JOYSTICK command, you will receive a task error when you activate the joystick.</p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example: Configure an Axis Group</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+' Use the X and Y axes to configure a 2D joystick axis group.
+JOYSTICK 2D AXISGROUP 0 X Y
+' Use the X, Y, and Z axes to configure a 3D joystick axis group.
+JOYSTICK 3D AXISGROUP 0 X Y&#160;Z</pre>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Commands/JOYSTICK_Command.html">JOYSTICK Command</a>&#160;</p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Joystick_Configuration.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Joystick_Configuration.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

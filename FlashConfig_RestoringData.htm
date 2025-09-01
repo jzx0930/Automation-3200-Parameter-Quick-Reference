@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|FlashConfig" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Restoring FlashConfig Data</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="FlashConfig_Overview.htm">FlashConfig</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Restoring FlashConfig Data</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Restoring <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> Data</h1>
+        <p><a name="kanchor726"></a>When you connect a stage that has <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> to a drive that supports <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span>, you can restore the controller with the data used at the factory to initially configure the axis. If you purchased integration from <span class="AerotechVariablesCompanyName_Short">Aerotech</span>, you can restore axis parameters, calculator information, and calibration data (if applicable). If you did not purchase integration, you can restore calculator information.</p>
+        <p>The data stored in <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> is also used to sense if you connect a new stage, connect a stage to a different drive, or disconnect a stage. If the controller senses one of these conditions, you must resolve the mismatch condition before you can restore individual axes with the data that is stored in <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> on the stage. Refer to <a href="FlashConfig_ResolvingMismatches.htm" class="MCXref_0">Resolving FlashConfig Mismatches</a>.</p>
+        <p>For information on the types of data that are kept in <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span>, refer to<a href="FlashConfig_Data.htm"> <a href="FlashConfig_Data.htm" class="MCXref_0">FlashConfig Data</a></a>.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');width: 650px;" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> You might not be able to restore 2D calibration from a stage that supports <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> if the number of corrections used to initially calibrate the stage is greater than the maximum calibration table size that can be stored in <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span>. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_1627622268_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                Figure: Restore FlashConfig Dialog Box<![CDATA[            ]]></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1627622268_0" style="display: none;">
+                <p>
+                    <img src="Resources/Images/Image_FlashConfig_Restore_A.png" class="ScreenshotBorder" />
+                </p>
+            </div>
+        </div>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To restore data from FlashConfig</h4>
+        <ol>
+            <li value="1">Open <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> and connect to a controller.</li>
+            <li value="2">In the <span class="procedureTerm">Network Explorer</span>, select the controller.</li>
+            <li value="3">On the toolbar, click the <span class="procedureTerm"><span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span></span> button <img src="Resources/Images/Icons/ApplyFlashConfig16x16.png" />. </li>
+            <li value="4">In the <span class="procedureTerm">Restore <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span></span> dialog box, review the types of data that are kept in <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> for each connected axis. </li>
+            <li value="5">Select the check box for each axis that you want to restore with <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> data. When you click <span class="procedureTerm">Restore</span>, the data from the stage overwrites the data on the controller for each axis that you select. </li>
+            <li value="6">
+                <p>If <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> contains valid calibration data, review the changes that you want to make to <span class="procedureTerm">Existing Calibration</span>.</p>
+            </li>
+            <li value="7">Click <span class="procedureTerm">Restore</span>. For the selected axes, the data from the stage is restored to the controller. </li>
+            <li value="8">If you are prompted to commit parameters or reset the controller, click <span class="procedureTerm">Yes</span>. After the controller resets, the restore is complete. You can enable and use the axis.</li>
+        </ol>
+        <p> You can change the parameters that were transferred from the stage to the controller by editing the parameters in <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> or by tuning the axis in <span class="AerotechVariablesApp_DigScope">Digital Scope</span>.</p>
+        <p>FlashConfig creates a backup of any data on the controller that is overwritten during the restore operation. The backup file is saved in the User Files directory. </p>
+        <div>
+            <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+            <p class="relatedTopic"><a href="CM_Configuration_Manager_Overview.htm" class="MCXref_0">Configuration Manager Overview</a>
+            </p>
+            <p class="relatedTopic"><a href="FlashConfig_Overview.htm" class="MCXref_0">FlashConfig Overview</a>
+            </p>
+        </div>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=FlashConfig_RestoringData.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=FlashConfig_RestoringData.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

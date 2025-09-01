@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Digital Scope" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:conditions="ApplicationsSections.DigitalScope" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Position Error Conditional Plotting</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="DS_Digital_Scope_Application.htm">Digital Scope</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Position Error Conditional Plotting</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2784"></a>Position Error <a name="kanchor2785"></a>Conditional Plotting</h1>
+        <p>You can use Position Error Conditional <a name="kanchor2786"></a>Plot Formatting to make an analysis of the quantity of error in your data based on a defined threshold. With this information, you can determine if the quantity of error that is caused is acceptable, or if you need to adjust the source of the data in order to cause less error.</p>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To access Position Error Conditional Plot Formatting in <a name="kanchor2787"></a><span class="AerotechVariablesApp_DigScope">Digital Scope</span></h4>
+        <ol>
+            <li value="1">In <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>, select <span class="procedureTerm">Tools</span> &#8594; <span class="procedureTerm"><span class="AerotechVariablesApp_DigScope">Digital Scope</span></span>. The <span class="BodyText_bold" style="font-weight: normal;">Digital Scope</span> application comes into view.</li>
+            <li class="noBulletLevel1">
+                <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3495258047_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: <span class="AerotechVariablesApp_DigScope">Digital Scope</span></a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3495258047_0" style="display: none;">
+                        <p class="noBulletLevel1">
+                            <img src="Resources/Images/Image_Digital_Scope_Utility_A32.png" MadCap:conditions="AerotechConditions.A3200Only" class="ScreenshotBorder" />
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li value="2">In <span class="AerotechVariablesApp_DigScope">Digital Scope</span>, select <span class="procedureTerm">Configuration </span>&#8594; <span class="procedureTerm">Conditional Plotting</span>. The <span class="procedureTerm">Conditional Plot Formatting</span> dialog comes into view.</li>
+            <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3495258047_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: <span class="AerotechVariablesApp_DigScope">Digital Scope</span> Conditional Plot Formatting
+                </a>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_3495258047_1" style="display: none;">
+                    <p class="noBulletLevel1">
+                        <img src="Resources/Images/Image_DS_Conditional_Plot_Formatting_A32.png" class="ScreenshotBorder" />
+                    </p>
+                </div>
+            </div>
+        </ol>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>1D Plots</h2>
+        <ul>
+            <li value="1">The conditional plot formatting has an effect only on the position-error signals. </li>
+            <li value="2">The colors of position-error signals change to the <span class="procedureTerm">Conditional Format Color</span> when the values of the position-error signals exceed the <span class="procedureTerm">In Position Threshold</span>. </li>
+            <li class="noBulletLevel1">
+                <div class="MCDropDown_noBulletLevel1_0"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_3495258047_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+              Figure: <span class="AerotechVariablesApp_DigScope">Digital Scope</span> Conditional Format Color
+            </a>
+                    <div class="MCDropDownBody_0" id="MCDropDownBody_3495258047_2" style="display: none;">
+                        <p>
+                            <img src="Resources/Images/Image_DS_Conditional_Format_Color_A32.png" class="ScreenshotBorder" />
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li value="3">The section of the position-error signal that is outside the In Position Threshold is in the Conditional Format Color. </li>
+            <li value="4">The section of the plot that is within the In Position Threshold is in the original signal color. </li>
+        </ul>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>1D Plot Formatting</h2>
+        <p>In the <span class="procedureTerm">1D Error Formatting Options</span> section of the <span class="procedureTerm">Conditional Plot Formatting</span> dialog, you can select either the <span class="procedureTerm">Step and Settle</span> or <span class="procedureTerm">Contouring</span> option for 1D plot formatting.</p>
+        <ul>
+            <li value="1"><span class="procedureTerm">Step and Settle</span> formatting applies only when the value of the Velocity Command signal is zero. This formatting has an effect only when the stage stops being in motion. For <span class="AerotechVariablesApp_DigScope">Digital Scope</span> to apply <span class="procedureTerm">Step and Settle</span> formatting correctly, you must collect the Velocity Command signal. For information about how to collect signals in a 1D plot, refer to the <span class="bold">Collecting Signals and Configuring a Plot</span> section of <a href="DS_Data_Collection.htm">Data Collection in <span class="AerotechVariablesApp_DigScope">Digital Scope</span></a>.</li>
+            <li value="2"><span class="procedureTerm">Contouring</span> mode formatting applies at all times. In this mode, the value of the Velocity Command signal does not have an effect on conditional plot formatting. If this signal is the original color, then the error is within the In Position threshold. If this signal is the Conditional Format Color, then the error exceeds the In Position Threshold.</li>
+        </ul>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>2D Plots</h2>
+        <p>The <span class="procedureTerm">In Position Threshold</span> is the maximum allowable vector difference between the Position Command and Position Feedback signals on the axes that are being plotted.</p>
+        <ul>
+            <li value="1">All vector differences between these signals that exceed the In Position Threshold are in the Conditional Format Color.</li>
+            <li value="2">All vector differences between these signals that stay within the In Position Threshold are in the original signal colors.</li>
+        </ul>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="DS_Conditional_Plotting.htm">Conditional Plotting</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=DS_Position_Error_Conditional_Plotting.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=DS_Position_Error_Conditional_Plotting.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

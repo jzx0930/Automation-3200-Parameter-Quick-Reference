@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Motion Composer" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Debugging Programs in Motion Composer</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Danger.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Warning.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Motion_Composer.htm">Motion Composer</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Debugging Programs</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Debugging Programs in <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span></h1>
+        <p>In <a name="kanchor2683"></a><span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>, you can run more than one program at the same time, but you can only run one program at a time on each task.</p>
+        <table class="TableStyle_Note" style="mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col style="width: 625px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note:</span> You can test or debug programs without moving the axes.&#160;Refer to <a href="Simulation_of_Motion.htm">Simulation of Motion</a> for more information.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Debug Actions</h2>
+        <p>Debug actions usually apply to the <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program that is associated with the active task. The following actions are on the <span class="procedureTerm">Debug</span> menu in Motion Composer.</p>
+        <table style="mc-table-style: url('Resources/TableStyles/NoLines.css');margin-left: 0;margin-right: auto;" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" style="width: 30px;" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-NoLines-Body-Body1">
+                    <td class="TableStyle-NoLines-BodyE-Column1-Body1" style="border-bottom-style: none;border-bottom-width: 1px;vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: none;border-right-width: 1px;text-align: left;">
+                        <p>
+                            <img src="Resources/Images/Icons/Run16x16.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-NoLines-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: none;border-bottom-width: 1px;">
+                        <p><span class="procedureTerm">Run</span> Runs, or continues to run, the selected <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-NoLines-Body-Body1">
+                    <td class="TableStyle-NoLines-BodyE-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: none;border-right-width: 1px;text-align: left;">
+                        <p>
+                            <img src="Resources/Images/Icons/Pause16x16.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-NoLines-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="procedureTerm">Pause</span> Causes the active  program to pause before it executes the next command. Because the command that is currently running does <span class="bold">not</span> stop, motion might not stop  immediately.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-NoLines-Body-Body1">
+                    <td class="TableStyle-NoLines-BodyE-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: none;border-right-width: 1px;text-align: left;">
+                        <img src="Resources/Images/Icons/Stop16x16.png" />
+                    </td>
+                    <td class="TableStyle-NoLines-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="procedureTerm">Stop</span> Stops executing the program that is associated with the active task.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-NoLines-Body-Body1">
+                    <td class="TableStyle-NoLines-BodyE-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: none;border-right-width: 1px;text-align: left;">
+                        <img src="Resources/Images/Icons/StopAll16x16.png" />
+                    </td>
+                    <td class="TableStyle-NoLines-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="procedureTerm">Stop All</span> Stops executing all programs in all tasks.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-NoLines-Body-Body1">
+                    <td class="TableStyle-NoLines-BodyE-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: none;border-right-width: 1px;text-align: left;">
+                        <p>
+                            <img src="Resources/Images/Icons/StepOver16x16.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-NoLines-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="procedureTerm">Step Over</span> Executes one line of the program that is associated with the active task. If the program line is a subroutine call (CALL or FARCALL), it executes all of the subroutine and moves to the next program line.</p>
+                        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                        <p><span class="note">NOTE:</span> <span class="procedureTerm">Step Over</span> does not  stop on lines in a subroutine unless there are breakpoints in the subroutine.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-NoLines-Body-Body1">
+                    <td class="TableStyle-NoLines-BodyE-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: none;border-right-width: 1px;text-align: left;">
+                        <p>
+                            <img src="Resources/Images/Icons/StepInto16x16.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-NoLines-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="procedureTerm">Step Into</span> Executes one line of the program that is associated with the active task. If the program line is a subroutine call (CALL or FARCALL), it steps one level into the subroutine. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-NoLines-Body-Body1">
+                    <td class="TableStyle-NoLines-BodyE-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: none;border-right-width: 1px;text-align: left;">
+                        <p>
+                            <img src="Resources/Images/Icons/Breakpoint16x16.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-NoLines-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><a name="Breakpoints"></a><span class="procedureTerm">Toggle Breakpoint</span> To add or remove a breakpoint from a program line, put your cursor on the line, open the <span class="procedureTerm">Debug</span> menu, and select <span class="procedureTerm">Toggle Breakpoint</span>. If the program is running, the breakpoint is set immediately. If the program is not running, the breakpoint is set when the program is loaded.</p>
+                        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                        <p><span class="note">NOTE:</span> Breakpoints on non-executable lines do not cause the program to pause. </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-NoLines-Body-Body1">
+                    <td class="TableStyle-NoLines-BodyE-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: none;border-right-width: 1px;text-align: left;">
+                        <p>
+                            <img src="Resources/Images/Icons/ClearBreakpoints16x16.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-NoLines-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="procedureTerm">Clear All Breakpoints</span> Clears all of the breakpoints in the program that is associated with the active task. If the program is running, the breakpoints are cleared immediately.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-NoLines-Body-Body1">
+                    <td class="TableStyle-NoLines-BodyB-Column1-Body1" style="vertical-align: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-right-style: none;border-right-width: 1px;text-align: left;">
+                        <p>
+                            <img src="Resources/Images/Icons/LineHighlightingEnabled16x16.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-NoLines-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;">
+                        <p><span class="procedureTerm">Toggle Line Highlighting</span>  Select <span class="procedureTerm">Toggle Line Highlighting</span> to tell <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> to either highlight each line that executes or to not highlight each line that executes while a program runs.</p>
+                        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                        <p><span class="note">NOTE:</span> Lines are highlighted when <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> gets status information from the controller, but are not highlighted in real time.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                        <p><span class="note">NOTE:</span>&#160;<span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> always highlights the lines where execution is paused or where an error occurs. <span class="procedureTerm">Toggle Line Highlighting</span> does not change this behavior.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2684"></a>Variable Watch</h2>
+        <p>To open the Variable Watch window, click the <span class="procedureTerm">Variable Watch</span> tab.</p>
+        <p MadCap:conditions="AerotechConditions.Option_MainA3200">
+            <img src="Resources/Images/Image_CM_VariableWatchWindow.png" />
+        </p>
+        <p>Use the Variable Watch window to view and edit the value of Global Variables, Task Variables, Program Variables, Virtual Binary I/O Bits, and Virtual I/O Registers.</p>
+        <p>To add a variable to the Watch window, in the <span class="procedureTerm">Name </span>column, click the cell and type the name of the variable. The name is case-insensitive. If the variable can be resolved, the Value, Type, Address, and Context cells are populated automatically.</p>
+        <p>Each variable value in the Watch Window updates when you change the current task selection, when you change the current task state, or when you click the <span class="procedureTerm">Update Now</span> button <img src="Resources/Images/Icons/Refresh16x16.png" />. To have variable values continuously update, click the <span class="procedureTerm">Turn on Continuous Updating</span> <img src="Resources/Images/Icons/Play16x16.png" /> button . To stop continuous updates, click the <span class="procedureTerm">Turn off Continuous Updating</span> button <img src="Resources/Images/Icons/Stop16x16.png" />.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note:</span> Task variables are resolved using the current task.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                <col style="width: 650px;" />
+                <tbody>
+                    <tr>
+                        <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note:</span> Program variables are resolved using the program that is associated on the current task.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p>
+            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                <col style="width: 650px;" />
+                <tbody>
+                    <tr>
+                        <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note:</span> You can add only the individual elements of Program Array variables to the watch window.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p>To edit a variable in the Watch window, in the <span class="procedureTerm">Value</span> column, click the cell and type the new value.</p>
+        <p>To remove a variable from the Watch window, in the <span class="procedureTerm">Name</span> column, click the cell and delete the text.</p>
+        <p>
+            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                <col style="width: 650px;" />
+                <tbody>
+                    <tr>
+                        <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note:</span> To put a <span class="procedureTerm">Name</span> or <span class="procedureTerm">Value</span> cell in Edit mode, select the cell and press <span class="procedureTerm">F2</span> on your keyboard. </td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2685"></a>Setting the <a name="kanchor2686"></a>Next Program Line</h2>
+        <table class="TableStyle-Danger" style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Danger.css');" cellspacing="0">
+            <col style="width: 50px;" class="TableStyle-Danger-Column-Column1" />
+            <col style="width: 589px;" class="TableStyle-Danger-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Danger-Body-Body1">
+                    <td class="TableStyle-Danger-BodyB-Column1-Body1">
+                        <img src="Resources/Images/Common/Symbol_Danger.png" />
+                    </td>
+                    <td class="TableStyle-Danger-BodyA-Column2-Body1">
+                        <p><span class="danger">Danger:</span> Setting the program line can cause unpredictable and possibly dangerous machine operation. Make sure that all of the code necessary for the correct and safe operation of your system will be executed after your program starts on the line that you select. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-Warning" style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Warning.css');" cellspacing="0">
+            <col style="width: 50px;" class="TableStyle-Warning-Column-Column1" />
+            <col style="width: 589px;" class="TableStyle-Warning-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Warning-Body-Body1">
+                    <td class="TableStyle-Warning-BodyB-Column1-Body1">
+                        <img src="Resources/Images/Common/Symbol_Warning.png" />
+                    </td>
+                    <td class="TableStyle-Warning-BodyA-Column2-Body1">
+                        <p><span class="warning">Warning:</span> If you are not sure how to correctly use this setting, contact <span class="AerotechVariablesCompanyName_Short">Aerotech</span>&#160;<MadCap:conditionalText MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.MotorSizerOnly,AerotechConditions.LensProOnly,AerotechConditions.GalvoCalibrationFileConverterOnly,AerotechConditions.CADFusionOnly"><a href="Technical_Support.htm" class="MCXref_0">Global Technical Support</a></MadCap:conditionalText>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You can set the next program line only when the task is in one of the following states.</p>
+        <ul>
+            <li value="1">Program Ready</li>
+            <li value="2">Program Paused</li>
+            <li value="3">Program Complete</li>
+        </ul>
+        <p MadCap:conditions="AerotechConditions.Option_MainA3200">To set the next program line, right-click on the line and then click <span class="procedureTerm">Set As Next Program Line</span>.</p>
+        <p>The current-line indicator moves to the line that you select. When the program runs, the program execution begins on that line. </p>
+        <p>After the Set As Next Program Line function is called, the task is in the Program Paused state. </p>
+        <table class="TableStyle_Note" style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> If you select a program line that is non-executable, such as a comment, the next executable program line is set as the next line that the program executes when the program runs.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Motion_Composer_Editing_Programs.htm">Editing Programs in <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span></a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Motion_Composer_Debugging_Programs.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Motion_Composer_Debugging_Programs.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

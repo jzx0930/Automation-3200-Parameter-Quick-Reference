@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Controller Configuration|FlashConfig" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Resolving FlashConfig Mismatches</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Warning.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Controller_Configuration.htm">Controller Configuration</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="FlashConfig_Overview.htm">FlashConfig</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Resolving FlashConfig Mismatches</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>Resolving <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> Mismatches</h1>
+        <p><a name="kanchor722"></a>When you change which <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> drives and stages are connected to your controller, you must change the <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> settings in <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>. Each time the controller is powered on or is reset, it senses the following conditions for each axis.</p>
+        <ul>
+            <li value="1">A <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stage was added.</li>
+            <li value="2">A <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stage was connected to a different drive.</li>
+            <li value="3">A <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stage is no longer connected.</li>
+        </ul>
+        <p>These conditions cause a <a name="kanchor723"></a>mismatch between the serial number of the stage and the value of the <a href="Parameters/RequiredStageSerialNumber.html" class="MCXref_0">RequiredStageSerialNumber Parameter</a>. You cannot enable the axis until you open the <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> dialog box in <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> and resolve the mismatch condition. Until you resolve the mismatch condition, when you try to enable the axis you get a <a href="Errors/RequiredStageSerialMismatch.html">RequiredStageSerialMismatch</a> error. </p>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To open the <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> dialog box</h4>
+        <ol>
+            <li value="1">Open <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> and connect to a controller.</li>
+            <li value="2">In the <span class="procedureTerm">Network Explorer</span>, select the controller.</li>
+            <li value="3">On the toolbar, click the <span class="procedureTerm"><span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span></span> button <img src="Resources/Images/Icons/ApplyFlashConfig16x16.png" />.</li>
+        </ol>
+        <p>The dialog box that shows is different if you connected new <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stages or if you changed or disconnected <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stages.</p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>New <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> Stages Detected</h2>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_768839586_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                Figure: New <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> Stages Detected</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_768839586_0" style="display: none;">
+                <p>
+                    <img src="Resources/Images/Image_FlashConfig_NewStagesDetected_A.png" class="ScreenshotBorder" />
+                </p>
+            </div>
+        </div>
+        <p>When you connect a new <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stage to your controller and click the <span class="procedureTerm"><span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span></span> button in <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>, you see the <a name="kanchor724"></a><span class="procedureTerm">New <span style="mc-tag-and-class: span;" class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> Stages Detected</span> dialog box.  The axes with new stages are identified with a warning icon in the grid at the top of the dialog box. You have the following options. </p>
+        <ul>
+            <li value="1"><span class="bold">Transfer</span> the configuration data from the new stages to the controller. For each axis, the configuration data on the controller is overwritten by the <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> data from the stage. </li>
+            <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_768839586_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />To transfer <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> data</a>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_768839586_1" style="display: none;">
+                    <ol>
+                        <li class="TopMargin" value="1">If <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> contains valid calibration data, review the changes that you want to make to <span class="procedureTerm">Existing Calibration</span>.</li>
+                        <li value="2">In the <span class="procedureTerm">New <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> Stages Detected</span> dialog box, click <span class="procedureTerm">Transfer &gt;</span>.</li>
+                        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_768839586_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                                Figure: New FlashConfig Stages — Transfer
+                            </a>
+                            <div class="MCDropDownBody_0" id="MCDropDownBody_768839586_2" style="display: none;">
+                                <p>
+                                    <img src="Resources/Images/Image_FlashConfig_NewStages_Transfer_A.png" class="ScreenshotBorder" />
+                                </p>
+                            </div>
+                        </div>
+                        <li value="3">Review the types of data that are kept in <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> for each new stage. 
+						<ul class="disc"><li value="1"><span class="bold">Valid</span> When you click <span class="procedureTerm">Transfer</span>, all of the data that is identified as <span class="procedureTerm">Valid</span> transfers from the stage and overwrites the data on the controller.</li><li value="2"><span class="bold">No data</span> The stage does not contain that type of data. When you click <span class="procedureTerm">Transfer</span>, the data on the controller stays the same for that data type on that axis. </li></ul></li>
+                        <li value="4">Click <span class="procedureTerm">Transfer</span>. The data transfers from the stage to the controller. </li>
+                        <li value="5">If you are prompted to commit parameters or reset the controller, click <span class="procedureTerm">Yes</span>. After the controller resets, the transfer is complete. You can enable and use the axis.</li>
+                    </ol>
+                </div>
+            </div>
+            <p> You can change the parameters that were transferred from the stage to the controller by editing the parameters in <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> or by tuning the axis in <span class="AerotechVariablesApp_DigScope">Digital Scope</span>.</p>
+            <li value="2"><span class="bold">Ignore</span> the configuration data from the new stages. For each axis, the configuration data on the controller stays the same and no data is transferred from the stages. You can always restore the controller with the data used at the factory to initially configure the axis. Refer to <a href="FlashConfig_RestoringData.htm" class="MCXref_0">Restoring FlashConfig Data</a></li>
+            <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_768839586_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />To Ignore <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> data</a>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_768839586_3" style="display: none;">
+                    <ol>
+                        <li class="TopMargin" value="1">In the <span class="procedureTerm">New <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> Stages Detected</span> dialog box, click <span class="procedureTerm">Ignore</span>.</li>
+                        <li value="2">If you are prompted to commit parameters or reset the controller, click <span class="procedureTerm">Yes</span>. No data is transferred. After the controller resets, you can enable and use the axis. </li>
+                    </ol>
+                </div>
+            </div>
+        </ul>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Changed or Disconnected <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> Stages</h2>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_768839586_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                Figure: Stage Serial Number Mismatch            </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_768839586_4" style="display: none;">
+                <p>
+                    <img src="Resources/Images/Image_FlashConfig_StageSerialNumberMismatch_MoreOptions_A.png" class="ScreenshotBorder" />
+                </p>
+            </div>
+        </div>
+        <p>If you connect a different stage to a drive or if you disconnect a stage, when you click the <span class="procedureTerm"><span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span></span> button in <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> you see the<a name="kanchor725"></a> <span class="procedureTerm">Stage Serial Number Mismatch</span> dialog box. The axes that are not connected as expected and axes that are missing are identified with a warning icon in the grid at the top of the dialog box. Use the information supplied in the grid to correct the connection of these <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stages to your controller. </p>
+        <table style="mc-table-style: url('Resources/TableStyles/Warning.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle-Warning" cellspacing="0">
+            <col style="width: 50px;" class="TableStyle-Warning-Column-Column1" />
+            <col class="TableStyle-Warning-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Warning-Body-Body1">
+                    <td class="TableStyle-Warning-BodyB-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/Symbol_Warning.png" />
+                    </td>
+                    <td class="TableStyle-Warning-BodyA-Column2-Body1">
+                        <p><span class="warning">Warning:</span> If you purchased integration for your system, always use the information in the interconnect drawing supplied by <span class="AerotechVariablesCompanyName_Short">Aerotech</span> to connect the stages to the drives.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If you replaced a <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stage with an identical stage, or if you want to stop using a <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stage, you might want to use the stages as they are connected. Before you can enable these axes, you must resolve the mismatch condition. You have the following options. </p>
+        <ul>
+            <li value="1"><span class="bold">Transfer</span> the configuration data from the stage to the controller for the stages that are connected to different drives. For each axis, the configuration data that is on the controller is overwritten by the <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> data from the stage. </li>
+            <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_768839586_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />To transfer <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> data</a>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_768839586_5" style="display: none;">
+                    <ol>
+                        <li class="TopMargin" value="1">In the <span class="procedureTerm">Stage Serial Number Mismatch</span> dialog box, click <span class="procedureTerm">More Options</span>. </li>
+                        <li value="2">If <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> contains valid calibration data, review the changes that you want to make to <span class="procedureTerm">Existing Calibration</span>.</li>
+                        <li value="3">Click <span class="procedureTerm">Transfer &gt;</span>.</li>
+                        <li class="noBulletLevel1">
+                            <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_768839586_6" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                Figure: Unexpected Stages — Transfer          </a>
+                                <div class="MCDropDownBody_0" id="MCDropDownBody_768839586_6" style="display: none;">
+                                    <p>
+                                        <img src="Resources/Images/Image_FlashConfig_StageSerialNumbeMismatch_Transfer_A.png" class="ScreenshotBorder" />
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li value="4">Review the types of data that are kept in <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> for each mismatched axis. 
+						<ul class="disc"><li value="1"><span class="bold">Valid</span> When you click <span class="procedureTerm">Transfer</span>, all of the data that is identified as <span class="procedureTerm">Valid</span> transfers from the stage and overwrites the data on the controller.</li><li value="2"><span class="bold">No data</span> The stage does not contain that type of data. When you click <span class="procedureTerm">Transfer</span>, the data on the controller stays the same for that data type on that axis. </li></ul></li>
+                        <li value="5">Click <span class="procedureTerm">Transfer</span>. The data transfers from the stage to the controller. </li>
+                        <li value="6">If you are prompted to commit parameters or reset the controller, click <span class="procedureTerm">Yes</span>. After the controller resets, the transfer is complete. You can enable and use the axis.</li>
+                    </ol>
+                </div>
+            </div>
+            <p> You can change the parameters that were transferred from the stage to the controller by editing the parameters in <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> or by tuning the axis in <span class="AerotechVariablesApp_DigScope">Digital Scope</span>.</p>
+            <p>If you disconnect a <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> stage from the controller and do not connect another stage for that axis, when you select the transfer option, the data types for that axis are identified as <span class="procedureTerm">No data</span>. The Transfer option has the same result for that axis as if you selected the Ignore  option.</p>
+            <li value="2"><span class="bold">Ignore</span> the configuration data from the stages. For each axis, the configuration data that is on the controller stays the same and no data is transferred from the stages. You can always restore the controller with the data used at the factory to initially configure the axis. Refer to <a href="FlashConfig_RestoringData.htm" class="MCXref_0">Restoring FlashConfig Data</a>.</li>
+            <div class="MCDropDown"><a class="MCDropDownHotSpot_h4_Procedure_0" href="javascript:void(0);" id="MCDropDownHotSpot_768839586_7" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />To Ignore <span class="AerotechVariablesFeature_FlashConfig">FlashConfig</span> data</a>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_768839586_7" style="display: none;">
+                    <ol>
+                        <li class="TopMargin" value="1">In the <span class="procedureTerm">Stage Serial Number Mismatch</span> dialog box, click <span class="procedureTerm">More Options</span>. </li>
+                        <li value="2">Click <span class="procedureTerm">Ignore</span>.</li>
+                        <li value="3">If you are prompted to commit parameters or reset the controller, click <span class="procedureTerm">Yes</span>. No data is transferred. After the controller resets, you can enable and use the axis. </li>
+                    </ol>
+                </div>
+            </div>
+        </ul>
+        <div>
+            <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+            <p class="relatedTopic"><a href="CM_Configuration_Manager_Overview.htm" class="MCXref_0">Configuration Manager Overview</a>
+            </p>
+            <p class="relatedTopic"><a href="FlashConfig_Overview.htm" class="MCXref_0">FlashConfig Overview</a>
+            </p>
+        </div>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=FlashConfig_ResolvingMismatches.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=FlashConfig_ResolvingMismatches.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

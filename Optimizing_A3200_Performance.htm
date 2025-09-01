@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Getting Started|Getting Started" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" class="INtime_MasterPage" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Optimizing A3200 Performance</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Getting_Started.htm">Getting Started</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Getting_Started.htm">Getting Started</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Step 3: Optimizing A3200 Performance</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:conditions="OutputTypeConditions.ScreenOnly" MadCap:autonum=""><span class="autonumber"><span></span></span>
+            <madcap:keyword term="System Performance;Installation;Troubleshooting:Processor Time Performance;Troubleshooting:Optimizing Processing Time Performance;Processor Time Performance;Optimizing Processor Time;Optimizing Processing Time Performance" xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /><a name="kanchor45"></a>Optimizing <span class="AerotechVariablesSimpleName_A3200">A3200</span> Performance</h1>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="GearandCam">DOWNLOAD PDF:</span> To download a PDF version of this topic, go to <a href="http://www.aerotechmotioncontrol.com/ftp/pwpsoftware/manuals_helpfiles/User Guides/User Guides/User Guide for Optimizing Performance.pdf" target="_blank">User Guide for Optimizing Performance</a> on <span class="AerotechVariablesWebAddress">www.aerotech.com</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To get real-time controller performance, the <span class="AerotechVariablesSimpleNameLong_Auto3200">Automation 3200</span> runs alongside <span class="GuidesCompanyBrand_Windows">Windows</span> in the <span class="AerotechVariablesROS_Company">TenAsys</span> <span class="AerotechVariablesROS_Name">INtime</span> real-time operating system.  The <span class="AerotechVariablesSimpleName_A3200">A3200</span> runs on a PC. Thus controller performance, like general <span class="GuidesCompanyBrand_Windows">Windows</span> performance, depends on the PC hardware configuration and the software configuration. The variety of available PCs and the different system configurations of those PCs make it important for you to optimize your system before you use the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. You can also optimize the <span class="AerotechVariablesSimpleName_A3200">A3200</span> controller software.</p>
+        <table class="TableStyle_Note" style="mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p MadCap:conditions="OutputTypeConditions.ScreenOnly"><span class="note">Note:</span> This topic tells you how to optimize the <span class="AerotechVariablesSimpleName_A3200">A3200</span> for real-time use. For information about testing the real-time performance of the <span class="AerotechVariablesSimpleName_A3200">A3200</span>,  refer to <a href="Analyzing_A3200_Performance.htm">Analyzing <span class="AerotechVariablesSimpleName_A3200">A3200</span> Performance</a>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:conditions="OutputTypeConditions.ScreenOnly" MadCap:autonum=""><span class="autonumber"><span></span></span>Optimizing PC Performance</h2>
+        <p MadCap:conditions="OutputTypeConditions.ScreenOnly">To see the PC&#160;configuration recommended by <span class="AerotechVariablesCompanyName_Short">Aerotech</span>, refer to <a href="System_Requirements.htm" class="MCXref_0">System Requirements</a>.</p>
+        <p>The <span class="AerotechVariablesSimpleName_A3200">A3200</span> installation and <span class="AerotechVariablesROS_Name">INtime</span> real-time operating system try to configure your system for the best possible performance. But, you might need to manually change some system settings so that the <span class="AerotechVariablesSimpleName_A3200">A3200</span> has the best possible real-time performance. <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you change the settings that follow. </p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_print_in_h41">
+                <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1422917728_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Configure <span class="AerotechVariablesROS_Name">INtime</span> to run in Dedicated mode
+                 </a>
+                </MadCap:conditionalText>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1422917728_0" style="display: none;">
+                <p>In Dedicated mode, <span class="AerotechVariablesROS_Name">INtime</span> uses one core for real-time controller processing and the other cores for <span class="GuidesCompanyBrand_Windows">Windows</span> processing. <span class="AerotechVariablesSimpleName_A3200">A3200</span> configures <span class="AerotechVariablesROS_Name">INtime</span> to run in <span class="procedureTerm">Dedicated</span> mode by default.</p>
+                <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>
+                To Verify that <span class="AerotechVariablesROS_Name">INtime</span> is Running in Dedicated Mode
+            </h4>
+                <ol>
+                    <li class="TopMargin" value="1">Click <span class="procedureTerm">Start</span>, click <span class="procedureTerm">All Programs</span>, click <span class="procedureTerm"><span class="AerotechVariablesROS_Name">INtime</span></span>, and then select <span class="procedureTerm"><span class="AerotechVariablesROS_Name">INtime</span> Configuration</span>. </li>
+                    <li value="2">Double-click <span class="procedureTerm">Node Management</span>. The <span class="procedureTerm"><span class="AerotechVariablesROS_Name">INtime</span> Node Management</span> dialog comes into view.</li>
+                    <li value="3">Select <span class="procedureTerm">AerotechNode0</span>.</li>
+                    <li value="4">Click the <span class="procedureTerm">System</span> tab. </li>
+                    <li value="5"> Make sure that <span class="procedureTerm">Boot mode</span> is set to <span class="procedureTerm">Dedicated</span>.</li>
+                    <li value="6">Click <span class="procedureTerm">Save</span> and then click <span class="procedureTerm">Close</span>.</li>
+                    <li value="7">Restart your computer. </li>
+                </ol>
+                <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span>&#160;<span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you do not use <span class="procedureTerm">Shared</span> mode because it can cause real-time performance problems on some PC platforms and might not be compatible with some <span class="GuidesCompanyName_Microsoft">Microsoft</span> security updates.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_print_in_h41">
+                <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1422917728_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Uninstall Software That Causes Problems with Real-Time Performance</a>
+                </MadCap:conditionalText>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1422917728_1" style="display: none;">
+                <p>Some software causes problems with the real-time performance of the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. If these problems occur, <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you uninstall this software.</p>
+                <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To Uninstall Software That Causes Problems with real-time performance</h4>
+                <ol>
+                    <li class="TopMargin" value="1">Open <span class="procedureTerm">Control Panel</span></li>
+                    <li value="2">Click <span class="procedureTerm">View By</span> and then select <span class="procedureTerm">Large Icons</span>. Then click <span class="procedureTerm">Programs and Features</span>.</li>
+                    <li value="3">Select and uninstall the software programs that cause problems with the real-time performance of the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. </li>
+                    <ul class="disc">
+                        <li value="1">All software programs from PC manufactures such as ASUS, Dell, GIGABYTE, HP, and Lenovo. Programs known to cause problems are in the list that follows:<ul><li value="1">Dell Precision Optimizer</li><li value="2">Dell OpenManager Client Instrumentation (OCMI)</li><li value="3">GIGABYTE software programs</li></ul></li>
+                        <li value="2">Some antivirus software might cause problems with the real-time performance.</li>
+                    </ul>
+                </ol>
+                <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> For some software programs, the uninstaller might cause BIOS settings to change. After you uninstall the software programs that cause problems, <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you change your PC to use the settings in the <span class="bold">Change Performance Settings in the BIOS/CMOS Setup</span> section.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_print_in_h4_0">
+                <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1422917728_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Change Performance Settings in the BIOS/CMOS Setup</a>
+                </MadCap:conditionalText>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1422917728_2" style="display: none;">
+                <p>Different PC&#160;and BIOS&#160;manufacturers have different procedures to configure the BIOS/CMOS settings. During startup, press <span class="procedureTerm">F1</span>, <span class="procedureTerm">F2</span>, <span class="procedureTerm">F10</span>, <span class="procedureTerm">F12</span>, <span class="procedureTerm">Delete</span>, or <span class="procedureTerm">Esc</span> to configure the BIOS/CMOS settings.</p>
+                <p><span class="AerotechVariablesCompanyName_Short">Aerotech</span> supplies free support for <span class="AerotechVariablesSimpleName_A3200">A3200</span> installation if you purchase an <span class="AerotechVariablesCompanyName_Short">Aerotech</span> industrial PC or an approved PC from the supplier list that follows.<MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"> If you have one of the approved PCs, click the link and use the BIOS settings specific to your PC.</MadCap:conditionalText></p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>PCs Approved by <span class="AerotechVariablesCompanyName_Short">Aerotech</span></h4>
+                <ul>
+                    <li MadCap:conditions="OutputTypeConditions.ScreenOnly" value="1"><a href="BIOSSettings_Advantech.htm">Advantech (AIMB-785 Motherboard)</a>
+                    </li>
+                    <li MadCap:conditions="OutputTypeConditions.ScreenOnly" value="2"><a href="BIOSSettings_BSI.htm">BSI (RMS575-AERO)</a>
+                    </li>
+                    <li MadCap:conditions="OutputTypeConditions.ScreenOnly" value="3"><a href="BIOSSettings_Polywell.htm">Polywell (Aero1650, Aero1763, Aero1960, or Aero2030)</a>
+                    </li>
+                </ul>
+                <p>If you have a PC&#160;that is was not configured by <span class="AerotechVariablesCompanyName_Short">Aerotech</span>, use the information that follows to make changes to your PC to help you run <span class="AerotechVariablesSimpleName_A3200">A3200</span> software. <span class="AerotechVariablesCompanyName_Short">Aerotech</span> does not guarantee the real-time capabilities of a PC that is not approved for <span class="AerotechVariablesSimpleName_A3200">A3200</span> installation because BIOS settings and chip sets are different for each motherboard manufacturer. </p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Recommended Settings for PCs Not Approved by <span class="AerotechVariablesCompanyName_Short">Aerotech</span></p>
+                <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 625px;" class="TableStyle-Basic" cellspacing="0" MadCap:conditions="OutputTypeConditions.ScreenOnly">
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                Feature
+                            </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                Description
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;"><span class="AerotechVariablesCompanyName_Short">Aerotech</span> Recommendations
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Active State Power Management (ASPM), Advanced Configuration and Power Interface (ACPI)</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>These features are power management features that can decrease the power consumption of the PC.</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Disable ASPM, ACPI, or the power management features that apply to the PC. Power management features can decrease real-time performance.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Processor States, Power States, C-States, C2 State, CPU Idle State</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>These features decrease the power consumption of the PC.</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Use the lowest-numbered C-State possible&#160;(C0) or use a High Performance mode. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>SpeedStep (Intel), SpeedShift (Intel), Cool'n'Quiet (AMD), P-States, Hardware P-States (HWP), Power-Performance States</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>These features balance the power consumption and the performance of the PC.</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Disable these features or use the lowest-numbered P-state possible&#160;(P0).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Sleep States, S-States, Suspend States</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>These features manage the sleep, suspend, and standby modes of the PC.</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Use the lowest-numbered S-state possible&#160;(S0 or S1) or use a High Performance mode. If there is a section to Block Sleep, select this option.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Turbo Mode, Turbo Boost, Boost Performance</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Features that use the word&#160;"turbo" usually change the CPU clock rate during operation.</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Disable all features that dynamically change the processor clock rate during execution. Changing this rate during execution can decrease real-time performance.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Hyper-Threading, HT, HTT</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>This Intel feature allows a physical processor core to be virtualized into 2 logical cores.</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Disable hyper-threading. <span class="GuidesCompanyBrand_Windows">Windows</span> executing on one logical core can change the performance of <span class="AerotechVariablesROS_Name">INtime</span> executing on another logical core. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>SMM&#160;(System Management Mode), SMI&#160;(System Management Interrupt)</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>This is an operating mode of the PC that includes error handling, safety functions, security functions, power management, hardware emulation, and system configuration. </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Disable SMM and SMI. They can take processing time from the CPU and can make  <span class="AerotechVariablesROS_Name">INtime</span> performance worse. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>UEFI, EFI, UEFI/EFI partitions/booting/storage</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Unified Extensible Firmware Interface (UEFI) is a firmware interface for PCs designed to replace BIOS. It supplies services that are available to the OS.</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Change this setting only if you have problems with <span class="AerotechVariablesROS_Name">INtime</span> performance. In the BIOS, disable UEFI/EFI partitions and booting. Then, configure the BIOS to use legacy BIOS or legacy boot mode. UEFI booting can cause <span class="GuidesCompanyBrand_Windows">Windows</span> to use System Management Mode to access the BIOS. This takes processing time from the CPU and makes <span class="AerotechVariablesROS_Name">INtime</span> performance worse. If <span class="GuidesCompanyBrand_Windows">Windows</span> is installed and is using a UEFI/EFI partition, you might have to reinstall <span class="GuidesCompanyBrand_Windows">Windows</span> after you change the BIOS configuration.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>TPM 2.0 Security, Trusted Platform Module, Trusted Computing</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>This is a security feature that is available only on some PCs.</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Disable the Trusted Platform Module feature. Access to this feature can cause a System Management Interrupt to occur, which gets processing time from the CPU and makes <span class="AerotechVariablesROS_Name">INtime</span> performance worse.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p> Intel Virtualization, VT, VT-d, Directed I/O</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>This is a virtualization technology that gives virtual machines full access to the hardware.</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Disable virtualization features that can cause problems with <span class="AerotechVariablesROS_Name">INtime</span> performance or with <span class="AerotechVariablesHyperWire">HyperWire</span> card interrupts.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Secure Boot</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Secure Boot is a security feature of the UEFI specification </p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                                <p>Disable Secure Boot.  <span class="AerotechVariablesROS_Name">INtime</span> 6.3 is not compatible with Secure Boot in <span class="GuidesOperatingSystem_Windows10">Windows&#160;10</span>. If Secure Boot is enabled, an error will occur during the  <span class="AerotechVariablesSimpleName_A3200">A3200</span> installation.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_print_in_h4_0">
+                <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1422917728_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Change Power Options in <span class="GuidesCompanyBrand_Windows">Windows</span></a>
+                </MadCap:conditionalText>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1422917728_3" style="display: none;">
+                <p><span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you change some of the power management settings in Microsoft <span class="GuidesCompanyBrand_Windows">Windows</span>. Some of the options in this procedure might not be available on your PC.</p>
+                <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To Configure Power Options for <span class="GuidesOperatingSystem_Windows7">Windows&#160;7</span>, <span class="GuidesOperatingSysem_Windews8_1">Windows&#160;8.1</span>, and <span class="GuidesOperatingSystem_Windows10">Windows&#160;10</span></h4>
+                <ol>
+                    <li class="TopMargin" value="1">Open <span class="procedureTerm">Control Panel</span>.</li>
+                    <li value="2">Click <span class="procedureTerm">View By</span> and then select <span class="procedureTerm">Large Icons</span>. Then click <span class="procedureTerm">Power Options</span>.</li>
+                    <li value="3">Select 
+<span class="procedureTerm">High performance</span>. You might have to expand <span class="procedureTerm">Show additional plans</span> and then select <span class="procedureTerm">High Performance</span>.</li>
+                    <li value="4">Click <span class="procedureTerm">Change plan settings</span>. The <span class="procedureTerm">Edit Plan Settings</span> dialog comes into view.</li>
+                    <li value="5">Configure the settings that follow.
+							<ol><li class="TopMargin" value="1">Set <span class="procedureTerm">Turn off the display</span> to <span class="procedureTerm">Never</span>.</li><li value="2">Set <span class="procedureTerm">Put the computer to sleep</span> to <span class="procedureTerm">Never</span></li><li value="3">Click <span class="procedureTerm">Save Changes</span>.</li></ol></li>
+                    <li value="6">Click <span class="procedureTerm">Change advanced power settings</span>.  The <span class="procedureTerm">Power Options</span> dialog comes into view.</li>
+                    <li value="7">Configure the <span class="GuidesCompanyBrand_Windows">Windows</span> Power Options features as follows. </li>
+                    <ul class="disc">
+                        <li value="1">Hard Disk: Set <span class="procedureTerm">Turn off hard disk after</span> to <span class="procedureTerm">Never</span>.</li>
+                        <li value="2">Sleep:
+                    <ul style="list-style-type: square;"><li class="BulletLevel2" value="1">Set <span class="procedureTerm">Sleep after</span> to <span class="procedureTerm">Never</span>.</li><li class="BulletLevel2" value="2">Set <span class="procedureTerm">Allow hybrid sleep</span> to <span class="procedureTerm">Off</span>.</li><li class="BulletLevel2" value="3">Set <span class="procedureTerm">Hibernate after</span> to <span class="procedureTerm">Never</span>.</li><li class="BulletLevel2" value="4">Set <span class="procedureTerm">Allow wake timers</span> to <span class="procedureTerm">Disable</span>.</li></ul></li>
+                        <li value="3">USB settings: Set <span class="procedureTerm">USB selective suspend setting</span> to <span class="procedureTerm">Disabled</span>.</li>
+                        <li value="4">Power buttons/Sleep buttons: Set all hibernate buttons, power buttons, and sleep buttons to <span class="procedureTerm">Shutdown</span> or <span class="procedureTerm">Do Nothing</span>.</li>
+                        <li value="5">PCI Express: Set <span class="procedureTerm">Link State Power Management</span> to <span class="procedureTerm">Off</span>.</li>
+                        <li value="6">Processor Power Management
+							<ul style="list-style-type: square;"><li class="BulletLevel2" value="1">Set <span class="procedureTerm">Minimum processor state</span> to <span class="procedureTerm">100%</span>.</li><li class="BulletLevel2" value="2">Set <span class="procedureTerm">Maximum processor state</span> to <span class="procedureTerm">100%</span>.</li></ul></li>
+                        <li value="7">Display: Set <span class="procedureTerm">Turn off display after</span> to <span class="procedureTerm">Never</span>.</li>
+                        <li value="8">Disable all other Sleep, Standby, Hibernation, or Lower Power Mode settings that are shown.</li>
+                    </ul>
+                    <li value="8">Click <span class="procedureTerm">Apply</span> and then click <span class="procedureTerm">OK</span>.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_print_in_h4_0">
+                <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1422917728_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Disable <span class="GuidesCompanyBrand_Windows">Windows</span> Fast Startup</a>
+                </MadCap:conditionalText>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1422917728_4" style="display: none;">
+                <p><span class="GuidesOperatingSysem_Windews8_1">Windows&#160;8.1</span> and <span class="GuidesOperatingSystem_Windows10">Windows&#160;10</span> use a boot mode called <span class="bold">Fast Startup</span>, which is enabled by default. When this boot mode is enabled, it can cause problems with <span class="AerotechVariablesROS_Name">INtime</span>. <span class="AerotechVariablesCompanyName_Short">Aerotech</span> strongly recommends that you disable this setting. Some of the options in this procedure might not be available on your PC.</p>
+                <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>
+                To Disable Fast Startup for <span class="GuidesOperatingSysem_Windews8_1">Windows&#160;8.1</span> and <span class="GuidesOperatingSystem_Windows10">Windows&#160;10</span><![CDATA[
+            ]]></h4>
+                <ol>
+                    <li class="TopMargin" value="1">Open <span class="procedureTerm">Control Panel</span>.</li>
+                    <li value="2">Click <span class="procedureTerm">View by</span> and select <span class="procedureTerm">Large icons</span>. Then click <span class="procedureTerm">Power Options</span>.</li>
+                    <li value="3">On the left in the <span class="procedureTerm">Power Options</span> dialog, click <span class="procedureTerm">Choose what the power button does</span>. The <span class="procedureTerm">System Settings</span> dialog comes into view.</li>
+                    <li value="4">Click <span class="procedureTerm">Change settings that are currently unavailable</span>.</li>
+                    <li value="5">In the <span class="procedureTerm">Shutdown settings</span> section of the dialog, configure the settings that follow.<ul style="list-style-type: square;"><li value="1">Clear the <span class="procedureTerm">Turn on fast startup (recommended)</span> box.</li><li value="2">Clear the <span class="procedureTerm">Sleep</span> box.</li><li value="3">Clear the <span class="procedureTerm">Hibernate</span> box.</li></ul></li>
+                    <li value="6">Click <span class="procedureTerm">Save changes</span>.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_print_in_h4_0">
+                <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1422917728_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Configure <span class="GuidesOperatingSystem_Windows10">Windows&#160;10</span> Automatic Updates</a>
+                </MadCap:conditionalText>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1422917728_5" style="display: none;">
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="note">NOTE:</span> To prevent problems, you must  configure <span class="GuidesOperatingSystem_Windows10">Windows&#160;10</span> updates to work with your <span class="AerotechVariablesSimpleName_A3200">A3200</span> and <span class="AerotechVariablesROS_Name">INtime</span> system. Refer to the <a href="http://www.aerotechmotioncontrol.com/ftp/pwpsoftware/manuals_helpfiles/User Guides/User Guides/User Guide to Windows 10 Updates.pdf" target="_blank">User Guide to Windows 10 Updates</a> on <span class="AerotechVariablesWebAddress">www.aerotech.com</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_print_in_h4_0">
+                <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1422917728_6" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Disable Audio Hardware</a>
+                </MadCap:conditionalText>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1422917728_6" style="display: none;">
+                <p>Disable your audio hardware if you do not need to use it. If you know how to change BIOS settings, disable your audio hardware from the BIOS. Then, do the procedure that follows to disable all audio devices from within <span class="GuidesCompanyBrand_Windows">Windows</span>.</p>
+                <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>
+                To Disable Audio Hardware from Device Manager in <span class="GuidesOperatingSystem_Windows7">Windows&#160;7</span>, <span class="GuidesOperatingSysem_Windews8_1">Windows&#160;8.1</span>, and <span class="GuidesOperatingSystem_Windows10">Windows&#160;10</span><![CDATA[
+            ]]></h4>
+                <ol>
+                    <li class="TopMargin" value="1">Open <span class="procedureTerm">Control Panel</span>.</li>
+                    <li value="2">Click <span class="procedureTerm">View by</span> and select <span class="procedureTerm">Large icons</span>. Then click <span class="procedureTerm">Device Manager</span>.</li>
+                    <li value="3">In <span class="procedureTerm">Device Manager</span>, expand the <span class="procedureTerm">Sound, video and game controllers</span> category.</li>
+                    <li value="4"> For all audio devices in the list, right-click each device and select <span class="procedureTerm">Disable</span>. In the warning dialog, click <span class="procedureTerm">Yes</span> to disable each audio device.</li>
+                    <li value="5">Close <span class="procedureTerm">Device Manager</span>.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_print_in_h4_0">
+                <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1422917728_7" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Change the Display Configuration</a>
+                </MadCap:conditionalText>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1422917728_7" style="display: none;">
+                <p>Problems with real-time performance can be caused by the graphics card or the graphics driver. Try one or more of these possible solutions. </p>
+                <div>
+                    <h4 class="tableCaption" MadCap:autonum=""><span class="autonumber"><span></span></span>Change the settings in the Graphics Card Configuration Utility</h4>
+                    <p>Open the configuration utility for your graphics card. Typically, you can right-click on the Desktop and select the item to configure the display or graphics properties. <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends these settings.</p>
+                    <ul>
+                        <li value="1">Configure the card to use a <span class="procedureTerm">Performance</span> mode as an alternative to a <span class="procedureTerm">Quality</span> mode. </li>
+                        <li value="2">Disable the power management features of the card. </li>
+                        <li value="3">Disable all hardware acceleration modes (also called turbo modes).</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="tableCaption" MadCap:autonum=""><span class="autonumber"><span></span></span>Change the display adapter to use basic graphics</h4>
+                    <p>Some graphics cards can decrease the real-time performance of your PC because they use advanced graphics features. Standard display drivers decrease the workload of the card and improve the performance of the PC. If your graphics card is causing problems with real-time performance, change the display adapter to <span class="procedureTerm">Standard VGA Graphic Adapter</span> or <span class="procedureTerm">Microsoft Basic Display Adapter</span>. Then, if your screen resolution is not satisfactory you can change it to a better resolution. </p>
+                </div>
+                <div>
+                    <h4 class="tableCaption" MadCap:autonum=""><span class="autonumber"><span></span></span>Use a medium-performance modern graphics card</h4>
+                    <p><span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you do not use high-end display adapters because they can cause interference with the <span class="AerotechVariablesSimpleName_A3200">A3200</span>. Use a medium-performance onboard integrated graphics adapter or a medium-performance PCI express dedicated graphics card. If your graphics card causes problems with A3200 performance, try a different graphics adapter.</p>
+                </div>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_print_in_h4_0">
+                <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1422917728_8" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Do Not Use Software and Hardware That Can Decrease Performance</a>
+                </MadCap:conditionalText>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1422917728_8" style="display: none;">
+                <p>Some third-party software programs, device drivers, and hardware devices can cause jitter and latency on a PC. This has an effect on the real-time performance of the <span class="AerotechVariablesSimpleName_A3200">A3200</span> and <span class="AerotechVariablesROS_Name">INtime</span>. </p>
+                <p>Devices that require too much PCI Express bus bandwith can cause communication errors or motion dropouts when the A3200 accesses the PCI Express bus. Here are some examples.</p>
+                <ul>
+                    <li value="1">Vision or frame grabber software</li>
+                    <li value="2">Frame grabber PCI Express devices</li>
+                    <li value="3">Other high-bandwith PCI Express devices</li>
+                </ul>
+                <p>To help real-time performance, remove all third-party software and hardware devices. If you must have one or more of these items in your system and you have real-time performance problems, use a dual PC (client/server) configuration. On a dual PC solution, <span class="AerotechVariablesSimpleName_A3200">A3200</span> and <span class="AerotechVariablesROS_Name">INtime</span> run on a server PC and all other software programs run on a client PC.<MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly"> For more information, refer to <a href="Remote_Server_Installation.htm" class="MCXref_0">Remote Server and Client Installation and Configuration</a>.</MadCap:conditionalText></p>
+            </div>
+        </div>
+        <h2 MadCap:conditions="OutputTypeConditions.ScreenOnly" MadCap:autonum=""><span class="autonumber"><span></span></span>Optimizing Controller Performance </h2>
+        <p>The <span class="AerotechVariablesSimpleName_A3200">A3200</span> installation tries to configure your system for the best possible performance.  However, you might need to change some controller settings so that the <span class="AerotechVariablesSimpleName_A3200">A3200</span> performance on your PC is acceptable. To change controller settings, use these  recommendations for your <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program. </p>
+        <ul>
+            <li value="1">In <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span>, change the value of the <a href="Parameters/EnabledTasks.html" MadCap:conditions="OutputTypeConditions.ScreenOnly" class="MCXref_0">EnabledTasks Parameter</a> to disable unused tasks.</li>
+            <li value="2">Decrease the number of task programs that run at the same time. </li>
+            <li value="3">Decrease the use of the <a href="Commands/CRITICAL%20START_Command.html" MadCap:conditions="OutputTypeConditions.ScreenOnly" class="MCXref_0">CRITICAL START Command</a>&#160;and <a href="Commands/CRITICAL%20END_Command.html" MadCap:conditions="OutputTypeConditions.ScreenOnly" class="MCXref_0">CRITICAL END Command</a>. These commands cause the controller to execute program lines at a fast rate and can decrease real-time performance. </li>
+            <li value="4">If the <a href="Parameters/MotionUpdateRate.html" MadCap:conditions="OutputTypeConditions.ScreenOnly" class="MCXref_0">MotionUpdateRate Parameter</a> is set to a value greater than 1.0 and you have motion problems or bad controller performance, change the MotionUpdateRate to 1.0 to decrease the workload of the controller.</li>
+            <li value="5">Do not use the <a href="Commands/ON_Command.html" MadCap:conditions="OutputTypeConditions.ScreenOnly" class="MCXref_0">ON Command</a> and the <a href="Commands/ONGOSUB_Command.html" MadCap:conditions="OutputTypeConditions.ScreenOnly" class="MCXref_0">ONGOSUB Command</a> more than 20 times in a program. </li>
+        </ul>
+        <div MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_MainA3200,OutputTypeConditions.ScreenOnly">
+            <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>Steps to <a name="kanchor46"></a>Getting Started</h3>
+            <ol>
+                <li value="1"><a href="Installing_the_Software.htm" class="MCXref_0">Installing the Software</a>
+                </li>
+                <li value="2"><a href="_License%20Activation/Activating_Your_Software.htm" class="MCXref_0">Activating Your Software</a>
+                </li>
+                <li value="3">Optimizing <span class="AerotechVariablesSimpleName_A3200">A3200</span> Performance</li>
+                <li value="4"><a href="Installing_the_FireWire_Card.htm" class="MCXref_0">Installing the FireWire or HyperWire™ Card
+        </a>
+                </li>
+                <li value="5"><a href="Configuring_the_FireWire_Card.htm" class="MCXref_0">Configuring and Verifying the FireWire or HyperWire™ Card</a>
+                </li>
+                <li value="6"><a href="Connecting_the_System.htm" class="MCXref_0">Connecting the System
+</a>
+                </li>
+                <li value="7"><a href="Selecting_a_Parameter_File.htm" class="MCXref_0">Selecting a Parameter File
+        </a>
+                </li>
+                <li value="8"><a href="Verifying_Motion.htm" class="MCXref_0">Verifying Motion</a>
+                </li>
+                <li value="9"><a href="Creating_Your_First_Program.htm" class="MCXref_0">Creating Your First Program
+</a>
+                </li>
+            </ol>
+        </div>
+        <div MadCap:conditions="OutputTypeConditions.ScreenOnly">
+            <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+            <p class="relatedTopic"><a href="Available_Memory.htm">Available Memory</a>
+            </p>
+            <p class="relatedTopic"><a href="Analyzing_A3200_Performance.htm">Analyzing A3200 Performance</a>
+            </p>
+            <p class="relatedTopic"><a href="Optimizing_Performance_in_VELOCITY_ON_Mode.htm">Optimizing Performance in VELOCITY&#160;ON&#160;Mode</a>
+            </p>
+        </div>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <col class="Column-Column1" style="width: 204px;" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Optimizing_A3200_Performance.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Optimizing_A3200_Performance.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyB-Column2-Body1">
+                            <img src="Resources/Images/Common/LOGO_INtime.png" />
+                        </td>
+                        <td class="BodyA-Column1-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

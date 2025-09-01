@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Troubleshooting" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Fault and Error Overview</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Warning.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Troubleshooting.htm">Troubleshooting</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Fault and Error Overview</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2807"></a>Fault and Error Overview</h1>
+        <p>The controller continuously monitors for problems and generates task errors and axis faults. Examples of these problems include division by zero from an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program and an axis fault that the controller generates while you issue a motion command.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2912155309_0" onclick="FMCDropDown( this ); return false;" name="kanchor2808"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Axis Faults</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2912155309_0" style="display: none;">
+                <table style="mc-table-style: url('Resources/TableStyles/Warning.css');margin-left: 0;margin-right: auto;" class="TableStyle-Warning" cellspacing="0">
+                    <col style="width: 50px;" class="TableStyle-Warning-Column-Column1" />
+                    <col style="width: 589px;" class="TableStyle-Warning-Column-Column2" />
+                    <tbody>
+                        <tr class="TableStyle-Warning-Body-Body1">
+                            <td class="TableStyle-Warning-BodyB-Column1-Body1">
+                                <img src="Resources/Images/Common/Symbol_Warning.png" />
+                            </td>
+                            <td class="TableStyle-Warning-BodyA-Column2-Body1">
+                                <p><span class="warning">Warning:</span> To prevent damage to the hardware, configure the <a href="Parameters/FaultMask.html">FaultMask</a> parameter before you enable or move the axes.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>An axis fault shows that the drive detected a <a name="kanchor2809"></a>fault condition for which you must do the necessary steps to correct. Examples of axis faults include a <a href="StructsAutoGen/axisfault_Position_Fbk.html">Position Feedback Fault</a> and a <a href="StructsAutoGen/axisfault_Cw_EOT_Limit.html">CW End Of Travel Limit Fault</a>.</p>
+                <p>An axis can be in one or more fault conditions at the same time. If you want the controller to abort one or more axes when the controller generates an axis fault, specify those axes in the <a href="Parameters/FaultAbortAxes.html">FaultAbortAxes</a> parameter.</p>
+                <p>Axis faults can have an effect on program execution in the following ways.</p>
+                <ul>
+                    <li value="1">If the controller generates an axis fault while the task is executing a synchronous motion command on that axis,  the controller stops executing your <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program and puts the task into the <a name="kanchor2810"></a>Error Task State.</li>
+                    <li value="2">If you specify a mask of axes in the <a href="Parameters/TaskTerminationAxes.html">TaskTerminationAxes</a> parameter and the controller generates an axis fault on one or more of those axes, the controller stops executing your <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program and puts the task into the Error Task State.</li>
+                </ul>
+                <p>You can customize <a name="kanchor2811"></a>axis fault handling by using the <a href="Commands/ONGOSUB_Command.html">ONGOSUB</a> command in an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program.</p>
+                <p>You can independently configure what the axis does for each fault condition by using the settings in the following table.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Axis Fault Behaviors </p>
+                <table style="width: 650px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+                    <col style="width: 399px;" class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 530px;" class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p style="text-align: left;">Fault Behavior</p>
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                                <p style="text-align: left;">Parameter Settings</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Not monitored</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>In <span class="AerotechVariablesParameter_5">FaultMask</span>, clear the corresponding fault bit.</p>
+                                <p><span class="AerotechVariablesParameter_5">FaultMask</span>Decel is not applicable.</p>
+                                <p><span class="AerotechVariablesParameter_5">FaultMask</span>Disable is not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Decelerate to a controlled stop</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>In <span class="AerotechVariablesParameter_5">FaultMask</span>, select the corresponding fault bit.</p>
+                                <p>In <span class="AerotechVariablesParameter_5">FaultMask</span>Decel, select the corresponding fault bit. </p>
+                                <p>In <span class="AerotechVariablesParameter_5">FaultMask</span>Disable, clear the corresponding fault bit.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: left;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Disable immediately</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">In <span class="AerotechVariablesParameter_5">FaultMask</span>, select the corresponding fault bit.<p>In <span class="AerotechVariablesParameter_5">FaultMask</span>Decel, clear the corresponding fault bit.</p><p>In <span class="AerotechVariablesParameter_5">FaultMask</span>Disable, select the corresponding fault bit.</p></td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: left;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>Decelerate to a controlled stop, then disable</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">In <span class="AerotechVariablesParameter_5">FaultMask</span>, select the corresponding fault bit. <p>In <span class="AerotechVariablesParameter_5">FaultMask</span>Decel, select the corresponding fault bit.</p><p>In <span class="AerotechVariablesParameter_5">FaultMask</span>Disable, select the corresponding fault bit. </p></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>If an axis is in a fault condition<a name="kanchor2812"></a>, the axis completes the action that you specify in the FaultMask, FaultMaskDecel, and FaultMaskDisable parameters. Before normal operations can continue, you must recover from the axis fault by doing the following.</p>
+                <ol>
+                    <li value="1">Correct the condition that caused the controller to generate an axis fault.</li>
+                    <li value="2">Acknowledge the fault condition by doing one of the following operations.</li>
+                    <ul style="list-style-type: disc;">
+                        <li value="1">Click the <span class="procedureTerm">Acknowledge All</span> button <img src="Resources/Images/Icons/AcknowledgeAll16x16.png" /> or issue an <a href="Commands/ACKNOWLEDGEALL_Command.html">ACKNOWLEDGEALL</a> command to clear all of the axis faults on the controller.</li>
+                        <li value="2">Issue the <a href="Commands/FAULTACK_Command.html">FAULTACK</a>&#160;command to acknowledge the axis faults on the axis that you specify.</li>
+                    </ul>
+                </ol>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2813"></a>Examining Axis Faults</h4>
+                <p>For more information about an axis fault that the controller generates, do one of the following options.</p>
+                <ul>
+                    <li value="1">Look at the axis fault in <span class="AerotechVariablesSimpleName_CNCOI">CNC Operator Interface</span>, <span class="AerotechVariablesApp_DigScope">Digital Scope</span>, or <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>. These applications show axis faults in red text.</li>
+                    <li value="2">In your <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program, use the DATAITEM_AxisFault item to see all of the axis faults that the controller generates. For more information about this data item, refer to the <a href="Commands/AXISSTATUS_Function.html">AXISSTATUS</a>&#160;function.</li>
+                    <li value="3">For advanced diagnostics information about the axis fault, use the <span class="procedureTerm">Fault</span> tab in the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span>.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2912155309_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Task Errors</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2912155309_1" style="display: none;">
+                <p>A task error stops a program when an <a name="kanchor2814"></a>error condition occurs in that program. For example, a task error occurs if the controller tries to generate motion while the axis is disabled. When a task error occurs, the controller stops executing your <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program and puts the task into the Error Task State.</p>
+                <p>If you want the controller to abort one or more axes when a task error occurs on a task, specify those axes in the <a href="Parameters/TaskErrorAbortAxes.html">TaskErrorAbortAxes</a> parameter.</p>
+                <p>You can customize task error handling by using the <a href="Commands/ONGOSUB_Command.html">ONGOSUB</a> command in an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2815"></a>Examining Task Errors</h4>
+                <p>For more information about a task error that occurs, do one of the following options.</p>
+                <ul>
+                    <li value="1">Look at the error message in <span class="AerotechVariablesSimpleName_CNCOI">CNC Operator Interface</span> or <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span>.</li>
+                    <li value="2">To find the error message in your <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program, use the <a href="Commands/ERRORDECODE_Function.html">ERRORDECODE</a> <a name="kanchor2816"></a>function. If you issue this function, you must use the DATAITEM_TaskErrorCode item to get the error code and the DATAITEM_TaskErrorLocation item to get the location code of the task error. For more information about these data items, refer to the <a href="Commands/TASKSTATUS_Function.html">TASKSTATUS</a> function.</li>
+                    <li value="3">For advanced diagnostics information about the task error, use the <span class="procedureTerm">Tasks</span> tab in the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span>.</li>
+                </ul>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2817"></a>Clearing Task Errors</h4>
+                <p>To clear task errors, do one of the following operations.</p>
+                <ul>
+                    <li value="1">Click the <span class="procedureTerm">Acknowledge All</span>  button <img src="Resources/Images/Icons/AcknowledgeAll16x16.png" /> or issue an <a href="Commands/ACKNOWLEDGEALL_Command.html">ACKNOWLEDGEALL</a> command to clear task errors on all tasks.</li>
+                    <li value="2">Click the <span class="procedureTerm">Stop</span> button <img src="Resources/Images/Icons/Stop16x16.png" /> or issue a <a href="Commands/PROGRAM%20STOP_Command.html">PROGRAM&#160;STOP</a> command to stop the current task and clear a task error on the current task.</li>
+                    <li value="3">Click the <span class="procedureTerm">Abort</span> button <img src="Resources/Images/Icons/Abort16x16.png" /> to abort all motion, stop the current task, and clear a task error on the current task.</li>
+                    <li value="4">Issue the <a href="Commands/TASKERROR_Command.html">TASKERROR</a> command to clear a task error on a specific task.</li>
+                </ul>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Commands/AXISFAULT_Command.html">AXISFAULT Command</a>
+        </p>
+        <p class="relatedTopic"><a href="Capturing_Axis_Data_until_a_Fault_occurs.htm" class="MCXref_0">Capturing Axis Data until an Axis Fault Occurs</a>
+        </p>
+        <p class="relatedTopic"><a href="Limits_Overview.htm">Limits Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="Task_Error_Handling_on_a_Separate_Task.htm">Task Error Handling on a Separate Task</a>
+        </p>
+        <p class="relatedTopic"><a href="StructsAutoGen/taskstate.html">Task State</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Fault_and_Error_Overview.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Fault_and_Error_Overview.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Motion Composer" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" class="" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Editing Programs in Motion Composer</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Motion_Composer.htm">Motion Composer</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Editing Programs</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2673"></a>Editing Programs in <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span></h1>
+        <p>Use the following editors in <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> to write <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> programs. </p>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2674"></a>Task Tabs</h2>
+        <p>Each controller task is identified by a tab. You can open files in a specific task tab and use the files to debug programs that are running in that task. <span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that you open files for a program in the tab for the task in which the program is running. If you open files in multiple task tabs, the files are linked together. If you make changes to one file, the changes are applied to all linked files.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> Task Tabs</p>
+        <table style="mc-table-style: url('Resources/TableStyles/Basic.css');caption-side: top;margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle-Basic" cellspacing="0">
+            <col style="width: 200px;" class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p style="text-align: left;">Task Tab State Indicators</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>White</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Shows that the application is not connected to the <span class="AerotechVariablesSimpleName_A3200">A3200</span> or the task is inactive on the current controller. Use the <a href="Parameters/EnabledTasks.html">EnabledTasks</a> parameter to set which tasks are active.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Blue</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Shows that the task on the current controller is active.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Red</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Shows that the task on the current controller has generated a fault.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2675"></a>File Tabs</h2>
+        <p>The <a name="kanchor2676"></a>file tabs have the following features.</p>
+        <h4 class="figure" MadCap:autonum=""><span class="autonumber"><span></span></span>Figure: File Tab Features
+            </h4>
+        <p>
+            <img src="Resources/Images/Image_MotionComposer_FileTabs_A32.png" alt="" title="" />
+        </p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> File Tabs</p>
+        <table style="mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;caption-side: top;width: 650px;" class="TableStyle-Basic" cellspacing="0">
+            <col class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 125px;" class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" colspan="2" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p style="text-align: left;">File Tab Features</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p style="text-align: left;">Description </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>
+                            <img src="Resources/Images/Common/CalloutLabel_Red_A.png" alt="" title="" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Locked Indicator</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>While a program is actively being debugged, all files that are part of that program (*.pgm) will be locked. Locked files are identified by an icon in the file tab that comes before the file name. You cannot make changes to those files until the files are unlocked. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>
+                            <img src="Resources/Images/Common/CalloutLabel_Red_B.png" alt="" title="" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Modified Indicator</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Files identified with an asterisk (*) have been changed after they were opened.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>
+                            <img src="Resources/Images/Common/CalloutLabel_Red_C.png" alt="" title="" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Save</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Right-click the file tab of an open file that you want to save and click <span class="procedureTerm">Save</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>
+                            <img src="Resources/Images/Common/CalloutLabel_Red_D.png" alt="" title="" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Close</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Right-click the file tab of an open file that you want to close and click <span class="procedureTerm">Close</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>
+                            <img src="Resources/Images/Common/CalloutLabel_Red_E.png" alt="" title="" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Move To</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Right-click the tab of an open file that you want to move to a different task, select <span class="procedureTerm">Move To</span>, and click on the task to which you want to move the file. Since files that are the same are linked, this is equivalent to opening the file in the <span class="procedureTerm">Destination</span> task and closing the file in the <span class="procedureTerm">Source</span> task.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>
+                            <img src="Resources/Images/Common/CalloutLabel_Red_F.png" alt="" title="" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>Copy To</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Right-click the tab of an open file that you want to copy to a different task, select <span class="procedureTerm">Copy To</span>, and click on the task to which you want to copy the file. Since files that are the same are linked, this is equivalent to changing to the destination task and manually opening the file.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>
+                            <img src="Resources/Images/Common/CalloutLabel_Red_G.png" alt="" title="" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                        <p>File Navigator</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Click the <span class="procedureTerm">Open Files</span> tab to browse through all open files. 
+</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <col style="width: 643px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> When you try to close a file that you changed but did not save, the application asks you if you want to save the file. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2677"></a>Editor Features</h2>
+        <p>The following features are available in the editor.</p>
+        <ul>
+            <li value="1"><span class="procedureTerm">Line number indicators</span> Line number indicators show the number of each line in the file.</li>
+            <li class="BodyText_bold" value="2">Indicator margin</li>
+        </ul>
+        <ul style="list-style-type: square;">
+            <li class="BulletLevel2" value="1"><span class="procedureTerm">Breakpoints</span> Breakpoints in files are identified by the breakpoint icon <img src="Resources/Images/Icons/Breakpoint16x16.png" />. When you debug programs, lines that contain breakpoints cause the program to pause before those lines are executed.</li>
+            <li class="BulletLevel2" value="2"><span class="procedureTerm">Current Line indicator</span> When a program is paused, the next line to be executed is identified by the current line icon <img src="Resources/Images/Icons/ViewNext16x16.png" />.</li>
+        </ul>
+        <ul>
+            <li class="BodyText_bold" value="1">Status bar</li>
+        </ul>
+        <ul style="list-style-type: square;">
+            <li class="BulletLevel2" value="1"><span class="procedureTerm">File path</span> Shows the full path of the file you are editing.</li>
+            <li class="BulletLevel2" value="2"><span class="procedureTerm">Line number</span> Shows the line number of the cursor.</li>
+            <li class="BulletLevel2" value="3"><span class="procedureTerm">Column number</span> Shows the column number of the cursor.</li>
+            <li class="BulletLevel2" value="4"><span class="procedureTerm">Character number</span> Shows the character number of the cursor.</li>
+        </ul>
+        <ul>
+            <li value="1"><span class="procedureTerm">Syntax highlighting</span> Syntax highlighting includes keywords, strings, and built-in commands and functions that are highlighted with corresponding colors to make programming easier.</li>
+        </ul>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>Syntax Highlighting Colors</p>
+        <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('Resources/TableStyles/Basic.css');width: 650px;" class="TableStyle-Basic" cellspacing="0">
+            <col style="width: 200px;" class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type of Syntax</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Color </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Commands</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p><span style="color: #0000ff;">Blue</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>G-Codes and M-Codes</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p><span style="color: #00008b;">Dark Blue</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Strings</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p><span style="color: #dc143c;">Red</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Variables and Registers</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p><span style="color: #8b4513;">Brown</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Parameters</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p><span style="color: #ad3ac2;">Purple</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                        <p>Constants</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p><span style="color: #696969;">Gray</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                        <p>Comments</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p><span style="color: #008000;">Green</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2678"></a>Network Explorer</h2>
+        <h3 MadCap:autonum=""><span class="autonumber"><span></span></span>User Files</h3>
+        <p>The <span class="procedureTerm">User Files</span> node of the Network Explorer shows all of the files in the <span class="procedureTerm">User Files</span> directory, which can be changed as a user preference.</p>
+        <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>File Nodes</h4>
+        <p>In the <span class="procedureTerm">User Files</span> node, files and directories in the <span class="procedureTerm">User Files</span> directory are shown as nodes. </p>
+        <ul>
+            <li class="BulletLevel1" value="1"><span class="procedureTerm">Open</span> Opens the file in the current instance of <span class="AerotechVariablesSimpleName_MotionComposer">Motion Composer</span> if the file is identified as an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> file type. If the file is not an <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> file type, it is sent to the shell and Windows tries to find the correct program to open the file.</li>
+            <li class="BulletLevel1" value="2"><span class="procedureTerm">Rename</span> Renames the file in place on the file system.</li>
+            <li class="BulletLevel1" value="3"><span class="procedureTerm">Delete</span> Deletes the file from the file system.</li>
+            <li class="BulletLevel1" value="4"><span class="procedureTerm">New Folder</span> Makes a new directory in the selected directory.</li>
+        </ul>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Motion_Composer_Editing_Programs.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Motion_Composer_Editing_Programs.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

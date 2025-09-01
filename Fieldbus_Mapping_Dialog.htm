@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="Motion Composer Suite|Configuration Manager" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>Fieldbus Mapping Dialog</title>
+        <link href="SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="SkinSupport/jquery.js">
+        </script>
+        <script src="SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Motion_Composer_Suite.htm">Motion Composer Suite</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CM_Configuration_Manager_Overview.htm">Configuration Manager</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Fieldbus Mapping Dialog</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum=""><span class="autonumber"><span></span></span><a name="kanchor2753"></a>Fieldbus Mapping Dialog</h1>
+        <p>Use the Fieldbus Mapping dialog to edit the Fieldbus mappings that are stored in your parameter file. For more information about Fieldbus mappings, refer to <a href="PC_Modbus_Overview.htm">PC Modbus Overview</a>, <a href="Drive_Modbus_Overview.htm">Drive Modbus Overview</a>, or <a href="Fieldbus_Options_Overview.htm">Fieldbus Options Overview</a>. </p>
+        <h4 class="Procedure" MadCap:autonum=""><span class="autonumber"><span></span></span>To open the Fieldbus Mapping dialog</h4>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_428659606_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                Figure: <span class="AerotechVariablesApp_ConfigMgr">Configuration Manager</span> Edit Fieldbus (This example shows PC Modbus Master)
+            </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_428659606_0" style="display: none;">
+                <p>
+                    <img src="Resources/Images/Image_CM_EditPCModbusMaster.png" alt="" title="" />
+                </p>
+            </div>
+        </div>
+        <ol>
+            <li value="1">In <span class="procedureTerm">Configuration Manager</span>, in <span class="procedureTerm">Network Explorer</span>, open the parameter file that you want to use. </li>
+            <li value="2">Open the Fieldbus node and click one of the Fieldbus type nodes (for example, PC Modbus master). </li>
+            <li value="3">Click the <span class="procedureTerm">Edit</span> button that shows in the Editor. The Fieldbus Mapping dialog comes into view. The dialog and the dialog title are specific to the Fieldbus type that you selected.</li>
+        </ol>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>Using the Fieldbus Mapping Dialog</h2>
+        <p>The Fieldbus Mapping dialog has the following main sections.</p>
+        <ul>
+            <li value="1"><span class="bold">Connections.</span> Add, delete and select connections.</li>
+            <li value="2"><span class="bold">Connection Details.</span> Edit the property details of a selected connection. The details you can edit depend on the Fieldbus type that you selected in Network Explorer.</li>
+            <li value="3"><span class="bold">Variables.</span> Edit the mappings that are associated with the selected connection. The types of mappings you can create depend on the Fieldbus type that you selected in Network Explorer. </li>
+        </ul>
+        <p>The following figure shows the dialog that opens when you select to edit <span class="procedureTerm">PC Modbus Master</span> in Network Explorer. </p>
+        <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_428659606_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="SkinSupport/DropDownClosed.gif" MadCap:altsrc="SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( 'SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />
+                Figure: Fieldbus Mapping Dialog — PC Modbus Master Configuration
+            </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_428659606_1" style="display: none;">
+                <p>
+                    <img src="Resources/Images/Image_FieldbusMappingDialog.png" />
+                </p>
+            </div>
+        </div>
+        <table style="width: 650px;mc-table-style: url('Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+            <col class="TableStyle-Basic-Column-Column1" style="width: 50px;" />
+            <col class="TableStyle-Basic-Column-Column1" style="width: 200px;" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Label</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Name</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_A.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Add Connection Button</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">Click to add a new connection to a Fieldbus, up to the maximum number of supported connections for a Fieldbus type.</td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_B.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Delete Connection Button</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">Click to delete the connection that is selected and all related mappings.</td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_C.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">List of Connections</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p> Area that shows a list of all the connections. If you select a connection, the Connection Details and Mappings section update with the information related to that connection. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_D.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Connection Details</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Area where you edit the connection parameters that are defined by the Fieldbus type that you selected. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_E.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Register Type and Mapping Type Tabs</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Tabs for each register or mapping type. Click the tab to view and edit the mappings for that type. The availability of the types is defined by the Fieldbus type that you selected. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_F.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Add Mapping Button</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Click to open the <span class="procedureTerm">Name</span> cell of the <span class="procedureTerm">Add Mapping</span> row in the Mapping Grid so that you can add a new mapping. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_G.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Delete Mappings</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Click to delete the mapping that is selected in the grid. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_H.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Mapping Grid</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Area where you edit all of the mappings of the selected register or mapping type. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_I.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Add Mapping Row</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Double-click on the <span class="procedureTerm">Name</span> cell and type the name of the new mapping. This row will always show at the end of the list of existing mappings. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_J.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Name Field</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                        <p>Type the name of the mapping.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_K.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Count Field</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">If you enter a number greater than one, then you create an array. For example, if you enter 8, then you create an array of size 8. </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_L.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Type Field</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">Select the data type that you want to assign to the mapping. </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_M.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Byte Address Field</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">Type the absolute address, in bytes, that you want to give to the mapping. This address is added to the address that you specify in the Bit Address field to make the full address for the mapping. </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_N.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Bit Address Field</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">Type the absolute address, in bits, that you want to give to the mapping. This address is added to the address that you specify in the Byte Address field to make the full address for the mapping. </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_O.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="font-weight: bold;"><span class="bold">Comment Field</span>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1">Optional. You can define a comment for the mapping.</td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                        <img src="Resources/Images/Common/CalloutLabel_Red_P.png" alt="" title="" />
+                    </td>
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="font-weight: bold;">
+                        <p><span class="bold"><span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> Definition Field</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                        <p>A preview of how the mapping looks when it is defined in <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> as a program variable. If the mapping is an array, the size of the array shows in this field of the grid. You cannot edit this field. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="Advanced_Fieldbus_Mapping.htm">Advanced Fieldbus Mapping</a>
+        </p>
+        <p class="relatedTopic"><a href="PC_Modbus_Overview.htm">PC Modbus Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="Drive_Modbus_Overview.htm">Drive Modbus Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="Fieldbus_Options_Overview.htm">Fieldbus Options Overview</a>
+        </p>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Fieldbus_Mapping_Dialog.htm&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=Fieldbus_Mapping_Dialog.htm&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
