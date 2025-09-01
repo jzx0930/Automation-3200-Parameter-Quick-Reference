@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Motion" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>PVT Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Warning.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/When_Statement.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="motion_Category.html">Motion</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">PVT</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>PVT Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Executes a vectorial time point move on the specified axes.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="2">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>PVT&#160;<i>&lt;Axis&gt;</i>&#160;<i>&lt;Position&gt;</i>,&#160;<i>&lt;Velocity&gt;</i> [ <i>&lt;Axis&gt;</i>&#160;<i>&lt;Position&gt;</i>,&#160;<i>&lt;Velocity&gt;</i> ... ]&#160;TIME&#160;<i>&lt;Time&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">PVT X 1.000, 0.000 Y 2.000, 0.000 TIME 1</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>PVT Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">&lt;Axis&gt;</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Axis_Variable_Type.htm">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis on which to execute the command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Position&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>If the task is in ABSOLUTE mode, this argument specifies the absolute position to move to, in user units. If the task is in INCREMENTAL mode, this argument specifies the distance to move, in user units.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Velocity&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The velocity, in user units/time base, at which to be moving at the end of the time interval. Use the <a href="../../../Commands/SECONDS_Command.html">SECONDS</a> and <a href="../../../Commands/MINUTES_Command.html">MINUTES</a> commands to specify which time base the controller uses.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Time&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The total time of the move, in milliseconds.</p>
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Warning.css');mc-table-style-original: url('../Resources/TableStyles/Warning.css');width: 650px;" cellspacing="0" class="TableStyle-Warning">
+            <col style="width: 50px;" class="TableStyle-Warning-Column-Column1" />
+            <col class="TableStyle-Warning-Column-Column2" />
+            <tr class="TableStyle-Warning-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Warning-BodyE-Column1-Body1">
+                    <img src="../Resources/Images/Common/Symbol_Warning.png" />
+                </td>
+                <td colspan="1" rowspan="1" valign="middle" class="TableStyle-Warning-BodyD-Column2-Body1">
+                    <p><span class="warning">Warning:</span> To give more control to the programmer, this command removes some of the features that reduce 
+ jerk or unacceptable motion.</p>
+                </td>
+            </tr>
+        </table>
+        <p>Use the <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> command to manually enter profile points from a program to 
+ make arbitrary velocity or acceleration profiles for a single or multiple 
+ axes. This command bypasses all automatic acceleration, and acceleration 
+ limiting used in RAPID, LINEAR, CW, CCW, BEZIER, MOVEABS, MOVEINC, and FREERUN command moves.</p>
+        <p>The <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> command lets the user generate a segment of motion for 
+ up to 32 axes over time interval <span class="commandArgument">&lt;Time&gt;</span>. When necessary, the controller uses the following third order polynomial to interpolate between the positions and velocities supplied by the user.</p>
+        <p class="equation">
+            <img src="../GeneratedImages/Equations/Equation202.png" style="width: 408px;height: 22px;" alt="" class="_MCEquation_0 mcReset" />
+        </p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/When_Statement.css');margin-left: 0;margin-right: auto;" class="TableStyle-When_Statement" cellspacing="0">
+            <col class="Column-Column1" />
+            <col />
+            <tbody>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column1-Body2">where</td>
+                    <td class="BodyA--Body2"><span class="equation"> t</span> is time.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><span class="bold">P</span> is the position at the end of the time segment in user units. If the <a href="ABSOLUTE_Command.html">ABSOLUTE</a> task mode is enabled, this value is entered as an absolute position. If the <a href="INCREMENTAL_Command.html">INCREMENTAL</a> task mode is enabled, this value is entered as an incremental distance from the end of the last move.</p>
+        <p MadCap:conditions="SnippetCondiitons_Commands.PVT"><span class="bold">V</span> is the axis velocity at the end of the time segment 
+ and is in user units. The velocity must be analytic or the interpreted velocities are not continuous. If you do not have an analytic velocity, then use the <a href="PT_Command.html" class="MCXref_0">PT Command</a>.</p>
+        <p><span class="bold">T</span> is the time interval in milliseconds. To specify a move duration of one millisecond or longer, enter any positive integer. To specify a move duration of less than a millisecond, enter 1/2, 1/4, 1/8, 1/16, 1/24, or 1/48. Do not enter any other fractional values for the time.</p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> If you specify a move duration of less than a millisecond for <span class="commandArgument">&lt;Time&gt;</span>, all of the <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> moves in that same sequence must use the same <span class="commandArgument">&lt;Time&gt;</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div MadCap:conditions="SnippetCondiitons_Commands.PVT,SnippetCondiitons_Commands.PT">
+            <p>If you specify a move duration for <span class="commandArgument">&lt;Time&gt;</span> that is greater than 1.0 divided by the position update rate of an axis, the controller interpolates motion to the position update rate. To interpolate motion, the controller uses the cubic-spline polynomial algorithm that you specified for the <a href="../Parameters/MotionInterpolationMode.html" class="MCXref_0">MotionInterpolationMode Parameter</a>. For more information, refer to the table that follows.</p>
+            <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><a name="kanchor1280"></a>Position Update Rates</p>
+            <table style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                <col style="width: 300px;" class="TableStyle-Basic-Column-Column1" />
+                <col style="width: 300px;" class="TableStyle-Basic-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-Basic-Head-Header1">
+                        <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;">Drive Type</th>
+                        <th class="TableStyle-Basic-HeadD-Column1-Header1">Position Update Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><span class="AerotechVariablesDriveType_GL4">GL4</span>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p style="text-align: center;">48 kHz</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                            <p><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span></p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p style="text-align: center;">48 kHz</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FLS">FLS</span></p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p style="text-align: center;">48 kHz</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_Piezo_Linear">QL</span> and <span class="AerotechVariablesDriveType_Piezo__LinearEnh">QLe</span></p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p style="text-align: center;">24 kHz</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p>
+                                <p><span class="AerotechVariablesSimpleName_Nmark">Nmark</span>&#160;<span class="AerotechVariablesDriveType_CLS">CLS</span>, <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, and <span class="AerotechVariablesDriveType_SSaM">SSaM</span></p>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p style="text-align: center;">48 kHz</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p>Servo Drives</p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p style="text-align: center;">8 kHz</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p><span class="AerotechVariablesDriveType_XL4s">XL4s</span>
+                            </p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p style="text-align: center;">48 kHz</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p><span class="AerotechVariablesDriveType_XR3">XR3</span>-<span class="AerotechVariablesXR3Option_XSL3">XSL3</span></p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p style="text-align: center;">8 kHz</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Basic-Body-Body1">
+                        <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p><span class="AerotechVariablesDriveType_XR3">XR3</span>-<span class="AerotechVariablesXR3Option_XSP3">XSP3</span></p>
+                        </td>
+                        <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                            <p style="text-align: center;">8 kHz</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p> <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> commands do not behave like the other <a href="../Motion_Overview.htm">synchronous</a> or <a href="../CommandsOLD/Asynchronous_Motion.htm">asynchronous</a> motion commands. After a <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> command is processed, the program immediately executes the next line in the program, much like an asynchronous motion command (MOVEINC, MOVEABS, FREERUN). However, unlike an asynchronous motion command, the <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> motion commands are buffered and executed one after another. If a stream of <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> commands is executed sequentially, it is possible to fill this buffer. If the buffer is full, subsequent <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> commands wait on the line until buffer space becomes available.</p>
+        <p>If you want your program to wait until <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> motion is complete before it continues, you must issue the <a href="WAIT%20MOVEDONE_Command.html" class="MCXref_0">WAIT MOVEDONE Command</a> or the <a href="WAIT%20INPOS_Command.html" class="MCXref_0">WAIT INPOS Command</a>. Make sure that you do not use the WAIT MODE MOVEDONE command or the WAIT MODE INPOS command because <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> does not obey the setting of the mode commands. For more information, refer to <a href="../Motion_Done_Overview.htm" class="MCXref_0">Motion Done Overview</a>.</p>
+        <div MadCap:conditions="SnippetCondiitons_Commands.PVT">
+            <p>PVT does not obey <a href="../Acceleration_Deceleration_Ramping_Overview.htm">Acceleration and Deceleration Ramping</a>. When you specify positions and velocities in a sequence of PVT commands, you must gradually change the axis positions and velocities from command to command to make smooth motion.</p>
+            <table style="mc-table-style: url('../Resources/TableStyles/Warning.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('../Resources/TableStyles/Warning.css');" class="TableStyle-Warning" cellspacing="0">
+                <col style="width: 50px;" class="TableStyle-Warning-Column-Column1" />
+                <col style="width: 589px;" class="TableStyle-Warning-Column-Column2" />
+                <tbody>
+                    <tr class="TableStyle-Warning-Body-Body1">
+                        <td class="TableStyle-Warning-BodyB-Column1-Body1">
+                            <img src="../Resources/Images/Common/Symbol_Warning.png" />
+                        </td>
+                        <td class="TableStyle-Warning-BodyA-Column2-Body1">
+                            <p><span class="warning">Warning:</span> If the final PVT command in a sequence does not have a velocity of zero, the velocity instantaneously changes at the end of the command. This causes the axis to jerk.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>When the controller combines <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> with LINEAR, CW, CCW, or BEZIER moves, the controller always decelerates 
+ to a stop on the LINEAR, CW, CCW, or BEZIER move that comes before the <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> move. Similarly, a <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> move that 
+ immediately comes before a LINEAR, CW, CCW, or BEZIER move must produce a zero velocity or the axis jerks.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/Warning.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('../Resources/TableStyles/Warning.css');" class="TableStyle-Warning" cellspacing="0">
+            <col style="width: 50px;" class="TableStyle-Warning-Column-Column1" />
+            <col style="width: 589px;" class="TableStyle-Warning-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Warning-Body-Body1">
+                    <td class="TableStyle-Warning-BodyB-Column1-Body1">
+                        <img src="../Resources/Images/Common/Symbol_Warning.png" />
+                    </td>
+                    <td class="TableStyle-Warning-BodyA-Column2-Body1">
+                        <p><span class="warning">Warning:</span> To avoid velocity dropouts, enclose sequential <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> commands in a <a href="CRITICAL%20START_Command.html">CRITICAL&#160;START</a> and <a href="CRITICAL%20END_Command.html">CRITICAL&#160;END</a>&#160;pair.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum=""><span class="autonumber"><span></span></span>
+            <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> Limitations
+        </h2>
+        <ol>
+            <li class="TopMargin" value="1">This command does not work with any <a href="ms-its:cncoption.chm::/Transformation_Overview.htm" MadCap:wasOriginalLinkAbs_href="true">transformation</a>.</li>
+            <li value="2">The controller does not look 
+ ahead in the <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> mode and does not slow down for <a href="ms-its:cncoption.chm::/Corner_Rounding.htm" MadCap:wasOriginalLinkAbs_href="true">corners</a>.
+            </li>
+            <li value="3">MFO has no effect on <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> 
+ motion.
+</li>
+            <li value="4"><a href="../Parameters/MaxSpeedClamp.html">MaxSpeedClamp</a> parameter has no effect on <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> motion.    </li>
+            <li value="5">Feedhold does not decelerate in <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> motion. It 
+ finishes the <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.PVT">PVT</MadCap:conditionalText> command and waits until the queue is flushed. Then 
+ motion abruptly stops.</li>
+        </ol>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+'******************************************************
+' Example PVT program.
+'
+' This program shows you how to use the PVT command on the A3200 
+' controller. You can use the PVT command to generate arbitrary move 
+' profiles. Each PVT command generates a move segment in a specified 
+' time period of 1 ms or multiples of 1 ms. Move times greater than 
+' 1 ms are curve fit with a 3rd order polynomial based on the 
+' position and velocity specified in the PVT command. The ending 
+' velocity of each segment is used as the starting velocity for 
+' the next segment.
+'
+' You can directly calculate the velocity that you specify for the
+' PVT command. But if you know only the positions, you can use an
+' average velocity for this command. This program shows each of these
+' methods for a sinusoidal move type. If you use an average velocity,
+' a delay of one PVT segment time occurs.				
+'*******************************************************
+#define PI 3.141592654
+' The position history values that you use to calculate the average velocity.
+DVAR $xpos0
+DVAR $xpos1
+DVAR $xpos2
+' Axis velocity in 1/s.
+DVAR $xvel   
+' PVT move segment time in ms.
+DVAR $Ts
+' Frequency of the sine wave in Hz.
+DVAR $Freq
+' Amplitude of the sine wave.
+DVAR $Ampl
+' Program internal variables.
+' 2*PI*freq storage.				
+DVAR $ang
+' Time in seconds.
+DVAR $time
+' Loop counter.
+DVAR $idx
+' Enable average velocity (1) or analytic velocity (0) calculation mode.
+DVAR $mode
+' End index for loop. Average mode requires one more loop.        
+DVAR $eidx  
+              
+' Make sure that the task executes a sufficient number of lines to calculate a new PVT target value.                        
+ExecuteNumLines = 100    
+                         
+ENABLE X
+' Set the units to primary units.
+PRIMARY
+' Set the time base to seconds.
+SECONDS
+' Enable absolute programming mode.
+ABSOLUTE
+' A sample time of the PVT command in ms ( &gt;= 1 ).
+$Ts = 3             
+
+' Frequency of the sine wave in Hz.				                         
+$Freq = 10              
+' Specify the amplitude of the sine wave in units.
+$Ampl = 100       
+' Enable average velocity (1) or analytic velocity (0) calculation mode. 
+$mode = 1                 
+
+' Use Digital Scope to collect data.				                         
+SCOPETRIG             
+
+' Use the analytic velocity and average velocity calculation modes to generate a move.				
+FOR $mode = 0 to 1  
+                   
+   ' Move the X axis to a location where PVT motion starts. 			  
+   LINEAR X=$Ampl F10000    
+   
+   ' Initialize "last position" storage. This is required only for average mode. 		                         
+   $xpos0 = $Ampl           
+   $xpos1 = $Ampl         
+   $xpos2 = $Ampl
+   $ang = 2 * PI * $Freq
+   ' Add one more loop for averaging mode.
+   $eidx = 200 + $mode
+
+   IF( $mode == 0 ) THEN 
+      ' Analytic velocity is available. 
+      ' Use the default interpolation mode.
+      MotionInterpolationMode = 0
+   ELSE
+      ' Analytic velocity is not available.
+      ' Use 3-position/1-velocity interpolation.
+      MotionInterpolationMode = 1
+   ENDIF
+
+   ' Main loop, calculate a new PVT command each time.
+   FOR $idx = 0 TO $eidx
+
+      ' Calculate the current time in seconds.	
+      $time = $idx * $Ts / 1000	
+      IF( $mode == 1 ) THEN 
+         ' ***** Use average velocity for the PVT command. *****
+
+         ' Shift positions back one sample.
+         $xpos0 = $xpos1                            
+         ' Shift positions back one sample.
+         $xpos1 = $xpos2      
+         ' New commanded position.	     
+         $xpos2 = $Ampl*cos( $ang * $time )    
+         ' Average velocity near xpos1.		    
+         $xvel = ($xpos2-$xpos0) * .5 * 1000/$Ts   
+         
+         ' Execute the move segment. 		                                           
+         PVT X $xpos1, $xvel  TIME $Ts             
+
+      ELSE	
+         ' ****** Use calculated (analytic) velocity for the PVT command. *****
+         ' New commanded position in units.
+         $xpos0 = $Ampl*cos( $ang * $time )        
+         
+         ' Commanded velocity in units/s.		                                           
+         $xvel = -$ang*$Ampl*sin( $ang * $time )  
+         
+         ' Execute the move segment.		                                        
+         PVT X $xpos0, $xvel  TIME $Ts          
+      ENDIF
+   ' Move segment.
+   NEXT $idx             
+   DWELL .1
+' $mode.
+NEXT $mode           
+END PROGRAM</pre>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics<a name="kanchor1281"></a></h3>
+        <p class="relatedTopic"><a href="../Kinematic_Transformation_Overview.htm">Kinematic 
+ Transformation Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="../Programming_Units_and_Modes.htm">Programming 
+ Units and Modes</a>
+        </p>
+        <p class="relatedTopic"><a href="PT_Command.html">PT Command</a>
+        </p>
+        <p class="relatedTopic"><a href="motion_Category.html">Motion Command Category</a>
+        </p><a name="kanchor1282"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PVT_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PVT_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Motion" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>QCOMMAND READ Function</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Warning.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="motion_Category.html">Motion</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">QCOMMAND READ</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>QCOMMAND READ Function</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Reads the raw position and velocity command from the command queue of a task.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="4">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre><i>&lt;return&gt;</i>&#160;=&#160;QCOMMAND&#160;READ&#160;<i>&lt;Task&gt;</i>,&#160;<i>&lt;Axis&gt;</i> [ <i>&lt;Axis&gt;</i> ... ],&#160;<i>&lt;PosArray&gt;</i>,&#160;<i>&lt;VelArray&gt;</i>,&#160;<i>&lt;Time&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre><i>&lt;return&gt;</i>&#160;=&#160;QCOMMAND&#160;READ&#160;<i>&lt;Task&gt;</i>,&#160;<i>&lt;Axis&gt;</i> [ <i>&lt;Axis&gt;</i> ... ],&#160;<i>&lt;PosArray&gt;</i>,&#160;<i>&lt;VelArray&gt;</i>,&#160;<i>&lt;Time&gt;</i>&#160;TARGET&#160;<i>&lt;TargArray&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre><i>&lt;return&gt;</i>&#160;=&#160;QCOMMAND&#160;READ&#160;<i>&lt;Task&gt;</i>,&#160;<i>&lt;Axis&gt;</i> [ <i>&lt;Axis&gt;</i> ... ],&#160;<i>&lt;PosArray&gt;</i>,&#160;<i>&lt;VelArray&gt;</i>,&#160;<i>&lt;Time&gt;</i>&#160;TARGET&#160;<i>&lt;TargArray&gt;</i>&#160;DATA&#160;<i>&lt;MiscArray&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">$global[0] = QCOMMAND READ 1, X Y, $PosArray, $Velrray, 2</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>QCOMMAND READ Function Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">&lt;Axis&gt;</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Axis_Variable_Type.htm">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis on which to execute the command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Task&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The task on which to execute the command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;PosArray&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">String</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The position data, in counts, of the motion profile of the specified axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;VelArray&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">String</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The velocity data, in counts per millisecond, of the motion profile of the specified axes.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Time&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The time, in milliseconds.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;TargArray&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) The target position of the move, in primary units. This position is zero for points that are generated by PVT commands.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;MiscArray&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) 
+								To see the possible values, refer to <span class="bold">Table: <span class="commandArgument">&lt;MiscArray&gt;</span> Argument Values</span>.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>RETURNS</p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">other</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The variable that stores the return value. The value is either a string or a 64-bit IEEE floating point value.</p>
+                </td>
+            </tr>
+        </table>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Warning.css');margin-left: 0;margin-right: auto;" class="TableStyle-Warning" cellspacing="0">
+            <col style="width: 50px;" class="TableStyle-Warning-Column-Column1" />
+            <col class="TableStyle-Warning-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Warning-Body-Body1">
+                    <td class="TableStyle-Warning-BodyB-Column1-Body1" style="text-align: center;">
+                        <img src="../Resources/Images/Common/Symbol_Warning.png" />
+                    </td>
+                    <td class="TableStyle-Warning-BodyA-Column2-Body1">
+                        <p><span class="warning">Warning:</span> If you use this command incorrectly, the axis can jerk and might cause damage to the equipment. Before you use this command on physical hardware, test it with simulated motion. Refer to <a href="../Simulation_of_Motion.htm">Simulation of Motion</a>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><span class="AerotechVariablesCompanyName_Short">Aerotech</span> recommends that only advanced users use this command. Before you read this topic, read the following.</p>
+        <ul>
+            <li value="1"><a href="../Kinematic_Transformation_Overview.htm">Kinematic Transformation Overview</a>
+            </li>
+            <li value="2"><a href="../QCOMMAND_Features_and_Limitations.htm">QCOMMAND Features and Limitations</a>
+            </li>
+            <li value="3"><a href="../Samples/Transformed_Motion.htm">Transformed Motion</a> example program</li>
+        </ul>
+        <p><a name="kanchor1283"></a>Use the QCOMMAND READ function to get the raw position and velocity command from the command queue of a task. Use the QCOMMAND READ function with <a href="QCOMMAND%20WRITE_Function.html">QCOMMAND WRITE</a> to change or transform the motion profile in the command queue entry of a task. </p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note:</span> This function applies only to motions that use the queue of a task, which include RAPID, LINEAR, CW, CCW, and PVT motion.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The function returns a value that identifies a one entry that is a specific motion point
+ in the queue. The value is returned in the variable that you specify in the <span class="commandArgument">&lt;return&gt;</span> argument. Each task has a separate command queue. Thus, if axes X and Y are the input axes and are being commanded on task 1, the 
+ value of the <span class="commandArgument">&lt;Task&gt;</span> argument must be set to 1.</p>
+        <p> The <span class="commandArgument">&lt;Axis&gt;</span> arguments specify each axis that is used as the output of the transformation. If no valid queue entry is available for any of the specified axes, or if none of the specified axes are enabled, then the command returns a value of -1, the transforms do not occur and the <span class="commandArgument">&lt;PosArray&gt;</span>, 
+ <span class="commandArgument">&lt;VelArray&gt;</span>, <span class="commandArgument">&lt;Time&gt;</span> variables are not assigned.</p>
+        <div>
+            <p>The following figure shows details of the positions and velocities that are returned. The red line is the profile 
+ path for a given axis. The return values are as follows, where x is the number for the specified axis.</p>
+            <p class="equation" style="font-family: Arial;font-size: 10pt;"><span class="equationVariable">&lt;Time&gt;</span>&#160;&#160;&#160;(T1-T0)</p>
+            <p class="equation" style="font-family: Arial;font-size: 10pt;"><span class="equationVariable">&lt;PosArray&gt;</span>[x]&#160;&#160;P1 (the 
+ area of the shaded region in the figure)</p>
+            <p class="equation" style="font-family: Arial;font-size: 10pt;"><span class="equationVariable">&lt;VelArray&gt;</span>[x]&#160;&#160;V1 </p>
+            <p class="equation" style="font-family: Arial;font-size: 10pt;">The <span class="equation">V0</span> is the <span class="equationVariable">&lt;VelArray&gt;</span><span class="equation">[x]</span> from the 
+ previous call to QCOMMAND READ.</p>
+            <p class="equation" style="font-family: Arial;font-size: 10pt;">The <span class="commandArgument"> &lt;Time&gt;</span> argument normally reflects the <a href="../Parameters/MotionUpdateRate.html">MotionUpdateRate</a> parameter value 
+ that was active when the profile point was generated (<span class="commandArgument"> &lt;Time&gt;</span> = 1.0 / MotionUpdateRate).</p>
+            <div class="MCDropDown"><a class="MCDropDownHotSpot_figure_0" href="javascript:void(0);" id="MCDropDownHotSpot_1468533864_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Figure: QCOMMAND READ Illustration
+            </a>
+                <div class="MCDropDownBody_0" id="MCDropDownBody_1468533864_0" style="display: none;">
+                    <p class="img">
+                        <img src="../Resources/Images/Figure_QCOMMAND_READ.png" style="height: 273px;width: 459px;" width="459" height="273" border="0" class="img_1" />
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>The following table shows the data in the <span class="commandArgument">&lt;MiscArray&gt;</span> argument. 
+ Values [2] and above are zero during RAPID and PVT commands. </p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <col style="width: 650px;" />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> The passed array must be at least 32 items long because the controller always writes 32 items into the <span class="commandArgument">&lt;MiscArray&gt;</span> 
+ array.  Make sure that you declare the array variables large enough to hold the returned data. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;MiscArray&gt;</span> Argument Values</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;caption-side: top;width: 650px;" cellspacing="0" class="TableStyle-Basic">
+            <col style="width: 75px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 50px;" class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                        <p>Value</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" colspan="2" style="text-align: left;vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                    <p>0</p>
+                </td>
+                <td colspan="2" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>User line (normally the line in the program file being executed is zero when executing immediate 
+ commands)</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="6" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                    <p>1</p>
+                </td>
+                <td colspan="2" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>A mask of Motion flags, as follows.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>0x01</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>First point in profile is executing.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>0x02</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>RAPID motion is executing.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>0x04 
+ </p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>LINEAR motion is executing.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>0x08
+ </p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>CW or CCW motion is executing.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>0x10
+ </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>PVT motion is executing.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                    <p>2</p>
+                </td>
+                <td colspan="2" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>0.0, except for CW and CCW motion when it is the start angle of the move in radians PI to -PI&#160;.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                    <p>3</p>
+                </td>
+                <td colspan="2" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>0.0, except for CW and CCW motion when it is the end angle of the move in radians PI to -PI.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                    <p>4</p>
+                </td>
+                <td colspan="2" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Distance in this move so far (0 at beginning of move) is always in primary units.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                    <p>5</p>
+                </td>
+                <td colspan="2" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Target velocity of this move (F/E command) times the MFO is always in primary units/sec. </p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                    <p>6</p>
+                </td>
+                <td colspan="2" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Length of this entire move along path (0 at beginning of move) is always in primary units.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: center;">
+                    <p>7</p>
+                </td>
+                <td colspan="2" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                    <p>Percent complete of this move, based on path length 0 to 100 percent.</p>
+                </td>
+            </tr>
+        </table>
+        <p>The data in the <span class="commandArgument">&lt;PosArray&gt;</span>, <span class="commandArgument">&lt;VelArray&gt;</span>, and <span class="commandArgument">&lt;TargArray&gt;</span> array variables is not packed. For 
+ example, if the axis mask is X Z and you have not changed the default axis names, then <span class="commandArgument">&lt;PosArray&gt;</span>[0] is the X position and <span class="commandArgument">&lt;PosArray&gt;</span>[2] is the Z position.</p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="QCOMMAND%20RESET_Command.html">QCOMMAND RESET Command</a>
+        </p>
+        <p class="relatedTopic"><a href="motion_Category.html">Motion Command Category</a>
+        </p><a name="kanchor1284"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=QCOMMAND READ_Function.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=QCOMMAND READ_Function.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

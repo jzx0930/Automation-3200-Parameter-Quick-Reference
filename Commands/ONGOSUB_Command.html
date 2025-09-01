@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|Program Flow" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>ONGOSUB Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Warning.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="programflow_Category.html">Program Flow</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">ONGOSUB</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>ONGOSUB Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Transfers program execution to a specified program or subroutine if a specified condition is true.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="5">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>ONGOSUB&#160;<i>&lt;Condition&gt;</i>&#160;FARCALL&#160;<i>&lt;ProgramName&gt;</i>,&#160;<i>&lt;Label&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>ONGOSUB&#160;<i>&lt;Condition&gt;</i>&#160;FARCALL&#160;<i>&lt;ProgramName&gt;</i>,&#160;<i>&lt;Subroutine&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>ONGOSUB&#160;CLEAR&#160;</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>ONGOSUB&#160;CLEAR&#160;<i>&lt;Condition&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">
+ONGOSUB (TASKSTATUS(DATAITEM_TaskErrorCode) != 0) FARCALL "" "OnError" PRIORITY_FAULT</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>ONGOSUB Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Condition&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Other</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) 
+								The condition to examine. Refer to <a href="../OnGosub_Conditional_Expression.htm">Conditional Expressions</a>.
+							</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;ProgramName&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">String</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) 
+                The name of the program to which the controller transfers program execution.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Label&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Label</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) 
+                The label to which the controller transfers program execution.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Subroutine&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Label</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) 
+                The name of the subroutine to which the controller transfers program execution.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Priority&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Other</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) The priority that you want to assign to the command. To see the possible values, refer to the <b>ONGOSUB &lt;Priority&gt; Argument Values</b> section.</p>
+                </td>
+            </tr>
+        </table>
+        <p><a name="kanchor1851"></a>The ONGOSUB command automatically monitors a specified condition. If that condition occurs, axis motion is stopped and program flow is immediately redirected to the specified program or subroutine. Use this feature for handling fault or safety conditions that must be continuously monitored. </p>
+        <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+        <div class="codeexample"><pre xml:space="preserve">
+' If a task error occcurs, call the OnError subroutine.
+ONGOSUB (TASKSTATUS(DATAITEM_TaskErrorCode) != 0) FARCALL "" "OnError" PRIORITY_FAULT
+
+' If the controller generates an axis fault, call the OnFault subroutine.
+ONGOSUB (AXISSTATUS(X, DATAITEM_AxisFault) != 0) FARCALL "" "OnFault" PRIORITY_FAULT
+
+' The ONGOSUB monitors are active only while the task program is running.
+' The program that follows is an example of a simple motion program.
+' NOTE: In this example program, the ONGOSUB routines are triggered if a
+' task error occurs or an axis fault is generated during the commands that follow.
+ENABLE X
+HOME X
+
+F10
+G1 X(50)
+G1 X(-50)
+
+END PROGRAM
+
+DFS OnError  
+	' Clear the condition that caused the ONGOSUB.
+	ACKNOWLEDGEALL
+
+	' Custom task error handling code goes here.
+
+	' End the program.
+	' NOTE: This is one of many ways to exit from an ONGOSUB.
+	PROGRAM RESTART
+ENDDFS
+DFS OnFault
+	' Clear the condition that caused the ONGOSUB.
+	ACKNOWLEDGEALL
+
+	' Custom axis fault handling code goes here.
+
+	' Restart the program at the beginning.
+	' NOTE: This is one of many ways to exit from an ONGOSUB.
+	PROGRAM RESTART
+ENDDFS
+</pre>
+        </div>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.FARCALL,SnippetCondiitons_Commands.ONGOSUB">The <span class="commandArgument">&lt;ProgramName&gt;</span>, <span class="commandArgument">&lt;Subroutine&gt;</span>, and <span href="../Labels.htm" class="commandArgument">&lt;Label&gt;</span> arguments can be <a href="../Global_Variables.htm">Global String variables</a> and define the program execution entry point. If you specify "" for the <span class="commandArgument">&lt;ProgramName&gt;</span> argument, the controller uses the label in the calling program.</MadCap:conditionalText>
+        </p>
+        <p>Before the controller executes a program called by the <MadCap:conditionalText MadCap:conditions="SnippetCondiitons_Commands.ONGOSUB">ONGOSUB</MadCap:conditionalText> command, you must download that program onto the controller. When the program is on the controller, it prevents an invalid file name or path error from occurring. Download the program at startup by using the <a href="../Program_Automation_CM.htm" class="MCXref_0">Program Automation</a> feature. Make sure that you set the <span class="procedureTerm">Mode</span> for the execution type to <span class="procedureTerm">Download</span>.</p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> Program names must be less than 187 characters long. Refer to <a href="../Program_Names.htm">Program Names</a> for more information.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> Subroutine names must be less than 32 characters long. Refer to <a href="../Subroutines_Overview.htm" class="MCXref_0">Subroutines Overview</a> for more information.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If you specify "" for the <span class="commandArgument">&lt;Label&gt;</span> argument, execution starts at the first line in the called program. If this label is used only as the target of the ONGOSUB from within another 
+ program, the compiler warns that the label is not used when compiling 
+ the program because the compiler cannot see the ONGOSUB reference in another 
+ program. The warning is benign and you can ignore it.</p>
+        <p>ONGOSUB commands are not active until first executed in a program and are only active while the task is executing. If a task has no purpose other than to define ONGOSUBs, you must execute an "infinite loop" 
+ program on that task to keep the ONGOSUB active. Remove ONGOSUBs at any time by using the CLEAR keyword or by defining a new ONGOSUB with the same conditional expression, but a different handling routine. </p>
+        <p>ONGOSUBs are active for a task from when they are first executed until they are cleared. ONGOSUBs remain active even if a new program is loaded into a task. ONGOSUB conditions are not checked during the first line of a program. This allows ONGOSUBs defined in previous programs to be cleared if desired. </p>
+        <p>After the program lines in the ONGOSUB handling routine are finished (an <a href="DFS_Command.html">ENDDFS</a> or <a href="RETURN_Command.html">RETURN</a> command is executed), program control returns to the location from which the ONGOSUB was called. Refer to the following table for other ways to return from an ONGOSUB command. </p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');" cellspacing="0" class="TableStyle-Basic">
+            <caption>Table: Possible ONGOSUB Return Commands</caption>
+            <col style="width: 300px;" class="TableStyle-Basic-Column-Column1" />
+            <col style="width: 339px;" class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Result</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 2px;padding-bottom: 2px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Command</th>
+                </tr>
+            </thead>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Return program control to the location from which the ONGOSUB was called. (most common return)</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p><a href="DFS_Command.html">ENDDFS</a> &#160;<br />or<br /><a href="RETURN_Command.html">RETURN (from an ONGOSUB)</a></p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Indicate what the controller should do with any motion occurring when the trigger occurs.</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p><a href="RETURN_Command.html">RETURN (from a Subroutine or Program)</a>
+                    </p>
+                    <p>You must specify an argument to the RETURN command.</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>End the ONGOSUB and the program.</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p><a href="END%20PROGRAM_Command.html">END PROGRAM</a> (End of Program)</p>
+                </td>
+            </tr>
+            <tr valign="top" class="TableStyle-Basic-Body-Body1">
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p>Jump to the top of the program at the end of the ONGOSUB</p>
+                </td>
+                <td colspan="1" rowspan="1" class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p><a href="PROGRAM%20RESET_Command.html">PROGRAM RESET</a> 
+ (Reset Program)<br />or<a href="PROGRAM%20RESTART_Command.html"><br />PROGRAM RESTART</a> (Restart Program)</p>
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Warning.css');width: 650px;" cellspacing="0" class="TableStyle-Warning">
+            <col style="width: 50px;" class="TableStyle-Warning-Column-Column1" />
+            <col class="TableStyle-Warning-Column-Column2" />
+            <tr class="TableStyle-Warning-Body-Body1">
+                <td style="width: 3.563%;" width="3.563%" class="TableStyle-Warning-BodyE-Column1-Body1">
+                    <img src="../Resources/Images/Common/Symbol_Warning.png" />
+                </td>
+                <td valign="middle" class="TableStyle-Warning-BodyD-Column2-Body1">
+                    <p class="NoteStyle"><span class="warning">Warning:</span> Never use a GOTO command at the end of an ONGOSUB. Using GOTO will cause stack and ONGOSUB problems.</p>
+                </td>
+            </tr>
+        </table>
+        <p>A triggered ONGOSUB does not clear the condition that caused it. The same ONGOSUB immediately triggers again upon exiting the ONGOSUB routine if the condition remains true. If you do not clear the ONGOSUB, make the 
+ condition triggering the ONGOSUB false or create an ONGOSUB of higher priority.</p>
+        <p>The conditional expression for an ONGOSUB command is similar to that used in the <a href="IF_Command.html">IF</a> and <a href="WHILE_Command.html">WHILE</a> commands. The conditional expression can use any global variable, task variable, controller parameter, binary input/output, digital input/output, or analog input/output. The conditional expression must not contain program variables (DVAR). ONGOSUB commands are internally referenced by the conditional expression. This expression must be identical to the original definition when changing the properties of an existing ONGOSUB command. </p>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2954929252_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Clearing an ONGOSUB
+            Command</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2954929252_0" style="display: none;">
+                <p>Remove an ONGOSUB definition by preceding the conditional expression with the ONGOSUB CLEAR keywords and omitting the FARCALL, program name, program label, and priority. </p>
+                <p>Remove all ONGOSUBs defined on the task by omitting the conditional expression. Redefine an existing ONGOSUB by defining a new ONGOSUB with the same conditional expression, but a different target. </p>
+                <p>When overwriting or clearing an ONGOSUB, use the exact same conditional command so the controller recognizes it as the same ONGOSUB. For example, if an ONGOSUB is defined with the conditional ($Var &gt; 0), a CLEAR with ($Var &gt;= 1) does not clear the previously defined ONGOSUB.</p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2954929252_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />The Scope of an ONGOSUB
+            Command</a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2954929252_1" style="display: none;">
+                <p>When an ONGOSUB is active, it is active from every program running on the task, including programs called from the original program. The ONGOSUB is not deactivated when the program ends. If you define an ONGOSUB in a program without clearing it, the next program run on that task has that ONGOSUB active in it. To avoid this, use an ONGOSUB CLEAR at the end of a program establishing the ONGOSUB. You can simultaneously clear a single ONGOSUB and all ONGOSUBs.</p>
+                <p>However, an ONGOSUB is not active when there is no program running on the task. If a task has no purpose other than to define the ONGOSUBs, you must place an infinite loop program on that task to 
+ keep the ONGOSUB active.</p>
+                <p>ONGOSUB conditions are not tested prior to the first line executed in a program, allowing you to clear the ONGOSUBS on the first line.</p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2954929252_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Multiple ONGOSUB Commands
+            </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2954929252_2" style="display: none;">
+                <p>Multiple ONGOSUBs can be defined, but never more than one pertaining to the same condition. The total number of ONGOSUBs that can be defined in a task is determined by the <a href="../Parameters/MonitorStatements.html">MonitorStatements</a> parameter. </p>
+                <p>If there are multiple ONGOSUBs defined, one ONGOSUB can trigger while another is processing. The ONGOSUBs act exactly the same as regular program calls, in that, control returns back to the first ONGOSUB after the second one has completed. Stack ONGOSUBs less than the <a href="../Parameters/CallStackSize.html">CallStackSize</a> task parameter. </p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2954929252_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />ONGOSUB <span class="commandArgument">&lt;Priority&gt;</span> Argument Values
+            </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2954929252_3" style="display: none;">
+                <p>Each ONGOSUB is assigned a priority.  Priorities establish relationships between different ONGOSUB commands and task errors. If you do not specify a priority, the priority is PRIORITY_NORMAL. If you specify a priority, you must specify one of the following constants.</p>
+                <ul>
+                    <li value="1">PRIORITY_MEDIUM</li>
+                    <li value="2">PRIORITY_FAULT</li>
+                    <li value="3">PRIORITY_HIGHEST</li>
+                </ul>
+                <p>The FAULT priority level can be used with any condition, not just faults. </p>
+                <p>The active priority is usually PRIORITY_NORMAL. After an ONGOSUB command is executed, the priority changes to the priority specified for the ONGOSUB command. 
+ </p>
+                <p>Restarting program execution or associating a new program to the task does not clear the priority level. Only an ONGOSUB, <a href="PROGRAM%20RESTART_Command.html">PROGRAM RESTART</a>, <a href="FARGOTO_Command.html">FARGOTO</a>, task reset, or a hard reset changes the priority level. </p>
+                <p>However, if an ONGOSUB condition evaluates true, it executes only if its priority level is greater than the active priority. If the active priority is equal to or greater than the ONGOSUBs priority, the ONGOSUB is deferred until such time as the active priority falls below the ONGOSUBs priority. Therefore, an ONGOSUB of equal or lower priority cannot interrupt an executing ONGOSUB command, but a higher priority ONGOSUB can. </p>
+                <p>A TASKERROR command stops a program that is running; however, if the priority level is PRIORITY_FAULT or PRIORITY_HIGHEST, a task error does not stop the running program. If the program is executing an ONGOSUB, the program is stopped only if the priority is PRIORITY_MEDIUM.</p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2954929252_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />ONGOSUB Commands in Relation to Motion
+            </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2954929252_4" style="display: none;">
+                <p>If the ONGOSUB occurs during motion, <a href="../Feedhold_Operation.htm">feedhold</a> 
+ occurs and is completed before calling the ONGOSUB routine. After axis motion has been interrupted, you can move any axis whether it was involved in the interrupted move or not. </p>
+                <p>If the ONGOSUB is exited with a <a href="RETURN_Command.html">RETURN</a> command, the motion resumes (for example, accelerate up to speed smoothly) only after leaving the ONGOSUB routine.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2954929252_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Returning From an ONGOSUB Command</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2954929252_5" style="display: none;">
+                <p>Refer to the <span class="bold">Returning from an ONOGOSUB Command</span> section of the <a href="RETURN_Command.html">RETURN Command</a>.</p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2954929252_6" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Debugging an ONGOSUB
+Command            </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2954929252_6" style="display: none;">
+                <p><a name="kanchor1852"></a>When an ONGOSUB command is successfully executed in a program, the ONGOSUB defined in the command becomes active. However, if there is an error in the activation of the ONGOSUB command (for example, it cannot evaluate the conditional expression or find the ONGOSUB program file or label), it generates a task error (Cannot evaluate an ONGOSUB) and sets the <a href="../Info_Variables.htm">Info Variables</a> to an error code and location indicating the problem. </p>
+                <p>View the task error and task warnings with the <span class="AerotechVariablesApp_Console">Console</span> utility, with the  <span class="AerotechVariablesApp_Console">Console</span> commands: TK n (for n = the appropriate task number), and TSKI.</p>
+                <p>After an ONGOSUB fails an evaluation, the controller no longer attempts to evaluate it. View the ONGOSUB defined and active status using the <span class="procedureTerm">ZON</span> command within the <span class="AerotechVariablesApp_Console">Console</span> utility. The state of the ONGOSUB is active if it evaluated OK or broken if not. If the description of the ONGOSUB in the <span class="procedureTerm">ZON</span> command is too long to view on the display, use the <span class="procedureTerm">OUTON</span> command before the <span class="procedureTerm">ZON</span> command and examine the file that was written for the full description.</p>
+                <p>This ONGOSUB description line is in compiled text format, and its syntax varies from that which was entered in the program, specifically with respect to the use of temporary variables to resolve complex expressions.</p>
+                <p>If the controller finds an error (such as a missing label or file) while executing an ONGOSUB, it generates the following task error, "An ONGOSUB error occurred." The actual error causing the problem (for example: invalid file name) is indicated as a task warning. </p>
+                <p>View the task error and task warnings with the <a href="../Console_Utility.htm">Console Utility</a>, with the Console commands: TK <span class="equationVariable">n</span> (for<span class="equationVariable"> n</span> = the appropriate task number), and TSKI.</p>
+                <p>A common mistake with ONGOSUBs is to not clear the condition that generated it before leaving the target routine. This results in the ONGOSUB immediately reoccurring after it is exited and never returning 
+ control to the original program.</p>
+                <p>Another common mistake is to not realize that an ONGOSUB does not run unless the program is running.</p>
+                <p>Another common mistake with ONGOSUBs is to not clear the condition that generated it before leaving the target routine. This results in the ONGOSUB immediately reoccurring after it is exited and never returning 
+ control to the original program.
+            </p>
+                <p>Another common mistake is to not realize that an ONGOSUB does not run unless the program is running. This is defined in the Scope of an ONGOSUB section.</p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2954929252_7" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />Other information about ONGOSUB Commands           </a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2954929252_7" style="display: none;">
+                <p>ONGOSUBS are not tested prior to the first line executed, allowing you clear the ONGOSUBs on the first line.</p>
+                <p>ONGOSUB conditional expressions are tested prior to the execution of each line and the interrupted line is understood to be the line that immediately executes after the ONGOSUB test. If a line defines a condition (for example, ONGOSUB watches for $BO[7] &gt; 0, and the executed line is $BO[7] = 1), the line after the interrupted line is actually two lines after the $BO[7] = 1 line. </p>
+                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                <div class="codeexample"><pre>
+ONGOSUB ($B07&gt;0)......
+' Manually fire the ONGOSUB command.
+N10 $B07=1
+' Not this line.
+N20 LINEAR..
+' This is the line returned to.
+N30 LINEAR..</pre>
+                </div>
+                <p>Unlike the <a href="FARCALL_Command.html">FARCALL</a> command, you cannot pass arguments to the program called in an ONGOSUB command. Use global or task variables for this purpose. </p>
+                <p>There is a limit to the number of ONGOSUBs that can be defined. This is determined by the <a href="../Parameters/MonitorStatements.html">MonitorStatements</a> parameter.</p>
+                <table class="TableStyle_Note" style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+                    <col style="width: 650px;" />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd"><span class="note">Note:</span> If a label within a program is used only as the target  of an <span class="procedureTerm">ONGOSUB</span> within another program, the program compiler warns that the label is not used when compiling the program, because the compiler cannot see the <span class="procedureTerm">ONGOSUB</span> reference in another program. 
+ The warning is harmless and can be ignored.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="SyntaxExampleCommand_1">Multiple ONGOSUBs can be active, but never more than one pertaining to the same condition.</p>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics
+        </h3>
+        <p class="relatedTopic"><a href="ON_Command.html">ON Command</a>
+        </p>
+        <p class="relatedTopic"><a href="../Canned_Functions.htm">Canned Functions </a>
+        </p>
+        <p class="relatedTopic"><a href="TASKERROR_Command.html">TASKERROR Command</a>
+        </p>
+        <p class="relatedTopic"><a href="../Fault_and_Error_Overview.htm">Fault and Error Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="FARCALL_Command.html">FARCALL Command</a>
+        </p>
+        <p class="relatedTopic"><a href="programflow_Category.html">Program Flow Command Category</a>
+        </p><a name="kanchor1853"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=ONGOSUB_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=ONGOSUB_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

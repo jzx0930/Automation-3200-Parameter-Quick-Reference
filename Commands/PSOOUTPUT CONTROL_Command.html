@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|PSO" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>PSOOUTPUT CONTROL Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="pso_Category.html">PSO</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">PSOOUTPUT CONTROL</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>PSOOUTPUT CONTROL Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Sets the PSO output mode.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="2">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>PSOOUTPUT&#160;<i>&lt;Axis&gt;</i>&#160;CONTROL&#160;<i>&lt;Pin&gt;</i>&#160;<i>&lt;Mode&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1">
+                        <div><pre xml:space="preserve">PSOOUTPUT X CONTROL 1 1</pre><pre xml:space="preserve">PSOOUTPUT X CONTROL 0 1</pre>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>PSOOUTPUT CONTROL Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">&lt;Axis&gt;</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Axis_Variable_Type.htm">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis on which to execute the command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Pin&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Applies only to Npaq, Nservo, and XR3. Does not apply to Npaq MR. Specifies the pin number of PSO output.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Mode&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>Does not apply to the XR3. Used to select the mode of PSO output.</p>
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> This command does not apply when used with the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_SSaM">SSaM</span>, the <span class="AerotechVariablesSimpleName_Nstep">Nstep</span>, or the <span class="AerotechVariablesDriveType_XL4s">XL4s</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Use the PSOOUTPUT&#160;CONTROL&#160;command to change the default PSO output locations.&#160;Refer to your drive hardware manual for more information. <MadCap:conditionalText MadCap:conditions="OutputTypeConditions.ScreenOnly">To see a list of available hardware manuals, refer to <a href="../Other_Documentation.htm" MadCap:conditions="AerotechConditions.Option_MainA3200">Other Documentation</a>.</MadCap:conditionalText></p>
+        <p>The <span class="commandArgument">&lt;Pin&gt;</span> argument is used by the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> (does not include the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> MR), <span class="AerotechVariablesSimpleName_Nservo">Nservo</span>, and <span class="AerotechVariablesDriveType_XR3">XR3</span> because they have multiple PSO outputs. All other drives use only the <span class="commandArgument">&lt;Mode&gt;</span> argument, so on these drives, you should specify 0 for the <span class="commandArgument">&lt;Pin&gt;</span> argument.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2830437339_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesDriveType_GL4">GL4</span>, <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> and <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2830437339_0" style="display: none;">
+                <p>The table that follows shows the possible values for the <span class="commandArgument">&lt;Mode&gt;</span> argument.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:conditions="SnippetConditions_IFOV.NmarkDrives" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Mode&gt;</span> Argument Values for the <span class="AerotechVariablesDriveType_GL4">GL4</span>, <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> and <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span></p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 92px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+							Value
+						</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+							Description
+						</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Not applicable</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Laser Output 1&#160;Refer to the following description.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Laser Output 1</h4>
+                <p>The Laser Output 1 is dual function. By default, the setting of the GALVO LASERMODE command controls Laser Output 1. When the mode is set to 1, Laser Output 1 is  the PSO output. To give control of Laser Output 1 back to the GALVO LASERMODE command, use the PSOCONTROL RESET command.</p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2830437339_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_CP">CP</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2830437339_1" style="display: none;">
+                <p>The <span class="commandArgument">&lt;Axis&gt;</span> argument must specify the drive axis containing the PSO option. The table that follows shows the possible values for the <span class="commandArgument">&lt;Mode&gt;</span> argument.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Mode&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_CP">CP</span></p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('../Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+                    <col style="width: 92px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                                Value
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Not applicable</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Auxiliary Marker Output (Differential) Refer to the following description.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Auxiliary Marker Output</h4>
+                <p>The auxiliary marker is a dual-function, bidirectional pin pair. By default, the controller uses the auxiliary marker together with the auxiliary encoder. The bidirectional pins of the auxiliary marker are inputs. Refer to the drive hardware manual for more information. When you configure the PSO&#160;output to use the auxiliary marker, the bidirectional pins become outputs. In differential mode, the auxiliary marker output signal uses an RS-422 differential buffer. You can invert the active polarity by reversing the electrical connections to the drive.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2830437339_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span> and <span class="AerotechVariablesDriveType_FLS">FLS</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2830437339_2" style="display: none;">
+                <p>The table that follows shows the possible values for the <span class="commandArgument">&lt;Mode&gt;</span> argument.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:conditions="SnippetConditions_IFOV.NdrivesWithQuadrature,SnippetConditions_IFOV.NdriveDrives" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Mode&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span> and <span class="AerotechVariablesDriveType_FLS">FLS</span></p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 92px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+							Value
+						</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+							Description
+						</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Not applicable</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Laser Output 1&#160;Refer to the following description.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Laser Output 1</h4>
+                <p>The Laser Output 1 is dual function. By default, the setting of the GALVO LASERMODE command controls Laser Output 1. When the mode is set to 1, Laser Output 1 is  the PSO output. To give control of Laser Output 1 back to the GALVO LASERMODE command, use the PSOCONTROL RESET command.</p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2830437339_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span> and <span class="AerotechVariablesDriveType_HPe">HPe</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2830437339_3" style="display: none;">
+                <p>The <span class="commandArgument">&lt;Axis&gt;</span> argument must specify the drive axis containing the PSO option. The table that follows shows the possible values for the <span class="commandArgument">&lt;Mode&gt;</span> argument.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Mode&gt;</span> Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_HLe">HLe</span> and <span class="AerotechVariablesDriveType_HPe">HPe</span></p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('../Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+                    <col style="width: 92px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                                Value
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" rowspan="2">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Default. PSO&#160;available on dedicated high-speed opto-output.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="background-color: #e0e0c2;">
+                                <p><span class="driveNote">Hardware:</span> You must have the I/O option to have connector J301 and to use the main PSO output.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>PSO&#160;available on dedicated high-speed opto-output and the Auxiliary Marker Output&#160;(Differential). Refer to the following description.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Auxiliary Marker Output</h4>
+                <p>The auxiliary marker is a dual-function, bidirectional pin pair. By default, the controller uses the auxiliary marker together with the auxiliary encoder. The bidirectional pins of the auxiliary marker are inputs. Refer to the drive hardware manual for more information. When you configure the PSO&#160;output to use the auxiliary marker, the bidirectional pins become outputs. In differential mode, the auxiliary marker output signal uses an RS-422 differential buffer. You can invert the active polarity by reversing the electrical connections to the drive.</p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2830437339_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_ML">ML</span> and <span class="AerotechVariablesDriveType_MP">MP</span>, and <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>&#160;<span class="AerotechVariablesDriveType_MR">MR</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2830437339_4" style="display: none;">
+                <p>The <span class="commandArgument">&lt;Axis&gt;</span> argument must specify the drive axis containing the PSO option. The table that follows shows the possible values for the <span class="commandArgument">&lt;Mode&gt;</span> argument.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Mode&gt;</span> Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_ML">ML</span> and <span class="AerotechVariablesDriveType_MP">MP</span>, and <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>&#160;<span class="AerotechVariablesDriveType_MR">MR</span></p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('../Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+                    <col style="width: 92px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                                Value
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Auxiliary Marker Output (Differential). Refer to the following description.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Auxiliary Marker Output</h4>
+                <p>The auxiliary marker is a dual-function, bidirectional pin pair. By default, the controller uses the auxiliary marker together with the auxiliary encoder. The bidirectional pins of the auxiliary marker are inputs. Refer to the drive hardware manual for more information. When you configure the PSO&#160;output to use the auxiliary marker, the bidirectional pins become outputs. In differential mode, the auxiliary marker output signal uses an RS-422 differential buffer. You can invert the active polarity by reversing the electrical connections to the drive.</p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2830437339_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_Piezo_Linear">QL</span> and <span class="AerotechVariablesDriveType_Piezo__LinearEnh">QLe</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2830437339_5" style="display: none;">
+                <p>The table that follows shows the possible values for the <span class="commandArgument">&lt;Mode&gt;</span> argument.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Mode&gt;</span> Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_Piezo_Linear">QL</span> and <span class="AerotechVariablesDriveType_Piezo__LinearEnh">QLe</span></p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Basic.css');mc-table-style-original: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col style="width: 92px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 486px;" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                                Value
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Not applicable.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Auxiliary Marker Output (Differential). Refer to the following description.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Auxiliary Marker Output&#160;(Single-Ended).&#160;Refer to the following description.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Auxiliary Marker Output</h4>
+                <p>The auxiliary marker is a dual-function, bidirectional pin pair. By default, the controller uses the auxiliary marker together with the auxiliary encoder. The bidirectional pins of the auxiliary marker are inputs. Refer to the drive hardware manual for more information. When you configure the PSO&#160;output to use the auxiliary marker, the bidirectional pins become outputs. In differential mode, the auxiliary marker output signal uses an RS-422 differential buffer. You can invert the active polarity by reversing the electrical connections to the drive.</p>
+                <p>In single-ended mode, the two pins are driven independently as TTL outputs where the positive signal supplies an active-high output and the negative signal supplies an active-low output.</p>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2830437339_6" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesSimpleName_Npaq">Npaq</span> and <span class="AerotechVariablesSimpleName_Nservo">Nservo</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2830437339_6" style="display: none;">
+                <p>The <span class="commandArgument">&lt;Axis&gt;</span> argument must specify the first axis.</p>
+                <p>The table that follows shows the possible combinations of the <span class="commandArgument">&lt;Pin&gt;</span> and <span class="commandArgument">&lt;Mode&gt;</span> arguments for the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> and <span class="AerotechVariablesSimpleName_Nservo">Nservo</span>.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Pin&gt;</span> and <span class="commandArgument">&lt;Mode&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> and <span class="AerotechVariablesSimpleName_Nservo">Nservo</span></p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('../Resources/TableStyles/Basic.css');" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <col style="width: 263px;" class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" colspan="2"><span class="commandArgument">&lt;Pin&gt;</span>
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" colspan="2"><span class="commandArgument">&lt;Mode&gt;</span>
+                            </th>
+                        </tr>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                Value
+                            </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: left;">
+                                Description
+                            </th>
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="border-right-style: solid;border-right-width: 1px;border-right-color: #000000;vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                Value
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="vertical-align: bottom;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;text-align: left;">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p rowspan="2">PSO Output 1 (diff driver), OptoOut, and Open Collector</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Main Output</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Aux Output</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Data Collection Sync Pulse&#160;(<span class="AerotechVariablesSimpleName_Nservo">Nservo</span> only)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="2" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p rowspan="2">PSO Output 2 (diff driver)</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Main Output</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Aux Output</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" rowspan="3" style="vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                                <p rowspan="3">(J8)</p>
+                                <p rowspan="3">High-Speed Outputs 8 and 9</p>
+                                <p rowspan="3">Available only on the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span></p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Not connected to PSO</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Quad A and B</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;vertical-align: middle;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Inside Window</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2830437339_7" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesDriveType_XC2">XC2</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2830437339_7" style="display: none;">
+                <p>The table that follows shows the possible values for the <span class="commandArgument">&lt;Mode&gt;</span> argument.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Mode&gt;</span> Values for the <span class="AerotechVariablesDriveType_XC2">XC2</span></p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 92px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                               
+							Value
+						
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                               
+							Description
+						
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p style="text-align: center;">0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Default. PSO is available on dedicated outputs (Isolated and TTL).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1" style="background-color: #e0e0c2;">
+                                <p><span class="driveNote">Hardware:</span> You must have the -EB1 option to use the dedicated PSO outputs. </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2830437339_8" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesDriveType_XC4">XC4</span> and <span class="AerotechVariablesDriveType_XC4e">XC4e</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2830437339_8" style="display: none;">
+                <p>The table that follows shows the possible values for the <span class="commandArgument">&lt;Mode&gt;</span> argument.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Mode&gt;</span> Values for the <span class="AerotechVariablesDriveType_XC4">XC4</span> and <span class="AerotechVariablesDriveType_XC4e">XC4e</span></p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 92px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                               
+							Value
+						
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                               
+							Description
+						
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p style="text-align: center;">0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Default. PSO is available on dedicated outputs (Isolated and TTL).</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1" style="background-color: #e0e0c2;">
+                                <p><span class="driveNote">Hardware:</span> You must have the -EB1 option to use the dedicated PSO outputs. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>PSO is available on dedicated outputs (Isolated and TTL) and on the Auxiliary Marker Output (Differential). Refer to the description that follows.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>PSO is available on dedicated outputs (Isolated and TTL) and on the Auxiliary Marker Output (Single-Ended). Refer to the description that follows.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Auxiliary Marker Output</h4>
+                <p>The auxiliary marker is a dual-function, bidirectional pin pair. By default, the controller uses the auxiliary marker together with the auxiliary encoder. The bidirectional pins of the auxiliary marker are inputs. Refer to the drive hardware manual for more information. When you configure the PSO&#160;output to use the auxiliary marker, the bidirectional pins become outputs. In differential mode, the auxiliary marker output signal uses an RS-422 differential buffer. You can invert the active polarity by reversing the electrical connections to the drive.</p>
+                <p>In single-ended mode, the negative signal supplies an active-high TTL output, and the positive signal is not driven.</p>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_2830437339_9" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="AerotechVariablesDriveType_XR3">XR3</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2830437339_9" style="display: none;">
+                <p>The table that follows shows the possible values for the <span class="commandArgument">&lt;Pin&gt;</span> argument. The <span class="commandArgument">&lt;Mode&gt;</span> argument does not apply to the <span class="AerotechVariablesDriveType_XR3">XR3</span>.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Pin&gt;</span> Values for the <span class="AerotechVariablesDriveType_XR3">XR3</span></p>
+                <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 92px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                               
+							Value
+						
+                            </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                               
+							Description
+						
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                                <p style="text-align: center;">0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>No PSO Output</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>PSO&#160;Output 0 (Isolated and TTL)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>PSO Output 1 (Isolated and TTL)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>3</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>PSO Output 2 (Isolated and TTL)</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The XR3 has three dedicated PSO output pins that can be used by any axis in the chassis. You cannot configure more than one axis to use the same PSO output pin. To free one of the PSO output pins so that it can be used by another axis,   issue the PSOOUTPUT CONTROL command and specify a &lt;Pin&gt; value of 0, or issue the <a href="PSOCONTROL_Command.html" class="MCXref_0">PSOCONTROL Command</a> with a RESET argument.</p>
+            </div>
+        </div>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="../PSO_Command_Overview.htm">PSO Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="../PSO_Block_Diagrams.htm">PSO Block Diagrams</a>
+        </p>
+        <p class="relatedTopic"><a href="../Samples/skill__5.html">PSO Programming Examples</a>
+        </p>
+        <p class="relatedTopic"><a href="../PSO_Specifications.htm">PSO Specifications</a>
+        </p>
+        <p class="relatedTopic"><a href="../PSO_Hardware_Status.htm" class="MCXref_0">PSO Hardware Status
+        </a>
+        </p>
+        <p class="relatedTopic"><a href="pso_Category.html">PSO Command Category</a>
+        </p><a name="kanchor2528"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PSOOUTPUT CONTROL_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PSOOUTPUT CONTROL_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

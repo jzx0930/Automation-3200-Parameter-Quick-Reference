@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|PSO" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>PSODISTANCE Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="pso_Category.html">PSO</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">PSODISTANCE</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>PSODISTANCE Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Specifies the distance that an axis travels between firing events.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="4">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>PSODISTANCE&#160;<i>&lt;Axis&gt;</i>&#160;FIXED&#160;<i>&lt;FireDistance&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>PSODISTANCE&#160;<i>&lt;Axis&gt;</i>&#160;ARRAY&#160;<i>&lt;StartIndex&gt;</i>&#160;<i>&lt;NumberOfFiringEvents&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>PSODISTANCE&#160;<i>&lt;Axis&gt;</i>&#160;OFF</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1">
+                        <div><pre xml:space="preserve">PSODISTANCE X FIXED 1000</pre><pre xml:space="preserve">PSODISTANCE Y ARRAY 0 100</pre>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>PSODISTANCE Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">&lt;Axis&gt;</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Axis_Variable_Type.htm">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis on which to execute the command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;FireDistance&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">64-bit IEEE floating point</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) The distance, in encoder counts, that an axis must travel before a firing event triggers the pulse generator.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;StartIndex&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) The element of the array that contains the first incremental firing distance.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;NumberOfFiringEvents&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>(Optional) The number of firing events.</p>
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> This command does not apply when used with the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_SSaM">SSaM</span> or the <span class="AerotechVariablesSimpleName_Nstep">Nstep</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Use the PSODISTANCE command to specify the incremental distance between PSO firing events. To specify constant firing distances, use the PSODISTANCE&#160;FIXED&#160;command.  To specify firing distances in which the data in the PSO array has an effect, use the PSODISTANCE&#160;ARRAY&#160;command. If you do multi-axis tracking, the distance that you specify is a vector distance. The controller compares the vector distance with the square root of the sum of the squares of the individual axis components.</p>
+        <p>Because the PSODISTANCE command uses information that you specify in the PSOTRACK&#160;INPUT command, you must issue the PSOTRACK INPUT command before you issue the PSODISTANCE&#160;command.</p>
+        <p>You can see the PSO distance and window counters from the <a href="../StatusUtility_DriveInfoTab.htm" class="MCXref_0">Drive Information Tab of the Status Utility</a>. You can plot the <span class="procedureTerm">PSO Counter 1</span>, <span class="procedureTerm">PSO Counter 2</span>, <span class="procedureTerm">PSO Counter 3</span>, <span class="procedureTerm">PSO Window 1</span>, and <span class="procedureTerm">PSO Window 2</span> items in <a href="../DS_Digital_Scope_Application.htm"><span class="AerotechVariablesApp_DigScope">Digital Scope</span></a>.</p>
+        <p>For information about how to specify firing distances, refer to the sections that follow.</p>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2359357350_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />PSODISTANCE&#160;FIXED - Fixed-Distance Firing</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2359357350_0" style="display: none;">
+                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                <div><pre xml:space="preserve">PSODISTANCE Y FIXED 2000</pre>
+                </div>
+                <p>Use the PSODISTANCE&#160;FIXED&#160;command to specify a fixed incremental distance at which a PSO firing event occurs. The controller generates a firing event each time the axis moves the distance specified by the <span class="commandArgument">&lt;FireDistance&gt;</span> argument. The controller measures this distance, which is the firing distance, from the location where the previous firing event occurred.</p>
+                <p>The value that you specify for the <span class="commandArgument">&lt;FireDistance&gt;</span> argument is in encoder counts and must be a positive integer value that is less than 8,388,607 encoder counts. The PSO&#160;algorithm requires firing distances to be in encoder counts because it operates at the hardware level.</p>
+                <p> If you want your <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> application to specify firing distances in user units, you must manually convert the value of the <span class="commandArgument">&lt;FireDistance&gt;</span> argument into counts. Then you must supply this value to the PSODISTANCE&#160;FIXED&#160;command, which rounds it to the nearest number of counts.</p>
+                <div class="example">
+                    <p class="For_example_Head">For Example</p>
+                    <p>Assume that your system uses an  ABRT-150-AS rotary stage and you want to specify a fixed-distance firing event that occurs at each interval of 30.0 degrees. This rotary motor has 11,840 counts per revolution, which is 32.8888889 counts per degree.</p>
+                    <p>Thus, <span class="pre">PSODISTANCE X FIXED ABS(UNITSTOCOUNTS(X, 30.0))</span> fires at each interval of 987 counts because it rounds up 986.666667 to 987. An interval of 987 counts is equivalent to an interval of 30.01 degrees, not 30.0 degrees, which causes an error of 0.01 degree.</p>
+                    <p>After 100 firing events occur, the counts per degree of the rotary motor is incorrect by 1 degree. After 1,000 firing events occur, the counts per degree of the rotary motor is incorrect by 10 degrees.</p>
+                </div>
+                <p>Because the PSODISTANCE&#160;FIXED&#160;command rounds this value, PSO might not fire when you expect it to fire. There might be a small difference between the firing distances that you specify and the firing distances that occur. If this command rounds up the value, the firing distance becomes longer by a maximum of a 1/2 count. If this command rounds down the value, the firing distance becomes shorter by a maximum of a 1/2 count.</p>
+                <p>When many firing events occur, the firing distances continue to become longer or shorter because the controller measures each distance from the location where the previous firing event occurred. After many firing events, there can be a large difference between the firing distances that you specify and the firing distances that occur.</p>
+                <div class="example">
+                    <p class="For_example_Head">For Example</p>
+                    <p>The controller generates 100 firing events and the PSODISTANCE&#160;FIXED command rounds up each value specified for the <span class="commandArgument">&lt;FireDistance&gt;</span> argument. As a result, the position where the last firing event actually occurs is a maximum of 50 counts farther from where you think the firing event will occur.</p>
+                </div>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_2359357350_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" />PSODISTANCE&#160;ARRAY - Array-Based Distance Firing</a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_2359357350_1" style="display: none;">
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Note.css');width: 650px;" class="TableStyle_Note" cellspacing="0">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                <p><span class="driveNote">Hardware:</span> This command applies only when used with the <span class="AerotechVariablesDriveType_GL4">GL4</span>, the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span>, <span class="AerotechVariablesDriveType_FLS">FLS</span>, <span class="AerotechVariablesDriveType_HLe">HLe</span>, <span class="AerotechVariablesDriveType_HPe">HPe</span>, <span class="AerotechVariablesDriveType_ML">ML</span>, or <span class="AerotechVariablesDriveType_Piezo__LinearEnh">QLe</span>, the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> or <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>, the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span>, the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span>, the <span class="AerotechVariablesDriveType_XC2">XC2</span>, the <span class="AerotechVariablesDriveType_XC4">XC4</span>, the <span class="AerotechVariablesDriveType_XC4e">XC4e</span>, the <span class="AerotechVariablesDriveType_XL4s">XL4s</span>, or the <span class="AerotechVariablesDriveType_XR3">XR3</span>. It does not apply to the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span>.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4 class="exampleHeading" MadCap:autonum=""><span class="autonumber"><span></span></span>Example</h4>
+                <div><pre xml:space="preserve">PSODISTANCE Y ARRAY 3 77</pre>
+                </div>
+                <p>Use the PSODISTANCE ARRAY command to specify the distances between firing events. These distances are based on data that is in the PSO array. Each array element contains an incremental distance and supplies the distance between firing events. For multi-axis tracking, the array elements supply the vector distances between firing events.</p>
+                <p>After the axis moves through the current distance, a firing event triggers the pulse generator and loads the next value from the array. The PSO hardware uses the new value as the next incremental firing distance.</p>
+                <p>To write the firing distances into the array, use the <a href="ARRAY%20WRITE_Command.html" class="MCXref_0">ARRAY WRITE Command</a>. The firing distances in the array are specified in encoder counts and must be positive integer values that are less than 8,388,607 encoder counts.</p>
+                <p>To prevent unexpected PSO firing events, make sure that your <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program does not overwrite firing distances in the array until the PSO&#160;hardware consumes them. You can do this by splitting the PSO array in half. Thus the PSO hardware consumes distances from one half of the PSO array while your <span class="AerotechVariablesSimpleName_AeroBasic">AeroBasic</span> program writes new distances to the other half. You can use the <span class="procedureTerm">PSO&#160;Distance Array Index</span> value on the <span class="procedureTerm">Drive Info</span> tab of the <span class="AerotechVariablesApp_StatusUtility">Status Utility</span> to monitor the array index from which the PSO hardware consumes points. You can also get this information by using the <a href="DRIVEINFO_Function.html" class="MCXref_0">DRIVEINFO Function</a>.</p>
+                <p>Each drive has a maximum number of elements that you can download from the PSO array. For information about the array size and the PSO&#160;FIFO&#160;Load Rate, refer to <span class="bold">Table: Array Size by Drive Type</span> in <a href="../Drive_Array_Overview.htm" class="MCXref_0">Drive Array Overview</a>.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Finite Number of Firing Distances</h4>
+                <p>If you want a finite number of firing distances, you can use the <a href="ARRAY%20WRITE_Command.html" class="MCXref_0">ARRAY WRITE Command</a> to download and use some or all of the elements from the PSO array. Make sure that you specify the correct values for these arguments. </p>
+                <p class="indentLevel1"><span class="bold"><span MadCap:createDate="2016-05-05T16:08:49.5771088-04:00" MadCap:creator="lgelli" MadCap:initials="LG" MadCap:comment="Does this also need to be the same as the value for this argument in the ARRAY WRITE command?" MadCap:editor="lgelli" MadCap:editDate="2016-05-05T16:09:43.5993176-04:00" class="commandArgument">&lt;NumberOfFiringEvents&gt;</span></span> The value of this argument must be less than or equal to the number of elements that you download from the PSO array.  Thus, the <span class="commandArgument">&lt;NumberOfFiringEvents&gt;</span> argument of the PSODISTANCE&#160;ARRAY&#160;Command must be less than or equal to the <span class="commandArgument">&lt;NumberOfElements&gt;</span> argument of the ARRAY&#160;WRITE&#160;Command.</p>
+                <p class="indentLevel1"><span class="bold"><span class="commandArgument">&lt;StartIndex&gt;</span></span> You can specify a value of 0. But if you want the first incremental firing distance to start where you put the data, specify the <span class="commandArgument">&lt;StartIndex&gt;</span> argument of the PSODISTANCE&#160;ARRAY Command with the same value that you use for the <span class="commandArgument">&lt;StartIndex&gt;</span> argument of the ARRAY&#160;WRITE&#160;Command.</p>
+                <p class="indentLevel1">The PSO hardware uses the new value as the next incremental firing distance. When the PSO&#160;hardware consumes all distances in the PSO array, the controller stops generating the PSO firing events.</p>
+                <h4 MadCap:autonum=""><span class="autonumber"><span></span></span>Infinite Number of Firing Distances</h4>
+                <p>If you want an infinite number of firing distances, you can use the PSO&#160;array as a circular buffer.  When you do this, you must use the <a href="ARRAY%20WRITE_Command.html" class="MCXref_0">ARRAY WRITE Command</a> to download and use all of the elements from the PSO array. You cannot download and use only some of the elements. Make sure that you specify the correct values for these arguments.</p>
+                <p class="indentLevel1"><span class="bold"><span class="commandArgument">&lt;NumberOfFiringEvents&gt;</span></span> Specify a value of -1.</p>
+                <p class="indentLevel1"><span class="bold"><span class="commandArgument">&lt;StartIndex&gt;</span></span> Specify a value of 0.</p>
+                <p class="indentLevel1">To get an infinite number of firing distances that is valid, make sure that the PSO&#160;firing rate is lower than the rate at which you can download new distances into the PSO&#160;array. When the PSO&#160;hardware consumes the last firing distance at the end of the array, it wraps around from the end of the array space to the start of the array for the next firing distance. This is continuous until you stop the PSO&#160;firing.</p>
+            </div>
+        </div>
+        <p>To disable distance-based firing events, use the PSODISTANCE&#160;OFF command. After you issue this command, the controller completes all pulse sequences that were triggered by previous firing events. If you configured the distance counter, it continues to track the feedback sources that you specified for the <a href="PSOTRACK%20INPUT_Command.html" class="MCXref_0">PSOTRACK INPUT Command</a>.</p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">Note:</span> The PSO&#160;hardware operates on encoder counts and cannot do non-integer scaling. For true vector firing, all axes being tracked must have the same distance unit per encoder count.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="../PSO_Command_Overview.htm">PSO Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="../PSO_Block_Diagrams.htm">PSO Block Diagrams</a>
+        </p>
+        <p class="relatedTopic"><a href="../Samples/skill__5.html">PSO Programming Examples</a>
+        </p>
+        <p class="relatedTopic"><a href="../PSO_Specifications.htm">PSO Specifications</a>
+        </p>
+        <p class="relatedTopic"><a href="../PSO_Hardware_Status.htm" class="MCXref_0">PSO Hardware Status
+        </a>
+        </p>
+        <p class="relatedTopic"><a href="pso_Category.html">PSO Command Category</a>
+        </p><a name="kanchor2519"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PSODISTANCE_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PSODISTANCE_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

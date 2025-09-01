@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|PSO" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>PSOWINDOW INPUT Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Warning.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffects.js">
+        </script>
+        <script src="../SkinSupport/MadCapEffectsMenu.js">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="pso_Category.html">PSO</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">PSOWINDOW INPUT</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>PSOWINDOW INPUT Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Configures which encoder channel is connected to each window.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="3">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>PSOWINDOW&#160;<i>&lt;Axis&gt;</i>&#160;<i>&lt;WindowNumber&gt;</i>&#160;INPUT&#160;<i>&lt;Source&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>PSOWINDOW&#160;<i>&lt;Axis&gt;</i>&#160;<i>&lt;WindowNumber&gt;</i>&#160;INPUT&#160;<i>&lt;Source&gt;</i>&#160;INVERT</pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">PSOWINDOW X 1 INPUT 1</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>PSOWINDOW INPUT Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">&lt;Axis&gt;</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Axis_Variable_Type.htm">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis on which to execute the command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;WindowNumber&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The window to configure. The Ndrive CP, MP, QL, and Npaq MR with MP drives must be set to 1. All other drives can be set to 1 or 2.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Source&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">32-bit signed integer</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The encoder to use as the source for the first axis of tracking (use for single-axis).</p>
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> This command does not apply when used with the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_SSaM">SSaM</span> or the <span class="AerotechVariablesSimpleName_Nstep">Nstep</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="note">NOTE:</span> If you are doing single-axis tracking, configure only window 1. If you are doing multi-axis tracking, you must configure both window 1 and window 2.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Use the PSOWINDOW INPUT command to specify the feedback source to be used as the input to the PSO window hardware. </p>
+        <p>The following sections show the possible values for the <span class="commandArgument">&lt;Source#&gt;</span> argument for each drive type.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/Warning.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle-Warning" cellspacing="0">
+            <col style="width: 50px;" class="TableStyle-Warning-Column-Column1" />
+            <col class="TableStyle-Warning-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Warning-Body-Body1">
+                    <td class="TableStyle-Warning-BodyB-Column1-Body1">
+                        <p>
+                            <img src="../Resources/Images/Common/Symbol_Warning.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-Warning-BodyA-Column2-Body1">
+                        <p><span class="warning">Warning:</span> When you use this command to configure the functions of the Sync ports on the <span class="AerotechVariablesDriveType_XC4">XC4</span> or XC4e or of the High-Speed Outputs on the <span class="AerotechVariablesDriveType_XR3">XR3</span>, the new functions of the outputs override all existing functions that you previously configured with other commands. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_0" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span>&#160;Argument Values for the <span class="AerotechVariablesDriveType_GL4">GL4</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_0" style="display: none;">
+                <p>If the PositionFeedbackType parameter is set to <span class="procedureTerm">Encoder Multiplier</span>, the drive generates emulated quadrature signals only if the effective multiplication factor is greater than 4. The effective multiplication factor is equal to the value of the EncoderMultiplicationFactor parameter divided by the value of the EmulatedQuadratureDivider parameter.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesDriveType_GL4">GL4</span></p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 50px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: center;">Value
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p style="text-align: center;">0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 encoder</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 2 encoder</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="SnippetConditions_CommunicationProtocol.HyperWire">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 encoder (includes <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span> encoder 1)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="SnippetConditions_CommunicationProtocol.HyperWire">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>3</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 2 encoder (includes <span class="AerotechVariablesSimpleName_IFOV_2">IFOV</span> encoder 2)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>4</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Auxiliary encoder 1</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>5</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Auxiliary encoder 2</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="SnippetConditions_CommunicationProtocol.HyperWire">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>6</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>SYNC&#160;Port A</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="SnippetConditions_CommunicationProtocol.HyperWire">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>7</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>SYNC&#160;Port B</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>14</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 <a href="pulse_Category.html">PULSE command</a>  output (mode PULSEOUTPUTMODE_Null)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>15</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Axis 2 <a href="pulse_Category.html">PULSE command</a> output (mode PULSEOUTPUTMODE_Null)</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_1" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_CP">CP</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_1" style="display: none;">
+                <p>The <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_CP">CP</span> cannot use -MXU feedback to send emulated quadrature signals to the PSO.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span><span class="AerotechVariablesDriveType_CP">CP</span></p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('../Resources/TableStyles/Basic.css');width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col style="width: 50px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Value
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Standard encoder (TTL Line Driver)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Auxiliary encoder (TTL Line Driver)</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_2" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span> and <span class="AerotechVariablesDriveType_FLS">FLS</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_2" style="display: none;">
+                <p>If the PositionFeedbackType parameter is set to <span class="procedureTerm">Encoder Multiplier</span> and your drive uses -MXH feedback, the drive generates emulated quadrature signals only if the effective multiplication factor is greater than 4. The effective multiplication factor is equal to the value of the EncoderMultiplicationFactor parameter divided by the value of the EmulatedQuadratureDivider parameter.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_FCL">FCL</span> and <span class="AerotechVariablesDriveType_FLS">FLS</span></p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 50px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: center;">Value
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p style="text-align: center;">0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 encoder</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 encoder&#160;(includes auxiliary encoder 1)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>4</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Auxiliary encoder 1</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>14</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p><a href="pulse_Category.html">PULSE command</a>  output (mode PULSEOUTPUTMODE_Null)</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_3" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_HLe">HLe</span> and <span class="AerotechVariablesDriveType_HPe">HPe</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_3" style="display: none;">
+                <p>If the PositionFeedbackType parameter is set to <span class="procedureTerm">Encoder Multiplier</span> and your drive uses -MXH feedback, the drive generates emulated quadrature signals only if the effective multiplication factor is greater than 4. The effective multiplication factor is equal to the value of the EncoderMultiplicationFactor parameter divided by the value of the EmulatedQuadratureDivider parameter.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_HLe">HLe</span> and <span class="AerotechVariablesDriveType_HPe">HPe</span></p>
+                <table class="TableStyle-Basic" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('../Resources/TableStyles/Basic.css');width: 650px;" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 50px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Value
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Standard encoder (TTL Line Driver)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Auxiliary encoder (TTL Line Driver)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>MXH (Analog Sine Wave)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>3</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Not applicable</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>4</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>SSI Net Port 1, (J302 and J303)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>5</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>SSI&#160;Net Port 2, (J302 and J303)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>6</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Resolver Channel 1</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>7</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Resolver Channel 2</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_4" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_ML">ML</span>, <span class="AerotechVariablesDriveType_MP">MP</span>, and <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_4" style="display: none;">
+                <p>If the PositionFeedbackType parameter is set to <span class="procedureTerm">Encoder Multiplier</span> and your <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_ML">ML</span> or <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span> with <span class="AerotechVariablesDriveType_ML">ML</span> drives uses -MXH feedback, the drive generates emulated quadrature signals only if the effective multiplication factor is greater than 4. The effective multiplication factor is equal to the value of the EncoderMultiplicationFactor parameter divided by the value of the EmulatedQuadratureDivider parameter.</p>
+                <p>The <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_ML">ML</span> and <span class="AerotechVariablesDriveType_MP">MP</span> cannot use -MXU feedback to send emulated quadrature signals to the PSO.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_ML">ML</span>, <span class="AerotechVariablesDriveType_MP">MP</span>, and <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span></p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('../Resources/TableStyles/Basic.css');width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col style="width: 50px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Value
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Standard encoder (TTL Line Driver)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Auxiliary encoder (TTL Line Driver)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>MXH (Analog Sine Wave)<sup>(1)</sup></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;">
+                                <p>3</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p><a href="pulse_Category.html">PULSE command</a> output (mode PULSEOUTPUTMODE_Null)<sup>(2)</sup></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="TableStyle-Basic-Foot-Footer1">
+                            <td class="TableStyle-Basic-FootD-Column1-Footer1" colspan="2">
+                                <p colspan="2" class="footnote">(1) <span class="AerotechVariablesDriveType_ML">ML</span> only</p>
+                                <p class="footnote">(2) This value applies only when used with a <span class="AerotechVariablesDriveType_HEX_RC">HEX&#160;RC</span> drive that has part-speed PSO enabled. The HEX&#160;RC&#160;drive contains an <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_MP">MP</span> 10&#160;with -MXU feedback.</p>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_5" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values
+for  the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_Piezo_Linear">QL</span> and <span class="AerotechVariablesDriveType_Piezo__LinearEnh">QLe</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_5" style="display: none;">
+                <p>If the PositionFeedbackType parameter is set to <span class="procedureTerm">Capacitance Sensor</span> and your drive uses Capacitance Sensor feedback, the drive generates emulated quadrature signals only if the effective multiplication factor is greater than 4. The effective multiplication factor is equal to the value of the EncoderMultiplicationFactor parameter divided by the value of the EmulatedQuadratureDivider parameter.</p>
+                <p class-="indentLevel1" class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span>&#160;<span class="AerotechVariablesDriveType_Piezo_Linear">QL</span> and <span class="AerotechVariablesDriveType_Piezo__LinearEnh">QLe</span></p>
+                <table class="TableStyle-Basic" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 50px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Value</th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Capacitance sensor feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Auxiliary encoder (TTL line driver)</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_6" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> and <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_6" style="display: none;">
+                <p>If the PositionFeedbackType parameter is set to <span class="procedureTerm">Encoder Multiplier</span> and your drive uses -MXH feedback, the drive generates emulated quadrature signals only if the effective multiplication factor is greater than 4. The effective multiplication factor is equal to the value of the EncoderMultiplicationFactor parameter divided by the value of the EmulatedQuadratureDivider parameter.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> and <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span></p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 50px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: center;">Value
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p style="text-align: center;">0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 encoder</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 2 encoder</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="SnippetConditions_CommunicationProtocol.FireWire">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 encoder&#160;(includes auxiliary encoder 1)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="SnippetConditions_CommunicationProtocol.FireWire">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>3</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 2 encoder (includes auxiliary encoder 2)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>4</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Auxiliary encoder 1</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>5</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Auxiliary encoder 2</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>14</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 <a href="pulse_Category.html">PULSE command</a>  output (mode PULSEOUTPUTMODE_Null)<sup MadCap:conditions="SnippetCondiitons_Commands.ArgumentValues_GCL">(1)</sup></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>15</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 2 <a href="pulse_Category.html">PULSE command</a> output (mode PULSEOUTPUTMODE_Null)<sub style="vertical-align: super;" MadCap:conditions="SnippetCondiitons_Commands.ArgumentValues_GCL">(1)</sub></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="SnippetCondiitons_Commands.ArgumentValues_GCL">
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1" style="text-align: left;" colspan="2">
+                                <p colspan="2" class="footnote">(1) GCL&#160;only</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_7" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_7" style="display: none;">
+                <p>If the PositionFeedbackType parameter is set to <span class="procedureTerm">Encoder Multiplier</span> and your drive uses -MXR feedback, the drive generates emulated quadrature signals only if the effective multiplication factor is greater than 4. The effective multiplication factor is equal to the value of the EncoderMultiplicationFactor parameter divided by the value of the EmulatedQuadratureDivider parameter.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span></p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Basic.css');mc-table-style-original: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 50px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Value
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Local Encoder Counter, Channel 0</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Local Encoder Counter, Channel 1</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Local Encoder Counter, Channel 2</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>3</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Local Encoder Counter, Channel 3</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>4</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Local Encoder Counter, Channel 4</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>5</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Local Encoder Counter, Channel 5</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>6</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Emulated Quadrature Input, Channel 6<sup>(1)</sup></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>7</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Emulated Quadrature Input, Channel 7<sup>(1)</sup></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>8</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>Emulated Quadrature Input, Channel 8<sup>(1)</sup></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="TableStyle-Basic-Foot-Footer1">
+                            <td class="TableStyle-Basic-FootD-Column1-Footer1" colspan="2">
+                                <p colspan="2">(1) Encoder channels 6 - 8 are available with the <span MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,Default.A3200Only" class="AerotechVariablesSimpleName_Npaq">Npaq</span> MXR option. You can configure three of the six MXR channels to generate real-time quadrature outputs for use with the PSO. To configure the axis that drives each of these channels, use the <a href="../Parameters/EmulatedQuadratureChannel.html">EmulatedQuadratureChannel</a> axis parameter.</p>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown"><a class="dropDownHead_1" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_8" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span></a>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_8" style="display: none;">
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesSimpleName_Nservo">Nservo</span></p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('../Resources/TableStyles/Basic.css');width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col style="width: 50px;" class="TableStyle-Basic-Column-Column1" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1">Value
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 0px;padding-bottom: 0px;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Local Encoder Counter, Channel 0</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Local Encoder Counter, Channel 1</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Local Encoder Counter, Channel 2</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>3</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Local Encoder Counter, Channel 3</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>4</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>CLK/DIR Channel 0<sup>(1)</sup></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>5</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>CLK/DIR Channel 1<sup>(1)</sup></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>6</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>CLK/DIR Channel 2<sup>(1)</sup></p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>7</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p>CLK/DIR Channel 3<sup>(1)</sup></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="TableStyle-Basic-Foot-Footer1">
+                            <td class="TableStyle-Basic-FootD-Column1-Footer1" colspan="2">
+                                <p colspan="2">(1) The <span class="AerotechVariablesSimpleName_Nservo">Nservo</span> can use the CLK/DIR outputs as PSO input sources if the motor type is set to "stepper." In this mode, PSO will use the stepper motor resolution for tracking distances. Use this mode if there is no feedback available (open-loop).</p>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_9" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the  <span class="AerotechVariablesDriveType_XC2">XC2</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_9" style="display: none;">
+                <p>The <span class="AerotechVariablesDriveType_XC2">XC2</span> cannot use primary feedback from an -MX1 multiplier option to send emulated quadrature signals to the PSO. This drive does not support auxiliary feedback for an encoder multiplier.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesDriveType_XC2">XC2</span></p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 50px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: center;">Value
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p style="text-align: center;">0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Primary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Auxiliary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>14</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p><a href="pulse_Category.html">PULSE command</a>  output (mode PULSEOUTPUTMODE_Null)</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_10" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesDriveType_XC4">XC4</span> and <span class="AerotechVariablesDriveType_XC4e">XC4e</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_10" style="display: none;">
+                <p>The <span class="AerotechVariablesDriveType_XC4">XC4</span> cannot use primary feedback from an -MX1 multiplier option to send emulated quadrature signals to the PSO. This drive does not support auxiliary feedback for an encoder multiplier.</p>
+                <p>If the PositionFeedbackType parameter is set to <span class="procedureTerm">Encoder Multiplier</span> and your <span class="AerotechVariablesDriveType_XC4e">XC4e</span> uses primary feedback from an -MX2 or -MX3 multiplier option, the drive generates emulated quadrature signals only if the effective multiplication factor is greater than 4. The effective multiplication factor is equal to the value of the EncoderMultiplicationFactor parameter divided by the value of the EmulatedQuadratureDivider parameter.</p>
+                <p>The <span class="AerotechVariablesDriveType_XC4e">XC4e</span> cannot use auxiliary feedback from an -MX3 multiplier option to send emulated quadrature signals to the PSO.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesDriveType_XC4">XC4</span> and <span class="AerotechVariablesDriveType_XC4e">XC4e</span></p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 50px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: center;">Value
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p style="text-align: center;">0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Primary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Auxiliary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>SYNC&#160;Port A</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>3</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>SYNC&#160;Port B</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>14</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p><a href="pulse_Category.html">PULSE command</a>  output (mode PULSEOUTPUTMODE_Null)</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_11" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesDriveType_XL4s">XL4s</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_11" style="display: none;">
+                <p>If the PositionFeedbackType parameter is set to <span class="procedureTerm">Encoder Multiplier</span>, the drive generates emulated quadrature signals only if the effective multiplication factor is greater than 4. The effective multiplication factor is equal to the value of the EncoderMultiplicationFactor parameter divided by the value of the EmulatedQuadratureDivider parameter.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesDriveType_XL4s">XL4s</span></p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 50px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: center;">Value
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">Description
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p style="text-align: center;">0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 encoder</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 encoder&#160;(includes auxiliary encoder 1)</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>4</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Auxiliary encoder 1</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="SnippetConditions_CommunicationProtocol.HyperWire">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>6</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>SYNC&#160;Port A</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1" MadCap:conditions="SnippetConditions_CommunicationProtocol.HyperWire">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>7</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>SYNC&#160;Port B</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>14</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p><a href="pulse_Category.html">PULSE command</a>  output (mode PULSEOUTPUTMODE_Null)</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="MCDropDown">
+            <div class="MCDropDownHead_0"><a class="MCDropDownHotSpot_0" href="javascript:void(0);" id="MCDropDownHotSpot_1049071529_12" onclick="FMCDropDown( this ); return false;"><img style="border: none;margin-right: 5px;" src="../SkinSupport/DropDownClosed.gif" MadCap:altsrc="../SkinSupport/DropDownOpen.gif" onload="if ( typeof( FMCPreloadImage ) == 'function' ) { FMCPreloadImage( '../SkinSupport/DropDownOpen.gif' ); }" alt="Closed" MadCap:alt2="Open" class="MCDropDownIcon" /><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesDriveType_XR3">XR3</span></a>
+            </div>
+            <div class="MCDropDownBody_0" id="MCDropDownBody_1049071529_12" style="display: none;">
+                <p>If the PositionFeedbackType parameter is set to <span class="procedureTerm">Encoder Multiplier</span>, the drive generates emulated quadrature signals only if the effective multiplication factor is greater than 4. The <span class="AerotechVariablesDriveType_XR3">XR3</span> must use one of the multiplier options that follow:</p>
+                <ul class="disc">
+                    <li value="1">For primary feedback, the <span class="AerotechVariablesDriveType_XR3">XR3</span> uses an -MX2 or -MX4 multiplier option. The effective multiplication factor is equal to the value of the EncoderMultiplicationFactor parameter divided by the value of the EmulatedQuadratureDivider parameter.</li>
+                    <li value="2">For auxiliary feedback, the <span class="AerotechVariablesDriveType_XR3">XR3</span> uses an -MX4 multiplier option. The effective multiplication factor is equal to the value of the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.ParameterAUX">Auxiliary</MadCap:conditionalText>EncoderMultiplicationFactor parameter divided by the value of the <MadCap:conditionalText MadCap:conditions="SnippetConditions_Parameters.ParameterAUX">Auxiliary</MadCap:conditionalText>EmulatedQuadratureDivider parameter.</li>
+                </ul>
+                <p>The <span class="AerotechVariablesDriveType_XR3">XR3</span> cannot use primary feedback from an -MX1 multiplier option to send emulated quadrature signals to the PSO.</p>
+                <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Source#&gt;</span> Argument Values for the <span class="AerotechVariablesDriveType_XR3">XR3</span></p>
+                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');width: 650px;" class="TableStyle-Basic" cellspacing="0">
+                    <col class="TableStyle-Basic-Column-Column1" style="width: 50px;" />
+                    <col class="TableStyle-Basic-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Basic-Head-Header1">
+                            <th class="TableStyle-Basic-HeadE-Column1-Header1" style="text-align: center;">
+                        Value
+                    
+                    </th>
+                            <th class="TableStyle-Basic-HeadD-Column1-Header1" style="text-align: left;">
+                        Description
+                    
+                    </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>0</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 0 Primary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>1</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 0 Auxiliary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>2</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 Primary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>3</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 1 Auxiliary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>4</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 2 Primary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>5</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 2 Auxiliary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>6</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 3 Primary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>7</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 3 Auxiliary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>8</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 4 Primary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>9</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 4 Auxiliary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>10</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 5 Primary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyE-Column1-Body1" style="text-align: center;">
+                                <p>11</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                                <p>Axis 5 Auxiliary Feedback</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Basic-Body-Body1">
+                            <td class="TableStyle-Basic-BodyB-Column1-Body1" style="text-align: center;">
+                                <p>14</p>
+                            </td>
+                            <td class="TableStyle-Basic-BodyA-Column1-Body1">
+                                <p><a href="pulse_Category.html">PULSE command</a> output (mode PULSEOUTPUTMODE_Null)</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p>The PSO window hardware begins counting as soon as you issue the PSOWINDOW INPUT command, and so the window counter value might not match the feedback position of the axis. Typically, you should issue the PSOWINDOW INPUT command when the axis is at the home position to avoid any potential offset, but you can also load the window counter to a specific value by using the <a href="PSOWINDOW%20LOAD_Command.html">PSOWINDOW&#160;LOAD</a> command.</p>
+        <p>You can use the <span class="procedureTerm">INVERT</span> keyword to change the direction of the PSO window counters. Typically, you should use this keyword when you set the <span class="procedureTerm">Position Feedback Direction</span> bit of the <a href="../Parameters/FeedbackSetup.html"><span class="AerotechVariablesParameter_20">FeedbackSetup</span></a> parameter to <span class="procedureTerm">Inverted</span>.</p>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <div>
+            <p class="relatedTopic"><a href="../PSO_Command_Overview.htm">PSO Overview</a>
+            </p>
+            <p class="relatedTopic"><a href="../PSO_Block_Diagrams.htm">PSO Block Diagrams</a>
+            </p>
+            <p class="relatedTopic"><a href="../Samples/skill__5.html">PSO Programming Examples</a>
+            </p>
+            <p class="relatedTopic"><a href="../PSO_Specifications.htm">PSO Specifications</a>
+            </p>
+            <p class="relatedTopic"><a href="../PSO_Hardware_Status.htm" class="MCXref_0">PSO Hardware Status
+        </a>
+            </p>
+        </div>
+        <p class="relatedTopic"><a href="pso_Category.html">PSO Command Category</a>
+        </p><a name="kanchor2549"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PSOWINDOW INPUT_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PSOWINDOW INPUT_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>

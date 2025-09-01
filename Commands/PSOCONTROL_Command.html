@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:tocPath="AeroBasic Programming|Commands and Functions|PSO" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="HtmlHelp" MadCap:PathToHelpSystem="../" MadCap:HelpSystemFileName="A3200.xml" MadCap:SearchType="Stem">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252" /><title>PSOCONTROL Command</title>
+        <link href="../SkinSupport/Slideshow.css" rel="stylesheet" />
+        <link href="../SkinSupport/MadCap.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/MasterPage_Footer.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/AerotechHelpStyles.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Header.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/NoLines.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Syntax.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Note.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Basic.css" rel="stylesheet" />
+        <script src="../SkinSupport/jquery.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapGlobal.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapSlideshow.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapMerging.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapAliasFile.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapUtilities.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapBody.js" type="text/javascript">
+        </script>
+        <script src="../SkinSupport/MadCapHighlighter.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+			window.onbeforeprint = function(e) {
+				var nodes = document.getElementsByTagName("*");
+				for (var i = 0; i < nodes.length; i++ ) {			
+					if (nodes[i].nodeType == 1)
+					{
+						var args = nodes[i].attributes;
+						for (var j = 0; j < args.length; j++) {
+						if ( args[j].name == "MadCap:targetName" )
+						{
+							nodes[i].setAttribute( "className", "MCTogglerBody" );
+						}
+						}
+					}
+				}
+			}						
+			-->
+        </script>
+        <table style="width: 100%;margin-left: -7px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Header.css');" cellspacing="0" MadCap:conditions="AerotechConditions.A3200Only" class="TableStyle-Header">
+            <col class="TableStyle-Header-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-Header-Body-Body1" style="height: 55px;">
+                    <td style="background-repeat: no-repeat;vertical-align: top;background-image: url('../Resources/Images/Header/Header_A3200.png');background-position-y: top;padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;border-left-style: none;border-right-style: none;border-top-style: none;border-bottom-style: none;border-bottom-width: 1px;border-bottom-color: #dae3ea;" class="TableStyle-Header-BodyA-Column1-Body1">
+                        <div class="MCBreadcrumbsBox_MD_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="../Programming_Overview.htm">AeroBasic Programming</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Commands and Functions</span><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="pso_Category.html">PSO</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">PSOCONTROL</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="0px" style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../Resources/TableStyles/NoLines.css');" class="TableStyle-NoLines" cellspacing="0">
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <col class="TableStyle-NoLines-Column-Column1" />
+            <tr class="TableStyle-NoLines-Body-Body1">
+                <td class="TableStyle-NoLines-BodyE-Column1-Body1">
+                    <h1 MadCap:autonum=""><span class="autonumber"><span></span></span>PSOCONTROL Command</h1>
+                </td>
+                <td class="TableStyle-NoLines-BodyD-Column1-Body1" />
+            </tr>
+        </table>
+        <p>Enables and disables the PSO hardware.</p>
+        <table class="TableStyle-Syntax" cellspacing="0" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Syntax.css');width: 650px;">
+            <col style="width: 70px;" class="TableStyle-Syntax-Column-Column1" />
+            <col class="TableStyle-Syntax-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyE-Column1-Body1" rowspan="2">
+                        <p class="SyntaxTableHeader">Syntax:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyD-Column2-Body1"><pre>PSOCONTROL&#160;<i>&lt;Axis&gt;</i>&#160;<i>&lt;Mode&gt;</i></pre>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Syntax-Body-Body1">
+                    <td class="TableStyle-Syntax-BodyB-Column1-Body1">
+                        <p class="SyntaxTableHeader">Example:</p>
+                    </td>
+                    <td class="TableStyle-Syntax-BodyA-Column2-Body1"><pre xml:space="preserve">
+PSOCONTROL X ON</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span>PSOCONTROL Command Arguments
+						</p>
+        <table class="TableStyle-Basic" cellspacing="0" style="mc-table-style: url('../Resources/TableStyles/Basic.css');margin-left: 0;margin-right: auto;width: 650px;">
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Argument</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">
+                        <p style="text-align: left;">Type</p>
+                    </th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">
+                        <p style="text-align: left;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">&lt;Axis&gt;</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Axis_Variable_Type.htm">Axis</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The axis on which to execute the command.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic-Body-Body1">
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><span class="commandArgument">
+												&lt;Mode&gt;
+											</span>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyE-Column1-Body1">
+                    <p><a href="../Parameter_Types.htm" MadCap:conditions="AerotechConditions.Option_MainA3200,AerotechConditions.Option_MainEnsemble,AerotechConditions.Option_MainSoloist">Other</a>
+                    </p>
+                </td>
+                <td class="TableStyle-Basic-BodyD-Column1-Body1">
+                    <p>The mode of operation of the PSO hardware.</p>
+                </td>
+            </tr>
+        </table>
+        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> This command does not apply when used with the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_SSaM">SSaM</span> or the <span class="AerotechVariablesSimpleName_Nstep">Nstep</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Use the PSOCONTROL&#160;command to cause immediate actions on the PSO, including readying for pulse generation (ARM), turning off pulses (OFF), software triggered pulse generation (FIRE), and resetting the hardware to the default state (RESET). Typically, the first command issued when configuring the PSO should be PSOCONTROL RESET and the last command should be PSOCONTROL ARM. Many of the PSO commands do not have an effect until the PSOCONTROL ARM command is issued.</p>
+        <table style="width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;mc-table-style-original: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                        <p><span class="driveNote">Hardware:</span> If you are using an <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> (not including the <span class="AerotechVariablesSimpleName_Npaq">Npaq</span> <span class="AerotechVariablesDriveType_MR">MR</span>), make sure that the PSO interlock is driven or disabled by setting the <a href="../Parameters/IOSetup.html">IOSetup</a> axis parameter.&#160;For more information, refer to the <a href="../Other_Documentation.htm">hardware manuals </a>for your drives.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The table that follows shows the possible values for the <span class="commandArgument">&lt;Mode&gt;</span> argument.</p>
+        <p class="Table_Title_bold_Numbered" MadCap:autonum="Table: &#160;&#160;&#160;&#160;"><span class="autonumber"><span>Table: &#160;&#160;&#160;&#160;</span></span><span class="commandArgument">&lt;Mode&gt;</span> Argument Values</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Basic.css');width: 700px;" class="TableStyle-Basic" cellspacing="0">
+            <col class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <col class="TableStyle-Basic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Basic-Head-Header1">
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Value</th>
+                    <th class="TableStyle-Basic-HeadE-Column1-Header1">Description</th>
+                    <th class="TableStyle-Basic-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>ARM</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Enables PSO tracking.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Use the ARM argument as the last command in a sequence of PSO commands. It causes all previously specified PSO commands to activate and allows the PSO hardware to begin tracking the axis positions.</p>
+                        <p>This argument also causes the distance counters to be loaded with the user specified values. Because this creates the reference point for PSO counters, make sure that the servo is "in position" before you issue this command. This can be done by putting a delay ( DWELL ) command in the program or by checking axis in position status.</p>
+                        <p>This argument can be used after a PSOCONTROL OFF command to allow the PSO hardware to resume pulse generation. The PSOTRACK RESET command controls what occurs on the counters during the OFF state.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>ARM GALVO</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Enables manual firing.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>
+                            <table style="mc-table-style: url('../Resources/TableStyles/Note.css');margin-left: 0;margin-right: auto;caption-side: top;width: 650px;" class="TableStyle_Note" cellspacing="0">
+                                <col />
+                                <tbody>
+                                    <tr>
+                                        <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                            <p><span class="driveNote">Hardware:</span> This command applies only when used with the <span class="AerotechVariablesDriveType_GL4">GL4</span> or the <span class="AerotechVariablesSimpleName_Nmark">Nmark</span> <span class="AerotechVariablesDriveType_CLS">CLS</span> or <span class="AerotechVariablesDriveType_Galvo_Compact_Linear">GCL</span>.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                        <p> Use the ARM GALVO&#160;argument as the last command in a sequence of PSO commands. The ARM GALVO&#160;argument activates all of the previously-specified PSO commands. Then you can manually fire the PSO pulse generator. </p>
+                        <p>To configure the PSO pulse generator to manually fire, issue the <a href="PSOOUTPUT%20PULSE%20LASER%20MASK_Command.html" class="MCXref_0">PSOOUTPUT PULSE LASER MASK Command</a>, which configures the pulse generator to be triggered by the laser status. </p>
+                        <ul class="disc">
+                            <li value="1">If you want the laser to fire while the axis is not moving, then manually fire the pulse generator by issuing the <a href="GALVO%20LASEROVERRIDE%20ON_Command.html" class="MCXref_0">GALVO LASEROVERRIDE ON Command</a>, then  a <a href="MOVEDELAY_Command.html" class="MCXref_0">MOVEDELAY Command</a> of at least 1, and then a <a href="GALVO%20LASEROVERRIDE%20OFF_Command.html" class="MCXref_0">GALVO LASEROVERRIDE OFF Command</a>. </li>
+                            <li value="2">If you want the laser to fire while the axis is moving, issue the <a href="GALVO%20LASEROVERRIDE%20ON_Command.html" class="MCXref_0">GALVO LASEROVERRIDE ON Command</a>&#160;and <a href="GALVO%20LASEROVERRIDE%20OFF_Command.html" class="MCXref_0">GALVO LASEROVERRIDE OFF Command</a>&#160;to control the firing during your profile.</li>
+                        </ul>
+                        <p>When you use this argument, the distance counters are held in reset so that if you previously configured a PSO tracking mode, tracking is no longer enabled. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>ARM PWM</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Enables PSO tracking.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <table style="margin-left: 0;margin-right: auto;width: 650px;mc-table-style: url('../Resources/TableStyles/Note.css');" class="TableStyle_Note" cellspacing="0">
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td class="TableStyle_Note_Body_0_0_RowEnd_ColEnd">
+                                        <p><span class="driveNote">Hardware:</span> This command applies only when used with the <span class="AerotechVariablesSimpleName_Ndrive">Ndrive</span> <span class="AerotechVariablesDriveType_HLe">HLe</span>, <span class="AerotechVariablesDriveType_HPe">HPe</span>, or <span class="AerotechVariablesDriveType_ML">ML</span>.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Use the ARM PWM argument to do the same functions as the PSOCONTROL ARM command, such as activating all previous PSO commands and allowing position tracking to begin, but with the following additional functionality.</p>
+                        <p>When you use this argument in conjunction with the <a href="PSOOUTPUT%20PULSE%20BIT%20MASK_Command.html">PSOOUTPUT PULSE BIT MASK</a> command, the drive generates fixed frequency output pulses (not dependent on axis position) with a duty cycle that can be changed at each firing event by values stored in the PSO array. The pulse output is also masked with the state of the bit in each array location, just as in the normal BIT MASK case. Note that the masking of the output and changes to the duty cycle will not take effect until the completion of the current pulse and, therefore, might not occur at the exact positions that a normal firing event would occur.</p>
+                        <p>When the PSOCONTROL ARM PWM command is issued, the PSO output immediately begins pulsing using the specifications given in the <a href="PSOPULSE_Command.html">PSOPULSE TIME</a> command. (The optional CYCLES argument is ignored, however). It continues to pulse until you turn it off with the PSOCONTROL OFF command. To prevent the PSO output from pulsing until the first firing event, specify the first bit of the BIT MASK values as zero. You can initiate changes to the duty cycle and the mask bit at either fixed distances (using <a href="PSODISTANCE_Command.html">PSODISTANCE</a> FIXED) or variable distances (using PSODISTANCE ARRAY).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>FIRE</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Fires one or a sequence of pulses.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">Use the FIRE argument to cause the pulse generator to produce one pulse or pulse sequence under software control. </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>FIRE CONTINUOUS</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Fires one or a sequence of pulses.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">Use the FIRE&#160;CONTINUOUS argument to  cause the pulse generator to repeatedly generate pulses or pulse sequences until the PSOCONTROL OFF command is given.</td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>ON</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Turns on PSO output.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Use the ON argument to immediately set the PSO output signal to its active state until a PSOCONTROL OFF command is given. No pulse generation occurs in this mode and the output is continuously on.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>OFF</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Turns off PSO output.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Use the OFF argument to immediately set the PSO output signal to its inactive state. The PSOTRACK RESET command controls what occurs on the internal counters when the OFF command is given. The inactive state is a hardware fail safe level defined in the individual drive manuals; typically this is the high impedance state.</p>
+                        <p>To resume operation, issue a PSOCONTROL ARM command.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>PULSE&#160;DISABLE</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyE-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Prevents all applicable sources from triggering the pulse generator.</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyD-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Use the PULSE&#160;DISABLE value to prevent all applicable sources from triggering the pulse generator. When you use this value, the pulse generator completes all pulses that it is currently generating. But it does not generate new pulses. Examples of sources that can trigger the pulse generator include firing events and when the window counter enters or exits a window range.</p>
+                        <p>To start generating new pulses again, issue the PSOCONTROL&#160;ARM&#160;value.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic-Body-Body1">
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>RESET</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyB-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Reverts all PSO&#160;states to the default condition</p>
+                    </td>
+                    <td class="TableStyle-Basic-BodyA-Column1-Body1" style="vertical-align: middle;padding-left: 4px;padding-right: 4px;padding-top: 0px;padding-bottom: 0px;">
+                        <p>Use the RESET argument to set all PSO states to their default conditions and remove all PSO data from the internal hardware FIFO buffers. This argument should be used to restart PSO operations after faults or other process interruptions occur.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="relatedTopics" MadCap:autonum=""><span class="autonumber"><span></span></span>Related Topics</h3>
+        <p class="relatedTopic"><a href="../PSO_Command_Overview.htm">PSO&#160;Overview</a>
+        </p>
+        <p class="relatedTopic"><a href="../PSO_Block_Diagrams.htm">PSO Block Diagrams</a>
+        </p>
+        <p class="relatedTopic"><a href="../Samples/skill__5.html">PSO Programming Examples</a>
+        </p>
+        <p class="relatedTopic"><a href="../PSO_Specifications.htm">PSO Specifications</a>
+        </p>
+        <p class="relatedTopic"><a href="../PSO_Hardware_Status.htm" class="MCXref_0">PSO Hardware Status
+        </a>
+        </p>
+        <p class="relatedTopic"><a href="pso_Category.html">PSO Command Category</a>
+        </p><a name="kanchor2518"></a>
+        <MadCap:pageFooter class="OddPage">
+            <hr color="#006400" width="100%" size="0" align="center" />
+            <table style="width: 100%;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-top-style: none;border-top-width: 1px;border-bottom-style: none;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/MasterPage_Footer.css');" class="TableStyle-MasterPage_Footer" cellspacing="0">
+                <col class="Column-Column1" />
+                <col class="Column-Column2" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <td class="BodyB-Column1-Body1">
+                            <p class="feedback">Was this information helpful?</p><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PSOCONTROL_Command.html&amp;version=6.04.003&amp;helpful=yes" target="_blank"><div class="feedback"><p>Yes</p></div></a><a href="http://help.aerotech.com/feedback/?product=A3200&amp;type=help&amp;id=PSOCONTROL_Command.html&amp;version=6.04.003&amp;helpful=no" target="_blank"><div class="feedback"><p>No</p></div></a>
+                        </td>
+                        <td class="BodyA-Column2-Body1" style="text-align: right;">
+                            <p class="footer"><span class="AerotechVariablesCompanyName">Aerotech, Inc.</span>
+                            </p>
+                            <p class="trademarkandCopyright" style="text-align: right;" MadCap:conditions="AerotechConditions.A3200Only,AerotechConditions.A3200Programming,AerotechConditions.Option_LabVIEWA3200">Copyright <img src="../Resources/Images/Header/CopyrightSymbol.png" /> 2001-<span class="AerotechVariablesCurrentYear">2020</span></p>
+                            <p class="footer"> All Rights Reserved </p>
+                            <p class="footer"><a href="mailto:Support@aerotech.com" target="_blank" title="Support Email Address" alt="Support Email Address">Support@aerotech.com</a>
+                            </p>
+                            <p class="footer"><a href="http://www.aerotech.com/" target="_blank" title="http://www.aerotech.com" alt="http://www.aerotech.com"><span class="AerotechVariablesWebAddress">www.aerotech.com</span></a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </MadCap:pageFooter>
+        <script type="text/javascript" src="../SkinSupport/MadCapBodyEnd.js">
+        </script>
+    </body>
+</html>
